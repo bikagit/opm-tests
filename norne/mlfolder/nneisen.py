@@ -138,4 +138,4 @@ plt.show()
 # from kerasify import export_model
 # lazy hack to be changed
 
-export_model(model, 'linredNN.model')
+export_model(model, 'eisenNN.model')
