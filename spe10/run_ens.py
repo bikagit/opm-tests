@@ -66,10 +66,10 @@ cmdargs = vars(parser.parse_known_args()[0])
 cwd = os.getcwd()
 # INPUTS
 VARIABLE = "--linear-solver-reduction="
-# VALUES = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 2.5e-1, 2.5e-2, 2.5e-3, 2.5e-4]
+VALUES = [5e-3, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 2.5e-1, 2.5e-2, 2.5e-3, 2.5e-4]
 
 #VALUES = [1e-1, 9e-2, 8e-2, 7e-2, 6e-2, 5e-2, 4e-2, 3e-2, 2e-2, 1e-2]
-VALUES = [5e-3]
+# VALUES = [6e-3,5e-3]
 DEFAULTADAPTIVE = 5e-3
 # VALUES = np.random.uniform(1e-2,1e-3,10)
 # VALUES = np.random.uniform(2e-3,8e-3,11)
@@ -84,17 +84,17 @@ OUTFOL = cwd + "/" + cmdargs["output"].strip()
 
 NPRUNS = len(VALUES)
 # NPRUNS = 11
-NPRUNS = 5
+# NPRUNS = 5
 
 NMPIS = 1
 NEWTONMAXIT = 20
 CNV = 1e-2
 MB = 1e-7
 # FLOW = "/Users/macbookn/activopmwkspc/master/build/opm-simulators/bin/flow "
-FLOW = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
+FLOW = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow "
 
-FLOWADAPTIVE = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
-CASE = "NORNE_ATW2013"
+FLOWADAPTIVE = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow "
+CASE = "SPE10-MOD02-01"
 BETA = 1
 ALPHA = 0.33 # BETA * I_newton + ALPHA * I_linear (see https://opm-project.org/wp-content/uploads/2024/04/saeternes_opm_summit_230409_share.pdf) --output-mode=none 
 # FLAGS = (
@@ -107,8 +107,8 @@ ALPHA = 0.33 # BETA * I_newton + ALPHA * I_linear (see https://opm-project.org/w
 
 #     f" --tolerance-mb={MB} --tolerance-mb-relaxed={MB}1e-5
 # --tolerance-cnv-relaxed={CNV} 
-FLAGS = f" --use-best-residual=true --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed=1e-2 --tolerance-cnv=1e-2 --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 "
-FLAGSADAPT = f"  --use-m-lmethods-tols=true --use-best-residual=true  --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed=1e-2 --tolerance-cnv=1e-2 --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 "
+FLAGS = f" --use-best-residual=true --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed={CNV} --tolerance-cnv={CNV} --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 --newton-min-iterations=1 --newton-max-iterations={NEWTONMAXIT}  "
+FLAGSADAPT = f"  --use-m-lmethods-tols=true --use-best-residual=true  --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed={CNV} --tolerance-cnv={CNV} --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 --newton-min-iterations=1 --newton-max-iterations={NEWTONMAXIT} "
 
 COLORS = [
     "#1f77b4",
