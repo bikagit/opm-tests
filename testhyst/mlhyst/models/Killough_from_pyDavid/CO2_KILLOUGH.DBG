@@ -1,0 +1,1739 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.04-pre (fd6ac3aa9*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.3.0, Darwin Kernel Version 24.3.0: Thu Jan  2 20:24:16 PST 2025; root:xnu-11215.81.4~3/RELEASE_ARM64_T6000 )
+Build time       =  2025-04-22 at 16:48:59 hrs
+User             =  macbookn
+Simulation started on 22-04-2025 at 17:06:30 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+ActivateMLRelPErm="0" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough" # default: ""
+EclDeckFileName="/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxIterations="20"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file '/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA'
+    0 Reading RUNSPEC  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 5
+    1 Reading DIMENS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 7
+    2 Reading EQLDIMS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 11
+    3 Reading TABDIMS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 14
+    4 Reading WATER    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 17
+    5 Reading GAS      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 18
+    6 Reading CO2STORE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 19
+    7 Reading METRIC   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 21
+    8 Reading START    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 23
+    9 Reading SATOPTS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 26
+   10 Reading WELLDIMS in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 29
+   11 Reading UNIFIN   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 32
+   12 Reading UNIFOUT  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 33
+   13 Reading GRID     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 35
+   14 Reading INIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 37
+   15 Reading SPECGRID in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 5
+   16 Reading COORD    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 9
+   17 Reading ZCORN    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 1214
+   18 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 7
+   19 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 20
+   20 Reading COPY     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 33
+   21 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 37
+   22 Reading PROPS    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 41
+   23 Reading SGFN     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/TABLES.INC line 1
+   24 Reading SWFN     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/TABLES.INC line 2007
+   25 Reading EHYSTR   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 46
+   26 Reading ROCK     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 49
+   27 Reading REGIONS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 54
+   28 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/REGIONS.INC line 4
+   29 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/REGIONS.INC line 17
+   30 Reading SOLUTION in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 59
+   31 Reading EQUIL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 61
+   32 Reading RTEMPVD  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 64
+   33 Reading RVW      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 68
+   34 Reading RPTRST   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 70
+   35 Reading SUMMARY  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 73
+   36 Reading PERFORMA in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 75
+   37 Reading CGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 76
+   38 Reading CGIRL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 80
+   39 Reading CPI      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 84
+   40 Reading WGIRL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 89
+   41 Reading CGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 93
+   42 Reading CGITL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 97
+   43 Reading WGITL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 101
+   44 Reading FPR      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 105
+   45 Reading FGIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 107
+   46 Reading FWIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 109
+   47 Reading FGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 111
+   48 Reading FWIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 113
+   49 Reading FGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 115
+   50 Reading FWIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 117
+   51 Reading FWCD     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 119
+   52 Reading WGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 121
+   53 Reading WGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 124
+   54 Reading WBHP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 127
+   55 Reading RPR      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 130
+   56 Reading RWIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 133
+   57 Reading RGIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 136
+   58 Reading WPI      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 139
+   59 Reading SCHEDULE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 142
+   60 Reading RPTRST   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 144
+   61 Reading WELSPECS in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 146
+   62 Reading COMPDAT  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 149
+   63 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 152
+   64 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 156
+   65 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 161
+   66 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 164
+   67 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 168
+   68 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 173
+   69 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 176
+   70 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 180
+   71 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 185
+   72 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 188
+   73 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 192
+   74 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 197
+   75 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 200
+   76 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 204
+   77 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 209
+   78 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 212
+   79 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 216
+   80 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 221
+   81 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 224
+   82 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 228
+   83 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 233
+   84 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 236
+   85 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 240
+   86 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 245
+The CO2 storage option is given. PVT properties from the Brine-CO2 system is used
+See the OPM manual for details on the used models.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+2 fluid phases are active
+
+Processing dynamic information from
+/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 142
+Initializing report step 0/8 at 2000-01-01 0 DAYS line 142
+Processing keyword RPTRST at line 144
+Processing keyword WELSPECS at line 146
+Processing keyword COMPDAT at line 149
+Processing keyword TUNING at line 152
+Processing keyword WCONINJE at line 156
+Complete report step 1 (7 DAYS) at 2000-01-08 (0 DAYS)
+
+Initializing report step 2/8 at 2000-01-08 (0 DAYS) line 161
+Processing keyword TUNING at line 164
+Processing keyword WCONINJE at line 168
+Complete report step 2 (14 DAYS) at 2000-01-22 (7 DAYS)
+
+Initializing report step 3/8 at 2000-01-22 (7 DAYS) line 173
+Processing keyword TUNING at line 176
+Processing keyword WCONINJE at line 180
+Complete report step 3 (7 DAYS) at 2000-01-29 (21 DAYS)
+
+Initializing report step 4/8 at 2000-01-29 (21 DAYS) line 185
+Processing keyword TUNING at line 188
+Processing keyword WCONINJE at line 192
+Complete report step 4 (21 DAYS) at 2000-02-19 (28 DAYS)
+
+Initializing report step 5/8 at 2000-02-19 (28 DAYS) line 197
+Processing keyword TUNING at line 200
+Processing keyword WCONINJE at line 204
+Complete report step 5 (7 DAYS) at 2000-02-26 (49 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/8 at 2000-02-26 (49 DAYS) line 209
+Processing keyword TUNING at line 212
+Processing keyword WCONINJE at line 216
+Complete report step 6 (28 DAYS) at 2000-03-25 (56 DAYS)
+
+Initializing report step 7/8 at 2000-03-25 (56 DAYS) line 221
+Processing keyword TUNING at line 224
+Processing keyword WCONINJE at line 228
+Complete report step 7 (7 DAYS) at 2000-04-01 (84 DAYS)
+
+Initializing report step 8/8 at 2000-04-01 (84 DAYS) line 233
+Processing keyword TUNING at line 236
+Processing keyword WCONINJE at line 240
+Complete report step 8 (365 DAYS) at 2001-04-01 (91 DAYS)
+
+
+Processing grid
+Total number of active cells: 6000 / total pore volume: 144337567 RM3
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System:  Water-Gas system.
+Relative permeability input format: Saturation Family II.
+Number of saturation regions: 2
+
+CO2STORE/CO2SOL is enabled. 
+ The surface density of CO2 is  1.868433kg/m3 
+ The surface density of Brine is  998.107723kg/m3
+ The surface densities are computed using the reference pressure ( 101325.000000Pa) and the reference temperature (288.710000K).
+
+
+================ Starting main simulation loop ===============
+
+
+
+---------------    Simulation step number 0    ---------------
+      Current time (days)     0
+      Current stepsize (days) 7
+      Total time (days)       456
+
+
+
+Report step  0/8 at day 0/456, date = 01-Jan-2000
+Using Newton nonlinear solver.
+Restart file written for report step 0/8, date = 01-Jan-2000 00:00:00
+
+Starting time step 0, stepsize 1 days, at day 0/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.042e-26  8.137e-06  2.918e-11  6.028e+02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  8.115e-06  8.092e-06  1.327e+02  4.533e+02
+   2  7.825e-06  8.080e-06  7.477e+01  1.054e+03
+   3  7.821e-06  8.028e-06  5.370e+01  3.863e+02
+   4  7.798e-06  8.013e-06  4.168e+01  2.244e+02
+   5  7.756e-06  7.901e-06  3.476e+01  1.677e+02
+   6  7.697e-06  7.885e-06  2.840e+01  1.325e+02
+   7  7.626e-06  7.811e-06  2.418e+01  1.105e+02
+   8  7.542e-06  7.720e-06  2.076e+01  9.329e+01
+   9  7.447e-06  7.618e-06  1.824e+01  8.051e+01
+  10  7.341e-06  7.505e-06  1.636e+01  7.135e+01
+  11  7.226e-06  7.381e-06  1.506e+01  6.493e+01
+  12  7.099e-06  7.248e-06  1.376e+01  5.903e+01
+  13  6.962e-06  7.106e-06  1.255e+01  5.340e+01
+  14  6.818e-06  6.955e-06  1.175e+01  4.985e+01
+  15  6.664e-06  6.793e-06  1.090e+01  4.631e+01
+  16  6.502e-06  6.626e-06  1.015e+01  4.319e+01
+  17  6.331e-06  6.450e-06  9.443e+00  4.040e+01
+  18  6.155e-06  6.268e-06  9.044e+00  3.823e+01
+  19  5.968e-06  6.076e-06  8.356e+00  3.477e+01
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  5.776e-06  5.878e-06  8.518e+00  3.331e+01
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.33 days
+
+
+Starting time step 0, stepsize 0.33 days, at day 0/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.438e-27  2.685e-06  9.630e-12  1.989e+02
+   1  2.676e-06  2.672e-06  4.377e+01  1.495e+02
+   2  2.580e-06  2.659e-06  2.475e+01  3.481e+02
+   3  2.561e-06  2.627e-06  1.777e+01  1.264e+02
+   4  2.527e-06  2.593e-06  1.371e+01  7.094e+01
+   5  2.480e-06  2.536e-06  1.123e+01  5.373e+01
+   6  2.420e-06  2.477e-06  9.364e+00  4.375e+01
+   7  2.350e-06  2.403e-06  7.894e+00  3.574e+01
+   8  2.272e-06  2.321e-06  6.892e+00  3.051e+01
+   9  2.186e-06  2.231e-06  6.337e+00  2.775e+01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  10  2.090e-06  2.132e-06  5.563e+00  2.390e+01
+  11  1.991e-06  2.030e-06  5.010e+00  2.137e+01
+  12  1.887e-06  1.923e-06  4.553e+00  1.929e+01
+  13  1.779e-06  1.812e-06  5.240e+00  1.745e+01
+  14  1.660e-06  1.691e-06  4.438e+00  1.979e+01
+  15  1.527e-06  1.554e-06  4.040e+00  1.811e+01
+  16  1.392e-06  1.416e-06  4.296e+00  1.097e+01
+  17  1.259e-06  1.280e-06  3.063e+00  5.904e+00
+  18  1.119e-06  1.137e-06  2.886e+00  3.927e+00
+  19  9.803e-07  9.960e-07  2.695e+00  1.790e+00
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  8.398e-07  8.529e-07  2.543e+00  1.294e+00
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.10890000000000001 days
+
+
+Starting time step 0, stepsize 0.1089 days, at day 0/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.135e-27  8.861e-07  3.178e-12  6.565e+01
+   1  8.803e-07  8.806e-07  1.444e+01  4.922e+01
+   2  8.437e-07  8.676e-07  8.195e+00  1.150e+02
+   3  8.204e-07  8.409e-07  5.873e+00  4.056e+01
+   4  7.836e-07  7.995e-07  4.452e+00  2.256e+01
+   5  7.374e-07  7.538e-07  3.680e+00  1.738e+01
+   6  6.824e-07  6.968e-07  3.070e+00  1.395e+01
+   7  6.213e-07  6.338e-07  2.644e+00  1.159e+01
+   8  5.624e-07  5.735e-07  2.717e+00  8.027e+00
+   9  4.919e-07  5.010e-07  2.030e+00  6.220e+00
+  10  4.181e-07  4.257e-07  1.807e+00  3.519e+00
+  11  3.388e-07  3.445e-07  1.669e+00  1.702e+00
+  12  2.632e-07  2.676e-07  1.496e+00  6.734e-01
+  13  1.871e-07  1.900e-07  1.369e+00  2.384e-01
+  14  1.118e-07  1.136e-07  1.698e+00  2.425e-01
+  15  3.787e-08  3.847e-08  2.123e+00  3.569e-01
+  16  1.832e-09  1.909e-09  2.166e+00  2.322e-01
+  17  7.121e-10  7.596e-10  6.767e-01  1.059e-01
+  18  1.591e-11  1.610e-11  5.942e-02  1.124e-02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  19  6.616e-12  6.751e-12  2.022e-04  2.513e-04
+Overall linear iterations used: 35
+ Newton its=19, linearizations=20 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 1, stepsize 0.0458526 days, at day 0.1089/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.549e-22  3.721e-07  1.724e-01  1.423e+00
+   1  8.396e-10  2.654e-10  1.461e-01  7.516e-01
+   2  2.363e-09  3.790e-09  6.649e-02  6.834e-02
+   3  8.277e-11  7.714e-11  3.201e-03  1.830e-03
+Overall linear iterations used: 6
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 2, stepsize 0.137558 days, at day 0.154753/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.769e-22  1.110e-06  3.189e-01  5.621e-01
+   1  5.150e-07  5.199e-07  1.515e+00  3.229e+00
+   2  2.512e-07  2.532e-07  1.273e+00  3.008e+00
+   3  1.616e-07  1.641e-07  1.159e+00  9.428e-01
+   4  5.503e-08  5.595e-08  1.612e+00  7.721e-01
+   5  5.919e-09  6.096e-09  1.639e+00  2.126e-01
+   6  1.333e-09  1.382e-09  6.211e-01  7.654e-02
+   7  1.644e-10  1.701e-10  4.532e-02  5.398e-03
+   8  5.484e-12  5.701e-12  2.683e-04  1.142e-04
+Overall linear iterations used: 16
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 3, stepsize 0.137558 days, at day 0.292311/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.795e-22  1.112e-06  2.160e-01  3.094e-01
+   1  1.878e-07  1.856e-07  5.719e-01  1.743e+00
+   2  9.981e-08  1.011e-07  1.482e+00  5.802e-01
+   3  2.229e-10  1.985e-10  9.235e-01  2.395e-01
+   4  1.491e-09  1.564e-09  9.363e-01  7.759e-02
+   5  9.304e-11  9.944e-11  1.254e-01  1.079e-02
+   6  6.834e-11  7.108e-11  4.123e-03  9.484e-04
+Overall linear iterations used: 13
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 4, stepsize 0.247604 days, at day 0.429868/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.158e-17  2.004e-06  3.191e-01  3.253e-01
+   1  7.820e-07  7.866e-07  1.220e+00  3.282e+00
+   2  5.670e-07  5.756e-07  2.077e+00  1.550e+00
+   3  3.680e-07  3.735e-07  1.782e+00  1.034e+00
+   4  1.910e-07  1.939e-07  1.939e+00  4.374e-01
+   5  2.162e-08  2.202e-08  1.987e+00  4.295e-01
+   6  3.491e-09  3.600e-09  1.741e+00  3.226e-01
+   7  8.044e-10  8.204e-10  2.913e-01  6.538e-02
+   8  2.265e-10  2.337e-10  4.752e-02  1.340e-02
+   9  6.817e-11  7.016e-11  3.547e-03  4.214e-04
+Overall linear iterations used: 15
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 5, stepsize 0.220093 days, at day 0.677473/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.963e-18  1.782e-06  1.911e-01  1.949e-01
+   1  2.650e-07  2.637e-07  1.198e+00  1.577e+00
+   2  2.858e-08  2.903e-08  1.272e+00  1.098e+00
+   3  2.220e-08  2.253e-08  1.272e+00  2.986e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   4  2.063e-09  2.104e-09  7.024e-01  6.220e-02
+   5  5.454e-10  5.513e-10  1.505e-01  8.790e-03
+   6  4.523e-11  4.577e-11  1.177e-03  1.528e-04
+Overall linear iterations used: 9
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 6, stepsize 0.396167 days, at day 0.897565/7, date = 01-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.672e-17  3.205e-06  3.195e-01  3.249e-01
+   1  1.290e-06  1.302e-06  2.785e+00  3.501e+00
+   2  7.999e-07  8.111e-07  4.522e+00  3.102e+00
+   3  5.275e-07  5.347e-07  2.809e+00  1.854e+00
+   4  2.748e-07  2.786e-07  2.394e+00  1.701e+00
+   5  9.062e-08  9.198e-08  2.232e+00  3.821e-01
+   6  9.495e-09  9.660e-09  1.944e+00  3.128e-01
+   7  3.976e-10  4.131e-10  8.973e-01  8.500e-02
+   8  9.717e-10  9.870e-10  6.672e-02  2.727e-03
+   9  2.841e-11  2.890e-11  2.033e-04  2.691e-05
+Overall linear iterations used: 15
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 7, stepsize 0.352148 days, at day 1.29373/7, date = 02-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.050e-21  2.849e-06  1.983e-01  2.017e-01
+   1  4.551e-07  4.537e-07  1.419e+00  1.626e+00
+   2  1.339e-07  1.355e-07  1.486e+00  1.187e+00
+   3  6.173e-08  6.258e-08  1.304e+00  7.121e-01
+   4  2.508e-09  2.566e-09  1.097e+00  1.456e-01
+   5  2.074e-09  2.105e-09  1.508e-01  2.234e-02
+   6  7.717e-11  7.893e-11  9.009e-03  8.591e-04
+Overall linear iterations used: 10
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 8, stepsize 0.633867 days, at day 1.64588/7, date = 02-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.331e-21  5.124e-06  3.528e-01  3.580e-01
+   1  2.033e-06  2.053e-06  4.013e+00  4.188e+00
+   2  1.547e-06  1.566e-06  4.110e+00  1.772e+00
+   3  1.142e-06  1.158e-06  2.515e+00  1.158e+00
+   4  6.916e-07  7.007e-07  2.599e+00  1.850e+00
+   5  4.264e-07  4.320e-07  2.783e+00  3.597e-01
+   6  9.914e-08  1.004e-07  2.315e+00  3.693e-01
+   7  7.925e-09  8.056e-09  1.538e+00  2.403e-01
+   8  1.882e-09  1.917e-09  6.356e-01  4.407e-02
+   9  7.723e-10  7.845e-10  2.469e-02  5.725e-03
+  10  6.879e-11  6.990e-11  8.986e-04  1.449e-04
+Overall linear iterations used: 16
+ Newton its=10, linearizations=11 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 9, stepsize 0.507093 days, at day 2.27975/7, date = 03-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.733e-18  4.098e-06  1.896e-01  2.339e-01
+   1  5.344e-07  5.344e-07  1.501e+00  2.585e+00
+   2  2.430e-07  2.461e-07  2.400e+00  1.003e+00
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   3  8.857e-08  8.971e-08  2.694e+00  5.801e-01
+   4  1.907e-08  1.930e-08  1.170e+00  6.296e-01
+   5  7.837e-09  7.943e-09  5.742e-01  1.637e-01
+   6  1.869e-09  1.895e-09  3.004e-01  2.783e-02
+   7  1.567e-10  1.593e-10  1.671e-02  1.897e-03
+   8  5.351e-11  5.436e-11  2.157e-04  1.515e-05
+Overall linear iterations used: 12
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 10, stepsize 0.507093 days, at day 2.78684/7, date = 03-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  7.402e-22  4.095e-06  1.981e-01  2.007e-01
+   1  6.414e-07  6.442e-07  1.921e+00  2.312e+00
+   2  3.058e-07  3.094e-07  1.178e+00  1.025e+00
+   3  3.705e-08  3.748e-08  1.396e+00  3.315e-01
+   4  3.109e-08  3.149e-08  6.384e-01  1.047e-01
+   5  6.336e-09  6.420e-09  1.138e-01  3.221e-02
+   6  8.708e-10  8.829e-10  2.343e-02  2.507e-03
+   7  4.767e-12  4.840e-12  1.161e-04  5.042e-05
+Overall linear iterations used: 13
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 11, stepsize 0.709931 days, at day 3.29393/7, date = 04-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  8.480e-17  5.730e-06  2.790e-01  2.825e-01
+   1  1.575e-06  1.592e-06  3.950e+00  3.471e+00
+   2  1.113e-06  1.126e-06  2.295e+00  1.309e+00
+   3  5.175e-07  5.237e-07  2.273e+00  1.355e+00
+   4  1.333e-07  1.349e-07  1.646e+00  5.979e-01
+   5  1.633e-08  1.657e-08  1.444e+00  1.758e-01
+   6  2.492e-09  2.535e-09  3.650e-01  2.840e-02
+   7  5.861e-10  5.942e-10  3.574e-02  3.336e-03
+   8  3.329e-12  3.370e-12  2.629e-04  1.709e-05
+Overall linear iterations used: 12
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 12, stepsize 0.709931 days, at day 4.00386/7, date = 05-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.546e-18  5.729e-06  2.229e-01  2.258e-01
+   1  1.036e-06  1.039e-06  1.817e+00  3.063e+00
+   2  4.410e-07  4.461e-07  2.499e+00  1.118e+00
+   3  1.996e-07  2.019e-07  3.097e+00  1.085e+00
+   4  5.958e-08  6.027e-08  1.338e+00  4.479e-01
+   5  3.067e-08  3.101e-08  1.947e+00  2.854e-01
+   6  1.300e-08  1.314e-08  6.759e-01  7.397e-02
+   7  2.374e-09  2.403e-09  1.580e-01  1.218e-02
+   8  1.684e-10  1.707e-10  1.227e-02  5.046e-04
+   9  1.339e-11  1.356e-11  2.064e-04  3.825e-06
+Overall linear iterations used: 16
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 13, stepsize 0.63105 days, at day 4.7138/7, date = 05-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.526e-17  5.090e-06  1.894e-01  1.917e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  5.527e-07  5.538e-07  1.632e+00  1.862e+00
+   2  1.578e-07  1.595e-07  8.532e-01  7.898e-01
+   3  1.194e-08  1.202e-08  9.450e-01  2.270e-01
+   4  7.143e-09  7.218e-09  3.670e-01  4.774e-02
+   5  1.095e-09  1.108e-09  1.779e-02  3.602e-03
+   6  4.142e-11  4.200e-11  2.460e-04  4.797e-05
+Overall linear iterations used: 11
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 14, stepsize 0.827577 days, at day 5.34485/7, date = 06-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  8.912e-16  6.673e-06  2.605e-01  2.634e-01
+   1  1.536e-06  1.548e-06  2.084e+00  2.818e+00
+   2  7.481e-07  7.561e-07  2.701e+00  1.013e+00
+   3  1.919e-07  1.940e-07  3.201e+00  7.699e-01
+   4  8.182e-08  8.275e-08  1.794e+00  4.470e-01
+   5  1.228e-08  1.243e-08  7.591e-01  1.356e-01
+   6  6.645e-09  6.725e-09  5.026e-01  3.645e-02
+   7  6.885e-10  6.970e-10  3.344e-02  2.665e-03
+   8  7.923e-11  8.028e-11  2.387e-03  4.401e-05
+Overall linear iterations used: 12
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 15, stepsize 0.827577 days, at day 6.17242/7, date = 07-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  6.706e-16  6.672e-06  2.259e-01  2.284e-01
+   1  1.103e-06  1.108e-06  2.159e+00  2.412e+00
+   2  5.146e-07  5.201e-07  1.624e+00  8.603e-01
+   3  8.798e-08  8.886e-08  1.716e+00  2.929e-01
+   4  2.091e-08  2.117e-08  9.103e-01  7.525e-02
+   5  2.738e-10  2.803e-10  9.032e-02  1.167e-01
+   6  3.014e-09  3.050e-09  9.490e-03  8.439e-03
+Overall linear iterations used: 9
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+Sub steps started at time = 0 (days)
+ step[ 0 ] = 0.1089 (days)
+ step[ 1 ] = 0.0458526 (days)
+ step[ 2 ] = 0.137558 (days)
+ step[ 3 ] = 0.137558 (days)
+ step[ 4 ] = 0.247604 (days)
+ step[ 5 ] = 0.220093 (days)
+ step[ 6 ] = 0.396167 (days)
+ step[ 7 ] = 0.352148 (days)
+ step[ 8 ] = 0.633867 (days)
+ step[ 9 ] = 0.507093 (days)
+ step[ 10 ] = 0.507093 (days)
+ step[ 11 ] = 0.709931 (days)
+ step[ 12 ] = 0.709931 (days)
+ step[ 13 ] = 0.63105 (days)
+ step[ 14 ] = 0.827577 (days)
+ step[ 15 ] = 0.827577 (days)
+sub steps end time = 7 (days)
+Suggested next step size = 1.48964 (days)
+
+Time step took 1.424804 seconds; total solver time 1.424804 seconds.
+
+
+
+---------------    Simulation step number 1    ---------------
+      Current time (days)     7
+      Current stepsize (days) 14
+      Total time (days)       456
+
+
+
+Report step  1/8 at day 7/456, date = 08-Jan-2000
+
+Starting time step 0, stepsize 1.48964 days, at day 7/21, date = 08-Jan-2000
+Restart file written for report step 1/8, date = 08-Jan-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.085e-20  3.669e-21  3.738e-01  7.712e+02
+   1  2.359e-08  2.700e-08  2.008e+00  2.221e+01
+   2  1.223e-07  1.241e-07  6.302e-01  2.185e-01
+   3  2.330e-09  7.042e-09  8.233e-02  5.285e-01
+   4  2.197e-09  7.536e-10  4.297e-02  6.298e-01
+   5  3.018e-09  6.860e-10  4.474e-02  1.394e-01
+   6  6.202e-10  7.430e-10  4.826e-03  9.256e-02
+   7  2.471e-10  1.586e-09  2.244e-03  4.240e-02
+   8  3.664e-11  1.075e-09  3.329e-05  4.848e-03
+Overall linear iterations used: 17
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 1, stepsize 1.48964 days, at day 8.48964/21, date = 09-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.891e-16  3.103e-19  9.842e-02  9.552e-02
+   1  6.497e-10  5.642e-09  5.942e-02  7.122e-02
+   2  2.592e-09  5.988e-09  3.629e-02  2.541e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   3  5.100e-09  5.110e-09  2.311e-02  1.649e-01
+   4  1.795e-09  1.798e-09  2.704e-03  4.646e-02
+   5  4.343e-10  4.351e-10  7.879e-04  1.212e-02
+   6  9.721e-11  9.740e-11  2.348e-05  7.048e-04
+Overall linear iterations used: 12
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 2, stepsize 2.68135 days, at day 9.97928/21, date = 10-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  9.310e-21  2.573e-22  1.044e-01  1.027e-01
+   1  6.253e-09  7.508e-09  6.719e-02  7.800e-02
+   2  4.580e-10  4.591e-10  1.674e-02  1.071e-01
+   3  1.488e-09  1.489e-09  2.132e-03  1.628e-02
+   4  3.850e-10  3.853e-10  6.705e-05  1.294e-03
+Overall linear iterations used: 6
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 4.16968 days, at day 12.6606/21, date = 13-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.749e-15  2.166e-21  1.072e-01  1.066e-01
+   1  4.225e-09  4.622e-09  1.166e-01  7.931e-02
+   2  1.164e-09  1.163e-09  4.871e-02  6.931e-01
+   3  1.378e-08  1.379e-08  1.751e-02  1.953e-01
+   4  3.266e-09  3.267e-09  1.905e-03  5.449e-02
+   5  7.303e-10  7.307e-10  3.164e-04  5.502e-03
+Overall linear iterations used: 8
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 4, stepsize 4.16968 days, at day 16.8303/21, date = 17-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.239e-20  1.474e-21  1.051e-01  1.048e-01
+   1  6.364e-10  6.676e-10  6.836e-02  6.167e-02
+   2  6.609e-10  6.616e-10  7.418e-03  1.171e-01
+   3  1.960e-09  1.960e-09  8.919e-04  2.566e-02
+   4  3.932e-10  3.933e-10  7.951e-05  2.423e-03
+Overall linear iterations used: 6
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+Sub steps started at time = 7 (days)
+ step[ 0 ] = 1.48964 (days)
+ step[ 1 ] = 1.48964 (days)
+ step[ 2 ] = 2.68135 (days)
+ step[ 3 ] = 4.16968 (days)
+ step[ 4 ] = 4.16968 (days)
+sub steps end time = 21 (days)
+Suggested next step size = 10.8412 (days)
+
+Time step took 0.251269 seconds; total solver time 1.676073 seconds.
+
+
+
+---------------    Simulation step number 2    ---------------
+      Current time (days)     21
+      Current stepsize (days) 7
+      Total time (days)       456
+
+
+
+Report step  2/8 at day 21/456, date = 22-Jan-2000
+
+Starting time step 0, stepsize 7 days, at day 21/28, date = 22-Jan-2000
+Restart file written for report step 2/8, date = 22-Jan-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.559e-16  5.688e-05  1.215e-01  3.657e+03
+   1  4.586e-05  4.561e-05  6.177e+00  2.249e+03
+   2  4.792e-05  4.398e-05  3.909e+01  1.122e+02
+   3  4.447e-05  4.048e-05  5.357e+01  9.287e+01
+   4  3.963e-05  3.826e-05  1.066e+01  1.525e+02
+   5  3.748e-05  3.637e-05  9.510e+00  6.634e+01
+   6  3.551e-05  3.484e-05  1.091e+01  4.007e+01
+   7  3.374e-05  3.334e-05  1.367e+01  4.614e+01
+   8  3.182e-05  3.159e-05  1.659e+01  3.159e+01
+   9  2.963e-05  2.954e-05  1.055e+01  1.790e+01
+  10  2.862e-05  2.878e-05  1.095e+01  2.709e+01
+  11  2.701e-05  2.731e-05  1.748e+01  8.384e+00
+  12  2.504e-05  2.533e-05  1.264e+01  1.058e+01
+  13  2.326e-05  2.370e-05  1.000e+01  1.553e+01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  14  2.172e-05  2.191e-05  1.128e+01  2.605e+01
+  15  2.064e-05  2.082e-05  1.317e+01  7.060e+00
+  16  1.872e-05  1.888e-05  6.209e+01  7.395e+01
+  17  1.628e-05  1.641e-05  1.119e+01  2.254e+01
+  18  1.543e-05  1.555e-05  1.317e+01  1.982e+01
+  19  1.422e-05  1.434e-05  1.216e+01  5.148e+00
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  1.266e-05  1.276e-05  1.598e+01  6.350e+00
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 21/28, date = 22-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.146e-17  1.877e-05  4.008e-02  1.207e+03
+   1  1.096e-05  1.093e-05  2.060e+00  2.844e+02
+   2  9.627e-06  9.700e-06  9.281e+00  1.723e+01
+   3  7.671e-06  7.646e-06  1.309e+01  1.494e+01
+   4  6.412e-06  6.462e-06  3.548e+00  7.496e+00
+   5  5.439e-06  5.483e-06  3.054e+00  3.354e+00
+   6  4.276e-06  4.310e-06  3.195e+00  1.118e+01
+   7  2.767e-06  2.788e-06  5.090e+00  5.704e+00
+   8  1.990e-06  2.005e-06  2.973e+00  2.914e+00
+   9  1.082e-06  1.090e-06  3.900e+00  1.523e+00
+  10  6.070e-07  6.117e-07  2.856e+00  6.668e-01
+  11  6.934e-08  6.988e-08  2.417e+00  6.115e-01
+  12  1.066e-08  1.077e-08  1.530e+00  1.666e-01
+  13  7.486e-09  7.535e-09  1.300e+00  3.713e-02
+  14  8.595e-10  8.673e-10  2.879e-01  3.476e-03
+  15  9.471e-12  9.560e-12  4.242e-03  4.162e-05
+Overall linear iterations used: 27
+ Newton its=15, linearizations=16 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 1, stepsize 1.232 days, at day 23.31/28, date = 24-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.451e-15  9.951e-06  1.648e-01  4.702e+01
+   1  2.932e-07  2.715e-07  8.821e-01  1.470e+00
+   2  2.208e-07  2.228e-07  1.917e+00  5.755e-01
+   3  8.742e-08  8.833e-08  1.454e+00  2.326e-01
+   4  4.909e-08  4.956e-08  7.374e-01  8.779e-02
+   5  9.206e-10  9.333e-10  1.316e-01  7.982e-03
+   6  2.597e-10  2.616e-10  9.902e-04  1.102e-03
+Overall linear iterations used: 10
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 2.2176 days, at day 24.542/28, date = 25-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.010e-17  1.796e-05  3.363e-01  8.750e+00
+   1  6.678e-06  6.702e-06  4.872e+00  7.201e+00
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   2  4.595e-06  4.638e-06  6.326e+00  7.663e+00
+   3  3.125e-06  3.153e-06  3.435e+00  2.570e+00
+   4  2.123e-06  2.142e-06  4.479e+00  2.162e+00
+   5  1.141e-06  1.151e-06  3.225e+00  1.905e+00
+   6  3.213e-07  3.240e-07  2.700e+00  4.992e-01
+   7  4.043e-08  4.079e-08  2.173e+00  2.282e-01
+   8  4.093e-09  4.125e-09  1.677e+00  2.090e-01
+   9  1.484e-09  1.503e-09  3.148e-01  2.961e-01
+  10  1.610e-09  1.632e-09  3.192e-02  2.014e-01
+  11  3.760e-09  3.805e-09  7.115e-03  1.343e-02
+  12  7.911e-12  7.994e-12  3.629e-05  7.880e-05
+Overall linear iterations used: 23
+ Newton its=12, linearizations=13 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 3, stepsize 1.2404 days, at day 26.7596/28, date = 27-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.608e-17  1.002e-05  1.494e-01  2.903e+00
+   1  1.296e-07  1.333e-07  6.797e-01  1.159e+00
+   2  3.971e-08  4.006e-08  6.983e-01  4.077e-01
+   3  3.107e-08  3.140e-08  8.334e-01  2.080e-01
+   4  8.475e-09  8.562e-09  3.502e-01  3.427e-02
+   5  2.198e-09  2.225e-09  2.252e-01  7.672e-03
+   6  9.638e-11  1.060e-10  2.346e-02  1.369e-03
+   7  2.644e-14  6.575e-13  7.000e-04  3.081e-04
+Overall linear iterations used: 15
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 15 (0.0sec)
+Sub steps started at time = 21 (days)
+ step[ 0 ] = 2.31 (days)
+ step[ 1 ] = 1.232 (days)
+ step[ 2 ] = 2.2176 (days)
+ step[ 3 ] = 1.2404 (days)
+sub steps end time = 28 (days)
+Suggested next step size = 1.73656 (days)
+
+Time step took 0.524188 seconds; total solver time 2.200260 seconds.
+
+
+
+---------------    Simulation step number 3    ---------------
+      Current time (days)     28
+      Current stepsize (days) 21
+      Total time (days)       456
+
+
+
+Report step  3/8 at day 28/456, date = 29-Jan-2000
+
+Starting time step 0, stepsize 1.73656 days, at day 28/49, date = 29-Jan-2000
+Restart file written for report step 3/8, date = 29-Jan-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.902e-18  3.133e-19  2.420e-01  8.992e+02
+   1  2.947e-07  2.881e-07  3.443e+00  2.083e+01
+   2  9.731e-08  9.744e-08  7.683e-01  2.630e-01
+   3  7.233e-10  7.032e-09  9.773e-02  8.515e-01
+   4  6.404e-09  2.779e-10  5.333e-02  2.504e-01
+   5  2.687e-09  7.027e-10  1.244e-02  8.676e-02
+   6  2.712e-09  1.345e-09  3.344e-02  2.406e-01
+   7  1.683e-09  4.654e-09  1.010e-02  5.705e-02
+   8  2.027e-10  2.577e-09  3.171e-02  2.216e-01
+    Oscillating behavior detected: Relaxation set to 0.900000
+   9  4.234e-12  1.956e-09  4.544e-03  6.788e-02
+  10  5.915e-10  1.045e-09  2.036e-03  2.849e-02
+  11  1.860e-10  1.141e-09  4.845e-04  1.413e-02
+  12  1.100e-11  1.520e-10  6.309e-05  3.419e-03
+Overall linear iterations used: 27
+ Newton its=12, linearizations=13 (0.0sec), linear its= 27 (0.0sec)
+
+Starting time step 1, stepsize 1.15771 days, at day 29.7366/49, date = 30-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.379e-16  6.910e-22  5.397e-02  5.229e-02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  4.854e-09  9.371e-09  2.173e-02  4.237e-02
+   2  3.510e-10  3.514e-10  9.776e-03  1.019e-01
+   3  1.742e-09  1.746e-09  8.071e-03  6.834e-02
+   4  7.791e-10  7.807e-10  2.113e-03  4.410e-02
+   5  5.486e-11  5.509e-11  6.536e-04  6.119e-03
+Overall linear iterations used: 8
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 2, stepsize 2.54695 days, at day 30.8943/49, date = 31-Jan-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.839e-18  2.350e-21  7.140e-02  6.929e-02
+   1  1.029e-08  1.202e-08  5.108e-02  5.472e-02
+   2  3.296e-09  3.301e-09  9.795e-03  1.017e-01
+   3  3.178e-10  3.179e-10  1.512e-03  1.298e-02
+   4  1.839e-10  1.841e-10  7.522e-04  7.546e-04
+Overall linear iterations used: 7
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 6.62208 days, at day 33.4412/49, date = 03-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.696e-20  6.467e-22  1.402e-01  1.386e-01
+   1  7.229e-09  8.373e-09  3.060e-01  1.195e-01
+   2  2.500e-09  2.506e-09  1.133e-01  3.529e+00
+   3  2.751e-07  2.753e-07  1.079e-01  2.871e+00
+   4  9.120e-08  9.122e-08  3.646e-02  5.713e-01
+   5  3.255e-08  3.257e-08  1.338e-02  1.464e-01
+   6  9.448e-09  9.452e-09  5.330e-04  2.855e-02
+   7  9.668e-10  9.673e-10  1.996e-04  2.937e-03
+Overall linear iterations used: 11
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 4, stepsize 8.9367 days, at day 40.0633/49, date = 10-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.464e-20  1.470e-21  1.432e-01  1.428e-01
+   1  7.279e-09  7.232e-09  2.846e-01  1.103e-01
+   2  4.271e-10  4.241e-10  6.479e-02  2.934e+00
+   3  1.414e-07  1.414e-07  7.448e-02  3.676e+00
+   4  1.576e-07  1.576e-07  1.822e-02  4.200e-01
+   5  2.751e-08  2.752e-08  5.058e-03  1.069e-01
+   6  8.592e-09  8.591e-09  2.693e-04  1.746e-02
+   7  1.033e-09  1.033e-09  4.287e-05  7.736e-04
+Overall linear iterations used: 12
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+Sub steps started at time = 28 (days)
+ step[ 0 ] = 1.73656 (days)
+ step[ 1 ] = 1.15771 (days)
+ step[ 2 ] = 2.54695 (days)
+ step[ 3 ] = 6.62208 (days)
+ step[ 4 ] = 8.9367 (days)
+sub steps end time = 49 (days)
+Suggested next step size = 12.5114 (days)
+
+Time step took 0.308404 seconds; total solver time 2.508665 seconds.
+
+
+
+---------------    Simulation step number 4    ---------------
+      Current time (days)     49
+      Current stepsize (days) 7
+      Total time (days)       456
+
+
+
+Report step  4/8 at day 49/456, date = 19-Feb-2000
+
+Starting time step 0, stepsize 7 days, at day 49/56, date = 19-Feb-2000
+Restart file written for report step 4/8, date = 19-Feb-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.290e-20  5.686e-05  9.493e-02  3.655e+03
+   1  4.046e-05  4.025e-05  3.076e+00  2.561e+02
+   2  3.935e-05  3.709e-05  2.626e+01  8.563e+01
+   3  3.261e-05  3.080e-05  1.899e+01  3.811e+01
+   4  3.009e-05  2.761e-05  1.071e+01  2.834e+01
+   5  2.780e-05  2.555e-05  6.460e+00  2.813e+01
+   6  2.390e-05  2.365e-05  1.028e+01  8.472e+00
+   7  2.117e-05  2.107e-05  5.624e+00  1.091e+01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   8  1.883e-05  1.895e-05  8.572e+00  1.160e+01
+   9  1.687e-05  1.697e-05  6.716e+00  5.873e+00
+  10  1.459e-05  1.469e-05  8.089e+00  1.016e+01
+  11  1.251e-05  1.257e-05  7.176e+00  5.871e+00
+  12  1.043e-05  1.048e-05  5.642e+00  3.301e+00
+  13  8.396e-06  8.426e-06  5.566e+00  5.910e+00
+  14  6.507e-06  6.536e-06  5.275e+00  3.212e+00
+  15  4.832e-06  4.836e-06  5.090e+00  6.044e+00
+  16  3.338e-06  3.345e-06  4.332e+00  3.132e+00
+  17  1.831e-06  1.814e-06  3.869e+00  6.079e+00
+  18  1.287e-06  1.280e-06  3.210e+00  3.070e+00
+  19  9.258e-07  9.023e-07  2.371e+00  6.099e+00
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  6.576e-07  6.469e-07  2.329e+00  3.050e+00
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 49/56, date = 19-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.256e-21  1.876e-05  3.133e-02  1.206e+03
+   1  7.960e-06  7.867e-06  9.851e-01  5.687e+01
+   2  7.470e-06  7.432e-06  2.763e+00  1.264e+01
+   3  4.057e-06  4.079e-06  3.541e+00  4.654e+01
+   4  2.573e-06  2.587e-06  2.836e+00  1.455e+01
+    Oscillating behavior detected: Relaxation set to 0.900000
+   5  1.546e-06  1.555e-06  2.885e+00  4.638e+00
+   6  5.669e-07  5.702e-07  2.859e+00  2.038e+00
+   7  7.000e-07  7.042e-07  1.742e+00  7.729e-01
+   8  3.282e-07  5.169e-07  1.188e+00  1.205e+01
+   9  3.648e-08  2.366e-08  1.006e+00  3.871e+00
+  10  4.430e-09  2.797e-07  2.226e-01  1.778e+01
+  11  5.970e-10  1.762e-07  1.565e-02  1.135e+01
+  12  5.756e-11  1.900e-07  1.586e-03  1.233e+01
+  13  5.345e-12  1.950e-07  4.323e-04  1.252e+01
+  14  4.087e-13  1.912e-07  5.846e-04  1.241e+01
+  15  9.727e-14  1.950e-07  4.323e-04  1.251e+01
+  16  1.323e-13  1.910e-07  5.846e-04  1.240e+01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  17  6.909e-14  1.949e-07  4.323e-04  1.251e+01
+  18  7.333e-14  1.910e-07  5.846e-04  1.240e+01
+  19  6.879e-14  1.949e-07  4.323e-04  1.251e+01
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  7.323e-14  1.910e-07  5.846e-04  1.240e+01
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.7623 days
+
+
+Starting time step 0, stepsize 0.7623 days, at day 49/56, date = 19-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.405e-21  6.192e-06  1.034e-02  3.980e+02
+   1  6.565e-07  6.971e-07  2.780e-01  1.026e+01
+   2  7.732e-07  7.766e-07  6.191e-01  2.732e+00
+   3  4.093e-08  4.123e-08  2.644e-01  7.370e-01
+   4  2.084e-09  2.065e-09  1.064e-01  1.433e-01
+   5  4.426e-09  4.422e-09  6.592e-03  1.395e-02
+   6  6.241e-11  6.598e-11  1.727e-04  3.653e-03
+Overall linear iterations used: 9
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 1.14171 days, at day 49.7623/56, date = 19-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  8.495e-21  9.239e-06  2.604e-01  3.553e+01
+   1  1.423e-06  1.403e-06  5.968e-01  2.652e+00
+   2  3.190e-07  3.191e-07  8.273e-01  7.044e-01
+   3  4.367e-08  4.396e-08  7.341e-01  2.090e-01
+   4  2.268e-09  2.229e-09  3.110e-01  3.551e-02
+   5  9.940e-11  1.450e-10  7.699e-03  1.391e-02
+   6  3.039e-12  7.484e-11  2.862e-04  2.938e-03
+Overall linear iterations used: 11
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 2, stepsize 2.05509 days, at day 50.904/56, date = 20-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.275e-15  1.660e-05  3.721e-01  9.360e+00
+   1  5.060e-06  5.015e-06  2.760e+00  5.893e+00
+   2  2.902e-06  2.914e-06  2.159e+00  1.766e+00
+   3  1.343e-06  1.353e-06  1.807e+00  8.737e-01
+   4  4.626e-07  4.661e-07  1.790e+00  5.466e-01
+   5  1.305e-08  1.317e-08  1.635e+00  2.193e-01
+   6  3.839e-09  3.873e-09  6.185e-01  8.779e-02
+   7  1.677e-10  1.715e-10  6.614e-02  8.761e-03
+   8  1.616e-10  1.633e-10  1.820e-04  1.062e-04
+Overall linear iterations used: 14
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 3, stepsize 1.52045 days, at day 52.9591/56, date = 22-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.268e-21  1.232e-05  1.816e-01  7.405e+00
+   1  8.839e-07  8.742e-07  7.568e-01  1.921e+00
+   2  1.300e-07  1.309e-07  1.342e+00  6.207e-01
+   3  1.916e-08  1.933e-08  4.049e-01  2.167e-01
+   4  6.495e-09  6.549e-09  4.023e-01  3.304e-02
+   5  7.336e-10  7.400e-10  1.787e-02  4.643e-03
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   6  2.639e-10  2.662e-10  9.252e-03  4.641e-05
+Overall linear iterations used: 11
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 4, stepsize 1.52045 days, at day 54.4795/56, date = 24-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.874e-15  1.228e-05  1.963e-01  2.849e+00
+   1  1.312e-06  1.310e-06  1.019e+00  1.871e+00
+   2  6.848e-08  6.900e-08  1.216e+00  5.765e-01
+   3  1.342e-08  1.354e-08  4.696e-01  9.586e-02
+   4  6.776e-09  6.832e-09  1.746e-01  1.157e-02
+   5  2.760e-10  2.779e-10  1.675e-02  1.600e-03
+   6  1.860e-11  1.873e-11  4.919e-04  1.038e-05
+Overall linear iterations used: 10
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+Sub steps started at time = 49 (days)
+ step[ 0 ] = 0.7623 (days)
+ step[ 1 ] = 1.14171 (days)
+ step[ 2 ] = 2.05509 (days)
+ step[ 3 ] = 1.52045 (days)
+ step[ 4 ] = 1.52045 (days)
+sub steps end time = 56 (days)
+Suggested next step size = 2.73681 (days)
+
+Time step took 0.680535 seconds; total solver time 3.189200 seconds.
+
+
+
+---------------    Simulation step number 5    ---------------
+      Current time (days)     56
+      Current stepsize (days) 28
+      Total time (days)       456
+
+
+
+Report step  5/8 at day 56/456, date = 26-Feb-2000
+
+Starting time step 0, stepsize 2.73681 days, at day 56/84, date = 26-Feb-2000
+Restart file written for report step 5/8, date = 26-Feb-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  9.290e-21  3.159e-22  3.654e-01  1.418e+03
+   1  4.732e-07  4.036e-07  3.435e+00  3.231e+01
+   2  1.648e-07  1.439e-07  1.381e+00  6.845e-01
+   3  3.147e-08  5.352e-09  2.651e-01  5.868e-01
+   4  1.874e-08  2.096e-09  4.627e-02  1.529e-01
+   5  4.794e-09  1.168e-08  7.072e-03  2.092e-01
+   6  5.528e-09  6.948e-09  8.858e-03  5.838e-02
+   7  1.267e-10  3.249e-09  1.494e-02  2.564e-01
+   8  6.591e-09  9.536e-09  7.757e-03  5.857e-02
+    Oscillating behavior detected: Relaxation set to 0.900000
+   9  1.903e-09  4.378e-09  6.449e-03  1.336e-01
+  10  3.876e-09  5.751e-09  2.859e-03  5.186e-02
+  11  1.008e-09  7.303e-10  3.032e-03  2.135e-02
+  12  1.348e-10  1.264e-09  3.528e-03  5.305e-02
+  13  1.589e-09  5.828e-10  3.093e-03  2.127e-02
+  14  5.844e-10  1.251e-09  3.604e-03  5.306e-02
+  15  1.447e-09  8.093e-10  3.084e-03  2.127e-02
+  16  5.865e-10  9.714e-10  3.580e-03  5.306e-02
+  17  1.452e-09  1.040e-09  3.084e-03  2.127e-02
+  18  5.757e-10  7.891e-10  3.583e-03  5.306e-02
+  19  1.465e-09  1.190e-09  3.084e-03  2.127e-02
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  5.677e-10  6.768e-10  3.582e-03  5.306e-02
+Overall linear iterations used: 43
+ Newton its=20, linearizations=21 (0.0sec), linear its= 43 (0.1sec)
+
+Starting time step 1, stepsize 1.09472 days, at day 58.7368/84, date = 28-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  6.457e-17  1.214e-18  4.262e-02  4.160e-02
+   1  1.251e-09  3.036e-09  8.767e-03  2.391e-02
+   2  1.014e-10  1.580e-09  2.823e-03  1.522e-02
+   3  2.104e-10  1.001e-09  9.928e-05  3.723e-03
+Overall linear iterations used: 8
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 2, stepsize 3.28417 days, at day 59.8315/84, date = 29-Feb-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.596e-16  3.563e-21  8.992e-02  8.828e-02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  8.391e-09  5.793e-09  6.768e-02  5.966e-02
+   2  4.086e-10  4.096e-10  1.259e-02  1.794e-01
+   3  5.718e-09  5.723e-09  4.287e-03  4.298e-02
+   4  7.397e-10  7.401e-10  4.826e-04  6.628e-03
+Overall linear iterations used: 7
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 8.53885 days, at day 63.1157/84, date = 04-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.360e-19  1.031e-18  1.672e-01  1.655e-01
+   1  7.729e-09  9.491e-09  3.217e-01  1.329e-01
+   2  1.310e-09  1.306e-09  1.334e-01  3.059e+00
+   3  3.350e-07  3.351e-07  6.497e-02  3.792e+00
+   4  2.480e-07  2.481e-07  2.165e-02  2.900e-01
+   5  7.499e-09  7.500e-09  8.164e-03  6.465e-02
+   6  1.089e-09  1.088e-09  1.047e-03  9.132e-03
+Overall linear iterations used: 10
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 4, stepsize 12.3454 days, at day 71.6546/84, date = 12-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.373e-14  3.687e-20  2.123e-01  2.118e-01
+   1  2.148e-09  2.190e-09  3.512e-01  1.574e-01
+   2  6.381e-09  6.379e-09  1.223e-01  2.927e+00
+   3  3.143e-07  3.143e-07  6.382e-02  3.769e+00
+   4  2.490e-07  2.491e-07  3.419e-02  1.116e+00
+   5  5.720e-08  5.721e-08  1.838e-02  3.311e-01
+   6  2.068e-08  2.068e-08  7.527e-04  8.277e-02
+   7  3.870e-09  3.870e-09  9.841e-05  1.243e-02
+   8  3.019e-10  3.019e-10  5.134e-05  5.015e-04
+Overall linear iterations used: 15
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 15 (0.0sec)
+Sub steps started at time = 56 (days)
+ step[ 0 ] = 2.73681 (days)
+ step[ 1 ] = 1.09472 (days)
+ step[ 2 ] = 3.28417 (days)
+ step[ 3 ] = 8.53885 (days)
+ step[ 4 ] = 12.3454 (days)
+sub steps end time = 84 (days)
+Suggested next step size = 12.3454 (days)
+
+Time step took 0.366517 seconds; total solver time 3.555717 seconds.
+
+
+
+---------------    Simulation step number 6    ---------------
+      Current time (days)     84
+      Current stepsize (days) 7
+      Total time (days)       456
+
+
+
+Report step  6/8 at day 84/456, date = 25-Mar-2000
+
+Starting time step 0, stepsize 7 days, at day 84/91, date = 25-Mar-2000
+Restart file written for report step 6/8, date = 25-Mar-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.129e-15  5.685e-05  9.402e-02  3.656e+03
+   1  3.658e-05  3.634e-05  3.681e+00  1.814e+02
+   2  3.812e-05  3.636e-05  2.428e+01  8.306e+01
+   3  2.898e-05  2.803e-05  1.303e+01  5.189e+01
+   4  2.429e-05  2.291e-05  9.584e+00  3.973e+01
+   5  2.062e-05  1.930e-05  4.398e+00  1.598e+01
+   6  1.825e-05  1.703e-05  4.666e+00  1.464e+01
+   7  1.428e-05  1.328e-05  4.922e+00  1.204e+01
+   8  1.210e-05  1.138e-05  6.531e+00  8.949e+00
+   9  9.489e-06  8.887e-06  8.341e+00  7.469e+00
+  10  7.429e-06  7.003e-06  6.740e+00  5.832e+00
+  11  5.158e-06  4.818e-06  5.755e+00  6.485e+00
+  12  3.259e-06  3.033e-06  4.384e+00  3.068e+00
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  13  1.919e-06  1.901e-06  3.702e+00  6.127e+00
+  14  8.525e-07  8.430e-07  3.187e+00  2.923e+00
+  15  3.704e-07  3.432e-07  1.945e+00  6.111e+00
+  16  1.737e-07  1.609e-07  1.895e+00  2.900e+00
+  17  4.151e-09  3.301e-08  1.699e+00  6.115e+00
+  18  3.654e-09  1.732e-08  6.635e-01  2.886e+00
+  19  1.372e-10  2.897e-08  4.935e-02  6.113e+00
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  1.850e-11  1.368e-08  1.724e-03  2.891e+00
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 84/91, date = 25-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.725e-16  1.876e-05  3.103e-02  1.206e+03
+   1  6.298e-06  6.224e-06  1.018e+00  4.165e+01
+   2  5.267e-06  5.211e-06  1.232e+00  1.346e+01
+   3  1.496e-06  1.502e-06  1.305e+00  8.331e+00
+   4  7.831e-07  7.861e-07  2.450e+00  1.987e+00
+   5  1.866e-07  1.869e-07  2.702e+00  2.506e+00
+   6  1.074e-07  1.085e-07  6.532e-01  6.479e-01
+   7  2.596e-09  3.237e-09  4.338e-01  4.173e-01
+   8  1.649e-09  2.270e-09  1.031e-02  2.859e-01
+   9  6.825e-13  6.181e-10  4.242e-03  4.210e-01
+  10  2.943e-12  6.135e-10  6.624e-04  2.856e-01
+  11  3.814e-14  6.156e-10  4.858e-04  4.211e-01
+  12  3.237e-12  6.131e-10  6.624e-04  2.856e-01
+    Oscillating behavior detected: Relaxation set to 0.900000
+  13  3.628e-13  2.228e-07  4.129e-04  1.429e+01
+  14  2.436e-12  1.799e-07  5.618e-04  1.167e+01
+  15  6.545e-13  1.711e-07  4.190e-04  1.098e+01
+  16  2.845e-13  1.690e-07  5.610e-04  1.097e+01
+  17  8.423e-13  1.723e-07  4.190e-04  1.106e+01
+  18  3.060e-13  1.689e-07  5.610e-04  1.096e+01
+  19  6.489e-13  1.723e-07  4.190e-04  1.106e+01
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  2.526e-13  1.690e-07  5.610e-04  1.096e+01
+Caught Exception: [/Users/macbookn/activopmwkspc/edgedev/opm-simulators/opm/simulators/flow/NonlinearSolver.hpp:175] Solver convergence failure - Failed to complete a time step within 20 iterations.
+Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.7623 days
+
+
+Starting time step 0, stepsize 0.7623 days, at day 84/91, date = 25-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.229e-16  6.191e-06  1.024e-02  3.981e+02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  3.394e-07  3.546e-07  2.523e-01  8.336e+00
+   2  7.880e-08  7.913e-08  2.309e-01  1.633e+00
+   3  1.134e-07  1.137e-07  6.453e-02  3.273e-01
+   4  5.442e-09  5.435e-09  8.085e-03  2.291e-01
+   5  5.863e-10  5.934e-10  9.642e-04  1.078e-02
+   6  6.721e-11  6.896e-11  4.982e-05  3.569e-04
+Overall linear iterations used: 11
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 1, stepsize 1.18606 days, at day 84.7623/91, date = 25-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.558e-21  9.598e-06  2.361e-01  3.439e+01
+   1  6.935e-07  6.752e-07  3.809e-01  1.085e+00
+   2  5.685e-08  5.523e-08  3.177e-01  6.567e-01
+   3  7.467e-08  7.510e-08  3.947e-01  8.292e-02
+   4  7.020e-09  7.062e-09  1.657e-01  1.047e-02
+   5  1.935e-10  1.943e-10  2.632e-03  1.622e-03
+Overall linear iterations used: 10
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 2.60933 days, at day 85.9484/91, date = 26-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.383e-15  2.108e-05  4.239e-01  1.220e+01
+   1  6.846e-06  6.826e-06  2.338e+00  5.957e+00
+   2  3.484e-06  3.504e-06  1.691e+00  1.759e+00
+   3  1.288e-06  1.296e-06  1.748e+00  9.526e-01
+   4  3.208e-07  3.229e-07  1.751e+00  9.598e-01
+   5  1.859e-07  1.871e-07  1.191e+00  2.765e-01
+   6  1.456e-08  1.468e-08  5.385e-01  9.152e-02
+   7  5.996e-10  6.066e-10  5.414e-02  2.091e-02
+   8  1.851e-10  1.881e-10  2.740e-03  1.526e-03
+Overall linear iterations used: 16
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 3, stepsize 2.44231 days, at day 88.5577/91, date = 29-Mar-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.238e-20  1.981e-05  2.456e-01  1.479e+01
+   1  3.281e-06  3.272e-06  1.229e+00  4.130e+00
+   2  1.146e-06  1.155e-06  1.265e+00  1.472e+00
+   3  1.024e-07  1.031e-07  1.289e+00  2.757e-01
+   4  1.222e-08  1.233e-08  5.571e-01  3.204e-01
+   5  6.697e-09  6.740e-09  7.984e-02  2.246e-02
+   6  2.276e-10  2.313e-10  6.436e-04  4.434e-03
+Overall linear iterations used: 10
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+Sub steps started at time = 84 (days)
+ step[ 0 ] = 0.7623 (days)
+ step[ 1 ] = 1.18606 (days)
+ step[ 2 ] = 2.60933 (days)
+ step[ 3 ] = 2.44231 (days)
+sub steps end time = 91 (days)
+Suggested next step size = 4.39616 (days)
+
+Time step took 0.640003 seconds; total solver time 4.195719 seconds.
+
+
+
+---------------    Simulation step number 7    ---------------
+      Current time (days)     91
+      Current stepsize (days) 365
+      Total time (days)       456
+
+
+
+Report step  7/8 at day 91/456, date = 01-Apr-2000
+
+Starting time step 0, stepsize 4.39616 days, at day 91/456, date = 01-Apr-2000
+Restart file written for report step 7/8, date = 01-Apr-2000 00:00:00
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.078e-17  8.667e-21  4.096e-01  2.277e+03
+   1  9.237e-07  8.420e-07  5.883e+00  5.209e+01
+   2  3.851e-07  3.154e-07  2.690e+00  1.226e+00
+   3  4.582e-09  6.697e-08  4.718e-01  1.006e+00
+   4  2.073e-08  3.326e-08  8.048e-02  2.506e-01
+   5  9.455e-09  3.127e-08  3.540e-02  3.295e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   6  4.416e-09  4.426e-09  2.553e-02  2.208e-01
+   7  5.945e-09  5.958e-09  3.518e-02  4.139e-01
+   8  1.800e-08  1.804e-08  2.113e-02  2.208e-01
+   9  4.537e-09  4.548e-09  2.898e-02  4.164e-01
+  10  1.788e-08  1.792e-08  2.406e-02  2.209e-01
+    Oscillating behavior detected: Relaxation set to 0.900000
+  11  5.608e-09  5.622e-09  2.663e-02  3.759e-01
+  12  1.494e-08  1.498e-08  2.002e-02  2.013e-01
+  13  7.346e-09  7.360e-09  1.952e-02  3.657e-01
+  14  1.189e-08  1.191e-08  1.843e-02  1.999e-01
+  15  2.913e-09  2.919e-09  1.984e-02  3.775e-01
+  16  1.044e-08  1.046e-08  1.957e-02  1.999e-01
+  17  8.110e-09  8.127e-09  1.878e-02  3.611e-01
+  18  1.091e-08  1.094e-08  1.912e-02  1.999e-01
+  19  2.505e-09  2.511e-09  2.027e-02  3.778e-01
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  1.032e-08  1.034e-08  1.953e-02  1.999e-01
+Overall linear iterations used: 44
+ Newton its=20, linearizations=21 (0.0sec), linear its= 44 (0.1sec)
+
+Starting time step 1, stepsize 1.75846 days, at day 95.3962/456, date = 05-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.289e-21  9.069e-19  4.571e-02  8.046e-02
+   1  4.118e-09  8.519e-09  3.799e-02  3.141e-02
+   2  3.236e-12  3.140e-12  7.981e-03  8.481e-02
+   3  1.345e-09  1.346e-09  7.679e-03  3.745e-02
+   4  1.486e-09  1.488e-09  8.440e-03  8.465e-02
+   5  2.357e-09  2.360e-09  8.639e-03  3.454e-02
+   6  1.472e-09  1.474e-09  8.369e-03  8.467e-02
+   7  1.948e-09  1.950e-09  8.523e-03  3.482e-02
+   8  1.467e-09  1.469e-09  8.370e-03  8.468e-02
+   9  1.938e-09  1.940e-09  8.521e-03  3.482e-02
+  10  1.467e-09  1.469e-09  8.370e-03  8.468e-02
+  11  1.938e-09  1.940e-09  8.521e-03  3.482e-02
+  12  1.467e-09  1.469e-09  8.370e-03  8.468e-02
+  13  1.938e-09  1.940e-09  8.521e-03  3.482e-02
+  14  1.467e-09  1.469e-09  8.370e-03  8.468e-02
+  15  1.938e-09  1.940e-09  8.521e-03  3.482e-02
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+  16  1.222e-09  1.224e-09  8.372e-03  8.468e-02
+  17  1.698e-09  1.700e-09  8.532e-03  3.482e-02
+  18  1.222e-09  1.224e-09  8.372e-03  8.468e-02
+  19  1.701e-09  1.703e-09  8.533e-03  3.482e-02
+Number of newton iterations reached its maximum try to continue with relaxed tolerances:  MB: 1.0e-06 CNV: 1.0e+00
+  20  1.222e-09  1.224e-09  8.372e-03  8.468e-02
+Overall linear iterations used: 41
+ Newton its=20, linearizations=21 (0.0sec), linear its= 41 (0.1sec)
+
+Starting time step 2, stepsize 0.703385 days, at day 97.1546/456, date = 07-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.145e-17  2.254e-22  1.187e-02  3.383e-02
+   1  7.065e-10  1.348e-09  6.340e-03  1.889e-02
+   2  8.954e-10  8.961e-10  9.829e-04  9.322e-03
+Overall linear iterations used: 3
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 3, stepsize 2.11016 days, at day 97.858/456, date = 07-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.963e-17  8.292e-22  3.174e-02  4.700e-02
+   1  1.391e-09  1.656e-09  1.980e-02  1.532e-02
+   2  1.354e-09  1.354e-09  1.695e-03  2.473e-03
+Overall linear iterations used: 3
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 4, stepsize 6.33047 days, at day 99.9682/456, date = 09-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.203e-20  1.719e-21  8.684e-02  8.599e-02
+   1  2.260e-08  2.398e-08  1.137e-01  8.310e-02
+   2  3.681e-09  3.683e-09  4.228e-02  7.398e-01
+   3  6.592e-08  6.594e-08  8.638e-03  2.165e-01
+   4  2.606e-08  2.606e-08  1.555e-02  5.545e-02
+   5  3.890e-09  3.892e-09  3.221e-03  8.807e-03
+Overall linear iterations used: 8
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 13.927 days, at day 106.299/456, date = 16-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.722e-17  2.592e-21  1.397e-01  1.389e-01
+   1  4.967e-08  4.970e-08  3.798e-01  2.037e-01
+   2  4.810e-09  4.813e-09  1.539e-01  2.279e+00
+   3  3.264e-07  3.264e-07  4.029e-02  3.417e+00
+   4  3.140e-07  3.140e-07  2.423e-02  1.059e+00
+   5  9.241e-08  9.239e-08  3.768e-02  3.127e-01
+   6  3.524e-08  3.523e-08  2.565e-03  7.412e-02
+   7  2.137e-09  2.137e-09  2.070e-04  1.003e-02
+   8  4.154e-10  4.153e-10  1.070e-05  2.790e-04
+Overall linear iterations used: 14
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 6, stepsize 13.927 days, at day 120.226/456, date = 30-Apr-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.339e-20  1.610e-21  1.535e-01  1.532e-01
+   1  1.748e-08  1.747e-08  3.188e-01  1.620e-01
+   2  2.489e-09  2.489e-09  1.140e-01  1.935e+00
+   3  1.872e-07  1.871e-07  2.049e-02  1.631e+00
+   4  7.870e-08  7.870e-08  3.789e-02  4.944e-01
+   5  1.685e-08  1.685e-08  9.006e-03  1.349e-01
+   6  1.248e-09  1.248e-09  1.701e-04  2.616e-02
+   7  1.742e-10  1.742e-10  4.834e-05  1.844e-03
+Overall linear iterations used: 13
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 7, stepsize 19.4978 days, at day 134.153/456, date = 14-May-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.062e-14  2.536e-21  2.123e-01  2.121e-01
+   1  1.315e-10  2.446e-10  4.106e-01  2.377e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   2  1.359e-08  1.359e-08  1.172e-01  1.763e+00
+   3  1.283e-07  1.283e-07  1.284e-01  3.782e+00
+   4  3.054e-07  3.054e-07  5.146e-02  1.167e+00
+   5  2.993e-08  2.993e-08  6.298e-03  3.309e-01
+   6  1.855e-08  1.855e-08  1.409e-03  8.194e-02
+   7  3.060e-09  3.060e-09  1.222e-04  1.136e-02
+   8  3.542e-10  3.542e-10  1.658e-05  2.948e-04
+Overall linear iterations used: 16
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 8, stepsize 19.4978 days, at day 153.651/456, date = 02-Jun-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.724e-20  2.670e-21  1.664e-01  1.663e-01
+   1  2.136e-08  2.138e-08  3.078e-01  1.838e-01
+   2  9.554e-10  9.538e-10  1.213e-01  2.377e+00
+   3  1.389e-07  1.389e-07  1.695e-02  1.848e+00
+   4  9.614e-08  9.612e-08  1.149e-02  5.579e-01
+   5  3.845e-08  3.844e-08  1.812e-03  1.535e-01
+   6  1.023e-08  1.022e-08  3.095e-04  2.963e-02
+   7  9.999e-10  9.997e-10  3.981e-05  2.319e-03
+Overall linear iterations used: 12
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 9, stepsize 27.297 days, at day 173.148/456, date = 22-Jun-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  6.780e-21  6.300e-22  1.916e-01  1.914e-01
+   1  1.562e-07  1.561e-07  5.513e-01  2.039e-01
+   2  1.658e-09  1.661e-09  1.068e-01  3.000e+00
+   3  2.724e-07  2.724e-07  4.509e-02  2.535e+00
+   4  2.006e-07  2.005e-07  2.352e-02  7.700e-01
+   5  8.795e-08  8.793e-08  1.812e-03  2.179e-01
+   6  2.707e-08  2.707e-08  2.412e-03  4.621e-02
+   7  3.249e-09  3.249e-09  8.159e-05  4.314e-03
+Overall linear iterations used: 13
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 10, stepsize 38.2158 days, at day 200.445/456, date = 19-Jul-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.861e-14  8.889e-23  2.631e-01  2.629e-01
+   1  1.927e-07  1.925e-07  8.433e-01  2.574e-01
+   2  4.676e-08  4.676e-08  2.046e-01  3.433e+00
+   3  3.184e-07  3.183e-07  1.390e-01  6.342e+00
+   4  2.800e-07  2.800e-07  2.022e-02  3.633e+00
+   5  1.706e-07  1.706e-07  1.187e-02  1.109e+00
+   6  7.357e-08  7.356e-08  1.668e-03  3.161e-01
+   7  2.777e-08  2.776e-08  5.644e-04  7.180e-02
+   8  4.549e-09  4.548e-09  1.203e-04  7.980e-03
+Overall linear iterations used: 16
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 11, stepsize 38.2158 days, at day 238.661/456, date = 26-Aug-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  4.173e-14  4.540e-18  2.097e-01  2.096e-01
+   1  9.865e-08  9.856e-08  8.154e-01  2.094e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   2  4.544e-08  4.544e-08  1.431e-01  4.025e+00
+   3  2.197e-07  2.196e-07  7.645e-02  7.149e+00
+   4  4.098e-07  4.097e-07  2.154e-02  3.704e+00
+   5  4.410e-08  4.409e-08  2.402e-02  1.017e+00
+   6  2.841e-08  2.841e-08  6.165e-03  2.929e-01
+   7  1.023e-08  1.023e-08  2.787e-03  6.616e-02
+   8  2.358e-09  2.357e-09  8.611e-05  7.010e-03
+Overall linear iterations used: 13
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 12, stepsize 38.2158 days, at day 276.877/456, date = 03-Oct-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.033e-14  1.646e-17  1.690e-01  1.689e-01
+   1  1.207e-07  1.206e-07  6.696e-01  2.013e-01
+   2  3.757e-08  3.758e-08  1.204e-01  3.512e+00
+   3  1.718e-07  1.719e-07  5.517e-02  1.431e+00
+   4  1.242e-07  1.242e-07  8.057e-03  4.229e-01
+   5  4.496e-08  4.495e-08  7.921e-04  1.068e-01
+   6  2.188e-09  2.188e-09  1.986e-03  1.547e-02
+   7  3.277e-10  3.276e-10  2.078e-05  5.462e-04
+Overall linear iterations used: 12
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 13, stepsize 53.5021 days, at day 315.093/456, date = 11-Nov-2000
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.186e-16  2.554e-23  2.225e-01  2.224e-01
+   1  1.123e-07  1.122e-07  7.192e-01  4.210e-01
+   2  1.630e-07  1.630e-07  2.168e-01  4.384e+00
+   3  3.333e-07  3.333e-07  1.321e-01  6.676e+00
+   4  3.253e-07  3.253e-07  7.073e-02  5.943e+00
+   5  1.907e-07  1.907e-07  1.075e-02  1.800e+00
+   6  1.021e-07  1.021e-07  2.020e-03  5.257e-01
+   7  2.253e-08  2.252e-08  7.575e-04  1.267e-01
+   8  6.075e-09  6.073e-09  1.752e-04  1.871e-02
+   9  9.659e-10  9.656e-10  1.497e-05  7.045e-04
+Overall linear iterations used: 17
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 14, stepsize 47.5574 days, at day 368.595/456, date = 03-Jan-2001
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  2.203e-16  9.492e-17  1.881e-01  1.880e-01
+   1  3.241e-08  3.237e-08  5.281e-01  2.466e-01
+   2  1.326e-07  1.326e-07  1.706e-01  5.403e+00
+   3  3.289e-07  3.287e-07  9.467e-02  2.773e+00
+   4  1.486e-07  1.485e-07  1.066e-02  7.450e-01
+   5  2.980e-08  2.979e-08  2.673e-02  2.046e-01
+   6  7.699e-09  7.698e-09  9.901e-04  4.184e-02
+   7  1.805e-10  1.804e-10  8.589e-05  3.447e-03
+Overall linear iterations used: 17
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 15, stepsize 39.848 days, at day 416.152/456, date = 20-Feb-2001
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  5.880e-14  2.459e-22  1.574e-01  1.573e-01
+Linear system blocksize: 2 size:    6000 block nonzeroes:     28780
+   1  1.114e-08  1.114e-08  3.240e-01  1.936e-01
+   2  2.342e-08  2.343e-08  1.631e-01  6.384e+00
+   3  2.719e-07  2.718e-07  5.033e-02  1.949e+00
+   4  3.047e-08  3.047e-08  8.057e-03  5.790e-01
+   5  1.903e-08  1.903e-08  1.072e-03  1.563e-01
+   6  6.650e-09  6.648e-09  1.943e-04  2.847e-02
+   7  8.607e-10  8.605e-10  2.338e-05  1.878e-03
+Overall linear iterations used: 11
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 11 (0.0sec)
+Sub steps started at time = 91 (days)
+ step[ 0 ] = 4.39616 (days)
+ step[ 1 ] = 1.75846 (days)
+ step[ 2 ] = 0.703385 (days)
+ step[ 3 ] = 2.11016 (days)
+ step[ 4 ] = 6.33047 (days)
+ step[ 5 ] = 13.927 (days)
+ step[ 6 ] = 13.927 (days)
+ step[ 7 ] = 19.4978 (days)
+ step[ 8 ] = 19.4978 (days)
+ step[ 9 ] = 27.297 (days)
+ step[ 10 ] = 38.2158 (days)
+ step[ 11 ] = 38.2158 (days)
+ step[ 12 ] = 38.2158 (days)
+ step[ 13 ] = 53.5021 (days)
+ step[ 14 ] = 47.5574 (days)
+ step[ 15 ] = 39.848 (days)
+sub steps end time = 456 (days)
+Suggested next step size = 55.7872 (days)
+
+Time step took 1.155964 seconds; total solver time 5.351683 seconds.
+
+Restart file written for report step 8/8, date = 01-Apr-2001 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.09 s
+  Deck input:                    0.04 s
+Number of timesteps:            67
+Simulation time:                 5.35 s
+  Assembly time:                 0.83 s (Wasted: 0.2 s; 22.5%)
+    Well assembly:               0.02 s (Wasted: 0.0 s; 37.2%)
+  Linear solve time:             2.39 s (Wasted: 0.6 s; 27.1%)
+    Linear setup:                0.78 s (Wasted: 0.2 s; 25.6%)
+  Props/update time:             1.78 s (Wasted: 0.4 s; 24.1%)
+  Pre/post step:                 0.33 s (Wasted: 0.0 s; 10.7%)
+  Output write time:             0.01 s
+Overall Linearizations:        667      (Wasted:   147; 22.0%)
+Overall Newton Iterations:     607      (Wasted:   147; 24.2%)
+Overall Linear Iterations:    1178      (Wasted:   331; 28.1%)
+
+
+
+Error summary:
+Warnings          0
+Info              279
+Errors            0
+Bugs              0
+Debug             856
+Problems          7
+
