@@ -93,19 +93,29 @@ def trainNN(krnw, Smax):
     y = np.array(krnw)
 
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+    feature_ranges: list[tuple[float, float]] = [(0.0, 1.0), (-3.7, 0.0)]
 
+    data: np.ndarray = np.random.uniform(0, 1, X_train.shape[1])
+    data_min = 0.0
+    data_max = 1.0
+    # print(max(X_train[:,0]))
     model = Sequential()
     model.add(keras.layers.Input([X_train.shape[1]]))
+    # model.add(MinMaxScalerLayer(data_min = 0.0, data_max = 1.0))
     model.add(Dense(4, activation='tanh'))
     model.add(Dense(4, activation='tanh'))
     model.add(Dense(1, activation='tanh'))
+    # model.add(MinMaxUnScalerLayer(data_min = 0.0,data_max = 1.0))
+    # # # #
+    # model.get_layer(model.layers[0].name).adapt(data=data)
+    # model.get_layer(model.layers[-1].name).adapt(data=data)
 
     optimizer = Adam(learning_rate=0.01)
 
 
 
     # Define early stopping
-    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True,start_from_epoch=100,)
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True,start_from_epoch=1,)
     # Compile the model
     model.compile(optimizer=optimizer, loss='mean_squared_error')
     # # ft the model on the training dataset

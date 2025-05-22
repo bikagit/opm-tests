@@ -2,130 +2,115 @@ import csv
 import numpy as np
 import os, sys
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as pltbis
+import keras
 
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+from keras.optimizers import Adam
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-from keras.models import Sequential
-from keras.layers import Dense
-from matplotlib import pyplot
-import numpy as np
-import keras
-path = os.getcwd()
+from sklearn.model_selection import train_test_split
+from keras.callbacks import EarlyStopping
 
-sys.path.insert(0, '/Users/macbookn/activopmwkspc/stable_releases/opm-common/python/opm/ml')
+keras.utils.set_random_seed(1234)
+
+sys.path.insert(0, '/Users/macbookn/activopmwkspc/edgedev/opm-common/python/opm/ml')
 
 from ml_tools import export_model
-from ml_tools import  MinMaxScalerLayer, MinMaxUnScalerLayer
+from ml_tools import MinMaxScalerLayer, MinMaxUnScalerLayer
 
 
-def PreprocessData(Sh, data, wp):
-    # smax = .0
-    krnw = []
-    krw = []
-    SandSmax = []
-    for S in Sh:
-       smax = .0
-       for s in S:
-            smax = max(s,smax)
-            pathCall = "/Users/macbookn/hackatonwork/build/opm-common/bin/hysteresis " + data +".DATA " + str(s) + " " + str(smax) + " " + wp + " 0 > relperms.csv"
-            x = os.system(pathCall)
-            SandSmax.append([s, smax])
-                # print(s,smax,float(output)
+# Define the custom environment
+class CustomEnv:
+    def __init__(self, Sh, data, wp):
+        self.Sh = Sh
+        self.data = data
+        self.wp = wp
 
-            with open(path+'/relperms.csv', newline='') as csvfile:
-                reader = csv.reader(csvfile, delimiter=',')
-                for row in reader:   
-                    krnw.append(float(row[0]))
-                    krw.append(float(row[1]))                  
-    
-    i = 0
-    start = 0
-    end = 0
-    for S in Sh:
-        end = len(S) + start
-        input = "D" + str(i)
-        if S[0] > S[-1]:
-            input = "I" + str(i)
-            i = i + 1
-        
-        plt.plot(S, krw[start:end], label = "KRW"+input)
-        plt.plot(S, krnw[start:end], label = "KRNW"+input)
-        start = end
-    return krnw,krw, SandSmax
+    def preprocess_data(self):
+        SandSmax = []
+        with open('sat.csv', 'w', newline='') as file:
+            for S in self.Sh:
+                smax = .0
+                for s in S:
+                    smax = max(s, smax)
+                    file.write(str(s) + "," + str(smax) + "\n")
+                    SandSmax.append([s, smax])
+
+        pathCall = f"/Users/macbookn/activopmwkspc/edgedev/build/opm-common/bin/hysteresis {self.data}.DATA sat.csv relperms.csv {self.wp} 0"
+        os.system(pathCall)
+
+        krw, krnw, krM, sT, S2 = [], [], [], [], []
+        with open('relperms.csv', newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=',')
+            for row in reader:
+                S2.append(float(row[0]))
+                krnw.append(float(row[1]))
+                krw.append(float(row[2]))
+                krM.append(float(row[3]))
+                sT.append([float(row[4])])
+
+        return np.array(krnw), np.array(krw), np.array(SandSmax)
 
 
-def trainNN(krnw, Smax):
-
-    x = np.array(Smax)
-    y = np.array(krnw)
-    
+# Function to create a model with a specified number of layers and neurons
+def create_model(input_dim, layers, neurons, optimizer):
     model = Sequential()
-    model.add(Dense(3, input_dim=2, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(5, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(5, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(5, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(5, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(5, activation='relu', kernel_initializer='he_uniform'))
-    model.add(Dense(1))
-    # define the loss function and optimization algorithm
-    model.compile(loss='mse', optimizer='adam')
-    # # ft the model on the training dataset
-    model.fit(x, y, epochs=2000, batch_size=100, verbose=0)
-    # make predictions for the input data
-    model.save("models/trainNNhyst.keras")
+    model.add(Dense(neurons[0], input_dim=input_dim, activation='tanh'))
+    for i in range(1, layers):
+        model.add(Dense(neurons[i], activation='tanh'))
+    model.add(Dense(1, activation='tanh'))  # Output layer for regression
+    model.compile(optimizer=optimizer, loss='mean_squared_error')
+    return model
+
+
+def train_nn(env):
+    krnw, krw, SandSmax = env.preprocess_data()
+    x = np.array(SandSmax)
+    y = np.array(krnw)
+
+    X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+    # Use create_model method to create the model
+    model = create_model(input_dim=X_train.shape[1], layers=2, neurons=[4, 4], optimizer=Adam(learning_rate=0.01))
+
+    # Define early stopping
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True, start_from_epoch=100)
+    # Compile the model
+    model.compile(optimizer=Adam(learning_rate=0.01), loss='mean_squared_error')
+    # Fit the model on the training dataset
+    history = model.fit(X_train, y_train, epochs=350, batch_size=64, validation_data=(X_test, y_test), callbacks=[early_stopping])
+
+    # Evaluate the model
+    loss = model.evaluate(X_test, y_test)
+    print(f'Test loss: {loss}')
+
+    y_pred = model.predict(X_test)
+
+    pltbis.plot(history.history['loss'])
+    pltbis.plot(history.history['val_loss'])
+    pltbis.savefig("loss.png")
 
     return model
 
 
-def predictNN(Sh):
-    oldmodel = keras.models.load_model("models/trainNNhyst.keras")
-    xhat = np.array([Sh])
-    yhat = oldmodel.predict(xhat)
-    return yhat
+# Example usage
+Sh = np.linspace(0.0, 1.0 - 0.05, 70)
+SS = [np.linspace(smax, 0, 10) for smax in Sh]
 
-
-swl = 0.05
-path = os.getcwd()
-S = np.linspace(0.0, 1.0-swl, 10)
-smax = 0.
-S2 = 1.0 - S - swl;
-# evaluate2([S, S2], "CO2", "GW")
-
-SS = [S]
-
-for smax in S:
-    SS.append(np.linspace(smax, 0, 10))
-
-krnw, krw, SandSmax = PreprocessData(SS, "../CO2", "GW")
-
-# model1 = trainNN(krnw, SandSmax)
-# model2 = trainNN(krw, SandSmax)
-
-# yhat = predictNN([0.3,0.5])
+env = CustomEnv(SS, "/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH", "GW")
+model_nonwett = train_nn(env)
 
 satspace = np.linspace(0.1, 0.95, 30)
-
-satMaxspace = np.linspace(0.6, 0.9, 2)
+satMaxspace = np.linspace(0.5, 0.8, 2)
 
 for valsatmax in satMaxspace:
     for valsat in satspace:
-        if valsatmax>valsat:
-            xhat = np.array([[valsat,valsatmax]])
+        if valsatmax > valsat:
+            xhat = np.array([[valsat, valsatmax]])
+            yhatkrnw = model_nonwett.predict(xhat)
 
-            oldmodelkrnw = keras.models.load_model("models/finemodel.keras")
-            oldmodelkrw = keras.models.load_model("models/krwtrainNNhyst.keras")
+export_model(model_nonwett, 'oldmodelkrnw.model')
 
-            yhatkrnw = oldmodelkrnw.predict(xhat)
-            yhat2krw = oldmodelkrw.predict(xhat)
-
-            pyplot.plot(xhat.flat[0],  yhatkrnw,marker="o", markersize=5, markeredgecolor="red",label="Predictedkrnw")
-            pyplot.plot(xhat.flat[0],  yhat2krw,marker="*", markersize=5, markeredgecolor="blue",label="Predictedkrw")
-
-            export_model(oldmodelkrnw, 'modelkrnw.model')
-            export_model(oldmodelkrw, 'modelkrw.model')
-
-
-plt.legend()
-plt.savefig("output/Killough.png")
-plt.show()
-
+plt.savefig("newKillough.png")
