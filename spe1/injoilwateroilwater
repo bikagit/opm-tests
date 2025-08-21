@@ -59,7 +59,7 @@ WELLDIMS
 -- 	   - we are dealing with only one 'group'
 -- Item 4: maximum number of wells in any one group
 -- 	   - there must be two wells in a group as there are two wells in total
-   2 1 1 2 /
+   3 1 1 3 /
 
 UNIFIN
 UNIFOUT
@@ -112,7 +112,7 @@ PROPS
 -- -------------------------------------------------------------------------
 -- Hysteresis input
 EHYSTR
-  0.1  2  2* KR/
+  1  3  2* KR /
 
 PVTW
 -- Item 1: pressure reference (psia)
@@ -334,16 +334,19 @@ SWOF
 /
 
 
+
 DENSITY
 -- Density (lb per ft³) at surface cond. of 
 -- oil, water and gas, respectively (in that order)
 
 -- Using values from Norne:
 -- In METRIC units:
-      859.5 1033.0 
+      859.5 1033.0 /
 -- In FIELD units:
---      	53.66 64.49 
+--      	53.66 64.49 /
 
+
+	
 -- It is required to enter data for undersaturated oil for the highest GOR
 -- (i.e. the last row) in the PVTO table.
 -- In order to fulfill this requirement, values for oil FVF and viscosity
@@ -408,6 +411,7 @@ WBHP
 
 WOIR
   'INJ'
+  'OILINJ'
   'PROD'
 /
 WOIT
@@ -458,6 +462,8 @@ WELSPECS
 -- Item #: 1	 2	3	4	5	 6
 	'PROD'	'G1'	10	10	1*	'OIL' /
 	'INJ'	'G1'	1	1	1*	'WAT' /
+  'OILINJ'	'G1'	1	1	1*	'OIL' /
+
 /
 -- Coordinates in item 3-4 are retrieved from Odeh's figure 1 and 2
 -- Note that the depth at the midpoint of the well grid blocks
@@ -467,6 +473,8 @@ COMPDAT
 -- Item #: 1	2	3	4	5	6	7	8	9
 	'PROD'	10	10	1	1	'OPEN'	1*	1*	0.5 /
 	'INJ'	1	1	3	3	'OPEN'	1*	1*	0.5 /
+  'OILINJ'	1	1	3	3	'OPEN'	1*	1*	0.5 /
+
 /
 -- Coordinates in item 2-5 are retreived from Odeh's figure 1 and 2 
 -- Item 9 is the well bore internal diameter, 
@@ -485,6 +493,8 @@ WCONPROD
 WCONINJE
 -- Item #:1	 2	 3	 4	5      6  7
 	'INJ'	'WATER'	'OPEN'	'RATE'	2000 1* 1000 /
+  'OILINJ'	'OIL'	'SHUT'	'RATE'	2000 1* 1000 /
+
 /
 -- Stated in Odeh that gas inj. rate (item 5) is 100MMscf per day
 -- BHP upper limit (item 7) should not be exceeding the highest
@@ -496,6 +506,8 @@ TSTEP
 
 WELOPEN  
 	'INJ' 'SHUT' /
+  'OILINJ' 'OPEN' /
+
 --  'PROD' 'SHUT' /
 
   /
@@ -505,6 +517,7 @@ TSTEP
 
 WELOPEN  
 	'INJ' 'OPEN' /
+  'OILINJ' 'SHUT' /
   'PROD' 'OPEN' /
 
   /
