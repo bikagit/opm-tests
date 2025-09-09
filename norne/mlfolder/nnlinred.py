@@ -27,14 +27,13 @@ model = Sequential()
 
 model.add(Dense(8, activation='relu', input_dim=7))
 model.add(Dense(16, activation='tanh'))
-model.add(Dense(16, activation='tanh'))
 # model.add(Dense(16, activation='tanh'))
-# model.add(Dense(16, activation='tanh'))
-model.add(Dense(16, activation='relu'))
-
-model.add(Dense(32, activation='relu'))
-model.add(Dense(64, activation='tanh'))
-model.add(Dense(32, activation='relu'))
+# # model.add(Dense(16, activation='tanh'))
+# # model.add(Dense(16, activation='tanh'))
+# model.add(Dense(16, activation='relu'))
+# model.add(Dense(32, activation='relu'))
+# model.add(Dense(64, activation='tanh'))
+# model.add(Dense(32, activation='relu'))
 model.add(Dense(16, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
@@ -99,9 +98,9 @@ y_train1 = y_train.reshape((len(y_train), 1))
 history = model.fit(
         x_train1,
         y_train1,
-        epochs=1000,
+        epochs=200,
         validation_split=0.30,
-        # batch_size=4
+        # batch_size=10
       )
 
 yhat = model.predict(x_train1)
