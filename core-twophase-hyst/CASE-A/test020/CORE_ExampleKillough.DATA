@@ -1,0 +1,562 @@
+-- This reservoir simulation deck is made available under the Open Database
+-- License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in
+-- individual contents of the database are licensed under the Database Contents
+-- License: http://opendatacommons.org/licenses/dbcl/1.0/
+
+-- Copyright (C) 2015 Statoil
+
+-- This simulation is based on the data given in
+-- 'Comparison of Solutions to a Three-Dimensional
+-- Black-Oil Reservoir Simulation Problem' by Aziz S. Odeh,
+-- Journal of Petroleum Technology, January 1981
+
+-- Modified to server as a oil-water two phase case
+
+---------------------------------------------------------------------------
+------------------------    COREEXAMPLE -- oil-water two phase case -----------
+---------------------------------------------------------------------------
+
+RUNSPEC
+-- -------------------------------------------------------------------------
+
+TITLE
+   COREEXAMPLE -- oil-water two phase case
+
+DIMENS
+   10 1 1/
+
+-- The number of equilibration regions is inferred from the EQLDIMS
+-- keyword.
+EQLDIMS
+/
+
+-- The number of PVTW tables is inferred from the TABDIMS keyword;
+-- when no data is included in the keyword the default values are used.
+TABDIMS
+2/
+
+
+OIL
+WATER
+
+
+METRIC
+
+
+SATOPTS
+HYSTER  /
+
+
+START
+   1 'JAN' 2015 /
+
+WELLDIMS
+-- Item 1: maximum number of wells in the model
+-- 	   - there are two wells in the problem; injector and producer
+-- Item 2: maximum number of grid blocks connected to any one well
+-- 	   - must be one as the wells are located at specific grid blocks
+-- Item 3: maximum number of groups in the model
+-- 	   - we are dealing with only one 'group'
+-- Item 4: maximum number of wells in any one group
+-- 	   - there must be two wells in a group as there are two wells in total
+   4 1 1 4 /
+
+UNIFIN
+UNIFOUT
+
+GRID
+
+-- The INIT keyword is used to request an .INIT file. The .INIT file
+-- is written before the simulation actually starts, and contains grid
+-- properties and saturation tables as inferred from the input
+-- deck. There are no other keywords which can be used to configure
+-- exactly what is written to the .INIT file.
+INIT
+
+-- -------------------------------------------------------------------------
+NOECHO
+
+DX
+-- There are in total 300 cells with length 1000ft in x-direction
+   	10*0.1 /
+DY
+-- There are in total 300 cells with length 1000ft in y-direction
+	10*0.1 /
+DZ
+-- The layers are 20, 30 and 50 ft thick, in each layer there are 100 cells
+	10*0.1 /
+
+TOPS
+-- The depth of the top of each grid block
+	10*2700 /
+
+PORO
+-- Constant porosity of 0.3 throughout all 300 grid cells (changed from 0.3 to 22.6%)
+   	10*0.226 /
+
+PERMX
+-- The layers have perm. 500mD, 50mD and 200mD, respectively.
+	10*2470  /
+
+PERMY
+-- Equal to PERMX
+	10*2470  /
+
+PERMZ
+-- Cannot find perm. in z-direction in Odeh's paper
+-- For the time being, we will assume PERMZ equal to PERMX and PERMY:
+	10*2470 /
+ECHO
+
+PROPS
+-- -------------------------------------------------------------------------
+-- Hysteresis input
+EHYSTR
+ 1  3  2* KR /
+
+PVTW
+-- Item 1: pressure reference (psia)
+-- Item 2: water FVF (rb per bbl or rb per stb)
+-- Item 3: water compressibility (psi^{-1})
+-- Item 4: water viscosity (cp)
+-- Item 5: water 'viscosibility' (psi^{-1})
+
+-- Using values from Norne:
+-- In METRIC units:
+ 	277.0 1.038 4.67E-5 0.318 0.0 /
+-- In FIELD units:
+-- 	4017.55 1.038 3.22E-6 0.318 0.0 /
+
+PVCDO
+-- Column 1: dissolved gas-oil ratio (Mscf per stb)
+-- Column 2: bubble point pressure (psia)
+-- Column 3: oil FVF for saturated oil (rb per stb)
+-- Column 4: oil viscosity for saturated oil (cP)
+
+-- Use values from top left table in Odeh's table 2:
+--14.7 2.0000 0.2000
+--5014.7	1.8270	0.4490
+--9014.7	1.7370	0.6310 /
+     200.00    1.10615  1.5E-6    1.180   0.0
+   /
+
+--SWATINIT
+--10*1.0
+--/
+
+
+ROCK
+-- Item 1: reference pressure (psia)
+-- Item 2: rock compressibility (psi^{-1})
+
+-- Using values from table 1 in Odeh:
+	200 3E-6 /
+
+SWOF
+-- Column 1: water saturation
+--   	     - this has been set to (almost) equally spaced values from 0.12 to 1
+-- Column 2: water relative permeability
+--   	     - generated from the Corey-type approx. formula
+--	       the coeffisient is set to 10e-5, S_{orw}=0 and S_{wi}=0.12
+-- Column 3: oil relative permeability when only oil and water are present
+--	     - we will use the same values as in column 3 in SGOF.
+-- 	       This is not really correct, but since only the first
+--	       two values are of importance, this does not really matter
+-- Column 4: corresponding water-oil capillary pressure (psi)
+
+0.162025039235058  0.00  0.7599167049485  0.00497882783035714
+0.171987664845698  0.0043148708620339  0.750141750667583  0.00456283678928571
+0.181957109891598  0.0055622159468516  0.731678566400078  0.00433762193571429
+0.191900083432378  0.0055457941458827  0.72975958311626  0.0037675779964285697
+0.201890097759407  0.0061280920738874  0.727604998700173  0.0046085913375
+0.2119257945344  0.0076976073137024  0.715953019043567  0.00465408014464286
+0.221897270984082  0.0078640311289403  0.672255329229264  0.00445645757678571
+0.231851140639605  0.0083607354068216  0.670877102810464  0.00409104043392857
+0.24193843984261  0.0087817591331422  0.653887205596082  0.00446769140357143
+0.251883692817079  0.0095652699164773  0.650102084442823  0.0038531208214285695
+0.261935988730054  0.0171998218437308  0.616752430571442  0.00457194931607143
+0.271863377447552  0.0182815928855856  0.612271280953707  0.00391809563571429
+0.281900412585266  0.0260612066010452  0.589843999082362  0.0044104127625
+0.291833203027927  0.0266450551543859  0.588504771485798  0.00381317260178571
+0.301814046352029  0.0284721057506538  0.588401541201291  0.00387510272678571
+0.311815479487699  0.0292968399777007  0.577380329299622  0.00388210722321429
+0.321751182478422  0.0303745712240315  0.575717516011429  0.00340578491785714
+0.3317421240045  0.0330816250173987  0.572850419092601  0.00397798285714286
+0.34168928741962  0.0334418679937309  0.571389338268788  0.00355665167678571
+0.351703635866527  0.0344585809591025  0.56438548751704  0.00394170623035714
+0.361677512158154  0.0347380296331546  0.54413499928797  0.00370157190535714
+0.37174674346442  0.0348039995583886  0.46958726300074  0.00394604676964286
+0.381685888355624  0.0434889359537218  0.461865415788155  0.00346057893214286
+0.391710358864208  0.0557011316814933  0.421247812749045  0.00364746362142857
+0.401686267114494  0.0729586557001442  0.392845171539737  0.0035385340553571397
+0.411625992961655  0.0747858655080988  0.378762608379536  0.00317416453392857
+0.421545505758561  0.0794677681971118  0.32774862693992  0.0031067714892857095
+0.431724640392979  0.0970380579454954  0.28396279174637  0.00372406268571429
+0.441672102886668  0.099590152129983  0.259621319023794  0.0035176569107142897
+0.451623539962518  0.0999608355332824  0.258796152191255  0.00333039482142857
+0.461617518329049  0.100756443670865  0.256905778765069  0.00324761949107143
+0.471622123695101  0.10278297042852  0.235303744136205  0.00329255447678571
+0.481566472220467  0.108676144372193  0.233117896334376  0.0031028278125
+0.491524547841756  0.1097619150046  0.229843040595844  0.0029467585071428597
+0.501482581292413  0.110693047667899  0.229120171292476  0.00288110014821429
+0.51145664013849  0.115412661011864  0.228962342656839  0.00286281361071429
+0.521435569692681  0.118905699480865  0.228790120641449  0.0028592497285714297
+0.531331062429949  0.122096201973051  0.227238015762439  0.00253392927857143
+0.541323693555731  0.127281203942692  0.225352547342761  0.00254661334821429
+0.551220610661617  0.130732424416865  0.222738773907585  0.0023065620642857103
+0.56131163919126  0.1266349218934  0.225804628122911  0.0028576409625
+0.571273052951078  0.129418569373638  0.203265013561539  0.00274084358035714
+0.581183456891254  0.133462716683688  0.200498525563085  0.0024346588446428597
+0.591453920354612  0.135181471169055  0.178512083161893  0.0032937523232142896
+0.601333062538682  0.138480658956264  0.0777857208506118  0.0029233301410714297
+0.611444825702726  0.153835640307993  0.0640317143247016  0.00322362771428571
+0.621280887255914  0.154768871670797  0.0  0.0027776035392857103
+0.631245247411275  0.159471772612261  0.0  0.00271250702678571
+0.641209274640587  0.164114795485754  0.0  0.0027105843535714298
+0.651163624819375  0.167292355193554  0.0  0.0026304330375
+0.661177463334549  0.198375670910409  0.0  0.00272068926964286
+0.671014301715187  0.201887768144041  0.0  0.00229550097857143
+0.681013047582757  0.240203974293585  0.0  0.0023568755678571402
+0.691047305562337  0.252139608064249  0.0  0.0023888498732142897
+0.700898465311897  0.277280162633934  0.0  0.0017818854107142898
+0.710767270142112  0.284904552995902  0.0  0.00129038072142857
+0.720845002715067  0.303891013006871  0.0  0.0010676137875
+0.730950246077296  0.341775096124056  0.0  0.0022917941303571402
+0.740906349666615  0.354069519059287  0.0  0.00226536134464286
+0.750739126349442  0.376715805450717  0.0  0.001894649775
+0.760761199235588  0.396759704454864  0.0  0.0019826176125
+0.77049182310871  0.402541179338858  0.0  0.0013071863625
+0.780390818782902  0.411778400168604  0.0  0.00105910706785714
+0.790323068220732  0.425201231912487  0.0  0.000969940644642857
+/
+0.201775345978114 0.000000000000000 0.645870575769594 0.003574152295983
+0.201775345978124  0.0011828920127436  0.64039433679206  0.003925508153571429
+0.211766111834755  0.0013138742933674  0.638839449729031  0.0034805209446428596
+0.221745000167983  0.0015367442802196  0.636650626759319  0.00323526935357143
+0.231737563485393  0.001918314916374  0.633303000022595  0.0030032619160714298
+0.241723399749094  0.0024849480226109  0.628583563580504  0.00280688633571429
+0.251705857539392  0.0039017532021048  0.619310785474072  0.00268199967857143
+0.261706421688539  0.0049293120213748  0.61167369034115  0.0025637424642857096
+0.271699600028717  0.007603168730696  0.60038450426426  0.00248156950178571
+0.28169679788313  0.0081796034873148  0.590176783671442  0.00243534962142857
+0.291676239792207  0.0093376298510011  0.568619328314842  0.0023299688946428598
+0.30164630301926  0.0103759907811609  0.561806081291397  0.0023353502946428595
+0.311600883283409  0.0125572975118832  0.552395560953028  0.00225809109107143
+0.32159026907545  0.0201506126473743  0.531066019538169  0.00227080520892857
+0.33157664950421  0.0222094416872322  0.514985397956446  0.0021474321482142897
+0.341534024219242  0.0229971857324136  0.50069671194899  0.00219748002857143
+0.351499700911273  0.0253069967183898  0.490424036204416  0.00221320513392857
+0.36146882748799  0.0271243852559364  0.474511278419186  0.00210016396071429
+0.371470358180569  0.0305249329923845  0.436573963919898  0.0021066094125
+0.381447605161406  0.0324495031590252  0.391784371410952  0.0020976138321428597
+0.391492389502898  0.0364073143135407  0.37556126341067  0.00191090725178571
+0.401471431730211  0.0413697576436284  0.365981496224793  0.00188753667857143
+0.411524551263252  0.0459369089115364  0.356986325404725  0.00178199830178571
+0.421469014375197  0.0497836401629331  0.327765738175738  0.0018835824214285697
+0.431348214769648  0.0533068629162451  0.317097702824632  0.00157891151785714
+0.441420189096085  0.0580356831986561  0.307583180266306  0.00176453231785714
+0.451379272699761  0.062991732330096  0.276932116237719  0.0018305756785714298
+0.461348877012436  0.069924015016396  0.263329214468032  0.0017569121999999999
+0.47133699290148  0.0782540653457833  0.235735272134988  0.0017318937535714298
+0.481309326896663  0.0825899238461555  0.22418550959761  0.00175056194464286
+0.491281506997761  0.0909926229506219  0.212190517207205  0.00168494524285714
+0.501271933512396  0.100164739066117  0.166752161198134  0.00168761648571429
+0.511240021580822  0.113288640415018  0.164266931097444  0.00167682723214286
+0.521205537735857  0.120198779811283  0.162432876795162  0.00165306024642857
+0.531088051835337  0.124223503295561  0.156690075877234  0.00173781443035714
+0.541180684505283  0.140129656208094  0.150079574483449  0.00163659084642857
+0.551166217409419  0.145538236415363  0.146413653029328  0.00160649087678571
+0.561134871232362  0.149663124957131  0.137285072465038  0.0015861040928571398
+0.571106698705644  0.157474307616116  0.135765889024791  0.00156265798392857
+0.581081105842379  0.1654876183564  0.134360649689823  0.00153720621964286
+0.59105074669106  0.17237659546393  0.129226722507619  0.00153143717678571
+0.60101724876468  0.188039519557025  0.123231950601277  0.0014653205625
+0.610994789140717  0.196228645028941  0.115999885174602  0.00148194207321429
+0.620958063867142  0.205377865217336  0.103822225517243  0.0014069622428571399
+0.630932947079107  0.214409622561357  0.0479667131784579  0.0014545050214285699
+0.640906285814454  0.226454742510075  0.0408013268927113  0.0014619695142857098
+0.650857016512155  0.2376392348415  0.0378324985307093  0.00136536214821429
+0.660850815410859  0.249840157095297  0.0306360193282988  0.00141314175
+0.670819930362483  0.291861878554773  0.0  0.00145815929464286
+0.680774990023318  0.30123401118647  0.0  0.00141900221785714
+0.690721945333732  0.312119024727103  0.0  0.00130531647857143
+0.700705818617474  0.326371317194468  0.0  0.0013598753303571398
+0.710665749745774  0.352809270108496  0.0  0.0013412548767857098
+0.720589781480307  0.358154376315155  0.0  0.0012144548999999999
+0.730575714066206  0.368377053157324  0.0  0.00121347492321429
+0.740544900982691  0.37454213171422  0.0  0.00122733675535714
+0.750480009769949  0.395740540594437  0.0  0.00115211702678571
+0.76041156898097  0.402756726231404  0.0  0.0010656511553571398
+0.77031804680383  0.412320797396455  0.0  0.0008472509142857139
+0.780290177468896  0.421304694742549  0.0  0.000808649528571429
+0.790272896407931  0.427233014264  0.0  0.000791317039285714
+/
+
+
+DENSITY
+-- Density (lb per ft³) at surface cond. of
+-- oil, water and gas, respectively (in that order)
+
+-- Using values from Norne:
+-- In METRIC units:
+      859.5 1033.0 /
+-- In FIELD units:
+--      	53.66 64.49 /
+
+-- It is required to enter data for undersaturated oil for the highest GOR
+-- (i.e. the last row) in the PVTO table.
+-- In order to fulfill this requirement, values for oil FVF and viscosity
+-- at 9014.7psia and GOR=1.618 for undersaturated oil have been approximated:
+-- It has been assumed that there is a linear relation between the GOR
+-- and the FVF when keeping the pressure constant at 9014.7psia.
+-- From Odeh we know that (at 9014.7psia) the FVF is 2.357 at GOR=2.984
+-- for saturated oil and that the FVF is 1.579 at GOR=1.27 for undersaturated oil,
+-- so it is possible to use the assumption described above.
+-- An equivalent approximation for the viscosity has been used.
+
+
+REGIONS
+
+--
+EQUALS
+'SATNUM'  1  /
+'IMBNUM'  2  /
+/
+
+SOLUTION
+RPTRST
+	'BASIC=1' 'KRW' 'KRO'  /
+
+PRESSURE
+10*250 /
+ 
+SWAT
+10*0.20 /
+-- -------------------------------------------------------------------------
+
+--EQUIL
+-- Item 1: datum depth (ft)
+-- Item 2: pressure at datum depth (psia)
+-- 	   - Odeh's table 1 says that initial reservoir pressure is
+-- 	     4800 psi at 8400ft, which explains choice of item 1 and 2
+-- Item 3: depth of water-oil contact (ft)
+-- 	   - chosen to be directly under the reservoir
+-- Item 4: oil-water capillary pressure at the water oil contact (psi)
+-- 	   - given to be 0 in Odeh's paper
+-- Item 5: depth of gas-oil contact (ft)
+-- 	   - chosen to be directly above the reservoir
+-- Item 6: gas-oil capillary pressure at gas-oil contact (psi)
+-- 	   - given to be 0 in Odeh's paper
+-- Item 7: RSVD-table
+-- Item 8: RVVD-table
+-- Item 9: Set to 0 as this is the only value supported by OPM
+
+-- Item #: 1 2    3    4 5    6 7 8 9
+--8400 200 8450 0 8300 0 1 0 0 /
+--  2730.0  250  0.0   6802.30425E-6 0.0  0.0   0   0   0 /   C+D:	Garn
+
+SUMMARY
+-- -------------------------------------------------------------------------
+
+-- 1a) Oil rate vs time
+FOPR
+-- Field Oil Production Rate
+
+
+-- In order to compare Eclipse with Flow:
+WBHP
+  'INJ'
+  'PROD'
+
+/
+
+WOIR
+  'INJ'
+  'OILINJ'
+  'PROD'
+  'SECPROD'
+/
+WOIT
+  'INJ'
+  'PROD'
+/
+WOPR
+  'INJ'
+  'PROD'
+/
+WOPT
+  'INJ'
+  'PROD'
+/
+WWIR
+  'INJ'
+  'PROD'
+/
+WWIT
+  'INJ'
+  'PROD'
+/
+WWPR
+  'INJ'
+  'PROD'
+/
+WWPT
+  'INJ'
+  'PROD'
+/
+SCHEDULE
+-- -------------------------------------------------------------------------
+RPTSCHED
+	'PRES' 'WELLS' /
+
+RPTRST
+	'BASIC=1' 'KRW' 'KRO'  /
+
+
+-- If no resolution (i.e. case 1), the two following lines must be added:
+--DRSDT
+-- 0 /
+-- Since this is Case 2, the two lines above have been commented out.
+-- if DRSDT is set to 0, GOR cannot rise and free gas does not
+-- dissolve in undersaturated oil -> constant bubble point pressure
+
+WELSPECS
+-- Item #: 1	 2	3	4	5	 6
+	'PROD'	'G1'	10	1	1*	'OIL' /
+  'SECPROD'	'G1'	1	1	1*	'WAT' /
+	'INJ'	'G1'	10	1	1*	'WAT' /
+  'OILINJ'	'G1'	1	1	1*	'OIL' /
+
+/
+-- Coordinates in item 3-4 are retrieved from Odeh's figure 1 and 2
+-- Note that the depth at the midpoint of the well grid blocks
+-- has been used as reference depth for bottom hole pressure in item 5
+
+COMPDAT
+-- Item #: 1	2	3	4	5	6	7	8	9
+	'PROD'	10	1	1	1	'OPEN'	1*	1*	0.005 /
+  'SECPROD'	1	1	1	1	'OPEN'	1*	1*	0.005 /
+	'INJ'	10	1	1	1	'OPEN'	1*	1*	0.005 /
+  'OILINJ'	1	1	1	1	'OPEN'	1*	1*	0.005 /
+
+/
+-- Coordinates in item 2-5 are retreived from Odeh's figure 1 and 2
+-- Item 9 is the well bore internal diameter,
+-- the radius is given to be 0.25ft in Odeh's paper
+
+
+WCONPROD
+-- Item #:1	2      3     4	   5  9
+	'PROD' 'OPEN' 'BHP' 1* 4* 245 /
+  'SECPROD'	'SHUT' 'BHP' 1* 4* 245 /
+/
+-- It is stated in Odeh's paper that the maximum oil prod. rate
+-- is 20 000stb per day which explains the choice of value in item 4.
+-- The items > 4 are defaulted with the exception of item  9,
+-- the BHP lower limit, which is given to be 1000psia in Odeh's paper
+
+WCONINJE
+-- Item #:1	 2	 3	 4	5      6  7
+	'INJ'	'WATER'	'SHUT'	'RATE'	5000e-7 1* 1000 /
+  'OILINJ'	'OIL'	'OPEN'	'RATE'	5000e-7 1* 1000 /
+
+/
+-- Stated in Odeh that gas inj. rate (item 5) is 100MMscf per day
+-- BHP upper limit (item 7) should not be exceeding the highest
+-- pressure in the PVT table=9014.7psia (default is 100 000psia)
+
+TSTEP
+--Advance the simulater once a month for TEN years:
+1  /
+WELOPEN
+	'INJ' 'OPEN' /
+  'OILINJ' 'SHUT' /
+ 'PROD' 'SHUT' /
+  'SECPROD' 'OPEN' /
+
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'SHUT' /
+  'OILINJ' 'OPEN' /
+
+ 'PROD' 'OPEN' /
+ 'SECPROD' 'SHUT' /
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'OPEN' /
+  'OILINJ' 'SHUT' /
+ 'PROD' 'SHUT' /
+  'SECPROD' 'OPEN' /
+
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'SHUT' /
+  'OILINJ' 'OPEN' /
+
+ 'PROD' 'OPEN' /
+ 'SECPROD' 'SHUT' /
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'OPEN' /
+  'OILINJ' 'SHUT' /
+ 'PROD' 'SHUT' /
+  'SECPROD' 'OPEN' /
+
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'SHUT' /
+  'OILINJ' 'OPEN' /
+
+ 'PROD' 'OPEN' /
+ 'SECPROD' 'SHUT' /
+
+  /
+  TSTEP
+1  /
+WELOPEN
+	'INJ' 'OPEN' /
+  'OILINJ' 'SHUT' /
+ 'PROD' 'SHUT' /
+  'SECPROD' 'OPEN' /
+
+
+  /
+
+TSTEP
+1  /
+WELOPEN
+	'INJ' 'SHUT' /
+  'OILINJ' 'OPEN' /
+
+ 'PROD' 'OPEN' /
+ 'SECPROD' 'SHUT' /
+
+  /
+
+  TSTEP
+1  /
+
+--Advance the simulator once a year for TEN years:
+--10*365 /
+
+END

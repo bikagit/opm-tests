@@ -1,0 +1,1 @@
+/Users/macbookn/activopmwkspc/edgedev/build/opm-simulators/bin/flow --activate-m-l-rel-p-erm=True    --newton-max-iterations=20 --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-opm-rst-file=true --newton-min-iterations=1 --enable-well-operability-check=false --min-time-step-before-shutting-problematic-wells-in-days=1e-99 CO2.DATA
