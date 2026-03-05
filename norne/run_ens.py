@@ -1,18 +1,26 @@
 # SPDX-FileCopyrightText: 2024 NORCE
 # SPDX-License-Identifier: GPL-3.0
 
-""""
-Script to run OPM Flow and plot for different values in given flags
+"""
+Script to run OPM Flow and plot results for different linear solver tolerance values.
 """
 
 import os
 import csv
-import math as mt
+import math
 import argparse
+import itertools
+import subprocess
+from pathlib import Path
+
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
+
+# ---------------------------------------------------------------------------
+# Plot styling
+# ---------------------------------------------------------------------------
 
 font = {"family": "normal", "weight": "normal", "size": 20}
 matplotlib.rc("font", **font)
@@ -30,647 +38,594 @@ plt.rcParams.update(
     }
 )
 
+# ---------------------------------------------------------------------------
+# Constants — edit these or override via a config file / environment vars
+# ---------------------------------------------------------------------------
+
 np.random.seed(18)
 
-# PARSER
-parser = argparse.ArgumentParser(
-    description="Application of ML for OPM Flow tolerances",
-)
-
-parser.add_argument(
-    "-z",
-    "--outpucsv",
-    default=1,
-    help="Output in table form csv ('1' by default).",
-)
-
-parser.add_argument(
-    "-e",
-    "--runensemble",
-    default=0,
-    help="Run the ensemble ('1' by default).",
-)
-parser.add_argument(
-    "-a",
-    "--runadaptive",
-    default=0,
-    help="Run the adaptive apporach ('0' by default).",
-)
-parser.add_argument(
-    "-o",
-    "--output",
-    default="output",
-    help="Name of output folder ('output' by default).",
-)
-cmdargs = vars(parser.parse_known_args()[0])
-cwd = os.getcwd()
-# INPUTS
 VARIABLE = "--linear-solver-reduction="
-# VALUES = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 2.5e-1, 2.5e-2, 2.5e-3, 2.5e-4]
-VALUES = [5e-3, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 2.5e-1, 2.5e-2, 2.5e-3, 2.5e-4]
 
-#VALUES = [1e-1, 9e-2, 8e-2, 7e-2, 6e-2, 5e-2, 4e-2, 3e-2, 2e-2, 1e-2]
-# VALUES = [6e-3,5e-3]
+# VALUES = [0.00414663, 0.00545092, 0.00209259, 0.00836344, 0.0023299,  0.00324877,
+#  0.00400508, 0.00110894, 0.00768728, 0.00974525,1e-1, 9e-2, 8e-2, 7e-2, 6e-2, 5e-2, 4e-2, 3e-2, 2e-2]
+# VALUES = [ 5e-3]
+# # VALUES = [ 9e-2, 8e-2, 7e-2, 6e-2, 5e-2, 4e-2, 3e-2, 2e-2,1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 5e-1, 5e-2, 5e-3, 5e-4, 5e-5, 5e-6, 2.5e-1, 2.5e-2, 2.5e-3, 2.5e-4]
+VALUES = [
+    5e-3,1e-6, 5e-6, 1e-5, 5e-5, 1e-4,
+    2.5e-4, 5e-4, 1e-3, 2.5e-3,
+    1e-2, 2.5e-2, 5e-2, 2.5e-1, 5e-1,
+]
+
+# VALUES = [5e-3, 1e-2, 1e-3, 1e-4, 1e-5]
 DEFAULTADAPTIVE = 5e-3
-# VALUES = np.random.uniform(1e-2,1e-3,10)
-# VALUES = np.random.uniform(2e-3,8e-3,11)
-OUTPUTFORMAT = int(cmdargs["outpucsv"])
-RUNENSEMBLE = int(cmdargs["runensemble"])
-RUNADAPTIVE = int(cmdargs["runadaptive"])
-# if OUTPUTFORMAT == 0:
-OUTFOL = cwd + "/" + cmdargs["output"].strip()
-
-# if OUTPUTFORMAT == 1:
-#  OUTFOL = cwd + "/" + cmdargs["outputNNformat"].strip()
-
-NPRUNS = len(VALUES)
-# NPRUNS = 11
-# NPRUNS = 5
 
 NMPIS = 1
 NEWTONMAXIT = 20
 CNV = 1e-2
 MB = 1e-7
-# FLOW = "/Users/macbookn/activopmwkspc/master/build/opm-simulators/bin/flow "
-FLOW = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow "
-
-FLOWADAPTIVE = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow "
-CASE = "NORNE_ATW2013"
 BETA = 1
-ALPHA = 0.33 # BETA * I_newton + ALPHA * I_linear (see https://opm-project.org/wp-content/uploads/2024/04/saeternes_opm_summit_230409_share.pdf) --output-mode=none 
-# FLAGS = (
-#     f" --newton-max-iterations={NEWTONMAXIT} --tolerance-cnv={CNV} --tolerance-cnv-relaxed={CNV} "
-#     f" --tolerance-mb={MB} --tolerance-mb-relaxed={MB}
-#     + "--full-time-step-initially=1 --time-step-control=newtoniterationcount "
-#     + "--output-extra-convergence-info=steps,iterations "
-#     + "--linear-solver=ilu0 --enable-ecl-output=0 --relaxed-max-pv-fraction=0 "
-# )
+ALPHA = 0.33  # BETA * I_newton + ALPHA * I_linear
 
-#     f" --tolerance-mb={MB} --tolerance-mb-relaxed={MB}1e-5
-# --tolerance-cnv-relaxed={CNV} 
-FLAGS = f" --use-best-residual=true --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1 --tolerance-cnv-relaxed={CNV} --tolerance-cnv={CNV} --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 --newton-min-iterations=1 --newton-max-iterations={NEWTONMAXIT} "
-FLAGSADAPT = f"  --use-m-lmethods-tols=true --use-best-residual=true  --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1 --tolerance-cnv-relaxed={CNV} --tolerance-cnv={CNV} --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 --newton-min-iterations=1 --newton-max-iterations={NEWTONMAXIT} "
+CASE = "NORNE_ATW2013"
 
-COLORS = [
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-    "r",
-    "k",
+# Path to the Flow binary — override with the FLOW_BIN environment variable
+FLOW_BIN = os.environ.get(
+    "FLOW_BIN",
+    "../../build/opm-simulators/bin/flow",  # replace or set $FLOW_BIN
+)
+
+BASE_FLAGS = (
+    " --use-best-residual=true"
+    " --relaxed-max-pv-fraction=0"
+    " --output-extra-convergence-info=steps,iterations"
+    " --enable-ecl-output=0"
+    " --use-gmres=0"
+    " --linear-solver=ilu0"
+    " --full-time-step-initially=1"
+    f" --tolerance-cnv-relaxed={CNV}"
+    f" --tolerance-cnv={CNV}"
+    " --tolerance-mb=1e-7"
+    " --tolerance-mb-relaxed=1e-7"
+    " --newton-min-iterations=1"
+    f" --newton-max-iterations={NEWTONMAXIT}"
+)
+# 
+ADAPTIVE_FLAGS = (
+    " --use-m-lmethods-tols=true"
+    " --use-best-path=false"
+    " --use-best-residual=true"
+    " --relaxed-max-pv-fraction=0"
+    " --output-extra-convergence-info=steps,iterations"
+    " --enable-ecl-output=0"
+    " --linear-solver=ilu0"
+    " --full-time-step-initially=1"
+    f" --tolerance-cnv-relaxed={CNV}"
+    f" --tolerance-cnv={CNV}"
+    " --tolerance-mb=1e-7"
+    " --tolerance-mb-relaxed=1e-7"
+    " --newton-min-iterations=1"
+    f" --newton-max-iterations={NEWTONMAXIT}"
+)
+
+_BASE_COLORS = [
+    "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+    "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
 ]
-LINESTYLE = [
-    "--",
-    (0, (1, 1)),
-    "-.",
-    (0, (1, 10)),
-    (0, (1, 1)),
-    (5, (10, 3)),
-    (0, (5, 10)),
-    (0, (5, 5)),
-    (0, (5, 1)),
-    (0, (3, 10, 1, 10)),
-    (0, (3, 5, 1, 5)),
-    (0, (3, 1, 1, 1)),
-    (0, (3, 5, 1, 5, 1, 5)),
-    (0, (3, 10, 1, 10, 1, 10)),
-    (0, (3, 1, 1, 1, 1, 1)),
-    (0, ()),
-     "--",
-    (0, (1, 1)),
-    "-.",
-    (0, (1, 10)),
-    (0, (1, 1)),
-    (5, (10, 3)),
-    (0, (5, 10)),
-    (0, (5, 5)),
-    (0, (5, 1)),
-    (0, (3, 10, 1, 10)),
-    (0, (3, 5, 1, 5)),
-    (0, (3, 1, 1, 1)),
-    (0, (3, 5, 1, 5, 1, 5)),
-    (0, (3, 10, 1, 10, 1, 10)),
-    (0, (3, 1, 1, 1, 1, 1)),
-    (0, ()),
-     "--",
-    (0, (1, 1)),
-    "-.",
-    (0, (1, 10)),
-    (0, (1, 1)),
-    (5, (10, 3)),
-    (0, (5, 10)),
-    (0, (5, 5)),
-    (0, (5, 1)),
-    (0, (3, 10, 1, 10)),
-    (0, (3, 5, 1, 5)),
-    (0, (3, 1, 1, 1)),
-    (0, (3, 5, 1, 5, 1, 5)),
-    (0, (3, 10, 1, 10, 1, 10)),
-    (0, (3, 1, 1, 1, 1, 1)),
-    (0, ()),
-    "-",
+_BASE_LINESTYLES = [
+    "--", (0, (1, 1)), "-.", (0, (1, 10)), (0, (5, 5)),
+    (5, (10, 3)), (0, (5, 10)), (0, (3, 5, 1, 5)), (0, (3, 1, 1, 1)), (0, ()),
 ]
-# RUNS
-if RUNENSEMBLE == 1:
-    for i in range(mt.floor(len(VALUES) / NPRUNS)):
-        command = ""
-        for j in range(NPRUNS):
-            if NMPIS == 1:
-                command += (
-                    FLOW
-                    + CASE
-                    + FLAGS
-                    + VARIABLE
-                    + f"{VALUES[NPRUNS*i+j]}"
-                    + f" --output-dir={OUTFOL}/sim_{NPRUNS*i+j}"
-                    " & "
-                )
-            else:
-                command += (
-                    f"mpirun -np {NMPIS} "
-                    + FLOW
-                    + CASE
-                    + FLAGS
-                    + VARIABLE
-                    + f"{VALUES[NPRUNS*i+j]}"
-                    + f" --output-dir={OUTFOL}/sim_{NPRUNS*i+j}"
-                    + " & "
-                )
-        command += "wait"
-        os.system(command)
-    finished = NPRUNS * mt.floor(len(VALUES) / NPRUNS)
-    remaining = len(VALUES) - finished
-    command = ""
-    for i in range(remaining):
-        if NMPIS == 1:
-            command += (
-                FLOW
-                + CASE
-                + FLAGS
-                + VARIABLE
-                + str(VALUES[finished + i])
-                + f" --output-dir={OUTFOL}/sim_{finished+i}"
-                " & "
-            )
-        else:
-            command += (
-                f"mpirun -np {NMPIS} "
-                + FLOW
-                + CASE
-                + FLAGS
-                + VARIABLE
-                + str(VALUES[finished + i])
-                + f" --output-dir={OUTFOL}/sim_{finished+i}"
-                + " & "
-            )
-    command += "wait"
-    os.system(command)
-if RUNADAPTIVE == 1:
-    command = (
-            FLOW
-            + CASE
-            + FLAGSADAPT
-            + VARIABLE
-            + f"{DEFAULTADAPTIVE}"
-            + f" --output-dir={OUTFOL}/adaptive"
-        )
-    os.system(command)
-# READ
-info_ite, info_itenam = [], []
-for i, val in enumerate(VALUES):
-    info_ite.append([])
-    with open(f"{OUTFOL}/sim_{i}/{CASE}.INFOITER", "r", encoding="utf8") as file:
-        for j, row in enumerate(csv.reader(file)):
-            if j == 0 and i == 0:
-                info_itenam = (row[0].strip()).split()
-            elif j > 0:
-                info_ite[-1].append(list(column for column in (row[0].strip()).split()))
-info_stepnam, finalstep, newtit, linit = [], [], [], []
-for i, val in enumerate(VALUES):
-    newtit.append(0)
-    linit.append(0)
-    with open(f"{OUTFOL}/sim_{i}/{CASE}.INFOSTEP", "r", encoding="utf8") as file:
-        for j, row in enumerate(csv.reader(file)):
-            if j == 0 and i == 0:
-                info_stepnam = (row[0].strip()).split()
-            elif j > 0:
-                newtit[-1] += int((row[0].strip()).split()[info_stepnam.index("NewtIt")])
-                linit[-1] += int((row[0].strip()).split()[info_stepnam.index("LinIt")])
-        if i == 0:
-            finalstep = float((row[0].strip()).split()[info_stepnam.index("TStep(day)")])
-if os.path.exists(f"{OUTFOL}/adaptive/{CASE}.INFOITER"):
-    info_ite.append([])
-    with open(f"{OUTFOL}/adaptive/{CASE}.INFOITER", "r", encoding="utf8") as file:
-        for j, row in enumerate(csv.reader(file)):
-            if j == 0:
-                info_itenam = (row[0].strip()).split()
-            elif j > 0:
-                info_ite[-1].append(list(column for column in (row[0].strip()).split()))
-    newtita = 0
-    linita = 0
-    with open(f"{OUTFOL}/adaptive/{CASE}.INFOSTEP", "r", encoding="utf8") as file:
-        for j, row in enumerate(csv.reader(file)):
-            if j == 0:
-                info_stepnam = (row[0].strip()).split()
-            elif j > 0:
-                newtita += int((row[0].strip()).split()[info_stepnam.index("NewtIt")])
-                linita += int((row[0].strip()).split()[info_stepnam.index("LinIt")])
-# PROCESS
-iters, maxress, rescnvo, rescnvw, rescnvg, times = [], [], [], [], [], []
-no_steps = int(info_ite[0][-1][info_itenam.index("ReportStep")]) + 1
-for i in range(len(info_ite)):
-    iters.append([])
-    maxress.append([])
-    # 
-    rescnvo.append([])
-    rescnvw.append([])
-    rescnvg.append([])
-    for n in range(no_steps):
-        iters[-1].append([])
-        maxress[-1].append([])
-        # 
-        rescnvo[-1].append([])
-        rescnvw[-1].append([])
-        rescnvg[-1].append([])
-        count = 0
-        for row in info_ite[i]:
-            if int(row[info_itenam.index("ReportStep")]) == n and int(row[info_itenam.index("TimeStep")]) == 0:
-                iters[-1][-1].append(int(row[info_itenam.index("Iteration")]))
-                maxress[-1][-1].append(
-                    max(
-                        # float(row[info_itenam.index("CNV_Gas")])/CNV,
-                        # float(row[info_itenam.index("CNV_Oil")])/CNV,
-                        # float(row[info_itenam.index("CNV_Water")])/CNV,
-                        # float(row[info_itenam.index("MB_Gas")])/MB,
-                        # float(row[info_itenam.index("MB_Oil")])/MB,
-                        # float(row[info_itenam.index("MB_Water")])/MB,
-                        float(row[info_itenam.index("CNV_Gas")]),
-                        float(row[info_itenam.index("CNV_Oil")]),
-                        float(row[info_itenam.index("CNV_Water")]),
-                        # float(row[info_itenam.index("MB_Gas")]),
-                        # float(row[info_itenam.index("MB_Oil")]),
-                        # float(row[info_itenam.index("MB_Water")]),
-                    )
-                )
-                rescnvo[-1][-1].append( float(row[info_itenam.index("CNV_Oil")]) )
-                rescnvw[-1][-1].append( float(row[info_itenam.index("CNV_Water")]) )
-                rescnvg[-1][-1].append( float(row[info_itenam.index("CNV_Gas")]) )
+COLORS = list(itertools.islice(itertools.cycle(_BASE_COLORS), 62)) + ["r", "k"]
+LINESTYLES = list(itertools.islice(itertools.cycle(_BASE_LINESTYLES), 63)) + ["-"]
 
-                if count == 0 and i == 0:
-                    times.append(float(row[info_itenam.index("Time")]))
-                count += 1
-            if count > NEWTONMAXIT or (int(row[info_itenam.index("ReportStep")]) == n and int(row[info_itenam.index("TimeStep")]) == 1):
-                break
-times = np.array(times)
-tsteps = list(times[1:] - times[:-1]) + [finalstep]
 
-# SELECT
-if OUTPUTFORMAT == 0:
-    bestress = [
-        f"#Min residual values; NEWTONMAXIT={NEWTONMAXIT}; MB={MB}; CNV={CNV}; MPI={NMPIS}\n"
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Application of ML for OPM Flow tolerances",
+    )
+    parser.add_argument(
+        "-z", "--outpucsv", default=1, type=int,
+        help="Output in table form csv (1) or NN format (0). Default: 1.",
+    )
+    parser.add_argument(
+        "-e", "--runensemble", default=0, type=int,
+        help="Run the ensemble (1=yes, 0=no). Default: 0.",
+    )
+    parser.add_argument(
+        "-a", "--runadaptive", default=0, type=int,
+        help="Run the adaptive approach (1=yes, 0=no). Default: 0.",
+    )
+    parser.add_argument(
+        "-o", "--output", default="output",
+        help="Name of output folder. Default: 'output'.",
+    )
+    return vars(parser.parse_known_args()[0])
+
+
+# ---------------------------------------------------------------------------
+# Simulation runners
+# ---------------------------------------------------------------------------
+
+def _build_command(value, sim_index, out_dir, flags, adaptive=False):
+    """Return the subprocess argument list for a single Flow run."""
+    out_subdir = out_dir / ("adaptive" if adaptive else f"sim_{sim_index}")
+    args = [
+        FLOW_BIN,
+        CASE,
+        *flags.split(),
+        f"{VARIABLE}{value}",
+        f"--output-dir={out_subdir}",
     ]
-    bestress += ["TStep[d],Defaulta"]
-    #bestpath = [
-    #    f"#{VARIABLE[2:-1]} values; NEWTONMAXIT={NEWTONMAXIT}; MB={MB}; CNV={CNV}; MPI={NMPIS}\n"
-    #]
-    #bestpath += ["TStep[d],Defaulta"]
-    for i in range(NEWTONMAXIT + 1):
-        #bestpath += [f",iterati{i}"]
-        bestress += [f",iterati{i}"]
-    #bestpath += ["\n"]
-    bestpath = [""]
-    bestress += ["\n"]
-    ppath = []
-    press = []
+    if NMPIS > 1:
+        args = ["mpirun", "-np", str(NMPIS)] + args
+    return args
+
+
+def run_ensemble(out_dir):
+    """Run all VALUES simulations, batching NPRUNS at a time in parallel."""
+    npruns = 7
+    n_batches = math.floor(len(VALUES) / npruns)
+
+    for batch in range(n_batches):
+        procs = []
+        for j in range(npruns):
+            idx = npruns * batch + j
+            cmd = _build_command(VALUES[idx], idx, out_dir, BASE_FLAGS)
+            procs.append(subprocess.Popen(cmd))
+        for p in procs:
+            p.wait()
+
+    # Handle any remaining simulations
+    finished = npruns * n_batches
+    remaining_vals = VALUES[finished:]
+    if remaining_vals:
+        procs = []
+        for i, val in enumerate(remaining_vals):
+            cmd = _build_command(val, finished + i, out_dir, BASE_FLAGS)
+            procs.append(subprocess.Popen(cmd))
+        for p in procs:
+            p.wait()
+
+
+def run_adaptive(out_dir):
+    """Run a single adaptive simulation."""
+    cmd = _build_command(DEFAULTADAPTIVE, None, out_dir, ADAPTIVE_FLAGS, adaptive=True)
+    subprocess.run(cmd, check=True)
+
+
+# ---------------------------------------------------------------------------
+# Data reading
+# ---------------------------------------------------------------------------
+
+def _parse_space_delimited_csv(filepath):
+    """Read a space-delimited CSV file, returning (header_list, rows)."""
+    header, rows = [], []
+    with open(filepath, "r", encoding="utf8") as fh:
+        for j, row in enumerate(csv.reader(fh)):
+            fields = row[0].strip().split()
+            if j == 0:
+                header = fields
+            else:
+                rows.append(fields)
+    return header, rows
+
+
+def read_results(out_dir):
+    """
+    Read .INFOITER and .INFOSTEP files for each simulation.
+
+    Returns
+    -------
+    info_ite      : list of rows per simulation (plus adaptive at end if present)
+    info_itenam   : column names for .INFOITER
+    newtit        : total Newton iterations per simulation
+    linit         : total linear iterations per simulation
+    finalstep     : last reported time step size (days)
+    has_adaptive  : bool — whether adaptive results were found
+    newton_adaptive, linear_adaptive : iteration totals for adaptive run
+    """
+    info_ite, info_itenam = [], []
+    newtit, linit = [], []
+    finalstep = 0.0
+
+    for i, _ in enumerate(VALUES):
+        sim_dir = out_dir / f"sim_{i}"
+        try:
+            header, rows = _parse_space_delimited_csv(sim_dir / f"{CASE}.INFOITER")
+        except FileNotFoundError:
+            raise FileNotFoundError(
+                f"Missing output for sim_{i}. Did the simulation complete? "
+                f"Expected: {sim_dir / f'{CASE}.INFOITER'}"
+            )
+        if i == 0:
+            info_itenam = header
+        info_ite.append(rows)
+
+        newtit.append(0)
+        linit.append(0)
+        step_header, step_rows = _parse_space_delimited_csv(sim_dir / f"{CASE}.INFOSTEP")
+        for row in step_rows:
+            newtit[-1] += int(row[step_header.index("NewtIt")])
+            linit[-1] += int(row[step_header.index("LinIt")])
+        if i == 0 and step_rows:
+            finalstep = float(step_rows[-1][step_header.index("TStep(day)")])
+
+    # Optional adaptive run
+    adaptive_infoiter = out_dir / "adaptive" / f"{CASE}.INFOITER"
+    adaptive_infostep = out_dir / "adaptive" / f"{CASE}.INFOSTEP"
+    has_adaptive = adaptive_infoiter.exists() and adaptive_infostep.exists()
+    newton_adaptive, linear_adaptive = 0, 0
+
+    if has_adaptive:
+        header, rows = _parse_space_delimited_csv(adaptive_infoiter)
+        info_itenam = header  # refresh in case it differs
+        info_ite.append(rows)
+
+        step_header, step_rows = _parse_space_delimited_csv(
+            out_dir / "adaptive" / f"{CASE}.INFOSTEP"
+        )
+        for row in step_rows:
+            newton_adaptive += int(row[step_header.index("NewtIt")])
+            linear_adaptive += int(row[step_header.index("LinIt")])
+
+    return (
+        info_ite, info_itenam,
+        newtit, linit, finalstep,
+        has_adaptive, newton_adaptive, linear_adaptive,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Data processing
+# ---------------------------------------------------------------------------
+
+def process_data(info_ite, info_itenam, finalstep):
+    """
+    Organise per-step, per-iteration residuals from raw row data.
+
+    Returns iters, maxress, rescnvo, rescnvw, rescnvg, times, tsteps.
+    """
+    no_steps = int(info_ite[0][-1][info_itenam.index("ReportStep")]) + 1
+
+    # Pre-group rows by (ReportStep, TimeStep) for O(n) lookup
+    grouped = []
+    for sim_rows in info_ite:
+        by_step = {}
+        for row in sim_rows:
+            key = (int(row[info_itenam.index("ReportStep")]),
+                   int(row[info_itenam.index("TimeStep")]))
+            by_step.setdefault(key, []).append(row)
+        grouped.append(by_step)
+
+    iters, maxress, rescnvo, rescnvw, rescnvg, times = [], [], [], [], [], []
+
+    for i in range(len(info_ite)):
+        iters.append([[] for _ in range(no_steps)])
+        maxress.append([[] for _ in range(no_steps)])
+        rescnvo.append([[] for _ in range(no_steps)])
+        rescnvw.append([[] for _ in range(no_steps)])
+        rescnvg.append([[] for _ in range(no_steps)])
+
+        for n in range(no_steps):
+            step_rows = grouped[i].get((n, 0), [])[:NEWTONMAXIT]
+            for count, row in enumerate(step_rows):
+                iters[i][n].append(int(row[info_itenam.index("Iteration")]))
+                maxress[i][n].append(max(
+                    float(row[info_itenam.index("CNV_Gas")]),
+                    float(row[info_itenam.index("CNV_Oil")]),
+                    float(row[info_itenam.index("CNV_Water")]),
+                ))
+                rescnvo[i][n].append(float(row[info_itenam.index("CNV_Oil")]))
+                rescnvw[i][n].append(float(row[info_itenam.index("CNV_Water")]))
+                rescnvg[i][n].append(float(row[info_itenam.index("CNV_Gas")]))
+                if i == 0 and count == 0:
+                    times.append(float(row[info_itenam.index("Time")]))
+
+    times = np.array(times)
+    tsteps = list(times[1:] - times[:-1]) + [finalstep]
+    return iters, maxress, rescnvo, rescnvw, rescnvg, times, tsteps
+
+
+# ---------------------------------------------------------------------------
+# Best-path selection
+# ---------------------------------------------------------------------------
+
+def select_best_path(maxress, rescnvo, rescnvw, rescnvg, tsteps, output_format):
+    """
+    Compute best tolerance path and residual sequences.
+
+    Returns bestpath (list of strings), bestress (list of strings),
+    ppath, press.
+    """
+    no_steps = len(tsteps)
+
+    if output_format == 0:
+        return _select_format0(maxress, tsteps, no_steps)
+    else:
+        return _select_format1(maxress, rescnvo, rescnvw, rescnvg, tsteps, no_steps)
+
+
+def _find_best_per_iteration(maxress, n, k):
+    """Return (min_residual, best_value) across all VALUES at step n, iteration k."""
+    min_ress = math.inf
+    best_val = math.inf
+    for i, value in enumerate(VALUES):
+        if k < len(maxress[i][n]) and maxress[i][n][k] < min_ress:
+            min_ress = maxress[i][n][k]
+            best_val = value
+    return min_ress, best_val
+
+
+def _select_format0(maxress, tsteps, no_steps):
+    header = [
+        f"#Min residual values; NEWTONMAXIT={NEWTONMAXIT}; MB={MB}; CNV={CNV}; MPI={NMPIS}\n",
+        "TStep[d],Defaulta",
+        *[f",iterati{i}" for i in range(NEWTONMAXIT + 1)],
+        "\n",
+    ]
+    bestpath, bestress = [""], list(header)
+    ppath, press = [], []
+
     for n in range(no_steps):
         bestpath.append(f"{tsteps[n]:.2e},{DEFAULTADAPTIVE:.2e},")
         bestress.append(f"{tsteps[n]:.2e},{DEFAULTADAPTIVE:.2e},")
         ppath.append([])
         press.append([])
-        bestvalue = mt.inf
-        for k in range(NEWTONMAXIT+1):
+
+        for k in range(NEWTONMAXIT + 1):
             if k == 0:
-                bestpath += [f"{DEFAULTADAPTIVE:.2e}"]
-                bestress += [f"{maxress[-1][n][k]:.2e}"]
-                ppath[-1].append(bestvalue)
+                bestpath += [f"{DEFAULTADAPTIVE:.2e}", ","]
+                bestress += [f"{maxress[-1][n][k]:.2e}", ","]
+                ppath[-1].append(math.inf)
                 press[-1].append(maxress[-1][n][k])
-                bestpath += [","]
-                bestress += [","]
             else:
-                minress = mt.inf
-                for i, value in enumerate(VALUES):
-                    if k < len(maxress[i][n]):
-                        # remove the value <= bestvalue to allow free mvmt of tols
-                        # if maxress[i][n][k] < minress and value <= bestvalue:  
-                        if maxress[i][n][k] < minress:
-                            minress = maxress[i][n][k]
-                            bestvalue = value
-                if minress == mt.inf:
+                min_ress, best_val = _find_best_per_iteration(maxress, n, k)
+                if min_ress == math.inf:
                     del bestpath[-1]
                     del bestress[-1]
                     break
-                bestpath += [f"{bestvalue:.2e}"]
-                bestress += [f"{minress:.2e}"]
-                ppath[-1].append(bestvalue)
-                press[-1].append(minress)
-                if minress < 1:
+                bestpath += [f"{best_val:.2e}"]
+                bestress += [f"{min_ress:.2e}"]
+                ppath[-1].append(best_val)
+                press[-1].append(min_ress)
+                if min_ress < 1:
                     break
                 bestpath += [","]
                 bestress += [","]
-        if k == NEWTONMAXIT:
+        else:
             del bestpath[-1]
             del bestress[-1]
         bestpath += "\n"
         bestress += "\n"
 
-if OUTPUTFORMAT == 1:
-    # SELECT
-    bestress = [
-    #     f"#Min residual valuesBLAHHHHHH; NEWTONMAXIT={NEWTONMAXIT}; MB={MB}; CNV={CNV}; MPI={NMPIS}\n"
-    ]
-    # bestress += ["TStep[d],Defaulta"]
-    bestpath = [
-    #    f"#{VARIABLE[2:-1]} values; NEWTONMAXIT={NEWTONMAXIT}; MB={MB}; CNV={CNV}; MPI={NMPIS}\n"
-    ]
-    # bestpath += ["Step,TStep[d],Defaulta"]
-    bestpath += ["TStep[d],Defaulta"]
+    return bestpath, bestress, ppath, press
 
-    # bestpath += ["Step"]
-    bestpath += [f",bestTol"]
-    bestpath += [f",cnvminmaxresid"]
-    bestpath += [f",cnvresidoil"]
-    bestpath += [f",cnvresidwater"]
-    bestpath += [f",cnvresidgas"]
-    # bestpath += [f",mbsminmaxresid"]
-    bestpath += [f",iterationNumber"]
-    bestpath += ["\n"]
 
-    #bestpath += ["TStep[d],Defaulta"]
-    # for i in range(NEWTONMAXIT + 1):
-    #     #bestpath += [f",iterati{i}"]
-    #     bestress += [f",iterati{i}"]
-    #bestpath += ["\n"]
-    # bestpath = [""]
-    # bestress += ["\n"]
-    ppath = []
-    press = []
+def _select_format1(maxress, rescnvo, rescnvw, rescnvg, tsteps, no_steps):
+    header = [
+        "TStep[d],Defaulta",
+        ",bestTol",
+        ",cnvminmaxresid",
+        ",cnvresidoil",
+        ",cnvresidwater",
+        ",cnvresidgas",
+        ",iterationNumber",
+        "\n",
+    ]
+    bestpath = list(header)
+    bestress = []
+    ppath, press = [], []
+
     for n in range(no_steps):
-        # bestpath.append(f"{n},{tsteps[n]:.2e},{DEFAULTADAPTIVE:.2e},")
-        # bestress.append(f"{tsteps[n]:.2e},{DEFAULTADAPTIVE:.2e},")
         ppath.append([])
         press.append([])
-        bestvalue = mt.inf
-        for k in range(NEWTONMAXIT+1):
+
+        for k in range(NEWTONMAXIT + 1):
             if k == 0:
-                # bestpath += [f"{n}"]
-                # bestpath += [","]
-                # bestpath += [f"{DEFAULTADAPTIVE:.2e}"]
-                # bestress += [f"{maxress[-1][n][k]:.2e}"]
-                # bestpath += [f"{n}"]
-                # bestpath += [","]
-                bestpath += [f"{tsteps[n]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{DEFAULTADAPTIVE:.2e}"]
-                bestpath += [","]
-                # Forcing the first iteration tolerance to be the default value
-                # bestpath += [f"{bestvalue:.2e}"]
-                bestpath += [f"{DEFAULTADAPTIVE:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{maxress[-1][n][k]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{rescnvo[-1][n][k]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{rescnvw[-1][n][k]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{rescnvg[-1][n][k]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{k}"]
-                bestpath += "\n"
-                ppath[-1].append(bestvalue)
-                # press[-1].append(maxress[-1][n][k])
-                # bestpath += [","]
-                # bestress += [","]
+                row = [
+                    f"{tsteps[n]:.2e}", ",",
+                    f"{DEFAULTADAPTIVE:.2e}", ",",
+                    f"{DEFAULTADAPTIVE:.2e}", ",",
+                    f"{maxress[-1][n][k]:.2e}", ",",
+                    f"{rescnvo[-1][n][k]:.2e}", ",",
+                    f"{rescnvw[-1][n][k]:.2e}", ",",
+                    f"{rescnvg[-1][n][k]:.2e}", ",",
+                    f"{k}", "\n",
+                ]
+                bestpath += row
+                ppath[-1].append(math.inf)
             else:
-                minress = mt.inf
-                for i, value in enumerate(VALUES):
-                    if k < len(maxress[i][n]):
-
-                        valrescnvo = rescnvo[i][n][k]
-                        valrescnvw = rescnvw[i][n][k]
-                        valrescnvg = rescnvg[i][n][k]
-                        # remove the value <= bestvalue to allow free mvmt of tols
-                        # if maxress[i][n][k] < minress and value <= bestvalue:  
-                        if maxress[i][n][k] < minress :
-                            minress = maxress[i][n][k]
-                            bestvalue = value
-                if minress == mt.inf:
+                min_ress, best_val = _find_best_per_iteration(maxress, n, k)
+                if min_ress == math.inf:
                     del bestpath[-1]
-                    # del bestress[-1]
                     break
-                # bestpath += [f"{n}"]
-                # bestpath += [","]
-                bestpath += [f"{tsteps[n]:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{DEFAULTADAPTIVE:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{bestvalue:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{minress:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{valrescnvo:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{valrescnvw:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{valrescnvg:.2e}"]
-                bestpath += [","]
-                bestpath += [f"{k}"]
-                bestpath += "\n"
 
-                ppath[-1].append(bestvalue)
-                # press[-1].append(minress)
-                if minress < 1:
+                # Retrieve per-component residuals for the winning sim
+                best_i = next(
+                    i for i, v in enumerate(VALUES)
+                    if v == best_val and k < len(maxress[i][n])
+                )
+                row = [
+                    f"{tsteps[n]:.2e}", ",",
+                    f"{DEFAULTADAPTIVE:.2e}", ",",
+                    f"{best_val:.2e}", ",",
+                    f"{min_ress:.2e}", ",",
+                    f"{rescnvo[best_i][n][k]:.2e}", ",",
+                    f"{rescnvw[best_i][n][k]:.2e}", ",",
+                    f"{rescnvg[best_i][n][k]:.2e}", ",",
+                    f"{k}", "\n",
+                ]
+                bestpath += row
+                ppath[-1].append(best_val)
+                if min_ress < 1:
                     break
-                # bestpath += [","]
-                # bestress += [","]
-        if k == NEWTONMAXIT:
+        else:
             del bestpath[-1]
-            # del bestress[-1]
         bestpath += "\n"
-        # bestress += "\n"
 
-# WRITE
-with open(
-    f"{OUTFOL}/bestpath.csv",
-    "w",
-    encoding="utf8",
-) as file:
-    file.write("".join(bestpath))
-with open(
-    f"{OUTFOL}/bestress.csv",
-    "w",
-    encoding="utf8",
-) as file:
-    file.write("".join(bestress))
-# PLOT
-if len(VALUES) < 100:
-    figs, axis = [], []
-    for n in range(no_steps):
-        fig, ax = plt.subplots()
-        figs.append(fig)
-        axis.append(ax)
+    return bestpath, bestress, ppath, press
+
+
+# ---------------------------------------------------------------------------
+# Output writing
+# ---------------------------------------------------------------------------
+
+def write_outputs(out_dir, bestpath, bestress):
+    """Write bestpath.csv and bestress.csv to out_dir."""
+    (out_dir / "bestpath.csv").write_text("".join(bestpath), encoding="utf8")
+    (out_dir / "bestress.csv").write_text("".join(bestress), encoding="utf8")
+
+
+# ---------------------------------------------------------------------------
+# Plotting
+# ---------------------------------------------------------------------------
+
+def plot_results(
+    out_dir, iters, maxress, press, ppath,
+    newtit, linit,
+    has_adaptive, newton_adaptive, linear_adaptive,
+):
+    """Generate and save all plots."""
+    no_steps = len(iters[0])
+
+    if len(VALUES) < 100:
+        _plot_per_step(out_dir, iters, maxress, press, has_adaptive, no_steps)
+
+    _plot_iteration_summary(
+        out_dir, newtit, linit,
+        has_adaptive, newton_adaptive, linear_adaptive,
+        no_steps,
+    )
+
+
+def _plot_per_step(out_dir, iters, maxress, press, has_adaptive, no_steps):
+    figs = [plt.subplots() for _ in range(no_steps)]
+    axes = [ax for _, ax in figs]
+    figs = [fig for fig, _ in figs]
+
     for i, val in enumerate(VALUES):
         for n in range(no_steps):
-            axis[n].plot(
-                iters[i][n],
-                maxress[i][n],
+            axes[n].plot(
+                iters[i][n], maxress[i][n],
                 color=COLORS[i],
                 label=VARIABLE + f"{val}",
-                ls=LINESTYLE[i],
+                ls=LINESTYLES[i],
                 lw=1,
             )
+
     for n in range(no_steps):
-        axis[n].plot(
-            range(len(press[n])),
-            press[n],
-            color=COLORS[-1],
-            label="best path",
-            ls="dotted",
-            lw=1,
+        axes[n].plot(
+            range(len(press[n])), press[n],
+            color=COLORS[-1], label="best path", ls="dotted", lw=1,
         )
-    if os.path.exists(f"{OUTFOL}/adaptive/{CASE}.INFOITER"):
+
+    if has_adaptive:
         for n in range(no_steps):
-            axis[n].plot(
-                iters[-1][n],
-                maxress[-1][n],
-                color="b",
-                label="adaptive",
-                ls="",
-                marker="*",
-                lw=3,
+            axes[n].plot(
+                iters[-1][n], maxress[-1][n],
+                color="b", label="adaptive", ls="", marker="*", lw=3,
             )
+
+    last_report = iters[0][-1]  # for title
     for n in range(no_steps):
-        axis[n].set_ylabel("Max normalize residuals (cnvs and mbs) [-]")
-        axis[n].set_yscale("log")
-        axis[n].set_xlabel("Iteration no.")
-        axis[n].set_title(
-            CASE
-            + f", report step {n} out of {info_ite[0][-1][info_itenam.index('ReportStep')]}"
-        )
-        axis[n].legend(prop={"size": 12})
-        axis[n].xaxis.set_major_locator(MaxNLocator(integer=True))
-        figs[n].savefig(f"{OUTFOL}/reportstep_{n}.png", bbox_inches="tight")
-fig, ax = plt.subplots()
-ax.set_title(CASE + f", Total no. report steps {int(info_ite[0][-1][info_itenam.index('ReportStep')])+1}")
-ax.set_xscale("log")
-ax.set_xlabel(VARIABLE[2:-1])
-ax.set_ylabel(r"$\beta$I$_{N}$+$\alpha$I$_{L}$ ("+ r"$\beta$=" + f"{BETA}, "+ r"$\alpha$=" + f"{ALPHA})")
-ax.plot(
-    VALUES,
-    BETA*np.array(newtit)+ALPHA*np.array(linit),
-    color="k",
-    marker="*",
-    lw=1,
-)
-if os.path.exists(f"{OUTFOL}/adaptive/{CASE}.INFOITER"):
-        ax.axhline(
-        y = BETA*newtita+ALPHA*linita,
-        color="b",
-        lw=2,
+        ax = axes[n]
+        ax.set_ylabel("Max normalised residuals (CNV) [-]")
+        ax.set_yscale("log")
+        ax.set_xlabel("Iteration no.")
+        ax.set_title(f"{CASE}, report step {n} out of {no_steps - 1}")
+        ax.legend(prop={"size": 12})
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+        figs[n].savefig(out_dir / f"reportstep_{n}.png", bbox_inches="tight")
+        plt.close(figs[n])
+
+
+def _plot_iteration_summary(
+    out_dir, newtit, linit,
+    has_adaptive, newton_adaptive, linear_adaptive,
+    no_steps,
+):
+    def _base_fig(ylabel):
+        fig, ax = plt.subplots()
+        ax.set_title(f"{CASE}, Total no. report steps {no_steps}")
+        ax.set_xscale("log")
+        ax.set_xlabel(VARIABLE[2:-1])
+        ax.set_ylabel(ylabel)
+        return fig, ax
+
+    # Weighted cost
+    fig, ax = _base_fig(
+        r"$\beta$I$_{N}$+$\alpha$I$_{L}$ ("
+        + r"$\beta$=" + f"{BETA}, " + r"$\alpha$=" + f"{ALPHA})"
     )
-fig.savefig(f"{OUTFOL}/totaliterationswighted.png", bbox_inches="tight")
-fig, ax = plt.subplots()
-ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-ax.set_title(CASE + f", Total no. report steps {int(info_ite[0][-1][info_itenam.index('ReportStep')])+1}")
-ax.set_xscale("log")
-ax.set_xlabel(VARIABLE[2:-1])
-ax.set_ylabel(r"I$_{N}$")
-ax.plot(
-    VALUES,
-    newtit,
-    color="k",
-    marker="*",
-    lw=1,
-)
-if os.path.exists(f"{OUTFOL}/adaptive/{CASE}.INFOITER"):
-        ax.axhline(
-        y = newtita,
-        color="b",
-        lw=2,
+    ax.plot(VALUES, BETA * np.array(newtit) + ALPHA * np.array(linit),
+            color="k", marker="*", lw=1)
+    if has_adaptive:
+        ax.axhline(y=BETA * newton_adaptive + ALPHA * linear_adaptive, color="b", lw=2)
+    fig.savefig(out_dir / "totaliterationswighted.png", bbox_inches="tight")
+    plt.close(fig)
+
+    # Newton iterations
+    fig, ax = _base_fig(r"I$_{N}$")
+    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.plot(VALUES, newtit, color="k", marker="*", lw=1)
+    if has_adaptive:
+        ax.axhline(y=newton_adaptive, color="b", lw=2)
+    fig.savefig(out_dir / "newtoniterations.png", bbox_inches="tight")
+    plt.close(fig)
+
+    # Linear iterations
+    fig, ax = _base_fig(r"I$_{L}$")
+    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.plot(VALUES, linit, color="k", marker="*", lw=1)
+    if has_adaptive:
+        ax.axhline(y=linear_adaptive, color="b", lw=2)
+    fig.savefig(out_dir / "lineariterations.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def main():
+    cmdargs = parse_args()
+    out_dir = Path.cwd() / cmdargs["output"].strip()
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    output_format = cmdargs["outpucsv"]
+
+    if cmdargs["runensemble"] == 1:
+        run_ensemble(out_dir)
+
+    if cmdargs["runadaptive"] == 1:
+        run_adaptive(out_dir)
+
+    (
+        info_ite, info_itenam,
+        newtit, linit, finalstep,
+        has_adaptive, newton_adaptive, linear_adaptive,
+    ) = read_results(out_dir)
+
+    iters, maxress, rescnvo, rescnvw, rescnvg, times, tsteps = process_data(
+        info_ite, info_itenam, finalstep
     )
-fig.savefig(f"{OUTFOL}/newtoniterations.png", bbox_inches="tight")
-fig, ax = plt.subplots()
-ax.set_title(CASE + f", Total no. report steps {int(info_ite[0][-1][info_itenam.index('ReportStep')])+1}")
-ax.set_xscale("log")
-ax.set_xlabel(VARIABLE[2:-1])
-ax.set_ylabel(r"I$_{L}$")
-ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-ax.plot(
-    VALUES,
-    linit,
-    color="k",
-    marker="*",
-    lw=1,
-)
-if os.path.exists(f"{OUTFOL}/adaptive/{CASE}.INFOITER"):
-        ax.axhline(
-        y = linita,
-        color="b",
-        lw=2,
+
+    bestpath, bestress, ppath, press = select_best_path(
+        maxress, rescnvo, rescnvw, rescnvg, tsteps, output_format
     )
-fig.savefig(f"{OUTFOL}/lineariterations.png", bbox_inches="tight")
+
+    write_outputs(out_dir, bestpath, bestress)
+
+    plot_results(
+        out_dir, iters, maxress, press, ppath,
+        newtit, linit,
+        has_adaptive, newton_adaptive, linear_adaptive,
+    )
+
+
+if __name__ == "__main__":
+    main()

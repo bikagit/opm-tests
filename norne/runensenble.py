@@ -91,9 +91,12 @@ NEWTONMAXIT = 20
 CNV = 1e-2
 MB = 1e-7
 # FLOW = "/Users/macbookn/activopmwkspc/master/build/opm-simulators/bin/flow "
-FLOW = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
+# FLOW = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
+FLOW = "/Users/macbookn/activopmwkspc/edgedev/build/opm-simulators/bin/flow_blackoil "
 
-FLOWADAPTIVE = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
+
+FLOWADAPTIVE = "/Users/macbookn/activopmwkspc/edgedev/build/opm-simulators/bin/flow_blackoil "
+# FLOWADAPTIVE = "/Users/macbookn/hackatonwork/build/opm-simulators/bin/flow_blackoil "
 CASE = "NORNE_ATW2013"
 BETA = 1
 ALPHA = 0.33 # BETA * I_newton + ALPHA * I_linear (see https://opm-project.org/wp-content/uploads/2024/04/saeternes_opm_summit_230409_share.pdf) --output-mode=none 
@@ -108,7 +111,7 @@ ALPHA = 0.33 # BETA * I_newton + ALPHA * I_linear (see https://opm-project.org/w
 #     f" --tolerance-mb={MB} --tolerance-mb-relaxed={MB}1e-5
 # --tolerance-cnv-relaxed={CNV} 
 FLAGS = f" --use-best-residual=true --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed=1e-2 --tolerance-cnv=1e-2 --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 "
-FLAGSADAPT = f"  --use-m-lmethods-tols=true --use-best-residual=true  --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed=1e-2 --tolerance-cnv=1e-2 --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 "
+FLAGSADAPT = f" --use-best-path=true --use-m-lmethods-tols=false --use-best-residual=true  --relaxed-max-pv-fraction=0 --output-extra-convergence-info=steps,iterations --enable-ecl-output=0 --full-time-step-initially=1  --tolerance-cnv-relaxed=1e-2 --tolerance-cnv=1e-2 --tolerance-mb=1e-5 --tolerance-mb-relaxed=1e-5 "
 
 COLORS = [
     "#1f77b4",
