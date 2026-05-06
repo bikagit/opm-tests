@@ -1,0 +1,1710 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.10-pre (835ecba76*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.5.0, Darwin Kernel Version 24.5.0: Tue Apr 22 19:54:49 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T6000 )
+Build time       =  2025-06-19 at 16:48:09 hrs
+User             =  macbookn
+Simulation started on 26-06-2025 at 13:06:37 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+ActivateMLRelPErm="False" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="noml" # default: ""
+EclDeckFileName="SPE1CASE2_2P.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="10"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'SPE1CASE2_2P.DATA'
+    0 Reading RUNSPEC  in SPE1CASE2_2P.DATA line 19
+    1 Reading TITLE    in SPE1CASE2_2P.DATA line 22
+    2 Reading DIMENS   in SPE1CASE2_2P.DATA line 25
+    3 Reading EQLDIMS  in SPE1CASE2_2P.DATA line 30
+    4 Reading TABDIMS  in SPE1CASE2_2P.DATA line 35
+    5 Reading OIL      in SPE1CASE2_2P.DATA line 39
+    6 Reading WATER    in SPE1CASE2_2P.DATA line 40
+    7 Reading METRIC   in SPE1CASE2_2P.DATA line 43
+    8 Reading SATOPTS  in SPE1CASE2_2P.DATA line 46
+    9 Reading START    in SPE1CASE2_2P.DATA line 50
+   10 Reading WELLDIMS in SPE1CASE2_2P.DATA line 53
+   11 Reading UNIFIN   in SPE1CASE2_2P.DATA line 64
+   12 Reading UNIFOUT  in SPE1CASE2_2P.DATA line 65
+   13 Reading GRID     in SPE1CASE2_2P.DATA line 67
+   14 Reading INIT     in SPE1CASE2_2P.DATA line 74
+   15 Reading NOECHO   in SPE1CASE2_2P.DATA line 77
+   16 Reading DX       in SPE1CASE2_2P.DATA line 79
+   17 Reading DY       in SPE1CASE2_2P.DATA line 82
+   18 Reading DZ       in SPE1CASE2_2P.DATA line 85
+   19 Reading TOPS     in SPE1CASE2_2P.DATA line 89
+   20 Reading PORO     in SPE1CASE2_2P.DATA line 93
+   21 Reading PERMX    in SPE1CASE2_2P.DATA line 97
+   22 Reading PERMY    in SPE1CASE2_2P.DATA line 101
+   23 Reading PERMZ    in SPE1CASE2_2P.DATA line 105
+   24 Reading ECHO     in SPE1CASE2_2P.DATA line 109
+   25 Reading PROPS    in SPE1CASE2_2P.DATA line 111
+   26 Reading EHYSTR   in SPE1CASE2_2P.DATA line 114
+   27 Reading PVTW     in SPE1CASE2_2P.DATA line 117
+   28 Reading PVCDO    in SPE1CASE2_2P.DATA line 130
+   29 Reading SWATINIT in SPE1CASE2_2P.DATA line 143
+   30 Reading ROCK     in SPE1CASE2_2P.DATA line 147
+   31 Reading SWOF     in SPE1CASE2_2P.DATA line 154
+   32 Reading DENSITY  in SPE1CASE2_2P.DATA line 339
+   33 Reading REGIONS  in SPE1CASE2_2P.DATA line 360
+   34 Reading EQUALS   in SPE1CASE2_2P.DATA line 363
+   35 Reading SOLUTION in SPE1CASE2_2P.DATA line 368
+   36 Reading EQUIL    in SPE1CASE2_2P.DATA line 371
+   37 Reading SUMMARY  in SPE1CASE2_2P.DATA line 392
+   38 Reading FOPR     in SPE1CASE2_2P.DATA line 396
+   39 Reading BPR      in SPE1CASE2_2P.DATA line 400
+   40 Reading WBHP     in SPE1CASE2_2P.DATA line 406
+   41 Reading WOIR     in SPE1CASE2_2P.DATA line 411
+   42 Reading WOIT     in SPE1CASE2_2P.DATA line 415
+   43 Reading WOPR     in SPE1CASE2_2P.DATA line 419
+   44 Reading WOPT     in SPE1CASE2_2P.DATA line 423
+   45 Reading WWIR     in SPE1CASE2_2P.DATA line 427
+   46 Reading WWIT     in SPE1CASE2_2P.DATA line 431
+   47 Reading WWPR     in SPE1CASE2_2P.DATA line 435
+   48 Reading WWPT     in SPE1CASE2_2P.DATA line 439
+   49 Reading SCHEDULE in SPE1CASE2_2P.DATA line 443
+   50 Reading RPTSCHED in SPE1CASE2_2P.DATA line 445
+   51 Reading RPTRST   in SPE1CASE2_2P.DATA line 448
+   52 Reading WELSPECS in SPE1CASE2_2P.DATA line 459
+   53 Reading COMPDAT  in SPE1CASE2_2P.DATA line 468
+   54 Reading WCONPROD in SPE1CASE2_2P.DATA line 478
+   55 Reading WCONINJE in SPE1CASE2_2P.DATA line 487
+   56 Reading TSTEP    in SPE1CASE2_2P.DATA line 495
+   57 Reading WELOPEN  in SPE1CASE2_2P.DATA line 499
+   58 Reading TSTEP    in SPE1CASE2_2P.DATA line 505
+   59 Reading WELOPEN  in SPE1CASE2_2P.DATA line 508
+   60 Reading TSTEP    in SPE1CASE2_2P.DATA line 514
+   61 Reading WELOPEN  in SPE1CASE2_2P.DATA line 517
+   62 Reading TSTEP    in SPE1CASE2_2P.DATA line 523
+   63 Reading WELOPEN  in SPE1CASE2_2P.DATA line 526
+   64 Reading TSTEP    in SPE1CASE2_2P.DATA line 532
+   65 Reading WELOPEN  in SPE1CASE2_2P.DATA line 535
+   66 Reading TSTEP    in SPE1CASE2_2P.DATA line 541
+   67 Reading WELOPEN  in SPE1CASE2_2P.DATA line 544
+   68 Reading TSTEP    in SPE1CASE2_2P.DATA line 549
+   69 Reading WELOPEN  in SPE1CASE2_2P.DATA line 552
+   70 Reading TSTEP    in SPE1CASE2_2P.DATA line 558
+   71 Reading WELOPEN  in SPE1CASE2_2P.DATA line 561
+
+Warning: Unsupported keywords or keyword items:
+
+  NOECHO: keyword not supported
+  In file: SPE1CASE2_2P.DATA, line 77
+
+  ECHO: keyword not supported
+  In file: SPE1CASE2_2P.DATA, line 109
+
+Creating grid from keywords DX, DY, DZ and TOPS
+2 fluid phases are active
+
+Processing dynamic information from
+SPE1CASE2_2P.DATA line 443
+Initializing report step 0/96 at 2015-01-01 0 DAYS line 443
+Processing keyword RPTSCHED at line 445
+Processing keyword RPTRST at line 448
+Processing keyword WELSPECS at line 459
+Processing keyword COMPDAT at line 468
+Processing keyword WCONPROD at line 478
+Processing keyword WCONINJE at line 487
+Complete report step 1 (31 DAYS) at 2015-02-01 (0 DAYS)
+
+Initializing report step 2/96 at 2015-02-01 (0 DAYS) line 495
+Complete report step 2 (28 DAYS) at 2015-03-01 (31 DAYS)
+
+Initializing report step 3/96 at 2015-03-01 (31 DAYS) line 495
+Complete report step 3 (31 DAYS) at 2015-04-01 (59 DAYS)
+
+Initializing report step 4/96 at 2015-04-01 (59 DAYS) line 495
+Complete report step 4 (30 DAYS) at 2015-05-01 (90 DAYS)
+
+Initializing report step 5/96 at 2015-05-01 (90 DAYS) line 495
+Complete report step 5 (31 DAYS) at 2015-06-01 (120 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/96 at 2015-06-01 (120 DAYS) line 495
+Complete report step 6 (30 DAYS) at 2015-07-01 (151 DAYS)
+
+Initializing report step 7/96 at 2015-07-01 (151 DAYS) line 495
+Complete report step 7 (31 DAYS) at 2015-08-01 (181 DAYS)
+
+Initializing report step 8/96 at 2015-08-01 (181 DAYS) line 495
+Complete report step 8 (31 DAYS) at 2015-09-01 (212 DAYS)
+
+Initializing report step 9/96 at 2015-09-01 (212 DAYS) line 495
+Complete report step 9 (30 DAYS) at 2015-10-01 (243 DAYS)
+
+Initializing report step 10/96 at 2015-10-01 (243 DAYS) line 495
+Complete report step 10 (31 DAYS) at 2015-11-01 (273 DAYS)
+
+Initializing report step 11/96 at 2015-11-01 (273 DAYS) line 495
+Complete report step 11 (30 DAYS) at 2015-12-01 (304 DAYS)
+
+Initializing report step 12/96 at 2015-12-01 (304 DAYS) line 495
+Complete report step 12 (31 DAYS) at 2016-01-01 (334 DAYS)
+
+Initializing report step 13/96 at 2016-01-01 (334 DAYS) line 495
+Processing keyword WELOPEN at line 499
+Complete report step 13 (31 DAYS) at 2016-02-01 (365 DAYS)
+
+Initializing report step 14/96 at 2016-02-01 (365 DAYS) line 505
+Complete report step 14 (28 DAYS) at 2016-02-29 (396 DAYS)
+
+Initializing report step 15/96 at 2016-02-29 (396 DAYS) line 505
+Complete report step 15 (31 DAYS) at 2016-03-31 (424 DAYS)
+
+Initializing report step 16/96 at 2016-03-31 (424 DAYS) line 505
+Complete report step 16 (30 DAYS) at 2016-04-30 (455 DAYS)
+
+Initializing report step 17/96 at 2016-04-30 (455 DAYS) line 505
+Complete report step 17 (31 DAYS) at 2016-05-31 (485 DAYS)
+
+Initializing report step 18/96 at 2016-05-31 (485 DAYS) line 505
+Complete report step 18 (30 DAYS) at 2016-06-30 (516 DAYS)
+
+Initializing report step 19/96 at 2016-06-30 (516 DAYS) line 505
+Complete report step 19 (31 DAYS) at 2016-07-31 (546 DAYS)
+
+Initializing report step 20/96 at 2016-07-31 (546 DAYS) line 505
+Complete report step 20 (31 DAYS) at 2016-08-31 (577 DAYS)
+
+Initializing report step 21/96 at 2016-08-31 (577 DAYS) line 505
+Complete report step 21 (30 DAYS) at 2016-09-30 (608 DAYS)
+
+Initializing report step 22/96 at 2016-09-30 (608 DAYS) line 505
+Complete report step 22 (31 DAYS) at 2016-10-31 (638 DAYS)
+
+Initializing report step 23/96 at 2016-10-31 (638 DAYS) line 505
+Complete report step 23 (30 DAYS) at 2016-11-30 (669 DAYS)
+
+Initializing report step 24/96 at 2016-11-30 (669 DAYS) line 505
+Complete report step 24 (31 DAYS) at 2016-12-31 (699 DAYS)
+
+Initializing report step 25/96 at 2016-12-31 (699 DAYS) line 505
+Processing keyword WELOPEN at line 508
+Complete report step 25 (31 DAYS) at 2017-01-31 (730 DAYS)
+
+Initializing report step 26/96 at 2017-01-31 (730 DAYS) line 514
+Complete report step 26 (28 DAYS) at 2017-02-28 (761 DAYS)
+
+Initializing report step 27/96 at 2017-02-28 (761 DAYS) line 514
+Complete report step 27 (31 DAYS) at 2017-03-31 (789 DAYS)
+
+Initializing report step 28/96 at 2017-03-31 (789 DAYS) line 514
+Complete report step 28 (30 DAYS) at 2017-04-30 (820 DAYS)
+
+Initializing report step 29/96 at 2017-04-30 (820 DAYS) line 514
+Complete report step 29 (31 DAYS) at 2017-05-31 (850 DAYS)
+
+Initializing report step 30/96 at 2017-05-31 (850 DAYS) line 514
+Complete report step 30 (30 DAYS) at 2017-06-30 (881 DAYS)
+
+Initializing report step 31/96 at 2017-06-30 (881 DAYS) line 514
+Complete report step 31 (31 DAYS) at 2017-07-31 (911 DAYS)
+
+Initializing report step 32/96 at 2017-07-31 (911 DAYS) line 514
+Complete report step 32 (31 DAYS) at 2017-08-31 (942 DAYS)
+
+Initializing report step 33/96 at 2017-08-31 (942 DAYS) line 514
+Complete report step 33 (30 DAYS) at 2017-09-30 (973 DAYS)
+
+Initializing report step 34/96 at 2017-09-30 (973 DAYS) line 514
+Complete report step 34 (31 DAYS) at 2017-10-31 (1003 DAYS)
+
+Initializing report step 35/96 at 2017-10-31 (1003 DAYS) line 514
+Complete report step 35 (30 DAYS) at 2017-11-30 (1034 DAYS)
+
+Initializing report step 36/96 at 2017-11-30 (1034 DAYS) line 514
+Complete report step 36 (31 DAYS) at 2017-12-31 (1064 DAYS)
+
+Initializing report step 37/96 at 2017-12-31 (1064 DAYS) line 514
+Processing keyword WELOPEN at line 517
+Complete report step 37 (31 DAYS) at 2018-01-31 (1095 DAYS)
+
+Initializing report step 38/96 at 2018-01-31 (1095 DAYS) line 523
+Complete report step 38 (28 DAYS) at 2018-02-28 (1126 DAYS)
+
+Initializing report step 39/96 at 2018-02-28 (1126 DAYS) line 523
+Complete report step 39 (31 DAYS) at 2018-03-31 (1154 DAYS)
+
+Initializing report step 40/96 at 2018-03-31 (1154 DAYS) line 523
+Complete report step 40 (30 DAYS) at 2018-04-30 (1185 DAYS)
+
+Initializing report step 41/96 at 2018-04-30 (1185 DAYS) line 523
+Complete report step 41 (31 DAYS) at 2018-05-31 (1215 DAYS)
+
+Initializing report step 42/96 at 2018-05-31 (1215 DAYS) line 523
+Complete report step 42 (30 DAYS) at 2018-06-30 (1246 DAYS)
+
+Initializing report step 43/96 at 2018-06-30 (1246 DAYS) line 523
+Complete report step 43 (31 DAYS) at 2018-07-31 (1276 DAYS)
+
+Initializing report step 44/96 at 2018-07-31 (1276 DAYS) line 523
+Complete report step 44 (31 DAYS) at 2018-08-31 (1307 DAYS)
+
+Initializing report step 45/96 at 2018-08-31 (1307 DAYS) line 523
+Complete report step 45 (30 DAYS) at 2018-09-30 (1338 DAYS)
+
+Initializing report step 46/96 at 2018-09-30 (1338 DAYS) line 523
+Complete report step 46 (31 DAYS) at 2018-10-31 (1368 DAYS)
+
+Initializing report step 47/96 at 2018-10-31 (1368 DAYS) line 523
+Complete report step 47 (30 DAYS) at 2018-11-30 (1399 DAYS)
+
+Initializing report step 48/96 at 2018-11-30 (1399 DAYS) line 523
+Complete report step 48 (31 DAYS) at 2018-12-31 (1429 DAYS)
+
+Initializing report step 49/96 at 2018-12-31 (1429 DAYS) line 523
+Processing keyword WELOPEN at line 526
+Complete report step 49 (31 DAYS) at 2019-01-31 (1460 DAYS)
+
+Initializing report step 50/96 at 2019-01-31 (1460 DAYS) line 532
+Complete report step 50 (28 DAYS) at 2019-02-28 (1491 DAYS)
+
+Initializing report step 51/96 at 2019-02-28 (1491 DAYS) line 532
+Complete report step 51 (31 DAYS) at 2019-03-31 (1519 DAYS)
+
+Initializing report step 52/96 at 2019-03-31 (1519 DAYS) line 532
+Complete report step 52 (30 DAYS) at 2019-04-30 (1550 DAYS)
+
+Initializing report step 53/96 at 2019-04-30 (1550 DAYS) line 532
+Complete report step 53 (31 DAYS) at 2019-05-31 (1580 DAYS)
+
+Initializing report step 54/96 at 2019-05-31 (1580 DAYS) line 532
+Complete report step 54 (30 DAYS) at 2019-06-30 (1611 DAYS)
+
+Initializing report step 55/96 at 2019-06-30 (1611 DAYS) line 532
+Complete report step 55 (31 DAYS) at 2019-07-31 (1641 DAYS)
+
+Initializing report step 56/96 at 2019-07-31 (1641 DAYS) line 532
+Complete report step 56 (31 DAYS) at 2019-08-31 (1672 DAYS)
+
+Initializing report step 57/96 at 2019-08-31 (1672 DAYS) line 532
+Complete report step 57 (30 DAYS) at 2019-09-30 (1703 DAYS)
+
+Initializing report step 58/96 at 2019-09-30 (1703 DAYS) line 532
+Complete report step 58 (31 DAYS) at 2019-10-31 (1733 DAYS)
+
+Initializing report step 59/96 at 2019-10-31 (1733 DAYS) line 532
+Complete report step 59 (30 DAYS) at 2019-11-30 (1764 DAYS)
+
+Initializing report step 60/96 at 2019-11-30 (1764 DAYS) line 532
+Complete report step 60 (31 DAYS) at 2019-12-31 (1794 DAYS)
+
+Initializing report step 61/96 at 2019-12-31 (1794 DAYS) line 532
+Processing keyword WELOPEN at line 535
+Complete report step 61 (31 DAYS) at 2020-01-31 (1825 DAYS)
+
+Initializing report step 62/96 at 2020-01-31 (1825 DAYS) line 541
+Complete report step 62 (28 DAYS) at 2020-02-28 (1856 DAYS)
+
+Initializing report step 63/96 at 2020-02-28 (1856 DAYS) line 541
+Complete report step 63 (31 DAYS) at 2020-03-30 (1884 DAYS)
+
+Initializing report step 64/96 at 2020-03-30 (1884 DAYS) line 541
+Complete report step 64 (30 DAYS) at 2020-04-29 (1915 DAYS)
+
+Initializing report step 65/96 at 2020-04-29 (1915 DAYS) line 541
+Complete report step 65 (31 DAYS) at 2020-05-30 (1945 DAYS)
+
+Initializing report step 66/96 at 2020-05-30 (1945 DAYS) line 541
+Complete report step 66 (30 DAYS) at 2020-06-29 (1976 DAYS)
+
+Initializing report step 67/96 at 2020-06-29 (1976 DAYS) line 541
+Complete report step 67 (31 DAYS) at 2020-07-30 (2006 DAYS)
+
+Initializing report step 68/96 at 2020-07-30 (2006 DAYS) line 541
+Complete report step 68 (31 DAYS) at 2020-08-30 (2037 DAYS)
+
+Initializing report step 69/96 at 2020-08-30 (2037 DAYS) line 541
+Complete report step 69 (30 DAYS) at 2020-09-29 (2068 DAYS)
+
+Initializing report step 70/96 at 2020-09-29 (2068 DAYS) line 541
+Complete report step 70 (31 DAYS) at 2020-10-30 (2098 DAYS)
+
+Initializing report step 71/96 at 2020-10-30 (2098 DAYS) line 541
+Complete report step 71 (30 DAYS) at 2020-11-29 (2129 DAYS)
+
+Initializing report step 72/96 at 2020-11-29 (2129 DAYS) line 541
+Complete report step 72 (31 DAYS) at 2020-12-30 (2159 DAYS)
+
+Initializing report step 73/96 at 2020-12-30 (2159 DAYS) line 541
+Processing keyword WELOPEN at line 544
+Complete report step 73 (31 DAYS) at 2021-01-30 (2190 DAYS)
+
+Initializing report step 74/96 at 2021-01-30 (2190 DAYS) line 549
+Complete report step 74 (28 DAYS) at 2021-02-27 (2221 DAYS)
+
+Initializing report step 75/96 at 2021-02-27 (2221 DAYS) line 549
+Complete report step 75 (31 DAYS) at 2021-03-30 (2249 DAYS)
+
+Initializing report step 76/96 at 2021-03-30 (2249 DAYS) line 549
+Complete report step 76 (30 DAYS) at 2021-04-29 (2280 DAYS)
+
+Initializing report step 77/96 at 2021-04-29 (2280 DAYS) line 549
+Complete report step 77 (31 DAYS) at 2021-05-30 (2310 DAYS)
+
+Initializing report step 78/96 at 2021-05-30 (2310 DAYS) line 549
+Complete report step 78 (30 DAYS) at 2021-06-29 (2341 DAYS)
+
+Initializing report step 79/96 at 2021-06-29 (2341 DAYS) line 549
+Complete report step 79 (31 DAYS) at 2021-07-30 (2371 DAYS)
+
+Initializing report step 80/96 at 2021-07-30 (2371 DAYS) line 549
+Complete report step 80 (31 DAYS) at 2021-08-30 (2402 DAYS)
+
+Initializing report step 81/96 at 2021-08-30 (2402 DAYS) line 549
+Complete report step 81 (30 DAYS) at 2021-09-29 (2433 DAYS)
+
+Initializing report step 82/96 at 2021-09-29 (2433 DAYS) line 549
+Complete report step 82 (31 DAYS) at 2021-10-30 (2463 DAYS)
+
+Initializing report step 83/96 at 2021-10-30 (2463 DAYS) line 549
+Complete report step 83 (30 DAYS) at 2021-11-29 (2494 DAYS)
+
+Initializing report step 84/96 at 2021-11-29 (2494 DAYS) line 549
+Complete report step 84 (31 DAYS) at 2021-12-30 (2524 DAYS)
+
+Initializing report step 85/96 at 2021-12-30 (2524 DAYS) line 549
+Processing keyword WELOPEN at line 552
+Complete report step 85 (31 DAYS) at 2022-01-30 (2555 DAYS)
+
+Initializing report step 86/96 at 2022-01-30 (2555 DAYS) line 558
+Complete report step 86 (28 DAYS) at 2022-02-27 (2586 DAYS)
+
+Initializing report step 87/96 at 2022-02-27 (2586 DAYS) line 558
+Complete report step 87 (31 DAYS) at 2022-03-30 (2614 DAYS)
+
+Initializing report step 88/96 at 2022-03-30 (2614 DAYS) line 558
+Complete report step 88 (30 DAYS) at 2022-04-29 (2645 DAYS)
+
+Initializing report step 89/96 at 2022-04-29 (2645 DAYS) line 558
+Complete report step 89 (31 DAYS) at 2022-05-30 (2675 DAYS)
+
+Initializing report step 90/96 at 2022-05-30 (2675 DAYS) line 558
+Complete report step 90 (30 DAYS) at 2022-06-29 (2706 DAYS)
+
+Initializing report step 91/96 at 2022-06-29 (2706 DAYS) line 558
+Complete report step 91 (31 DAYS) at 2022-07-30 (2736 DAYS)
+
+Initializing report step 92/96 at 2022-07-30 (2736 DAYS) line 558
+Complete report step 92 (31 DAYS) at 2022-08-30 (2767 DAYS)
+
+Initializing report step 93/96 at 2022-08-30 (2767 DAYS) line 558
+Complete report step 93 (30 DAYS) at 2022-09-29 (2798 DAYS)
+
+Initializing report step 94/96 at 2022-09-29 (2798 DAYS) line 558
+Complete report step 94 (31 DAYS) at 2022-10-30 (2828 DAYS)
+
+Initializing report step 95/96 at 2022-10-30 (2828 DAYS) line 558
+Complete report step 95 (30 DAYS) at 2022-11-29 (2859 DAYS)
+
+Initializing report step 96/96 at 2022-11-29 (2859 DAYS) line 558
+Complete report step 96 (31 DAYS) at 2022-12-30 (2889 DAYS)
+
+Processing keyword WELOPEN at line 561
+
+Processing grid
+Total number of active cells: 300 / total pore volume: 81360000 RM3
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System: Oil-Water system.
+Relative permeability input format: Saturation Family I.
+Number of saturation regions: 2
+
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/96 at day 0/2920, date = 01-Jan-2015
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 1 days, at day 0/31, date = 01-Jan-2015
+Restart file written for report step  0/96, date = 01-Jan-2015 00:00:00
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 1, stepsize 3 days, at day 1/31, date = 02-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 2, stepsize 7.33822 days, at day 4/31, date = 05-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 19.6618 days, at day 11.3382/31, date = 12-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT        31  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    1    01 Feb 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1847.8:        0.0:       -0.0:     2043.7:      0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1847.8:        0.0:       -0.0:     2043.7:      0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1847.8:        0.0:       -0.0:     2043.7:      0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.7:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.7:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.7:   273.1:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :       53.0:        0.0:        0.0:       58.7:        0.0:       62.0:        0.0:       64.4:
+:G1      :           :        :    :       53.0:        0.0:        0.0:       58.7:        0.0:       62.0:        0.0:       64.4:
+:PROD    : 10, 10    :    PROD: BHP:       53.0:        0.0:        0.0:       58.7:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       62.0:        0.0:       64.4:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  1/96 at day 31/2920, date = 01-Feb-2015
+
+Starting time step 0, stepsize 28 days, at day 31/59, date = 01-Feb-2015
+Restart file written for report step  1/96, date = 01-Feb-2015 00:00:00
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT        59  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    2    01 Mar 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1874.5:       -0.0:       -0.0:     2073.3:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1874.5:       -0.0:       -0.0:     2073.3:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1874.5:       -0.0:       -0.0:     2073.3:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.6:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.6:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.6:   276.3:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      105.5:        0.0:        0.0:      116.7:        0.0:      118.0:        0.0:      122.6:
+:G1      :           :        :    :      105.5:        0.0:        0.0:      116.7:        0.0:      118.0:        0.0:      122.6:
+:PROD    : 10, 10    :    PROD: BHP:      105.5:        0.0:        0.0:      116.7:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      118.0:        0.0:      122.6:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  2/96 at day 59/2920, date = 01-Mar-2015
+
+Starting time step 0, stepsize 31 days, at day 59/90, date = 01-Mar-2015
+Restart file written for report step  2/96, date = 01-Mar-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 10.23 days
+
+
+Starting time step 0, stepsize 10.23 days, at day 59/90, date = 01-Mar-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 1, stepsize 20.77 days, at day 69.23/90, date = 11-Mar-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 6.8541 days
+
+
+Starting time step 1, stepsize 6.8541 days, at day 69.23/90, date = 11-Mar-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 2, stepsize 13.9159 days, at day 76.0841/90, date = 18-Mar-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT        90  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    3    01 Apr 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1877.8:       -0.0:       -0.0:     2077.0:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1877.8:       -0.0:       -0.0:     2077.0:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1877.8:       -0.0:       -0.0:     2077.0:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.6:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.6:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.6:   277.6:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      163.7:        0.0:        0.0:      181.1:        0.0:      180.0:        0.0:      187.0:
+:G1      :           :        :    :      163.7:        0.0:        0.0:      181.1:        0.0:      180.0:        0.0:      187.0:
+:PROD    : 10, 10    :    PROD: BHP:      163.7:        0.0:        0.0:      181.1:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:      187.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  3/96 at day 90/2920, date = 01-Apr-2015
+
+Starting time step 0, stepsize 5.56636 days, at day 90/120, date = 01-Apr-2015
+Restart file written for report step  3/96, date = 01-Apr-2015 00:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 1, stepsize 12.2168 days, at day 95.5664/120, date = 06-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 2, stepsize 4.88673 days, at day 107.783/120, date = 18-Apr-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.6126202400000003 days
+
+
+Starting time step 2, stepsize 1.61262 days, at day 107.783/120, date = 18-Apr-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5321646792000001 days
+
+
+Starting time step 2, stepsize 0.532165 days, at day 107.783/120, date = 18-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 0.212866 days, at day 108.315/120, date = 19-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 4, stepsize 0.638598 days, at day 108.528/120, date = 19-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 5, stepsize 0.255439 days, at day 109.167/120, date = 20-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 6, stepsize 0.766317 days, at day 109.422/120, date = 20-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 7, stepsize 0.306527 days, at day 110.189/120, date = 21-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 8, stepsize 0.122611 days, at day 110.495/120, date = 21-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 9, stepsize 0.367832 days, at day 110.618/120, date = 21-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 10, stepsize 0.147133 days, at day 110.986/120, date = 21-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 11, stepsize 0.441399 days, at day 111.133/120, date = 22-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 12, stepsize 0.176559 days, at day 111.574/120, date = 22-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 13, stepsize 0.0706238 days, at day 111.751/120, date = 22-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 14, stepsize 0.211871 days, at day 111.821/120, date = 22-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 15, stepsize 0.0847485 days, at day 112.033/120, date = 23-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 16, stepsize 0.254246 days, at day 112.118/120, date = 23-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 17, stepsize 0.101698 days, at day 112.372/120, date = 23-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 18, stepsize 0.305095 days, at day 112.474/120, date = 23-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 19, stepsize 0.122038 days, at day 112.779/120, date = 23-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 20, stepsize 0.366114 days, at day 112.901/120, date = 23-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 21, stepsize 0.146445 days, at day 113.267/120, date = 24-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 22, stepsize 0.439336 days, at day 113.414/120, date = 24-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 23, stepsize 1.31801 days, at day 113.853/120, date = 24-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 24, stepsize 0.527204 days, at day 115.171/120, date = 26-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 25, stepsize 1.58161 days, at day 115.698/120, date = 26-Apr-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5219317108237245 days
+
+
+Starting time step 25, stepsize 0.521932 days, at day 115.698/120, date = 26-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 26, stepsize 1.04386 days, at day 116.22/120, date = 27-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 27, stepsize 0.417545 days, at day 117.264/120, date = 28-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 28, stepsize 1.25264 days, at day 117.681/120, date = 28-Apr-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 29, stepsize 0.501054 days, at day 118.934/120, date = 29-Apr-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 30, stepsize 0.564915 days, at day 119.435/120, date = 30-Apr-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT       120  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    4    01 May 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1853.9:       -0.0:       -0.0:     2050.5:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1853.9:       -0.0:       -0.0:     2050.5:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1853.9:       -0.0:       -0.0:     2050.5:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.5:   274.8:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      220.0:        0.0:        0.0:      243.3:        0.0:      240.0:        0.0:      249.3:
+:G1      :           :        :    :      220.0:        0.0:        0.0:      243.3:        0.0:      240.0:        0.0:      249.3:
+:PROD    : 10, 10    :    PROD: BHP:      220.0:        0.0:        0.0:      243.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      240.0:        0.0:      249.3:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  4/96 at day 120/2920, date = 01-May-2015
+
+Starting time step 0, stepsize 1.69474 days, at day 120/151, date = 01-May-2015
+Restart file written for report step  4/96, date = 01-May-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5592655735115444 days
+
+
+Starting time step 0, stepsize 0.559266 days, at day 120/151, date = 01-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 1, stepsize 1.11853 days, at day 120.559/151, date = 01-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 2, stepsize 0.447412 days, at day 121.678/151, date = 02-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 1.34224 days, at day 122.125/151, date = 03-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 4, stepsize 0.536895 days, at day 123.467/151, date = 04-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 5, stepsize 1.61068 days, at day 124.004/151, date = 05-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5315260010653717 days
+
+
+Starting time step 5, stepsize 0.531526 days, at day 124.004/151, date = 05-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 6, stepsize 1.06305 days, at day 124.536/151, date = 05-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 7, stepsize 0.425221 days, at day 125.599/151, date = 06-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 8, stepsize 1.27566 days, at day 126.024/151, date = 07-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 9, stepsize 0.510265 days, at day 127.3/151, date = 08-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 10, stepsize 1.53079 days, at day 127.81/151, date = 08-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5051623114125293 days
+
+
+Starting time step 10, stepsize 0.505162 days, at day 127.81/151, date = 08-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 11, stepsize 1.01032 days, at day 128.315/151, date = 09-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 12, stepsize 0.40413 days, at day 129.326/151, date = 10-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 13, stepsize 1.21239 days, at day 129.73/151, date = 10-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 14, stepsize 3.63717 days, at day 130.942/151, date = 11-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.2002656519161699 days
+
+
+Starting time step 14, stepsize 1.20027 days, at day 130.942/151, date = 11-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 15, stepsize 0.480106 days, at day 132.142/151, date = 13-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 16, stepsize 1.44032 days, at day 132.622/151, date = 13-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 17, stepsize 0.576128 days, at day 134.063/151, date = 15-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 18, stepsize 1.72838 days, at day 134.639/151, date = 15-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.570366237790564 days
+
+
+Starting time step 18, stepsize 0.570366 days, at day 134.639/151, date = 15-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 19, stepsize 1.14073 days, at day 135.209/151, date = 16-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 20, stepsize 0.456293 days, at day 136.35/151, date = 17-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 21, stepsize 1.36888 days, at day 136.806/151, date = 17-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 22, stepsize 0.547552 days, at day 138.175/151, date = 19-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 23, stepsize 1.64265 days, at day 138.723/151, date = 19-May-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 24, stepsize 1.64265 days, at day 140.365/151, date = 21-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5420760723961521 days
+
+
+Starting time step 24, stepsize 0.542076 days, at day 140.365/151, date = 21-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 25, stepsize 0.21683 days, at day 140.907/151, date = 21-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 26, stepsize 0.650491 days, at day 141.124/151, date = 22-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 27, stepsize 0.260197 days, at day 141.775/151, date = 22-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 28, stepsize 0.78059 days, at day 142.035/151, date = 23-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 29, stepsize 2.34177 days, at day 142.816/151, date = 23-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.7727836488079545 days
+
+
+Starting time step 29, stepsize 0.772784 days, at day 142.816/151, date = 23-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 30, stepsize 0.309113 days, at day 143.588/151, date = 24-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 31, stepsize 0.92734 days, at day 143.897/151, date = 24-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 32, stepsize 0.370936 days, at day 144.825/151, date = 25-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 33, stepsize 1.11281 days, at day 145.196/151, date = 26-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 34, stepsize 0.445123 days, at day 146.309/151, date = 27-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 35, stepsize 1.33537 days, at day 146.754/151, date = 27-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 36, stepsize 2.91097 days, at day 148.089/151, date = 29-May-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.9606205267746301 days
+
+
+Starting time step 36, stepsize 0.960621 days, at day 148.089/151, date = 29-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 37, stepsize 0.384248 days, at day 149.05/151, date = 30-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 38, stepsize 0.783051 days, at day 149.434/151, date = 30-May-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 39, stepsize 0.313221 days, at day 150.217/151, date = 31-May-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 40, stepsize 0.469831 days, at day 150.53/151, date = 31-May-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT       151  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    5    01 Jun 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1854.3:       -0.0:       -0.0:     2050.9:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1854.3:       -0.0:       -0.0:     2050.9:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1854.3:       -0.0:       -0.0:     2050.9:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.5:   273.5:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      278.2:        0.0:        0.0:      307.7:        0.0:      302.0:        0.0:      313.7:
+:G1      :           :        :    :      278.2:        0.0:        0.0:      307.7:        0.0:      302.0:        0.0:      313.7:
+:PROD    : 10, 10    :    PROD: BHP:      278.2:        0.0:        0.0:      307.7:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      302.0:        0.0:      313.7:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  5/96 at day 151/2920, date = 01-Jun-2015
+
+Starting time step 0, stepsize 1.40949 days, at day 151/181, date = 01-Jun-2015
+Restart file written for report step  5/96, date = 01-Jun-2015 00:00:00
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 1, stepsize 0.563797 days, at day 152.409/181, date = 02-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 2, stepsize 1.69139 days, at day 152.973/181, date = 02-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5581589508771221 days
+
+
+Starting time step 2, stepsize 0.558159 days, at day 152.973/181, date = 02-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 1.11632 days, at day 153.531/181, date = 03-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 4, stepsize 0.446527 days, at day 154.648/181, date = 04-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 5, stepsize 1.33958 days, at day 155.094/181, date = 05-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 6, stepsize 0.535833 days, at day 156.434/181, date = 06-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 7, stepsize 1.6075 days, at day 156.97/181, date = 06-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5304742669136169 days
+
+
+Starting time step 7, stepsize 0.530474 days, at day 156.97/181, date = 06-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 8, stepsize 1.06095 days, at day 157.5/181, date = 07-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 9, stepsize 0.424379 days, at day 158.561/181, date = 08-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 10, stepsize 1.27314 days, at day 158.986/181, date = 08-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 11, stepsize 0.509255 days, at day 160.259/181, date = 10-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 12, stepsize 1.52777 days, at day 160.768/181, date = 10-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 13, stepsize 4.5833 days, at day 162.296/181, date = 12-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.5124882298241047 days
+
+
+Starting time step 13, stepsize 1.51249 days, at day 162.296/181, date = 12-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 14, stepsize 0.604995 days, at day 163.808/181, date = 13-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 15, stepsize 1.81499 days, at day 164.413/181, date = 14-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5989453390103454 days
+
+
+Starting time step 15, stepsize 0.598945 days, at day 164.413/181, date = 14-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 16, stepsize 1.19789 days, at day 165.012/181, date = 15-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 17, stepsize 0.479156 days, at day 166.21/181, date = 16-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 18, stepsize 1.43747 days, at day 166.689/181, date = 16-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 19, stepsize 0.574988 days, at day 168.127/181, date = 18-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 20, stepsize 1.72496 days, at day 168.702/181, date = 18-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5692376501954324 days
+
+
+Starting time step 20, stepsize 0.569238 days, at day 168.702/181, date = 18-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 21, stepsize 1.13848 days, at day 169.271/181, date = 19-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 22, stepsize 0.45539 days, at day 170.409/181, date = 20-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 23, stepsize 1.36617 days, at day 170.865/181, date = 20-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 24, stepsize 0.546468 days, at day 172.231/181, date = 22-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 25, stepsize 1.6394 days, at day 172.777/181, date = 22-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5410034627457391 days
+
+
+Starting time step 25, stepsize 0.541003 days, at day 172.777/181, date = 22-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 26, stepsize 1.08201 days, at day 173.318/181, date = 23-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 27, stepsize 0.432803 days, at day 174.4/181, date = 24-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 28, stepsize 1.29841 days, at day 174.833/181, date = 24-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 29, stepsize 0.519363 days, at day 176.132/181, date = 26-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 30, stepsize 1.55809 days, at day 176.651/181, date = 26-Jun-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5141696909935505 days
+
+
+Starting time step 30, stepsize 0.51417 days, at day 176.651/181, date = 26-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 31, stepsize 1.02834 days, at day 177.165/181, date = 27-Jun-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 32, stepsize 0.411336 days, at day 178.193/181, date = 28-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 33, stepsize 1.23401 days, at day 178.605/181, date = 28-Jun-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 34, stepsize 1.16122 days, at day 179.839/181, date = 29-Jun-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT       181  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    6    01 Jul 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1900.2:       -0.0:       -0.0:     2101.7:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1900.2:       -0.0:       -0.0:     2101.7:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1900.2:       -0.0:       -0.0:     2101.7:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.5:   272.3:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      334.5:        0.0:        0.0:      370.0:        0.0:      362.0:        0.0:      376.0:
+:G1      :           :        :    :      334.5:        0.0:        0.0:      370.0:        0.0:      362.0:        0.0:      376.0:
+:PROD    : 10, 10    :    PROD: BHP:      334.5:        0.0:        0.0:      370.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      362.0:        0.0:      376.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  6/96 at day 181/2920, date = 01-Jul-2015
+
+Starting time step 0, stepsize 0.464488 days, at day 181/212, date = 01-Jul-2015
+Restart file written for report step  6/96, date = 01-Jul-2015 00:00:00
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 1, stepsize 1.39346 days, at day 181.464/212, date = 01-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 2, stepsize 0.557386 days, at day 182.858/212, date = 02-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 1.67216 days, at day 183.415/212, date = 03-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5518119577201578 days
+
+
+Starting time step 3, stepsize 0.551812 days, at day 183.415/212, date = 03-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 4, stepsize 1.10362 days, at day 183.967/212, date = 03-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 5, stepsize 0.44145 days, at day 185.071/212, date = 05-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 6, stepsize 1.32435 days, at day 185.512/212, date = 05-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 7, stepsize 0.529739 days, at day 186.837/212, date = 06-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 8, stepsize 1.58922 days, at day 187.366/212, date = 07-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.524442084617238 days
+
+
+Starting time step 8, stepsize 0.524442 days, at day 187.366/212, date = 07-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 9, stepsize 1.04888 days, at day 187.891/212, date = 07-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 10, stepsize 0.419554 days, at day 188.94/212, date = 08-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 11, stepsize 1.25866 days, at day 189.359/212, date = 09-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 12, stepsize 3.77598 days, at day 190.618/212, date = 10-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.2460743930505573 days
+
+
+Starting time step 12, stepsize 1.24607 days, at day 190.618/212, date = 10-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 13, stepsize 0.49843 days, at day 191.864/212, date = 11-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 14, stepsize 1.49529 days, at day 192.362/212, date = 12-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 15, stepsize 0.598116 days, at day 193.858/212, date = 13-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 16, stepsize 1.79435 days, at day 194.456/212, date = 14-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.592134551577625 days
+
+
+Starting time step 16, stepsize 0.592135 days, at day 194.456/212, date = 14-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 17, stepsize 1.18427 days, at day 195.048/212, date = 15-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 18, stepsize 0.473708 days, at day 196.232/212, date = 16-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 19, stepsize 1.42112 days, at day 196.706/212, date = 16-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 20, stepsize 0.568449 days, at day 198.127/212, date = 18-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 21, stepsize 1.70535 days, at day 198.695/212, date = 18-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5627646778193748 days
+
+
+Starting time step 21, stepsize 0.562765 days, at day 198.695/212, date = 18-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 22, stepsize 1.12553 days, at day 199.258/212, date = 19-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 23, stepsize 0.450212 days, at day 200.384/212, date = 20-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 24, stepsize 1.35064 days, at day 200.834/212, date = 20-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 25, stepsize 0.540254 days, at day 202.185/212, date = 22-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 26, stepsize 1.62076 days, at day 202.725/212, date = 22-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5348515497995338 days
+
+
+Starting time step 26, stepsize 0.534852 days, at day 202.725/212, date = 22-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 27, stepsize 1.0697 days, at day 203.26/212, date = 23-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 28, stepsize 0.427881 days, at day 204.329/212, date = 24-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 29, stepsize 1.28364 days, at day 204.757/212, date = 24-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 30, stepsize 3.85093 days, at day 206.041/212, date = 26-Jul-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.2708072823236922 days
+
+
+Starting time step 30, stepsize 1.27081 days, at day 206.041/212, date = 26-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 31, stepsize 0.508323 days, at day 207.312/212, date = 27-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 32, stepsize 1.52497 days, at day 207.82/212, date = 27-Jul-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 33, stepsize 0.609987 days, at day 209.345/212, date = 29-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 34, stepsize 1.0225 days, at day 209.955/212, date = 29-Jul-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 35, stepsize 1.0225 days, at day 210.978/212, date = 30-Jul-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT       212  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    7    01 Aug 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :     1900.1:       -0.0:       -0.0:     2101.6:     -0.000:     -0.00:      0.0000:        :        :
+:G1      :           :    :     1900.1:       -0.0:       -0.0:     2101.6:     -0.000:     -0.00:      0.0000:        :        :
+:PROD    : 10, 10    : BHP:     1900.1:       -0.0:       -0.0:     2101.6:     -0.000:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:G1      :           :      :      :      :        0.0:     2000.0:        0.0:     2077.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     2000.0:        0.0:     2077.5:   272.3:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :      392.7:        0.0:        0.0:      434.4:        0.0:      424.0:        0.0:      440.5:
+:G1      :           :        :    :      392.7:        0.0:        0.0:      434.4:        0.0:      424.0:        0.0:      440.5:
+:PROD    : 10, 10    :    PROD: BHP:      392.7:        0.0:        0.0:      434.4:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      424.0:        0.0:      440.5:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  7/96 at day 212/2920, date = 01-Aug-2015
+
+Starting time step 0, stepsize 0.408999 days, at day 212/243, date = 01-Aug-2015
+Restart file written for report step  7/96, date = 01-Aug-2015 00:00:00
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 1, stepsize 1.227 days, at day 212.409/243, date = 01-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 2, stepsize 0.490798 days, at day 213.636/243, date = 02-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 3, stepsize 1.4724 days, at day 214.127/243, date = 03-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 4, stepsize 0.588958 days, at day 215.599/243, date = 04-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 5, stepsize 1.76687 days, at day 216.188/243, date = 05-Aug-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.583068481492831 days
+
+
+Starting time step 5, stepsize 0.583068 days, at day 216.188/243, date = 05-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 6, stepsize 1.16614 days, at day 216.771/243, date = 05-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 7, stepsize 0.466455 days, at day 217.937/243, date = 06-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 8, stepsize 1.39936 days, at day 218.404/243, date = 07-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 9, stepsize 0.559746 days, at day 219.803/243, date = 08-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 10, stepsize 1.67924 days, at day 220.363/243, date = 09-Aug-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.5541482848107865 days
+
+
+Starting time step 10, stepsize 0.554148 days, at day 220.363/243, date = 09-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 11, stepsize 1.1083 days, at day 220.917/243, date = 09-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 12, stepsize 0.443319 days, at day 222.025/243, date = 11-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 13, stepsize 1.32996 days, at day 222.469/243, date = 11-Aug-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 14, stepsize 0.531982 days, at day 223.799/243, date = 12-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 15, stepsize 1.59595 days, at day 224.331/243, date = 13-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 16, stepsize 4.78784 days, at day 225.927/243, date = 14-Aug-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.5799875896525144 days
+
+
+Starting time step 16, stepsize 1.57999 days, at day 225.927/243, date = 14-Aug-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 17, stepsize 0.631995 days, at day 227.507/243, date = 16-Aug-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 18, stepsize 1.89599 days, at day 228.139/243, date = 17-Aug-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.6256750855023957 days
+
+
+Starting time step 18, stepsize 0.625675 days, at day 228.139/243, date = 17-Aug-2015

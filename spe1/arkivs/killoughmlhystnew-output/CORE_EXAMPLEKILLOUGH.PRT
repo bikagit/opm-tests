@@ -1,0 +1,3818 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.10-pre (04484abca*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.6.0, Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:29 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T6000 )
+Build time       =  2025-11-19 at 19:10:20 hrs
+User             =  root
+Simulation started on 19-11-2025 at 19:17:10 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+ActivateMLRelPErm="True" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="killoughmlhystnew-output" # default: ""
+EclDeckFileName="CORE_ExampleKillough.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="10"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+loadFileMLRelPErm=""
+
+Reading deck file 'CORE_ExampleKillough.DATA'
+    0 Reading RUNSPEC  in CORE_ExampleKillough.DATA line 19
+    1 Reading TITLE    in CORE_ExampleKillough.DATA line 22
+    2 Reading DIMENS   in CORE_ExampleKillough.DATA line 25
+    3 Reading EQLDIMS  in CORE_ExampleKillough.DATA line 30
+    4 Reading TABDIMS  in CORE_ExampleKillough.DATA line 35
+    5 Reading OIL      in CORE_ExampleKillough.DATA line 39
+    6 Reading WATER    in CORE_ExampleKillough.DATA line 40
+    7 Reading METRIC   in CORE_ExampleKillough.DATA line 43
+    8 Reading SATOPTS  in CORE_ExampleKillough.DATA line 46
+    9 Reading START    in CORE_ExampleKillough.DATA line 50
+   10 Reading WELLDIMS in CORE_ExampleKillough.DATA line 53
+   11 Reading UNIFIN   in CORE_ExampleKillough.DATA line 64
+   12 Reading UNIFOUT  in CORE_ExampleKillough.DATA line 65
+   13 Reading GRID     in CORE_ExampleKillough.DATA line 67
+   14 Reading INIT     in CORE_ExampleKillough.DATA line 74
+   15 Reading NOECHO   in CORE_ExampleKillough.DATA line 77
+   16 Reading DX       in CORE_ExampleKillough.DATA line 79
+   17 Reading DY       in CORE_ExampleKillough.DATA line 82
+   18 Reading DZ       in CORE_ExampleKillough.DATA line 85
+   19 Reading TOPS     in CORE_ExampleKillough.DATA line 89
+   20 Reading PORO     in CORE_ExampleKillough.DATA line 93
+   21 Reading PERMX    in CORE_ExampleKillough.DATA line 97
+   22 Reading PERMY    in CORE_ExampleKillough.DATA line 101
+   23 Reading PERMZ    in CORE_ExampleKillough.DATA line 105
+   24 Reading ECHO     in CORE_ExampleKillough.DATA line 109
+   25 Reading PROPS    in CORE_ExampleKillough.DATA line 111
+   26 Reading EHYSTR   in CORE_ExampleKillough.DATA line 114
+   27 Reading PVTW     in CORE_ExampleKillough.DATA line 117
+   28 Reading PVCDO    in CORE_ExampleKillough.DATA line 130
+   29 Reading SWATINIT in CORE_ExampleKillough.DATA line 143
+   30 Reading ROCK     in CORE_ExampleKillough.DATA line 148
+   31 Reading SWOF     in CORE_ExampleKillough.DATA line 155
+   32 Reading DENSITY  in CORE_ExampleKillough.DATA line 317
+   33 Reading REGIONS  in CORE_ExampleKillough.DATA line 339
+   34 Reading EQUALS   in CORE_ExampleKillough.DATA line 342
+   35 Reading SOLUTION in CORE_ExampleKillough.DATA line 347
+   36 Reading RPTRST   in CORE_ExampleKillough.DATA line 348
+   37 Reading EQUIL    in CORE_ExampleKillough.DATA line 352
+   38 Reading SUMMARY  in CORE_ExampleKillough.DATA line 373
+   39 Reading FOPR     in CORE_ExampleKillough.DATA line 377
+   40 Reading WBHP     in CORE_ExampleKillough.DATA line 382
+   41 Reading WOIR     in CORE_ExampleKillough.DATA line 388
+   42 Reading WOIT     in CORE_ExampleKillough.DATA line 394
+   43 Reading WOPR     in CORE_ExampleKillough.DATA line 398
+   44 Reading WOPT     in CORE_ExampleKillough.DATA line 402
+   45 Reading WWIR     in CORE_ExampleKillough.DATA line 406
+   46 Reading WWIT     in CORE_ExampleKillough.DATA line 410
+   47 Reading WWPR     in CORE_ExampleKillough.DATA line 414
+   48 Reading WWPT     in CORE_ExampleKillough.DATA line 418
+   49 Reading SCHEDULE in CORE_ExampleKillough.DATA line 422
+   50 Reading RPTSCHED in CORE_ExampleKillough.DATA line 424
+   51 Reading RPTRST   in CORE_ExampleKillough.DATA line 427
+   52 Reading WELSPECS in CORE_ExampleKillough.DATA line 438
+   53 Reading COMPDAT  in CORE_ExampleKillough.DATA line 450
+   54 Reading WCONPROD in CORE_ExampleKillough.DATA line 463
+   55 Reading WCONINJE in CORE_ExampleKillough.DATA line 473
+   56 Reading TSTEP    in CORE_ExampleKillough.DATA line 483
+   57 Reading WELOPEN  in CORE_ExampleKillough.DATA line 486
+   58 Reading TSTEP    in CORE_ExampleKillough.DATA line 495
+   59 Reading WELOPEN  in CORE_ExampleKillough.DATA line 497
+   60 Reading TSTEP    in CORE_ExampleKillough.DATA line 506
+   61 Reading WELOPEN  in CORE_ExampleKillough.DATA line 508
+   62 Reading TSTEP    in CORE_ExampleKillough.DATA line 517
+   63 Reading WELOPEN  in CORE_ExampleKillough.DATA line 519
+   64 Reading TSTEP    in CORE_ExampleKillough.DATA line 528
+   65 Reading WELOPEN  in CORE_ExampleKillough.DATA line 530
+   66 Reading TSTEP    in CORE_ExampleKillough.DATA line 539
+   67 Reading WELOPEN  in CORE_ExampleKillough.DATA line 541
+   68 Reading TSTEP    in CORE_ExampleKillough.DATA line 549
+   69 Reading WELOPEN  in CORE_ExampleKillough.DATA line 551
+   70 Reading TSTEP    in CORE_ExampleKillough.DATA line 560
+   71 Reading WELOPEN  in CORE_ExampleKillough.DATA line 562
+   72 Reading TSTEP    in CORE_ExampleKillough.DATA line 571
+
+Warning: Unsupported keywords or keyword items:
+
+  NOECHO: keyword not supported
+  In file: CORE_ExampleKillough.DATA, line 77
+
+  ECHO: keyword not supported
+  In file: CORE_ExampleKillough.DATA, line 109
+
+Warning: The ALL CAPS case: CORE_EXAMPLEKILLOUGH will be used when writing output files from this simulation.
+
+Creating grid from keywords DX, DY, DZ and TOPS
+2 fluid phases are active
+
+Processing dynamic information from
+CORE_ExampleKillough.DATA line 422
+Initializing report step 0/9 at 2015-01-01 0 DAYS line 422
+Processing keyword RPTSCHED at line 424
+Processing keyword RPTRST at line 427
+Processing keyword WELSPECS at line 438
+Processing keyword COMPDAT at line 450
+Processing keyword WCONPROD at line 463
+Processing keyword WCONINJE at line 473
+Complete report step 1 (1 DAYS) at 2015-01-02 (0 DAYS)
+
+Initializing report step 2/9 at 2015-01-02 (0 DAYS) line 483
+Processing keyword WELOPEN at line 486
+Complete report step 2 (1 DAYS) at 2015-01-03 (1 DAYS)
+
+Initializing report step 3/9 at 2015-01-03 (1 DAYS) line 495
+Processing keyword WELOPEN at line 497
+Complete report step 3 (1 DAYS) at 2015-01-04 (2 DAYS)
+
+Initializing report step 4/9 at 2015-01-04 (2 DAYS) line 506
+Processing keyword WELOPEN at line 508
+Complete report step 4 (1 DAYS) at 2015-01-05 (3 DAYS)
+
+Initializing report step 5/9 at 2015-01-05 (3 DAYS) line 517
+Processing keyword WELOPEN at line 519
+Complete report step 5 (1 DAYS) at 2015-01-06 (4 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/9 at 2015-01-06 (4 DAYS) line 528
+Processing keyword WELOPEN at line 530
+Complete report step 6 (1 DAYS) at 2015-01-07 (5 DAYS)
+
+Initializing report step 7/9 at 2015-01-07 (5 DAYS) line 539
+Processing keyword WELOPEN at line 541
+Complete report step 7 (1 DAYS) at 2015-01-08 (6 DAYS)
+
+Initializing report step 8/9 at 2015-01-08 (6 DAYS) line 549
+Processing keyword WELOPEN at line 551
+Complete report step 8 (1 DAYS) at 2015-01-09 (7 DAYS)
+
+Initializing report step 9/9 at 2015-01-09 (7 DAYS) line 560
+Processing keyword WELOPEN at line 562
+Complete report step 9 (1 DAYS) at 2015-01-10 (8 DAYS)
+
+
+Processing grid
+Total number of active cells: 10 / total pore volume: 0 RM3
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System: Oil-Water system.
+Relative permeability input format: Saturation Family I.
+Number of saturation regions: 2
+
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/9 at day 0/9, date = 01-Jan-2015
+Using Newton nonlinear solver.
+Restart file written for report step 0/9, date = 01-Jan-2015 00:00:00
+
+Starting time step 0, stepsize 1 days, at day 0/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.33 days
+
+
+Starting time step 0, stepsize 0.33 days, at day 0/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.10890000000000001 days
+
+
+Starting time step 0, stepsize 0.1089 days, at day 0/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.035937000000000004 days
+
+
+Starting time step 0, stepsize 0.035937 days, at day 0/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 1, stepsize 0.071874 days, at day 0.035937/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 2, stepsize 0.186872 days, at day 0.107811/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.061667892000000016 days
+
+
+Starting time step 2, stepsize 0.0616679 days, at day 0.107811/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.020350404360000005 days
+
+
+Starting time step 2, stepsize 0.0203504 days, at day 0.107811/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 3, stepsize 0.0407008 days, at day 0.128161/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013431266877600006 days
+
+
+Starting time step 3, stepsize 0.0134313 days, at day 0.128161/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.0268625 days, at day 0.141593/1, date = 01-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 5, stepsize 0.010745 days, at day 0.168455/1, date = 01-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 6, stepsize 0.023639 days, at day 0.1792/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 7, stepsize 0.0614615 days, at day 0.202839/1, date = 01-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 8, stepsize 0.0245846 days, at day 0.264301/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008112914994610487 days
+
+
+Starting time step 8, stepsize 0.00811291 days, at day 0.264301/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 9, stepsize 0.0162258 days, at day 0.272414/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 10, stepsize 0.0421872 days, at day 0.288639/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013921762130751594 days
+
+
+Starting time step 10, stepsize 0.0139218 days, at day 0.288639/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 11, stepsize 0.0278435 days, at day 0.302561/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 12, stepsize 0.0723932 days, at day 0.330405/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.023889743816369737 days
+
+
+Starting time step 12, stepsize 0.0238897 days, at day 0.330405/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 13, stepsize 0.0477795 days, at day 0.354295/1, date = 01-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 14, stepsize 0.0191118 days, at day 0.402074/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 15, stepsize 0.0573354 days, at day 0.421186/1, date = 01-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 16, stepsize 0.0573354 days, at day 0.478521/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 17, stepsize 0.149072 days, at day 0.535857/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04919376046666856 days
+
+
+Starting time step 17, stepsize 0.0491938 days, at day 0.535857/1, date = 01-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 18, stepsize 0.0885488 days, at day 0.58505/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.029221093717201125 days
+
+
+Starting time step 18, stepsize 0.0292211 days, at day 0.58505/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009642960926676372 days
+
+
+Starting time step 18, stepsize 0.00964296 days, at day 0.58505/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003182177105803203 days
+
+
+Starting time step 18, stepsize 0.00318218 days, at day 0.58505/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 19, stepsize 0.00636435 days, at day 0.588232/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 20, stepsize 0.0190931 days, at day 0.594597/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006300710669490343 days
+
+
+Starting time step 20, stepsize 0.00630071 days, at day 0.594597/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 21, stepsize 0.0126014 days, at day 0.600898/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 22, stepsize 0.0327637 days, at day 0.613499/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01081201950884543 days
+
+
+Starting time step 22, stepsize 0.010812 days, at day 0.613499/1, date = 01-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 23, stepsize 0.021624 days, at day 0.624311/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 24, stepsize 0.0648721 days, at day 0.645935/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 25, stepsize 0.168668 days, at day 0.710807/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.055660276431536274 days
+
+
+Starting time step 25, stepsize 0.0556603 days, at day 0.710807/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018367891222406972 days
+
+
+Starting time step 25, stepsize 0.0183679 days, at day 0.710807/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 26, stepsize 0.0367358 days, at day 0.729175/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012122808206788602 days
+
+
+Starting time step 26, stepsize 0.0121228 days, at day 0.729175/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 27, stepsize 0.0242456 days, at day 0.741298/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008001053416480478 days
+
+
+Starting time step 27, stepsize 0.00800105 days, at day 0.741298/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 28, stepsize 0.0160021 days, at day 0.749299/1, date = 01-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 29, stepsize 0.0352046 days, at day 0.765301/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.105614 days, at day 0.800506/1, date = 01-Jan-2015
+ Newton its=12, linearizations=13 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 31, stepsize 0.0469402 days, at day 0.90612/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015490273786503242 days
+
+
+Starting time step 31, stepsize 0.0154903 days, at day 0.90612/1, date = 01-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 32, stepsize 0.0309805 days, at day 0.92161/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01022358069909214 days
+
+
+Starting time step 32, stepsize 0.0102236 days, at day 0.92161/1, date = 01-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 33, stepsize 0.0204472 days, at day 0.931833/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006747563261400813 days
+
+
+Starting time step 33, stepsize 0.00674756 days, at day 0.931833/1, date = 01-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 34, stepsize 0.0134951 days, at day 0.938581/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 35, stepsize 0.023962 days, at day 0.952076/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 0.023962 days, at day 0.976038/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007907443981986631 days
+
+
+Starting time step 36, stepsize 0.00790744 days, at day 0.976038/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0026094565140555885 days
+
+
+Starting time step 36, stepsize 0.00260946 days, at day 0.976038/1, date = 01-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 37, stepsize 0.00521891 days, at day 0.978648/1, date = 01-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 38, stepsize 0.0161336 days, at day 0.983866/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005324082033071606 days
+
+
+Starting time step 38, stepsize 0.00532408 days, at day 0.983866/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0108095 days, at day 0.989191/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0035671349621579644 days
+
+
+Starting time step 39, stepsize 0.00356713 days, at day 0.989191/1, date = 01-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 40, stepsize 0.00724236 days, at day 0.992758/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         1  DAYS *                   COREEXAMPLE                                          *
+  REPORT    1    02 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  1/9 at day 1/9, date = 02-Jan-2015
+
+Starting time step 0, stepsize 0.0217271 days, at day 1/2, date = 02-Jan-2015
+Restart file written for report step 1/9, date = 02-Jan-2015 00:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0477996 days, at day 1.02173/2, date = 02-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.0669195 days, at day 1.06953/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022083419123727275 days
+
+
+Starting time step 2, stepsize 0.0220834 days, at day 1.06953/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007287528310830001 days
+
+
+Starting time step 2, stepsize 0.00728753 days, at day 1.06953/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 3, stepsize 0.0145751 days, at day 1.07681/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 4, stepsize 0.0437252 days, at day 1.09139/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014429306055443403 days
+
+
+Starting time step 4, stepsize 0.0144293 days, at day 1.09139/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004761670998296323 days
+
+
+Starting time step 4, stepsize 0.00476167 days, at day 1.09139/2, date = 02-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 5, stepsize 0.00952334 days, at day 1.09615/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0031427028588755733 days
+
+
+Starting time step 5, stepsize 0.0031427 days, at day 1.09615/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 6, stepsize 0.00628541 days, at day 1.09929/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 7, stepsize 0.0045712 days, at day 1.10558/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 8, stepsize 0.0137136 days, at day 1.11015/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 9, stepsize 0.0356554 days, at day 1.12386/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011766279503630146 days
+
+
+Starting time step 9, stepsize 0.0117663 days, at day 1.12386/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 10, stepsize 0.0235326 days, at day 1.13563/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007765744472395897 days
+
+
+Starting time step 10, stepsize 0.00776574 days, at day 1.13563/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 11, stepsize 0.0155315 days, at day 1.1434/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 12, stepsize 0.0403819 days, at day 1.15893/2, date = 02-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 13, stepsize 0.0565346 days, at day 1.19931/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0186564245204839 days
+
+
+Starting time step 13, stepsize 0.0186564 days, at day 1.19931/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 14, stepsize 0.0373128 days, at day 1.21797/2, date = 02-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 15, stepsize 0.0671631 days, at day 1.25528/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02216383233033488 days
+
+
+Starting time step 15, stepsize 0.0221638 days, at day 1.25528/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 16, stepsize 0.0443277 days, at day 1.27744/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01462812933802102 days
+
+
+Starting time step 16, stepsize 0.0146281 days, at day 1.27744/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 17, stepsize 0.0292563 days, at day 1.29207/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009654565363093873 days
+
+
+Starting time step 17, stepsize 0.00965457 days, at day 1.29207/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 18, stepsize 0.0193091 days, at day 1.30173/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006372013139641956 days
+
+
+Starting time step 18, stepsize 0.00637201 days, at day 1.30173/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 19, stepsize 0.012744 days, at day 1.3081/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=19, linearizations=20 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 20, stepsize 0.00536591 days, at day 1.32084/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 21, stepsize 0.0160977 days, at day 1.32621/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 22, stepsize 0.0091987 days, at day 1.3423/2, date = 02-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 23, stepsize 0.0275961 days, at day 1.3515/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 24, stepsize 0.0827883 days, at day 1.3791/2, date = 02-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 25, stepsize 0.149019 days, at day 1.46189/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04917622699961633 days
+
+
+Starting time step 25, stepsize 0.0491762 days, at day 1.46189/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 26, stepsize 0.0983525 days, at day 1.51106/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03245630981974678 days
+
+
+Starting time step 26, stepsize 0.0324563 days, at day 1.51106/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 27, stepsize 0.0649126 days, at day 1.54352/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.021421164481032876 days
+
+
+Starting time step 27, stepsize 0.0214212 days, at day 1.54352/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 28, stepsize 0.0428423 days, at day 1.56494/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014137968557481699 days
+
+
+Starting time step 28, stepsize 0.014138 days, at day 1.56494/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 29, stepsize 0.0282759 days, at day 1.57908/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009331059247937921 days
+
+
+Starting time step 29, stepsize 0.00933106 days, at day 1.57908/2, date = 02-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.0186621 days, at day 1.58841/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 31, stepsize 0.0559864 days, at day 1.60707/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 32, stepsize 0.145565 days, at day 1.66306/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.048036293008384426 days
+
+
+Starting time step 32, stepsize 0.0480363 days, at day 1.66306/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 33, stepsize 0.0960726 days, at day 1.7111/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03170395338553372 days
+
+
+Starting time step 33, stepsize 0.031704 days, at day 1.7111/2, date = 02-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 34, stepsize 0.0634079 days, at day 1.7428/2, date = 02-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 35, stepsize 0.0968964 days, at day 1.80621/2, date = 02-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 36, stepsize 0.0968964 days, at day 1.9031/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         2  DAYS *                   COREEXAMPLE                                          *
+  REPORT    2    03 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.544:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.544:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.544:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  2/9 at day 2/9, date = 03-Jan-2015
+
+Starting time step 0, stepsize 0.213172 days, at day 2/3, date = 03-Jan-2015
+Restart file written for report step 2/9, date = 03-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.07034681121577879 days
+
+
+Starting time step 0, stepsize 0.0703468 days, at day 2/3, date = 03-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 1, stepsize 0.0281387 days, at day 2.07035/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 2, stepsize 0.0731607 days, at day 2.09849/3, date = 03-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.0292643 days, at day 2.17165/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 4, stepsize 0.0643814 days, at day 2.20091/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02124586253614465 days
+
+
+Starting time step 4, stepsize 0.0212459 days, at day 2.20091/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007011134636927735 days
+
+
+Starting time step 4, stepsize 0.00701113 days, at day 2.20091/3, date = 03-Jan-2015
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.00560891 days, at day 2.20792/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 6, stepsize 0.0168267 days, at day 2.21353/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 7, stepsize 0.0437495 days, at day 2.23036/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 8, stepsize 0.0962489 days, at day 2.27411/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03176212257759551 days
+
+
+Starting time step 8, stepsize 0.0317621 days, at day 2.27411/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 9, stepsize 0.0635242 days, at day 2.30587/3, date = 03-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 10, stepsize 0.114344 days, at day 2.36939/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03773340162218348 days
+
+
+Starting time step 10, stepsize 0.0377334 days, at day 2.36939/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012452022535320548 days
+
+
+Starting time step 10, stepsize 0.012452 days, at day 2.36939/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 11, stepsize 0.024904 days, at day 2.38185/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 12, stepsize 0.0747121 days, at day 2.40675/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.024655004619934688 days
+
+
+Starting time step 12, stepsize 0.024655 days, at day 2.40675/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008136151524578448 days
+
+
+Starting time step 12, stepsize 0.00813615 days, at day 2.40675/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.002684930003110888 days
+
+
+Starting time step 12, stepsize 0.00268493 days, at day 2.40675/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 13, stepsize 0.00536986 days, at day 2.40943/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 14, stepsize 0.0161096 days, at day 2.4148/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005316161406159559 days
+
+
+Starting time step 14, stepsize 0.00531616 days, at day 2.4148/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 15, stepsize 0.0106323 days, at day 2.42012/3, date = 03-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 16, stepsize 0.00425293 days, at day 2.43075/3, date = 03-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 17, stepsize 0.0127588 days, at day 2.43501/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 18, stepsize 0.0382764 days, at day 2.44776/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 19, stepsize 0.0995185 days, at day 2.48604/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03284111870269129 days
+
+
+Starting time step 19, stepsize 0.0328411 days, at day 2.48604/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 20, stepsize 0.0656822 days, at day 2.51888/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02167513834377625 days
+
+
+Starting time step 20, stepsize 0.0216751 days, at day 2.51888/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0071527956534461635 days
+
+
+Starting time step 20, stepsize 0.0071528 days, at day 2.51888/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 21, stepsize 0.0143056 days, at day 2.52603/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004720845131274468 days
+
+
+Starting time step 21, stepsize 0.00472085 days, at day 2.52603/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 22, stepsize 0.00944169 days, at day 2.53076/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 23, stepsize 0.0245484 days, at day 2.5402/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 24, stepsize 0.00981936 days, at day 2.56475/3, date = 03-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 25, stepsize 0.00981936 days, at day 2.57456/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0032403880981067943 days
+
+
+Starting time step 25, stepsize 0.00324039 days, at day 2.57456/3, date = 03-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 26, stepsize 0.00648078 days, at day 2.57781/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 27, stepsize 0.0142577 days, at day 2.58429/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 28, stepsize 0.03707 days, at day 2.59854/3, date = 03-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 29, stepsize 0.0329511 days, at day 2.63561/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.085673 days, at day 2.66856/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 31, stepsize 0.122881 days, at day 2.75424/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04055076824669083 days
+
+
+Starting time step 31, stepsize 0.0405508 days, at day 2.75424/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013381753521407974 days
+
+
+Starting time step 31, stepsize 0.0133818 days, at day 2.75424/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0044159786620646315 days
+
+
+Starting time step 31, stepsize 0.00441598 days, at day 2.75424/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 32, stepsize 0.00883196 days, at day 2.75865/3, date = 03-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 33, stepsize 0.0194303 days, at day 2.76749/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 34, stepsize 0.0505188 days, at day 2.78692/3, date = 03-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 35, stepsize 0.0449056 days, at day 2.83743/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01481884679557902 days
+
+
+Starting time step 35, stepsize 0.0148188 days, at day 2.83743/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 0.0296377 days, at day 2.85225/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 37, stepsize 0.077058 days, at day 2.88189/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0254291411012136 days
+
+
+Starting time step 37, stepsize 0.0254291 days, at day 2.88189/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 38, stepsize 0.0508583 days, at day 2.90732/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.016783233126800974 days
+
+
+Starting time step 38, stepsize 0.0167832 days, at day 2.90732/3, date = 03-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0335665 days, at day 2.9241/3, date = 03-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 40, stepsize 0.0423298 days, at day 2.95767/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01396883826903681 days
+
+
+Starting time step 40, stepsize 0.0139688 days, at day 2.95767/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 41, stepsize 0.028361 days, at day 2.97164/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00935912164025461 days
+
+
+Starting time step 41, stepsize 0.00935912 days, at day 2.97164/3, date = 03-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 42, stepsize 0.0190019 days, at day 2.981/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006270611498970569 days
+
+
+Starting time step 42, stepsize 0.00627061 days, at day 2.981/3, date = 03-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 43, stepsize 0.0127312 days, at day 2.98727/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         3  DAYS *                   COREEXAMPLE                                          *
+  REPORT    3    04 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  3/9 at day 3/9, date = 04-Jan-2015
+
+Starting time step 0, stepsize 0.0381937 days, at day 3/4, date = 04-Jan-2015
+Restart file written for report step 3/9, date = 04-Jan-2015 00:00:00
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0687487 days, at day 3.03819/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022687072403275454 days
+
+
+Starting time step 1, stepsize 0.0226871 days, at day 3.03819/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 2, stepsize 0.0453741 days, at day 3.06088/4, date = 04-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0453741 days, at day 3.10625/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0149734677861618 days
+
+
+Starting time step 3, stepsize 0.0149735 days, at day 3.10625/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.0299469 days, at day 3.12123/4, date = 04-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.0658833 days, at day 3.15118/4, date = 04-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 6, stepsize 0.0922366 days, at day 3.21706/4, date = 04-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 7, stepsize 0.0819881 days, at day 3.3093/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02705605805840863 days
+
+
+Starting time step 7, stepsize 0.0270561 days, at day 3.3093/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008928499159274848 days
+
+
+Starting time step 7, stepsize 0.0089285 days, at day 3.3093/4, date = 04-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 8, stepsize 0.00793644 days, at day 3.31822/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 9, stepsize 0.0238093 days, at day 3.32616/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007857079260161867 days
+
+
+Starting time step 9, stepsize 0.00785708 days, at day 3.32616/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 10, stepsize 0.00698407 days, at day 3.33402/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 11, stepsize 0.0209522 days, at day 3.341/4, date = 04-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 12, stepsize 0.0460949 days, at day 3.36195/4, date = 04-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 13, stepsize 0.101409 days, at day 3.40805/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03346487198488143 days
+
+
+Starting time step 13, stepsize 0.0334649 days, at day 3.40805/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01104340775501087 days
+
+
+Starting time step 13, stepsize 0.0110434 days, at day 3.40805/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 14, stepsize 0.0220868 days, at day 3.41909/4, date = 04-Jan-2015
+ Newton its=19, linearizations=20 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 15, stepsize 0.00929971 days, at day 3.44118/4, date = 04-Jan-2015
+ Newton its=11, linearizations=12 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 16, stepsize 0.00676343 days, at day 3.45048/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 17, stepsize 0.0202903 days, at day 3.45724/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006695792491459223 days
+
+
+Starting time step 17, stepsize 0.00669579 days, at day 3.45724/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 18, stepsize 0.0133916 days, at day 3.46394/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 19, stepsize 0.0348181 days, at day 3.47733/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011489979915344027 days
+
+
+Starting time step 19, stepsize 0.01149 days, at day 3.47733/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003791693372063529 days
+
+
+Starting time step 19, stepsize 0.00379169 days, at day 3.47733/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 20, stepsize 0.00758339 days, at day 3.48112/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 21, stepsize 0.0227502 days, at day 3.4887/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 22, stepsize 0.0591504 days, at day 3.51145/4, date = 04-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 23, stepsize 0.130131 days, at day 3.5706/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04294320245464271 days
+
+
+Starting time step 23, stepsize 0.0429432 days, at day 3.5706/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014171256810032097 days
+
+
+Starting time step 23, stepsize 0.0141713 days, at day 3.5706/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0046765147473105916 days
+
+
+Starting time step 23, stepsize 0.00467651 days, at day 3.5706/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 24, stepsize 0.00935303 days, at day 3.57528/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0030864997332249906 days
+
+
+Starting time step 24, stepsize 0.0030865 days, at day 3.57528/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 25, stepsize 0.006173 days, at day 3.57837/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 26, stepsize 0.0160498 days, at day 3.58454/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 27, stepsize 0.0481494 days, at day 3.60059/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015889300626642254 days
+
+
+Starting time step 27, stepsize 0.0158893 days, at day 3.60059/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 28, stepsize 0.0317786 days, at day 3.61648/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.010486938413583887 days
+
+
+Starting time step 28, stepsize 0.0104869 days, at day 3.61648/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 29, stepsize 0.0209739 days, at day 3.62697/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006921379352965366 days
+
+
+Starting time step 29, stepsize 0.00692138 days, at day 3.62697/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 30, stepsize 0.0138428 days, at day 3.63389/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 31, stepsize 0.00922851 days, at day 3.64773/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 32, stepsize 0.0276855 days, at day 3.65696/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 33, stepsize 0.0830566 days, at day 3.68464/4, date = 04-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 34, stepsize 0.116149 days, at day 3.7677/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03832925328318224 days
+
+
+Starting time step 34, stepsize 0.0383293 days, at day 3.7677/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 35, stepsize 0.0766585 days, at day 3.80603/4, date = 04-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 36, stepsize 0.117311 days, at day 3.88269/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03871254581601401 days
+
+
+Starting time step 36, stepsize 0.0387125 days, at day 3.88269/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012775140119284621 days
+
+
+Starting time step 36, stepsize 0.0127751 days, at day 3.88269/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 37, stepsize 0.0255503 days, at day 3.89546/4, date = 04-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 38, stepsize 0.0459905 days, at day 3.92101/4, date = 04-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0329948 days, at day 3.96701/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         4  DAYS *                   COREEXAMPLE                                          *
+  REPORT    4    05 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.529:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.529:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.529:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  4/9 at day 4/9, date = 05-Jan-2015
+
+Starting time step 0, stepsize 0.0989845 days, at day 4/5, date = 05-Jan-2015
+Restart file written for report step 4/9, date = 05-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03266487190863572 days
+
+
+Starting time step 0, stepsize 0.0326649 days, at day 4/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01077940772984979 days
+
+
+Starting time step 0, stepsize 0.0107794 days, at day 4/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 1, stepsize 0.0215588 days, at day 4.01078/5, date = 05-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 2, stepsize 0.0474294 days, at day 4.03234/5, date = 05-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0664012 days, at day 4.07977/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.021912380033238657 days
+
+
+Starting time step 3, stepsize 0.0219124 days, at day 4.07977/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007231085410968756 days
+
+
+Starting time step 3, stepsize 0.00723109 days, at day 4.07977/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.0144622 days, at day 4.087/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 5, stepsize 0.0433865 days, at day 4.10146/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01431754911371814 days
+
+
+Starting time step 5, stepsize 0.0143175 days, at day 4.10146/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 6, stepsize 0.0286351 days, at day 4.11578/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009449582415053974 days
+
+
+Starting time step 6, stepsize 0.00944958 days, at day 4.11578/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 7, stepsize 0.0188992 days, at day 4.12523/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006236724393935623 days
+
+
+Starting time step 7, stepsize 0.00623672 days, at day 4.12523/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 8, stepsize 0.0124734 days, at day 4.13146/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 9, stepsize 0.0374203 days, at day 4.14394/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012348714299992533 days
+
+
+Starting time step 9, stepsize 0.0123487 days, at day 4.14394/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 10, stepsize 0.0246974 days, at day 4.15629/5, date = 05-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 11, stepsize 0.0444554 days, at day 4.18098/5, date = 05-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 12, stepsize 0.0978018 days, at day 4.22544/5, date = 05-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 13, stepsize 0.215164 days, at day 4.32324/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.07100411932781309 days
+
+
+Starting time step 13, stepsize 0.0710041 days, at day 4.32324/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02343135937817832 days
+
+
+Starting time step 13, stepsize 0.0234314 days, at day 4.32324/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0077323485947988465 days
+
+
+Starting time step 13, stepsize 0.00773235 days, at day 4.32324/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 14, stepsize 0.0154647 days, at day 4.33097/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 15, stepsize 0.0463941 days, at day 4.34644/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015310050217701716 days
+
+
+Starting time step 15, stepsize 0.0153101 days, at day 4.34644/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 16, stepsize 0.0306201 days, at day 4.36175/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.010104633143683133 days
+
+
+Starting time step 16, stepsize 0.0101046 days, at day 4.36175/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 17, stepsize 0.0202093 days, at day 4.37185/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006669057874830868 days
+
+
+Starting time step 17, stepsize 0.00666906 days, at day 4.37185/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 18, stepsize 0.0133381 days, at day 4.37852/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004401578197388373 days
+
+
+Starting time step 18, stepsize 0.00440158 days, at day 4.37852/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 19, stepsize 0.00880316 days, at day 4.38292/5, date = 05-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 20, stepsize 0.0193669 days, at day 4.39173/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 21, stepsize 0.0581008 days, at day 4.41109/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 22, stepsize 0.151062 days, at day 4.46919/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04985051403234177 days
+
+
+Starting time step 22, stepsize 0.0498505 days, at day 4.46919/5, date = 05-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 23, stepsize 0.0897309 days, at day 4.51905/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02961120533521101 days
+
+
+Starting time step 23, stepsize 0.0296112 days, at day 4.51905/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 24, stepsize 0.0592224 days, at day 4.54866/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01954339552123927 days
+
+
+Starting time step 24, stepsize 0.0195434 days, at day 4.54866/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006449320522008958 days
+
+
+Starting time step 24, stepsize 0.00644932 days, at day 4.54866/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 25, stepsize 0.0128986 days, at day 4.55511/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004256551544525913 days
+
+
+Starting time step 25, stepsize 0.00425655 days, at day 4.55511/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 26, stepsize 0.0085131 days, at day 4.55936/5, date = 05-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 27, stepsize 0.0255393 days, at day 4.56788/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00842797205816131 days
+
+
+Starting time step 27, stepsize 0.00842797 days, at day 4.56788/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0027812307791932325 days
+
+
+Starting time step 27, stepsize 0.00278123 days, at day 4.56788/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 28, stepsize 0.00556246 days, at day 4.57066/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 29, stepsize 0.0166874 days, at day 4.57622/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0055068369428026 days
+
+
+Starting time step 29, stepsize 0.00550684 days, at day 4.57622/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.0110137 days, at day 4.58173/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0036345123822497166 days
+
+
+Starting time step 30, stepsize 0.00363451 days, at day 4.58173/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 31, stepsize 0.00726902 days, at day 4.58536/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 32, stepsize 0.0218071 days, at day 4.59263/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 33, stepsize 0.0566984 days, at day 4.61444/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018710469743821543 days
+
+
+Starting time step 33, stepsize 0.0187105 days, at day 4.61444/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 34, stepsize 0.0374209 days, at day 4.63315/5, date = 05-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 35, stepsize 0.0149684 days, at day 4.67057/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 0.0389178 days, at day 4.68554/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 37, stepsize 0.101186 days, at day 4.72445/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.033391452723613685 days
+
+
+Starting time step 37, stepsize 0.0333915 days, at day 4.72445/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 38, stepsize 0.0667829 days, at day 4.75785/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022038358797585034 days
+
+
+Starting time step 38, stepsize 0.0220384 days, at day 4.75785/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 39, stepsize 0.0176307 days, at day 4.77988/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 40, stepsize 0.0458398 days, at day 4.79751/5, date = 05-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 41, stepsize 0.0783228 days, at day 4.84335/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.025846509172644465 days
+
+
+Starting time step 41, stepsize 0.0258465 days, at day 4.84335/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 42, stepsize 0.051693 days, at day 4.8692/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01705869605394535 days
+
+
+Starting time step 42, stepsize 0.0170587 days, at day 4.8692/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005629369697801966 days
+
+
+Starting time step 42, stepsize 0.00562937 days, at day 4.8692/5, date = 05-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 43, stepsize 0.0112587 days, at day 4.87483/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 44, stepsize 0.0337762 days, at day 4.88609/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011146152001647893 days
+
+
+Starting time step 44, stepsize 0.0111462 days, at day 4.88609/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 45, stepsize 0.0222923 days, at day 4.89724/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00735646032108761 days
+
+
+Starting time step 45, stepsize 0.00735646 days, at day 4.89724/5, date = 05-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 46, stepsize 0.0147129 days, at day 4.90459/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 47, stepsize 0.0441388 days, at day 4.9193/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014565791435753468 days
+
+
+Starting time step 47, stepsize 0.0145658 days, at day 4.9193/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 48, stepsize 0.0291316 days, at day 4.93387/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00961342234759729 days
+
+
+Starting time step 48, stepsize 0.00961342 days, at day 4.93387/5, date = 05-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 49, stepsize 0.0192268 days, at day 4.94348/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006344858749414211 days
+
+
+Starting time step 49, stepsize 0.00634486 days, at day 4.94348/5, date = 05-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 50, stepsize 0.0126897 days, at day 4.94983/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0041876067746133795 days
+
+
+Starting time step 50, stepsize 0.00418761 days, at day 4.94983/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 51, stepsize 0.00837521 days, at day 4.95402/5, date = 05-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 52, stepsize 0.0184255 days, at day 4.96239/5, date = 05-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 53, stepsize 0.019183 days, at day 4.98082/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         5  DAYS *                   COREEXAMPLE                                          *
+  REPORT    5    06 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  5/9 at day 5/9, date = 06-Jan-2015
+
+Starting time step 0, stepsize 0.057549 days, at day 5/6, date = 06-Jan-2015
+Restart file written for report step 5/9, date = 06-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01899116627896098 days
+
+
+Starting time step 0, stepsize 0.0189912 days, at day 5/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0379823 days, at day 5.01899/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012534169744114247 days
+
+
+Starting time step 1, stepsize 0.0125342 days, at day 5.01899/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 2, stepsize 0.0250683 days, at day 5.03153/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 3, stepsize 0.0551503 days, at day 5.05659/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01819961446845389 days
+
+
+Starting time step 3, stepsize 0.0181996 days, at day 5.05659/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.0363992 days, at day 5.07479/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012011745549179567 days
+
+
+Starting time step 4, stepsize 0.0120117 days, at day 5.07479/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003963876031229258 days
+
+
+Starting time step 4, stepsize 0.00396388 days, at day 5.07479/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 5, stepsize 0.00792775 days, at day 5.07876/6, date = 06-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 6, stepsize 0.01427 days, at day 5.08668/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004709084725100358 days
+
+
+Starting time step 6, stepsize 0.00470908 days, at day 5.08668/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 7, stepsize 0.00941817 days, at day 5.09139/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003107995918566236 days
+
+
+Starting time step 7, stepsize 0.003108 days, at day 5.09139/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 8, stepsize 0.00621599 days, at day 5.0945/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 9, stepsize 0.018648 days, at day 5.10072/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 10, stepsize 0.0484847 days, at day 5.11937/6, date = 06-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 11, stepsize 0.0872725 days, at day 5.16785/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.028799933379802172 days
+
+
+Starting time step 11, stepsize 0.0287999 days, at day 5.16785/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009503978015334718 days
+
+
+Starting time step 11, stepsize 0.00950398 days, at day 5.16785/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003136312745060457 days
+
+
+Starting time step 11, stepsize 0.00313631 days, at day 5.16785/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 12, stepsize 0.00627263 days, at day 5.17099/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 13, stepsize 0.0188179 days, at day 5.17726/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 14, stepsize 0.0413993 days, at day 5.19608/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01366177831748335 days
+
+
+Starting time step 14, stepsize 0.0136618 days, at day 5.19608/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004508386844769506 days
+
+
+Starting time step 14, stepsize 0.00450839 days, at day 5.19608/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 15, stepsize 0.00901677 days, at day 5.20059/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.002975535317547874 days
+
+
+Starting time step 15, stepsize 0.00297554 days, at day 5.20059/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 16, stepsize 0.00595107 days, at day 5.20356/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 17, stepsize 0.0178532 days, at day 5.20951/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0058915599287447905 days
+
+
+Starting time step 17, stepsize 0.00589156 days, at day 5.20951/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.001944214776485781 days
+
+
+Starting time step 17, stepsize 0.00194421 days, at day 5.20951/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 18, stepsize 0.00388843 days, at day 5.21146/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 19, stepsize 0.0116653 days, at day 5.21535/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 20, stepsize 0.0349959 days, at day 5.22701/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011548635772325538 days
+
+
+Starting time step 20, stepsize 0.0115486 days, at day 5.22701/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 21, stepsize 0.0230973 days, at day 5.23856/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007622099609734855 days
+
+
+Starting time step 21, stepsize 0.0076221 days, at day 5.23856/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 22, stepsize 0.0152442 days, at day 5.24618/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 23, stepsize 0.0335372 days, at day 5.26143/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 24, stepsize 0.0871968 days, at day 5.29496/6, date = 06-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 25, stepsize 0.0775083 days, at day 5.38216/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02557773373037425 days
+
+
+Starting time step 25, stepsize 0.0255777 days, at day 5.38216/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008440652131023503 days
+
+
+Starting time step 25, stepsize 0.00844065 days, at day 5.38216/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 26, stepsize 0.0168813 days, at day 5.3906/6, date = 06-Jan-2015
+ Newton its=15, linearizations=16 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 27, stepsize 0.00900336 days, at day 5.40748/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 28, stepsize 0.0270101 days, at day 5.41648/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 29, stepsize 0.0594222 days, at day 5.44349/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.019609323030793803 days
+
+
+Starting time step 29, stepsize 0.0196093 days, at day 5.44349/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006471076600161956 days
+
+
+Starting time step 29, stepsize 0.00647108 days, at day 5.44349/6, date = 06-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.0129422 days, at day 5.44997/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 31, stepsize 0.0284727 days, at day 5.46291/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 32, stepsize 0.0740291 days, at day 5.49138/6, date = 06-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 33, stepsize 0.0740291 days, at day 5.56541/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.024429608380931417 days
+
+
+Starting time step 33, stepsize 0.0244296 days, at day 5.56541/6, date = 06-Jan-2015
+ Newton its=16, linearizations=17 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 34, stepsize 0.0122148 days, at day 5.58984/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 35, stepsize 0.0366444 days, at day 5.60205/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012092656148561053 days
+
+
+Starting time step 35, stepsize 0.0120927 days, at day 5.60205/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 36, stepsize 0.0241853 days, at day 5.61415/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007981153058050295 days
+
+
+Starting time step 36, stepsize 0.00798115 days, at day 5.61415/6, date = 06-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 37, stepsize 0.0111736 days, at day 5.62213/6, date = 06-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 38, stepsize 0.024582 days, at day 5.6333/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 39, stepsize 0.0737459 days, at day 5.65788/6, date = 06-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 40, stepsize 0.103244 days, at day 5.73163/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03407058466644975 days
+
+
+Starting time step 40, stepsize 0.0340706 days, at day 5.73163/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 41, stepsize 0.0681412 days, at day 5.7657/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022486585879856837 days
+
+
+Starting time step 41, stepsize 0.0224866 days, at day 5.7657/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 42, stepsize 0.0449732 days, at day 5.78819/6, date = 06-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 43, stepsize 0.08342 days, at day 5.83316/6, date = 06-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 44, stepsize 0.08342 days, at day 5.91658/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         6  DAYS *                   COREEXAMPLE                                          *
+  REPORT    6    07 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.526:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.526:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.526:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  6/9 at day 6/9, date = 07-Jan-2015
+
+Starting time step 0, stepsize 0.25026 days, at day 6/7, date = 07-Jan-2015
+Restart file written for report step 6/9, date = 07-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0825858455502453 days
+
+
+Starting time step 0, stepsize 0.0825858 days, at day 6/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.027253329031580953 days
+
+
+Starting time step 0, stepsize 0.0272533 days, at day 6/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 1, stepsize 0.0545067 days, at day 6.02725/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01798719716084343 days
+
+
+Starting time step 1, stepsize 0.0179872 days, at day 6.02725/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 2, stepsize 0.0359744 days, at day 6.04524/7, date = 07-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 3, stepsize 0.0143898 days, at day 6.08121/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004748620050462665 days
+
+
+Starting time step 3, stepsize 0.00474862 days, at day 6.08121/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.00949724 days, at day 6.08596/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 5, stepsize 0.0284917 days, at day 6.09546/7, date = 07-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 6, stepsize 0.0626818 days, at day 6.12395/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 7, stepsize 0.162973 days, at day 6.18663/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.053780971243519965 days
+
+
+Starting time step 7, stepsize 0.053781 days, at day 6.18663/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01774772051036159 days
+
+
+Starting time step 7, stepsize 0.0177477 days, at day 6.18663/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 8, stepsize 0.0354954 days, at day 6.20438/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 9, stepsize 0.0922881 days, at day 6.23988/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.030455088395780493 days
+
+
+Starting time step 9, stepsize 0.0304551 days, at day 6.23988/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 10, stepsize 0.0609102 days, at day 6.27033/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.020100358341215128 days
+
+
+Starting time step 10, stepsize 0.0201004 days, at day 6.27033/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 11, stepsize 0.0402007 days, at day 6.29043/7, date = 07-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 12, stepsize 0.0723613 days, at day 6.33063/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.023879225709363572 days
+
+
+Starting time step 12, stepsize 0.0238792 days, at day 6.33063/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 13, stepsize 0.0477585 days, at day 6.35451/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 14, stepsize 0.124172 days, at day 6.40227/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04097675131726789 days
+
+
+Starting time step 14, stepsize 0.0409768 days, at day 6.40227/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013522327934698403 days
+
+
+Starting time step 14, stepsize 0.0135223 days, at day 6.40227/7, date = 07-Jan-2015
+ Newton its=12, linearizations=13 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 15, stepsize 0.00901489 days, at day 6.41579/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 16, stepsize 0.0270447 days, at day 6.42481/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008924736436900945 days
+
+
+Starting time step 16, stepsize 0.00892474 days, at day 6.42481/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 17, stepsize 0.0178495 days, at day 6.43373/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 18, stepsize 0.0464086 days, at day 6.45158/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 19, stepsize 0.120662 days, at day 6.49799/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03981860408687726 days
+
+
+Starting time step 19, stepsize 0.0398186 days, at day 6.49799/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013140139348669495 days
+
+
+Starting time step 19, stepsize 0.0131401 days, at day 6.49799/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 20, stepsize 0.0262803 days, at day 6.51113/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 21, stepsize 0.0788408 days, at day 6.53741/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.026017475910365604 days
+
+
+Starting time step 21, stepsize 0.0260175 days, at day 6.53741/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 22, stepsize 0.052035 days, at day 6.56343/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0171715341008413 days
+
+
+Starting time step 22, stepsize 0.0171715 days, at day 6.56343/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 23, stepsize 0.0343431 days, at day 6.5806/7, date = 07-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 24, stepsize 0.0755548 days, at day 6.61494/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02493306751442157 days
+
+
+Starting time step 24, stepsize 0.0249331 days, at day 6.61494/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008227912279759119 days
+
+
+Starting time step 24, stepsize 0.00822791 days, at day 6.61494/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 25, stepsize 0.0164558 days, at day 6.62317/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005430422104641019 days
+
+
+Starting time step 25, stepsize 0.00543042 days, at day 6.62317/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 26, stepsize 0.0108608 days, at day 6.6286/7, date = 07-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 27, stepsize 0.00434434 days, at day 6.63946/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 28, stepsize 0.013033 days, at day 6.64381/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 29, stepsize 0.039099 days, at day 6.65684/7, date = 07-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 30, stepsize 0.0860179 days, at day 6.69594/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.028385902425379538 days
+
+
+Starting time step 30, stepsize 0.0283859 days, at day 6.69594/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 31, stepsize 0.0567718 days, at day 6.72433/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018734695600750497 days
+
+
+Starting time step 31, stepsize 0.0187347 days, at day 6.72433/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 32, stepsize 0.0374694 days, at day 6.74306/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01236489909649533 days
+
+
+Starting time step 32, stepsize 0.0123649 days, at day 6.74306/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 33, stepsize 0.0247298 days, at day 6.75542/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 34, stepsize 0.0642975 days, at day 6.78015/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02121816684958599 days
+
+
+Starting time step 34, stepsize 0.0212182 days, at day 6.78015/7, date = 07-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 35, stepsize 0.00848727 days, at day 6.80137/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 0.0254618 days, at day 6.80986/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00840239407243605 days
+
+
+Starting time step 36, stepsize 0.00840239 days, at day 6.80986/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 37, stepsize 0.0168048 days, at day 6.81826/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005545580087807794 days
+
+
+Starting time step 37, stepsize 0.00554558 days, at day 6.81826/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 38, stepsize 0.0110912 days, at day 6.82381/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0332735 days, at day 6.8349/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.010980248573859434 days
+
+
+Starting time step 39, stepsize 0.0109802 days, at day 6.8349/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0036234820293736133 days
+
+
+Starting time step 39, stepsize 0.00362348 days, at day 6.8349/7, date = 07-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 40, stepsize 0.00724696 days, at day 6.83852/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 41, stepsize 0.0217409 days, at day 6.84577/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 42, stepsize 0.0652227 days, at day 6.86751/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.021523483254479264 days
+
+
+Starting time step 42, stepsize 0.0215235 days, at day 6.86751/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007102749473978157 days
+
+
+Starting time step 42, stepsize 0.00710275 days, at day 6.86751/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 43, stepsize 0.0142055 days, at day 6.87461/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004687814652825584 days
+
+
+Starting time step 43, stepsize 0.00468781 days, at day 6.87461/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 44, stepsize 0.00937563 days, at day 6.8793/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0030939576708648854 days
+
+
+Starting time step 44, stepsize 0.00309396 days, at day 6.8793/7, date = 07-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 45, stepsize 0.00618792 days, at day 6.8824/7, date = 07-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 46, stepsize 0.0160886 days, at day 6.88858/7, date = 07-Jan-2015
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 47, stepsize 0.014301 days, at day 6.90467/7, date = 07-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 48, stepsize 0.0429029 days, at day 6.91897/7, date = 07-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 49, stepsize 0.0381245 days, at day 6.96188/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=10, linearizations=11 (0.0sec), linear its= 10 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         7  DAYS *                   COREEXAMPLE                                          *
+  REPORT    7    08 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  7/9 at day 7/9, date = 08-Jan-2015
+
+Starting time step 0, stepsize 0.0304996 days, at day 7/8, date = 08-Jan-2015
+Restart file written for report step 7/9, date = 08-Jan-2015 00:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0670992 days, at day 7.0305/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022142731323303064 days
+
+
+Starting time step 1, stepsize 0.0221427 days, at day 7.0305/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 2, stepsize 0.0442855 days, at day 7.05264/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014614202673380023 days
+
+
+Starting time step 2, stepsize 0.0146142 days, at day 7.05264/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 3, stepsize 0.0292284 days, at day 7.06726/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009645373764430816 days
+
+
+Starting time step 3, stepsize 0.00964537 days, at day 7.06726/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 4, stepsize 0.0192907 days, at day 7.0769/8, date = 08-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.0347233 days, at day 7.09619/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01145870403214381 days
+
+
+Starting time step 5, stepsize 0.0114587 days, at day 7.09619/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0037813723306074575 days
+
+
+Starting time step 5, stepsize 0.00378137 days, at day 7.09619/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 6, stepsize 0.00756274 days, at day 7.09997/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 7, stepsize 0.0196631 days, at day 7.10754/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 8, stepsize 0.0511242 days, at day 7.1272/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.016870970790238235 days
+
+
+Starting time step 8, stepsize 0.016871 days, at day 7.1272/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 9, stepsize 0.0337419 days, at day 7.14407/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011134840721557236 days
+
+
+Starting time step 9, stepsize 0.0111348 days, at day 7.14407/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 10, stepsize 0.0222697 days, at day 7.15521/8, date = 08-Jan-2015
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 11, stepsize 0.0178157 days, at day 7.17748/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 12, stepsize 0.0391946 days, at day 7.19529/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012934230982160887 days
+
+
+Starting time step 12, stepsize 0.0129342 days, at day 7.19529/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 13, stepsize 0.0258685 days, at day 7.20823/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008536592448226186 days
+
+
+Starting time step 13, stepsize 0.00853659 days, at day 7.20823/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 14, stepsize 0.0170732 days, at day 7.21676/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005634151015829283 days
+
+
+Starting time step 14, stepsize 0.00563415 days, at day 7.21676/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 15, stepsize 0.0112683 days, at day 7.2224/8, date = 08-Jan-2015
+ Newton its=18, linearizations=19 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 16, stepsize 0.00500813 days, at day 7.23366/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 17, stepsize 0.0150244 days, at day 7.23867/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004958052893929769 days
+
+
+Starting time step 17, stepsize 0.00495805 days, at day 7.23867/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 18, stepsize 0.00991611 days, at day 7.24363/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0032723149099936474 days
+
+
+Starting time step 18, stepsize 0.00327231 days, at day 7.24363/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 19, stepsize 0.00654463 days, at day 7.2469/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=12, linearizations=13 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 20, stepsize 0.00436309 days, at day 7.25345/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 21, stepsize 0.0130893 days, at day 7.25781/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 22, stepsize 0.0392678 days, at day 7.2709/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012958367043574844 days
+
+
+Starting time step 22, stepsize 0.0129584 days, at day 7.2709/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 23, stepsize 0.0259167 days, at day 7.28386/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 24, stepsize 0.0777502 days, at day 7.30978/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02565756674627819 days
+
+
+Starting time step 24, stepsize 0.0256576 days, at day 7.30978/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008466997026271805 days
+
+
+Starting time step 24, stepsize 0.008467 days, at day 7.30978/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 25, stepsize 0.016934 days, at day 7.31824/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 26, stepsize 0.0372548 days, at day 7.33518/8, date = 08-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 27, stepsize 0.0670586 days, at day 7.37243/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.022129343427863987 days
+
+
+Starting time step 27, stepsize 0.0221293 days, at day 7.37243/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 28, stepsize 0.0442587 days, at day 7.39456/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014605366662390233 days
+
+
+Starting time step 28, stepsize 0.0146054 days, at day 7.39456/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 29, stepsize 0.0292107 days, at day 7.40917/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009639541997177554 days
+
+
+Starting time step 29, stepsize 0.00963954 days, at day 7.40917/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0031810488590685924 days
+
+
+Starting time step 29, stepsize 0.00318105 days, at day 7.40917/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 30, stepsize 0.0063621 days, at day 7.41235/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 31, stepsize 0.0190863 days, at day 7.41871/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006298476740955813 days
+
+
+Starting time step 31, stepsize 0.00629848 days, at day 7.41871/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 32, stepsize 0.012597 days, at day 7.42501/8, date = 08-Jan-2015
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 33, stepsize 0.0100776 days, at day 7.4376/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 34, stepsize 0.0302327 days, at day 7.44768/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009976787157674007 days
+
+
+Starting time step 34, stepsize 0.00997679 days, at day 7.44768/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 35, stepsize 0.0199536 days, at day 7.45766/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 0.0598607 days, at day 7.47761/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.019754038572194533 days
+
+
+Starting time step 36, stepsize 0.019754 days, at day 7.47761/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 37, stepsize 0.0395081 days, at day 7.49737/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013037665457648392 days
+
+
+Starting time step 37, stepsize 0.0130377 days, at day 7.49737/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 38, stepsize 0.0260753 days, at day 7.5104/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008604859202047939 days
+
+
+Starting time step 38, stepsize 0.00860486 days, at day 7.5104/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0172097 days, at day 7.51901/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005679207073351639 days
+
+
+Starting time step 39, stepsize 0.00567921 days, at day 7.51901/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 40, stepsize 0.0113584 days, at day 7.52469/8, date = 08-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 41, stepsize 0.0159018 days, at day 7.53605/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0052475873357769156 days
+
+
+Starting time step 41, stepsize 0.00524759 days, at day 7.53605/8, date = 08-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 42, stepsize 0.0104952 days, at day 7.54129/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0034634076416127637 days
+
+
+Starting time step 42, stepsize 0.00346341 days, at day 7.54129/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 43, stepsize 0.00692682 days, at day 7.54476/8, date = 08-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 44, stepsize 0.00692682 days, at day 7.55168/8, date = 08-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 45, stepsize 0.0124683 days, at day 7.55861/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 46, stepsize 0.0324175 days, at day 7.57108/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 47, stepsize 0.0713185 days, at day 7.6035/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02353510175150971 days
+
+
+Starting time step 47, stepsize 0.0235351 days, at day 7.6035/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 48, stepsize 0.0470702 days, at day 7.62703/8, date = 08-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 49, stepsize 0.0658983 days, at day 7.6741/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.021746434018394975 days
+
+
+Starting time step 49, stepsize 0.0217464 days, at day 7.6741/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 50, stepsize 0.0434929 days, at day 7.69585/8, date = 08-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 51, stepsize 0.113081 days, at day 7.73934/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 52, stepsize 0.147577 days, at day 7.85242/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04870052270574354 days
+
+
+Starting time step 52, stepsize 0.0487005 days, at day 7.85242/8, date = 08-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 53, stepsize 0.0194802 days, at day 7.90112/8, date = 08-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 54, stepsize 0.0396983 days, at day 7.9206/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013100440607844962 days
+
+
+Starting time step 54, stepsize 0.0131004 days, at day 7.9206/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004323145400588838 days
+
+
+Starting time step 54, stepsize 0.00432315 days, at day 7.9206/8, date = 08-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 55, stepsize 0.00864629 days, at day 7.92493/8, date = 08-Jan-2015
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 56, stepsize 0.0259389 days, at day 7.93357/8, date = 08-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 57, stepsize 0.0404883 days, at day 7.95951/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         8  DAYS *                   COREEXAMPLE                                          *
+  REPORT    8    09 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  8/9 at day 8/9, date = 09-Jan-2015
+
+Starting time step 0, stepsize 0.121465 days, at day 8/9, date = 09-Jan-2015
+Restart file written for report step 8/9, date = 09-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04008341812782201 days
+
+
+Starting time step 0, stepsize 0.0400834 days, at day 8/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 1, stepsize 0.0801668 days, at day 8.04008/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.026455055964362525 days
+
+
+Starting time step 1, stepsize 0.0264551 days, at day 8.04008/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008730168468239635 days
+
+
+Starting time step 1, stepsize 0.00873017 days, at day 8.04008/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 2, stepsize 0.0174603 days, at day 8.04881/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 3, stepsize 0.052381 days, at day 8.06627/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.017285733567114474 days
+
+
+Starting time step 3, stepsize 0.0172857 days, at day 8.06627/9, date = 09-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 4, stepsize 0.0311143 days, at day 8.08356/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.010267725738866001 days
+
+
+Starting time step 4, stepsize 0.0102677 days, at day 8.08356/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 5, stepsize 0.0205355 days, at day 8.09383/9, date = 09-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 6, stepsize 0.00821418 days, at day 8.11436/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 7, stepsize 0.0246425 days, at day 8.12258/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 8, stepsize 0.0640706 days, at day 8.14722/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02114330084147287 days
+
+
+Starting time step 8, stepsize 0.0211433 days, at day 8.14722/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 9, stepsize 0.0422866 days, at day 8.16836/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 10, stepsize 0.109945 days, at day 8.21065/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.036281904243967454 days
+
+
+Starting time step 10, stepsize 0.0362819 days, at day 8.21065/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 11, stepsize 0.0725638 days, at day 8.24693/9, date = 09-Jan-2015
+ Newton its=10, linearizations=11 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 12, stepsize 0.058051 days, at day 8.3195/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.019156845440814814 days
+
+
+Starting time step 12, stepsize 0.0191568 days, at day 8.3195/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 13, stepsize 0.0383137 days, at day 8.33865/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012643517990937778 days
+
+
+Starting time step 13, stepsize 0.0126435 days, at day 8.33865/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 14, stepsize 0.025287 days, at day 8.3513/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008344721874018935 days
+
+
+Starting time step 14, stepsize 0.00834472 days, at day 8.3513/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 15, stepsize 0.0166894 days, at day 8.35964/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0055075164368524965 days
+
+
+Starting time step 15, stepsize 0.00550752 days, at day 8.35964/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 16, stepsize 0.011015 days, at day 8.36515/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.003634960848322648 days
+
+
+Starting time step 16, stepsize 0.00363496 days, at day 8.36515/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 17, stepsize 0.00726992 days, at day 8.36878/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 18, stepsize 0.0218098 days, at day 8.37605/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007197222479678843 days
+
+
+Starting time step 18, stepsize 0.00719722 days, at day 8.37605/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 19, stepsize 0.0143944 days, at day 8.38325/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 20, stepsize 0.0374256 days, at day 8.39764/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 21, stepsize 0.112277 days, at day 8.43507/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.037051301325386685 days
+
+
+Starting time step 21, stepsize 0.0370513 days, at day 8.43507/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012226929437377607 days
+
+
+Starting time step 21, stepsize 0.0122269 days, at day 8.43507/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 22, stepsize 0.0244539 days, at day 8.4473/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00806977342866922 days
+
+
+Starting time step 22, stepsize 0.00806977 days, at day 8.4473/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 23, stepsize 0.0161395 days, at day 8.45537/9, date = 09-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 24, stepsize 0.035507 days, at day 8.47151/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01171731101842771 days
+
+
+Starting time step 24, stepsize 0.0117173 days, at day 8.47151/9, date = 09-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 25, stepsize 0.0234346 days, at day 8.48322/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00773342527216229 days
+
+
+Starting time step 25, stepsize 0.00773343 days, at day 8.48322/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 26, stepsize 0.0154669 days, at day 8.49096/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 27, stepsize 0.0464006 days, at day 8.50642/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015312182038881334 days
+
+
+Starting time step 27, stepsize 0.0153122 days, at day 8.50642/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 28, stepsize 0.0306244 days, at day 8.52174/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01010604014566168 days
+
+
+Starting time step 28, stepsize 0.010106 days, at day 8.52174/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 29, stepsize 0.0202121 days, at day 8.53184/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00666998649613671 days
+
+
+Starting time step 29, stepsize 0.00666999 days, at day 8.53184/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 30, stepsize 0.01334 days, at day 8.53851/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004402191087450229 days
+
+
+Starting time step 30, stepsize 0.00440219 days, at day 8.53851/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 31, stepsize 0.00880438 days, at day 8.54291/9, date = 09-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 32, stepsize 0.0158479 days, at day 8.55172/9, date = 09-Jan-2015
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 33, stepsize 0.0348654 days, at day 8.56757/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 34, stepsize 0.0906499 days, at day 8.60243/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02991447322801579 days
+
+
+Starting time step 34, stepsize 0.0299145 days, at day 8.60243/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 35, stepsize 0.0598289 days, at day 8.63235/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01974355233049042 days
+
+
+Starting time step 35, stepsize 0.0197436 days, at day 8.63235/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 36, stepsize 0.0394871 days, at day 8.65209/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 37, stepsize 0.102666 days, at day 8.69158/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.033879935799121574 days
+
+
+Starting time step 37, stepsize 0.0338799 days, at day 8.69158/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01118037881371012 days
+
+
+Starting time step 37, stepsize 0.0111804 days, at day 8.69158/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 38, stepsize 0.0223608 days, at day 8.70276/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00737905001704868 days
+
+
+Starting time step 38, stepsize 0.00737905 days, at day 8.70276/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 39, stepsize 0.0147581 days, at day 8.71014/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004870173011252129 days
+
+
+Starting time step 39, stepsize 0.00487017 days, at day 8.71014/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 40, stepsize 0.00974035 days, at day 8.71501/9, date = 09-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 41, stepsize 0.0175326 days, at day 8.72475/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 42, stepsize 0.0455848 days, at day 8.74228/9, date = 09-Jan-2015
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 43, stepsize 0.0455848 days, at day 8.78786/9, date = 09-Jan-2015
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 44, stepsize 0.0182339 days, at day 8.83345/9, date = 09-Jan-2015
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 45, stepsize 0.0255275 days, at day 8.85168/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008424074622407123 days
+
+
+Starting time step 45, stepsize 0.00842407 days, at day 8.85168/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 46, stepsize 0.0168481 days, at day 8.86011/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005559889250788702 days
+
+
+Starting time step 46, stepsize 0.00555989 days, at day 8.86011/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 47, stepsize 0.0111198 days, at day 8.86567/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 48, stepsize 0.0333593 days, at day 8.87679/9, date = 09-Jan-2015
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 49, stepsize 0.044927 days, at day 8.91015/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014825895856951361 days
+
+
+Starting time step 49, stepsize 0.0148259 days, at day 8.91015/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 50, stepsize 0.0296518 days, at day 8.92497/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009785091265587898 days
+
+
+Starting time step 50, stepsize 0.00978509 days, at day 8.92497/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 51, stepsize 0.0195702 days, at day 8.93476/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 52, stepsize 0.0456727 days, at day 8.95433/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015072005728177022 days
+
+
+Starting time step 52, stepsize 0.015072 days, at day 8.95433/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.004973761890298418 days
+
+
+Starting time step 52, stepsize 0.00497376 days, at day 8.95433/9, date = 09-Jan-2015
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 53, stepsize 0.00994752 days, at day 8.9593/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0032826828475969556 days
+
+
+Starting time step 53, stepsize 0.00328268 days, at day 8.9593/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 54, stepsize 0.00656537 days, at day 8.96258/9, date = 09-Jan-2015
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 55, stepsize 0.0196961 days, at day 8.96915/9, date = 09-Jan-2015
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 56, stepsize 0.0111548 days, at day 8.98885/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+                              **************************************************************************
+  WELLS    AT         9  DAYS *                   COREEXAMPLE                                          *
+  REPORT    9    10 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.534:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+Restart file written for report step 9/9, date = 10-Jan-2015 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.02 s
+  Deck input:                    0.02 s
+Number of timesteps:           675
+Simulation time:                 2.25 s
+  Assembly time:                 0.17 s (Wasted: 0.1 s; 59.9%)
+    Well assembly:               0.16 s (Wasted: 0.1 s; 59.3%)
+  Linear solve time:             0.24 s (Wasted: 0.2 s; 70.4%)
+    Linear setup:                0.18 s (Wasted: 0.1 s; 70.2%)
+  Props/update time:             1.31 s (Wasted: 1.0 s; 73.1%)
+  Pre/post step:                 0.42 s (Wasted: 0.1 s; 20.4%)
+  Output write time:             0.04 s
+Overall Linearizations:       7582      (Wasted:  5229; 69.0%)
+Overall Newton Iterations:    7156      (Wasted:  5229; 73.1%)
+Overall Linear Iterations:    5538      (Wasted:  3943; 71.2%)
+
+
+
+Error summary:
+Warnings          11
+Info              1371
+Errors            0
+Bugs              0
+Debug             0
+Problems          249
+

@@ -1,0 +1,247 @@
+
+-- Copyright (C) 2023 NORCE
+---testsetsetswet
+----------------------------------------------------------------------------
+RUNSPEC
+----------------------------------------------------------------------------
+DIMENS 
+600 1 10 /
+
+
+EQLDIMS
+/
+
+TABDIMS
+2 1* 10000 /
+
+WATER
+GAS
+CO2STORE
+
+METRIC
+
+START
+1 'JAN' 2000 /
+
+SATOPTS
+ HYSTER  /
+
+WELLDIMS
+6 10 6 6 /
+
+UNIFIN
+UNIFOUT
+----------------------------------------------------------------------------
+GRID
+----------------------------------------------------------------------------
+INIT
+INCLUDE
+  GEOLOGY.INC /
+----------------------------------------------------------------------------
+PROPS
+----------------------------------------------------------------------------
+INCLUDE
+TABLES.INC /
+
+EHYSTR
+1  2  2* BOTH /
+
+ROCK
+276.0 8.5e-05 /
+
+
+----------------------------------------------------------------------------
+REGIONS
+----------------------------------------------------------------------------
+INCLUDE
+REGIONS.INC /
+----------------------------------------------------------------------------
+SOLUTION
+---------------------------------------------------------------------------
+EQUIL
+ 0 213 0 0 0 0 1 1 0 /
+
+RTEMPVD
+0   40
+10.0 40 /
+
+RVW
+  6000*.0 /
+RPTRST 
+ 'BASIC=2' DEN VISC /
+----------------------------------------------------------------------------
+SUMMARY
+-------------------------------------------------------------------------
+PERFORMA---
+CGIR
+ INJ0 /
+/
+
+CGIRL
+ INJ0 /
+/
+
+CPI
+ INJ0 /
+/
+
+
+WGIRL
+ 'INJ0'  1  /
+/
+
+CGIT
+ INJ0 /
+/
+
+CGITL
+ INJ0 /
+/
+
+WGITL
+ 'INJ0'  1  /
+/
+
+FPR 
+
+FGIP
+
+FWIP
+
+FGIR
+
+FWIR
+
+FGIT
+
+FWIT
+
+FWCD
+
+WGIR
+/
+
+WGIT
+/
+
+WBHP
+/
+
+RPR
+/
+
+RWIP
+/
+
+RGIP
+/
+
+WPI
+/
+----------------------------------------------------------------------------
+SCHEDULE
+----------------------------------------------------------------------------
+RPTRST
+ 'BASIC=2' DEN VISC /
+WELSPECS
+'INJ0' 'G1' 1 1 1*  GAS 3*  /
+/
+COMPDAT
+'INJ0' 1 1 1 10 'OPEN' 1* 1* 0.3 /
+/
+TUNING
+1e-2 7 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' OPEN
+'RATE'  5.352087E+05  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*7
+/
+TUNING
+1e-2 14 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' SHUT
+'RATE'  0.000000E+00  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*14
+/
+TUNING
+1e-2 7 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' OPEN
+'RATE'  5.352087E+05  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*7
+/
+TUNING
+1e-2 21 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' SHUT
+'RATE'  0.000000E+00  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*21
+/
+TUNING
+1e-2 7 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' OPEN
+'RATE'  5.352087E+05  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*7
+/
+TUNING
+1e-2 28 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' SHUT
+'RATE'  0.000000E+00  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*28
+/
+TUNING
+1e-2 7 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' OPEN
+'RATE'  5.352087E+05  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*7
+/
+TUNING
+1e-2 365 1e-10 2* 1e-12/
+/
+/
+WCONINJE
+'INJ0' 'GAS' SHUT
+'RATE'  0.000000E+00  1* 400/
+/
+-- Close the specified connections
+TSTEP
+1*365
+/

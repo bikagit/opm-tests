@@ -1,0 +1,750 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.04-pre (fd6ac3aa9*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.3.0, Darwin Kernel Version 24.3.0: Thu Jan  2 20:24:16 PST 2025; root:xnu-11215.81.4~3/RELEASE_ARM64_T6000 )
+Build time       =  2025-04-22 at 16:48:59 hrs
+User             =  macbookn
+Simulation started on 22-04-2025 at 17:06:30 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+ActivateMLRelPErm="0" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough" # default: ""
+EclDeckFileName="/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxIterations="20"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file '/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA'
+    0 Reading RUNSPEC  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 5
+    1 Reading DIMENS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 7
+    2 Reading EQLDIMS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 11
+    3 Reading TABDIMS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 14
+    4 Reading WATER    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 17
+    5 Reading GAS      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 18
+    6 Reading CO2STORE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 19
+    7 Reading METRIC   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 21
+    8 Reading START    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 23
+    9 Reading SATOPTS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 26
+   10 Reading WELLDIMS in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 29
+   11 Reading UNIFIN   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 32
+   12 Reading UNIFOUT  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 33
+   13 Reading GRID     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 35
+   14 Reading INIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 37
+   15 Reading SPECGRID in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 5
+   16 Reading COORD    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 9
+   17 Reading ZCORN    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GRID.INC line 1214
+   18 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 7
+   19 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 20
+   20 Reading COPY     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 33
+   21 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/GEOLOGY.INC line 37
+   22 Reading PROPS    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 41
+   23 Reading SGFN     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/TABLES.INC line 1
+   24 Reading SWFN     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/TABLES.INC line 2007
+   25 Reading EHYSTR   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 46
+   26 Reading ROCK     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 49
+   27 Reading REGIONS  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 54
+   28 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/REGIONS.INC line 4
+   29 Reading EQUALS   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/REGIONS.INC line 17
+   30 Reading SOLUTION in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 59
+   31 Reading EQUIL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 61
+   32 Reading RTEMPVD  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 64
+   33 Reading RVW      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 68
+   34 Reading RPTRST   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 70
+   35 Reading SUMMARY  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 73
+   36 Reading PERFORMA in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 75
+   37 Reading CGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 76
+   38 Reading CGIRL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 80
+   39 Reading CPI      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 84
+   40 Reading WGIRL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 89
+   41 Reading CGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 93
+   42 Reading CGITL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 97
+   43 Reading WGITL    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 101
+   44 Reading FPR      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 105
+   45 Reading FGIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 107
+   46 Reading FWIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 109
+   47 Reading FGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 111
+   48 Reading FWIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 113
+   49 Reading FGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 115
+   50 Reading FWIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 117
+   51 Reading FWCD     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 119
+   52 Reading WGIR     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 121
+   53 Reading WGIT     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 124
+   54 Reading WBHP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 127
+   55 Reading RPR      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 130
+   56 Reading RWIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 133
+   57 Reading RGIP     in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 136
+   58 Reading WPI      in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 139
+   59 Reading SCHEDULE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 142
+   60 Reading RPTRST   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 144
+   61 Reading WELSPECS in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 146
+   62 Reading COMPDAT  in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 149
+   63 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 152
+   64 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 156
+   65 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 161
+   66 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 164
+   67 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 168
+   68 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 173
+   69 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 176
+   70 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 180
+   71 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 185
+   72 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 188
+   73 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 192
+   74 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 197
+   75 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 200
+   76 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 204
+   77 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 209
+   78 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 212
+   79 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 216
+   80 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 221
+   81 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 224
+   82 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 228
+   83 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 233
+   84 Reading TUNING   in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 236
+   85 Reading WCONINJE in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 240
+   86 Reading TSTEP    in /Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 245
+The CO2 storage option is given. PVT properties from the Brine-CO2 system is used
+See the OPM manual for details on the used models.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+2 fluid phases are active
+
+Processing dynamic information from
+/Users/macbookn/activopmwkspc/pyDavid/pyopmnearwell/examples/hysteresis_models/Killough/CO2_KILLOUGH.DATA line 142
+Initializing report step 0/8 at 2000-01-01 0 DAYS line 142
+Processing keyword RPTRST at line 144
+Processing keyword WELSPECS at line 146
+Processing keyword COMPDAT at line 149
+Processing keyword TUNING at line 152
+Processing keyword WCONINJE at line 156
+Complete report step 1 (7 DAYS) at 2000-01-08 (0 DAYS)
+
+Initializing report step 2/8 at 2000-01-08 (0 DAYS) line 161
+Processing keyword TUNING at line 164
+Processing keyword WCONINJE at line 168
+Complete report step 2 (14 DAYS) at 2000-01-22 (7 DAYS)
+
+Initializing report step 3/8 at 2000-01-22 (7 DAYS) line 173
+Processing keyword TUNING at line 176
+Processing keyword WCONINJE at line 180
+Complete report step 3 (7 DAYS) at 2000-01-29 (21 DAYS)
+
+Initializing report step 4/8 at 2000-01-29 (21 DAYS) line 185
+Processing keyword TUNING at line 188
+Processing keyword WCONINJE at line 192
+Complete report step 4 (21 DAYS) at 2000-02-19 (28 DAYS)
+
+Initializing report step 5/8 at 2000-02-19 (28 DAYS) line 197
+Processing keyword TUNING at line 200
+Processing keyword WCONINJE at line 204
+Complete report step 5 (7 DAYS) at 2000-02-26 (49 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/8 at 2000-02-26 (49 DAYS) line 209
+Processing keyword TUNING at line 212
+Processing keyword WCONINJE at line 216
+Complete report step 6 (28 DAYS) at 2000-03-25 (56 DAYS)
+
+Initializing report step 7/8 at 2000-03-25 (56 DAYS) line 221
+Processing keyword TUNING at line 224
+Processing keyword WCONINJE at line 228
+Complete report step 7 (7 DAYS) at 2000-04-01 (84 DAYS)
+
+Initializing report step 8/8 at 2000-04-01 (84 DAYS) line 233
+Processing keyword TUNING at line 236
+Processing keyword WCONINJE at line 240
+Complete report step 8 (365 DAYS) at 2001-04-01 (91 DAYS)
+
+
+Processing grid
+Total number of active cells: 6000 / total pore volume: 144337567 RM3
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System:  Water-Gas system.
+Relative permeability input format: Saturation Family II.
+Number of saturation regions: 2
+
+CO2STORE/CO2SOL is enabled. 
+ The surface density of CO2 is  1.868433kg/m3 
+ The surface density of Brine is  998.107723kg/m3
+ The surface densities are computed using the reference pressure ( 101325.000000Pa) and the reference temperature (288.710000K).
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/8 at day 0/456, date = 01-Jan-2000
+Using Newton nonlinear solver.
+Restart file written for report step 0/8, date = 01-Jan-2000 00:00:00
+
+Starting time step 0, stepsize 1 days, at day 0/7, date = 01-Jan-2000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.33 days
+
+
+Starting time step 0, stepsize 0.33 days, at day 0/7, date = 01-Jan-2000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.10890000000000001 days
+
+
+Starting time step 0, stepsize 0.1089 days, at day 0/7, date = 01-Jan-2000
+ Newton its=19, linearizations=20 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 1, stepsize 0.0458526 days, at day 0.1089/7, date = 01-Jan-2000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 2, stepsize 0.137558 days, at day 0.154753/7, date = 01-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 3, stepsize 0.137558 days, at day 0.292311/7, date = 01-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 4, stepsize 0.247604 days, at day 0.429868/7, date = 01-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 5, stepsize 0.220093 days, at day 0.677473/7, date = 01-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 6, stepsize 0.396167 days, at day 0.897565/7, date = 01-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 7, stepsize 0.352148 days, at day 1.29373/7, date = 02-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 8, stepsize 0.633867 days, at day 1.64588/7, date = 02-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 9, stepsize 0.507093 days, at day 2.27975/7, date = 03-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 10, stepsize 0.507093 days, at day 2.78684/7, date = 03-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 11, stepsize 0.709931 days, at day 3.29393/7, date = 04-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 12, stepsize 0.709931 days, at day 4.00386/7, date = 05-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 13, stepsize 0.63105 days, at day 4.7138/7, date = 05-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 14, stepsize 0.827577 days, at day 5.34485/7, date = 06-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 15, stepsize 0.827577 days, at day 6.17242/7, date = 07-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step  1/8 at day 7/456, date = 08-Jan-2000
+
+Starting time step 0, stepsize 1.48964 days, at day 7/21, date = 08-Jan-2000
+Restart file written for report step 1/8, date = 08-Jan-2000 00:00:00
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 1, stepsize 1.48964 days, at day 8.48964/21, date = 09-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 2, stepsize 2.68135 days, at day 9.97928/21, date = 10-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 4.16968 days, at day 12.6606/21, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 4, stepsize 4.16968 days, at day 16.8303/21, date = 17-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step  2/8 at day 21/456, date = 22-Jan-2000
+
+Starting time step 0, stepsize 7 days, at day 21/28, date = 22-Jan-2000
+Restart file written for report step 2/8, date = 22-Jan-2000 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 21/28, date = 22-Jan-2000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 1, stepsize 1.232 days, at day 23.31/28, date = 24-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 2.2176 days, at day 24.542/28, date = 25-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 3, stepsize 1.2404 days, at day 26.7596/28, date = 27-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step  3/8 at day 28/456, date = 29-Jan-2000
+
+Starting time step 0, stepsize 1.73656 days, at day 28/49, date = 29-Jan-2000
+Restart file written for report step 3/8, date = 29-Jan-2000 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 27 (0.0sec)
+
+Starting time step 1, stepsize 1.15771 days, at day 29.7366/49, date = 30-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 2, stepsize 2.54695 days, at day 30.8943/49, date = 31-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 6.62208 days, at day 33.4412/49, date = 03-Feb-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 4, stepsize 8.9367 days, at day 40.0633/49, date = 10-Feb-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+
+Report step  4/8 at day 49/456, date = 19-Feb-2000
+
+Starting time step 0, stepsize 7 days, at day 49/56, date = 19-Feb-2000
+Restart file written for report step 4/8, date = 19-Feb-2000 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 49/56, date = 19-Feb-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.7623 days
+
+
+Starting time step 0, stepsize 0.7623 days, at day 49/56, date = 19-Feb-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 1.14171 days, at day 49.7623/56, date = 19-Feb-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 2, stepsize 2.05509 days, at day 50.904/56, date = 20-Feb-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 3, stepsize 1.52045 days, at day 52.9591/56, date = 22-Feb-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 4, stepsize 1.52045 days, at day 54.4795/56, date = 24-Feb-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step  5/8 at day 56/456, date = 26-Feb-2000
+
+Starting time step 0, stepsize 2.73681 days, at day 56/84, date = 26-Feb-2000
+Restart file written for report step 5/8, date = 26-Feb-2000 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 43 (0.1sec)
+
+Starting time step 1, stepsize 1.09472 days, at day 58.7368/84, date = 28-Feb-2000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 2, stepsize 3.28417 days, at day 59.8315/84, date = 29-Feb-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 8.53885 days, at day 63.1157/84, date = 04-Mar-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 4, stepsize 12.3454 days, at day 71.6546/84, date = 12-Mar-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step  6/8 at day 84/456, date = 25-Mar-2000
+
+Starting time step 0, stepsize 7 days, at day 84/91, date = 25-Mar-2000
+Restart file written for report step 6/8, date = 25-Mar-2000 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.31 days
+
+
+Starting time step 0, stepsize 2.31 days, at day 84/91, date = 25-Mar-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.7623 days
+
+
+Starting time step 0, stepsize 0.7623 days, at day 84/91, date = 25-Mar-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 1, stepsize 1.18606 days, at day 84.7623/91, date = 25-Mar-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 2.60933 days, at day 85.9484/91, date = 26-Mar-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 3, stepsize 2.44231 days, at day 88.5577/91, date = 29-Mar-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step  7/8 at day 91/456, date = 01-Apr-2000
+
+Starting time step 0, stepsize 4.39616 days, at day 91/456, date = 01-Apr-2000
+Restart file written for report step 7/8, date = 01-Apr-2000 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 44 (0.1sec)
+
+Starting time step 1, stepsize 1.75846 days, at day 95.3962/456, date = 05-Apr-2000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 41 (0.1sec)
+
+Starting time step 2, stepsize 0.703385 days, at day 97.1546/456, date = 07-Apr-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 3, stepsize 2.11016 days, at day 97.858/456, date = 07-Apr-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 4, stepsize 6.33047 days, at day 99.9682/456, date = 09-Apr-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 13.927 days, at day 106.299/456, date = 16-Apr-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 6, stepsize 13.927 days, at day 120.226/456, date = 30-Apr-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 7, stepsize 19.4978 days, at day 134.153/456, date = 14-May-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 8, stepsize 19.4978 days, at day 153.651/456, date = 02-Jun-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 9, stepsize 27.297 days, at day 173.148/456, date = 22-Jun-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 10, stepsize 38.2158 days, at day 200.445/456, date = 19-Jul-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 11, stepsize 38.2158 days, at day 238.661/456, date = 26-Aug-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 12, stepsize 38.2158 days, at day 276.877/456, date = 03-Oct-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 13, stepsize 53.5021 days, at day 315.093/456, date = 11-Nov-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 14, stepsize 47.5574 days, at day 368.595/456, date = 03-Jan-2001
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 15, stepsize 39.848 days, at day 416.152/456, date = 20-Feb-2001
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 11 (0.0sec)
+
+Restart file written for report step 8/8, date = 01-Apr-2001 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.09 s
+  Deck input:                    0.04 s
+Number of timesteps:            67
+Simulation time:                 5.35 s
+  Assembly time:                 0.83 s (Wasted: 0.2 s; 22.5%)
+    Well assembly:               0.02 s (Wasted: 0.0 s; 37.2%)
+  Linear solve time:             2.39 s (Wasted: 0.6 s; 27.1%)
+    Linear setup:                0.78 s (Wasted: 0.2 s; 25.6%)
+  Props/update time:             1.78 s (Wasted: 0.4 s; 24.1%)
+  Pre/post step:                 0.33 s (Wasted: 0.0 s; 10.7%)
+  Output write time:             0.01 s
+Overall Linearizations:        667      (Wasted:   147; 22.0%)
+Overall Newton Iterations:     607      (Wasted:   147; 24.2%)
+Overall Linear Iterations:    1178      (Wasted:   331; 28.1%)
+
+
+
+Error summary:
+Warnings          0
+Info              279
+Errors            0
+Bugs              0
+Debug             0
+Problems          7
+

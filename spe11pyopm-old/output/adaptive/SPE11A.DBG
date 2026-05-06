@@ -1,0 +1,3450 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.04-pre (1f8438ef8*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.1.0, Darwin Kernel Version 24.1.0: Thu Oct 10 21:03:15 PDT 2024; root:xnu-11215.41.3~2/RELEASE_ARM64_T6000 )
+Build time       =  2024-11-15 at 12:17:09 hrs
+User             =  macbookn
+Simulation started on 11-12-2024 at 12:23:53 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EclDeckFileName="SPE11A" # default: ""
+UseMLmethodsTols="true" # default: "0"
+UseBestResidual="true" # default: "0"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableEclOutput="0" # default: "1"
+FullTimeStepInitially="1" # default: "0"
+ToleranceCnvRelaxed="1e-2" # default: "1"
+ToleranceCnv="1e-2" # default: "0.01"
+ToleranceMb="1e-5" # default: "1e-07"
+ToleranceMbRelaxed="1e-5" # default: "1e-06"
+NewtonMinIterations="1" # default: "2"
+NewtonMaxIterations="50" # default: "20"
+LinearSolverReduction="0.005" # default: "0.01"
+OutputDir="/Users/macbookn/hackatonwork/opm-tests/spe11pyopm/output/adaptive" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+BdaDeviceId="0"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableOpmRstFile="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheck="1"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepBeforeShuttingProblematicWellsInDays="0.01"
+MinTimeStepSize="0"
+NetworkMaxIterations="200"
+NetworkMaxStrictIterations="100"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceEisenstat="0.5"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseBestPath="0"
+UseEisenstat="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'SPE11A.data'
+    0 Reading RUNSPEC  in SPE11A.DATA line 4
+    1 Reading DIMENS   in SPE11A.DATA line 6
+    2 Reading EQLDIMS  in SPE11A.DATA line 9
+    3 Reading TABDIMS  in SPE11A.DATA line 12
+    4 Reading WATER    in SPE11A.DATA line 15
+    5 Reading GAS      in SPE11A.DATA line 16
+    6 Reading CO2STORE in SPE11A.DATA line 17
+    7 Reading DISGASW  in SPE11A.DATA line 18
+    8 Reading VAPWAT   in SPE11A.DATA line 19
+    9 Reading DIFFUSE  in SPE11A.DATA line 20
+   10 Reading METRIC   in SPE11A.DATA line 22
+   11 Reading START    in SPE11A.DATA line 24
+   12 Reading UNIFOUT  in SPE11A.DATA line 28
+   13 Reading GRID     in SPE11A.DATA line 30
+   14 Reading INIT     in SPE11A.DATA line 32
+   15 Reading DX       in SPE11A.DATA line 33
+   16 Reading DY       in SPE11A.DATA line 35
+   17 Reading DZ       in SPE11A.DATA line 37
+   18 Reading TOPS     in SPE11A.DATA line 39
+   19 Reading PERMX    in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/PERMX.INC line 3
+   20 Reading COPY     in SPE11A.DATA line 45
+   21 Reading MULTIPLY in SPE11A.DATA line 50
+   22 Reading PORO     in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/PORO.INC line 3
+   23 Reading BCCON    in SPE11A.DATA line 57
+   24 Reading DISPERC  in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/DISPERC.INC line 3
+   25 Reading PROPS    in SPE11A.DATA line 65
+   26 Reading SGWFN    in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/TABLES.INC line 3
+   27 Reading DIFFAWAT in SPE11A.DATA line 70
+   28 Reading DIFFAGAS in SPE11A.DATA line 72
+   29 Reading THCO2MIX in SPE11A.DATA line 75
+   30 Reading REGIONS  in SPE11A.DATA line 78
+   31 Reading SATNUM   in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/SATNUM.INC line 3
+   32 Reading FIPNUM   in /Users/macbookn/hackatonwork/opm-tests/spe11pyopm/FIPNUM.INC line 3
+   33 Reading SOLUTION in SPE11A.DATA line 86
+   34 Reading EQUIL    in SPE11A.DATA line 88
+   35 Reading RPTRST   in SPE11A.DATA line 91
+   36 Reading RTEMPVD  in SPE11A.DATA line 95
+   37 Reading SUMMARY  in SPE11A.DATA line 99
+   38 Reading PERFORMA in SPE11A.DATA line 101
+   39 Reading FGIP     in SPE11A.DATA line 102
+   40 Reading FGIR     in SPE11A.DATA line 103
+   41 Reading FGIT     in SPE11A.DATA line 104
+   42 Reading RGKDI    in SPE11A.DATA line 105
+   43 Reading RGKDM    in SPE11A.DATA line 107
+   44 Reading RGIP     in SPE11A.DATA line 109
+   45 Reading RWCD     in SPE11A.DATA line 111
+   46 Reading WBHP     in SPE11A.DATA line 113
+   47 Reading WGIR     in SPE11A.DATA line 115
+   48 Reading WGIT     in SPE11A.DATA line 117
+   49 Reading BWPR     in SPE11A.DATA line 119
+   50 Reading SCHEDULE in SPE11A.DATA line 124
+   51 Reading RPTRST   in SPE11A.DATA line 126
+   52 Reading BCPROP   in SPE11A.DATA line 130
+   53 Reading TUNING   in SPE11A.DATA line 134
+   54 Reading SOURCE   in SPE11A.DATA line 138
+   55 Reading TSTEP    in SPE11A.DATA line 142
+   56 Reading TUNING   in SPE11A.DATA line 145
+   57 Reading SOURCE   in SPE11A.DATA line 149
+   58 Reading TSTEP    in SPE11A.DATA line 153
+The CO2 storage option is given. PVT properties from the Brine-CO2 system is used
+See the OPM manual for details on the used models.
+
+Creating grid from keywords DX, DY, DZ and TOPS
+2 fluid phases are active
+
+Processing dynamic information from
+SPE11A.DATA line 124
+Initializing report step 0/1000 at 2025-01-01 0 DAYS line 124
+Processing keyword RPTRST at line 126
+Processing keyword BCPROP at line 130
+Processing keyword TUNING at line 134
+Processing keyword SOURCE at line 138
+Complete report step 1 (0.00020833333333333332 DAYS) at 2025-01-01 (0 DAYS)
+
+Initializing report step 2/1000 at 2025-01-01 (0 DAYS) line 142
+Complete report step 2 (0.00020833333333333332 DAYS) at 2025-01-01 (0.00020833333333333332 DAYS)
+
+Initializing report step 3/1000 at 2025-01-01 (0.00020833333333333332 DAYS) line 142
+Complete report step 3 (0.00020833333333333332 DAYS) at 2025-01-01 (0.00041666666666666664 DAYS)
+
+Initializing report step 4/1000 at 2025-01-01 (0.00041666666666666664 DAYS) line 142
+Complete report step 4 (0.00020833333333333332 DAYS) at 2025-01-01 (0.000625 DAYS)
+
+Initializing report step 5/1000 at 2025-01-01 (0.000625 DAYS) line 142
+Complete report step 5 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0008333333333333333 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/1000 at 2025-01-01 (0.0008333333333333333 DAYS) line 142
+Complete report step 6 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0010416666666666667 DAYS)
+
+Initializing report step 7/1000 at 2025-01-01 (0.0010416666666666667 DAYS) line 142
+Complete report step 7 (0.00020833333333333332 DAYS) at 2025-01-01 (0.00125 DAYS)
+
+Initializing report step 8/1000 at 2025-01-01 (0.00125 DAYS) line 142
+Complete report step 8 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0014583333333333332 DAYS)
+
+Initializing report step 9/1000 at 2025-01-01 (0.0014583333333333332 DAYS) line 142
+Complete report step 9 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0016666666666666666 DAYS)
+
+Initializing report step 10/1000 at 2025-01-01 (0.0016666666666666666 DAYS) line 142
+Complete report step 10 (0.00020833333333333332 DAYS) at 2025-01-01 (0.001875 DAYS)
+
+Initializing report step 11/1000 at 2025-01-01 (0.001875 DAYS) line 142
+Complete report step 11 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0020833333333333333 DAYS)
+
+Initializing report step 12/1000 at 2025-01-01 (0.0020833333333333333 DAYS) line 142
+Complete report step 12 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0022916666666666667 DAYS)
+
+Initializing report step 13/1000 at 2025-01-01 (0.0022916666666666667 DAYS) line 142
+Complete report step 13 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0025 DAYS)
+
+Initializing report step 14/1000 at 2025-01-01 (0.0025 DAYS) line 142
+Complete report step 14 (0.00020833333333333332 DAYS) at 2025-01-01 (0.002708333333333333 DAYS)
+
+Initializing report step 15/1000 at 2025-01-01 (0.002708333333333333 DAYS) line 142
+Complete report step 15 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0029166666666666664 DAYS)
+
+Initializing report step 16/1000 at 2025-01-01 (0.0029166666666666664 DAYS) line 142
+Complete report step 16 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0031249999999999997 DAYS)
+
+Initializing report step 17/1000 at 2025-01-01 (0.0031249999999999997 DAYS) line 142
+Complete report step 17 (0.00020833333333333332 DAYS) at 2025-01-01 (0.003333333333333333 DAYS)
+
+Initializing report step 18/1000 at 2025-01-01 (0.003333333333333333 DAYS) line 142
+Complete report step 18 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0035416666666666665 DAYS)
+
+Initializing report step 19/1000 at 2025-01-01 (0.0035416666666666665 DAYS) line 142
+Complete report step 19 (0.00020833333333333332 DAYS) at 2025-01-01 (0.00375 DAYS)
+
+Initializing report step 20/1000 at 2025-01-01 (0.00375 DAYS) line 142
+Complete report step 20 (0.00020833333333333332 DAYS) at 2025-01-01 (0.003958333333333333 DAYS)
+
+Initializing report step 21/1000 at 2025-01-01 (0.003958333333333333 DAYS) line 142
+Complete report step 21 (0.00020833333333333332 DAYS) at 2025-01-01 (0.004166666666666667 DAYS)
+
+Initializing report step 22/1000 at 2025-01-01 (0.004166666666666667 DAYS) line 142
+Complete report step 22 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0043749999999999995 DAYS)
+
+Initializing report step 23/1000 at 2025-01-01 (0.0043749999999999995 DAYS) line 142
+Complete report step 23 (0.00020833333333333332 DAYS) at 2025-01-01 (0.004583333333333333 DAYS)
+
+Initializing report step 24/1000 at 2025-01-01 (0.004583333333333333 DAYS) line 142
+Complete report step 24 (0.00020833333333333332 DAYS) at 2025-01-01 (0.004791666666666666 DAYS)
+
+Initializing report step 25/1000 at 2025-01-01 (0.004791666666666666 DAYS) line 142
+Complete report step 25 (0.00020833333333333332 DAYS) at 2025-01-01 (0.005 DAYS)
+
+Initializing report step 26/1000 at 2025-01-01 (0.005 DAYS) line 142
+Complete report step 26 (0.00020833333333333332 DAYS) at 2025-01-01 (0.005208333333333333 DAYS)
+
+Initializing report step 27/1000 at 2025-01-01 (0.005208333333333333 DAYS) line 142
+Complete report step 27 (0.00020833333333333332 DAYS) at 2025-01-01 (0.005416666666666666 DAYS)
+
+Initializing report step 28/1000 at 2025-01-01 (0.005416666666666666 DAYS) line 142
+Complete report step 28 (0.00020833333333333332 DAYS) at 2025-01-01 (0.005625 DAYS)
+
+Initializing report step 29/1000 at 2025-01-01 (0.005625 DAYS) line 142
+Complete report step 29 (0.00020833333333333332 DAYS) at 2025-01-01 (0.005833333333333333 DAYS)
+
+Initializing report step 30/1000 at 2025-01-01 (0.005833333333333333 DAYS) line 142
+Complete report step 30 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0060416666666666665 DAYS)
+
+Initializing report step 31/1000 at 2025-01-01 (0.0060416666666666665 DAYS) line 142
+Complete report step 31 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0062499999999999995 DAYS)
+
+Initializing report step 32/1000 at 2025-01-01 (0.0062499999999999995 DAYS) line 142
+Complete report step 32 (0.00020833333333333332 DAYS) at 2025-01-01 (0.006458333333333333 DAYS)
+
+Initializing report step 33/1000 at 2025-01-01 (0.006458333333333333 DAYS) line 142
+Complete report step 33 (0.00020833333333333332 DAYS) at 2025-01-01 (0.006666666666666666 DAYS)
+
+Initializing report step 34/1000 at 2025-01-01 (0.006666666666666666 DAYS) line 142
+Complete report step 34 (0.00020833333333333332 DAYS) at 2025-01-01 (0.006875 DAYS)
+
+Initializing report step 35/1000 at 2025-01-01 (0.006875 DAYS) line 142
+Complete report step 35 (0.00020833333333333332 DAYS) at 2025-01-01 (0.007083333333333333 DAYS)
+
+Initializing report step 36/1000 at 2025-01-01 (0.007083333333333333 DAYS) line 142
+Complete report step 36 (0.00020833333333333332 DAYS) at 2025-01-01 (0.007291666666666666 DAYS)
+
+Initializing report step 37/1000 at 2025-01-01 (0.007291666666666666 DAYS) line 142
+Complete report step 37 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0075 DAYS)
+
+Initializing report step 38/1000 at 2025-01-01 (0.0075 DAYS) line 142
+Complete report step 38 (0.00020833333333333332 DAYS) at 2025-01-01 (0.007708333333333333 DAYS)
+
+Initializing report step 39/1000 at 2025-01-01 (0.007708333333333333 DAYS) line 142
+Complete report step 39 (0.00020833333333333332 DAYS) at 2025-01-01 (0.007916666666666666 DAYS)
+
+Initializing report step 40/1000 at 2025-01-01 (0.007916666666666666 DAYS) line 142
+Complete report step 40 (0.00020833333333333332 DAYS) at 2025-01-01 (0.008125 DAYS)
+
+Initializing report step 41/1000 at 2025-01-01 (0.008125 DAYS) line 142
+Complete report step 41 (0.00020833333333333332 DAYS) at 2025-01-01 (0.008333333333333333 DAYS)
+
+Initializing report step 42/1000 at 2025-01-01 (0.008333333333333333 DAYS) line 142
+Complete report step 42 (0.00020833333333333332 DAYS) at 2025-01-01 (0.008541666666666666 DAYS)
+
+Initializing report step 43/1000 at 2025-01-01 (0.008541666666666666 DAYS) line 142
+Complete report step 43 (0.00020833333333333332 DAYS) at 2025-01-01 (0.008749999999999999 DAYS)
+
+Initializing report step 44/1000 at 2025-01-01 (0.008749999999999999 DAYS) line 142
+Complete report step 44 (0.00020833333333333332 DAYS) at 2025-01-01 (0.008958333333333332 DAYS)
+
+Initializing report step 45/1000 at 2025-01-01 (0.008958333333333332 DAYS) line 142
+Complete report step 45 (0.00020833333333333332 DAYS) at 2025-01-01 (0.009166666666666667 DAYS)
+
+Initializing report step 46/1000 at 2025-01-01 (0.009166666666666667 DAYS) line 142
+Complete report step 46 (0.00020833333333333332 DAYS) at 2025-01-01 (0.009375 DAYS)
+
+Initializing report step 47/1000 at 2025-01-01 (0.009375 DAYS) line 142
+Complete report step 47 (0.00020833333333333332 DAYS) at 2025-01-01 (0.009583333333333333 DAYS)
+
+Initializing report step 48/1000 at 2025-01-01 (0.009583333333333333 DAYS) line 142
+Complete report step 48 (0.00020833333333333332 DAYS) at 2025-01-01 (0.009791666666666666 DAYS)
+
+Initializing report step 49/1000 at 2025-01-01 (0.009791666666666666 DAYS) line 142
+Complete report step 49 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01 DAYS)
+
+Initializing report step 50/1000 at 2025-01-01 (0.01 DAYS) line 142
+Complete report step 50 (0.00020833333333333332 DAYS) at 2025-01-01 (0.010208333333333333 DAYS)
+
+Initializing report step 51/1000 at 2025-01-01 (0.010208333333333333 DAYS) line 142
+Complete report step 51 (0.00020833333333333332 DAYS) at 2025-01-01 (0.010416666666666666 DAYS)
+
+Initializing report step 52/1000 at 2025-01-01 (0.010416666666666666 DAYS) line 142
+Complete report step 52 (0.00020833333333333332 DAYS) at 2025-01-01 (0.010624999999999999 DAYS)
+
+Initializing report step 53/1000 at 2025-01-01 (0.010624999999999999 DAYS) line 142
+Complete report step 53 (0.00020833333333333332 DAYS) at 2025-01-01 (0.010833333333333332 DAYS)
+
+Initializing report step 54/1000 at 2025-01-01 (0.010833333333333332 DAYS) line 142
+Complete report step 54 (0.00020833333333333332 DAYS) at 2025-01-01 (0.011041666666666667 DAYS)
+
+Initializing report step 55/1000 at 2025-01-01 (0.011041666666666667 DAYS) line 142
+Complete report step 55 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01125 DAYS)
+
+Initializing report step 56/1000 at 2025-01-01 (0.01125 DAYS) line 142
+Complete report step 56 (0.00020833333333333332 DAYS) at 2025-01-01 (0.011458333333333333 DAYS)
+
+Initializing report step 57/1000 at 2025-01-01 (0.011458333333333333 DAYS) line 142
+Complete report step 57 (0.00020833333333333332 DAYS) at 2025-01-01 (0.011666666666666665 DAYS)
+
+Initializing report step 58/1000 at 2025-01-01 (0.011666666666666665 DAYS) line 142
+Complete report step 58 (0.00020833333333333332 DAYS) at 2025-01-01 (0.011875 DAYS)
+
+Initializing report step 59/1000 at 2025-01-01 (0.011875 DAYS) line 142
+Complete report step 59 (0.00020833333333333332 DAYS) at 2025-01-01 (0.012083333333333333 DAYS)
+
+Initializing report step 60/1000 at 2025-01-01 (0.012083333333333333 DAYS) line 142
+Complete report step 60 (0.00020833333333333332 DAYS) at 2025-01-01 (0.012291666666666666 DAYS)
+
+Initializing report step 61/1000 at 2025-01-01 (0.012291666666666666 DAYS) line 142
+Complete report step 61 (0.00020833333333333332 DAYS) at 2025-01-01 (0.012499999999999999 DAYS)
+
+Initializing report step 62/1000 at 2025-01-01 (0.012499999999999999 DAYS) line 142
+Complete report step 62 (0.00020833333333333332 DAYS) at 2025-01-01 (0.012708333333333332 DAYS)
+
+Initializing report step 63/1000 at 2025-01-01 (0.012708333333333332 DAYS) line 142
+Complete report step 63 (0.00020833333333333332 DAYS) at 2025-01-01 (0.012916666666666667 DAYS)
+
+Initializing report step 64/1000 at 2025-01-01 (0.012916666666666667 DAYS) line 142
+Complete report step 64 (0.00020833333333333332 DAYS) at 2025-01-01 (0.013125 DAYS)
+
+Initializing report step 65/1000 at 2025-01-01 (0.013125 DAYS) line 142
+Complete report step 65 (0.00020833333333333332 DAYS) at 2025-01-01 (0.013333333333333332 DAYS)
+
+Initializing report step 66/1000 at 2025-01-01 (0.013333333333333332 DAYS) line 142
+Complete report step 66 (0.00020833333333333332 DAYS) at 2025-01-01 (0.013541666666666665 DAYS)
+
+Initializing report step 67/1000 at 2025-01-01 (0.013541666666666665 DAYS) line 142
+Complete report step 67 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01375 DAYS)
+
+Initializing report step 68/1000 at 2025-01-01 (0.01375 DAYS) line 142
+Complete report step 68 (0.00020833333333333332 DAYS) at 2025-01-01 (0.013958333333333333 DAYS)
+
+Initializing report step 69/1000 at 2025-01-01 (0.013958333333333333 DAYS) line 142
+Complete report step 69 (0.00020833333333333332 DAYS) at 2025-01-01 (0.014166666666666666 DAYS)
+
+Initializing report step 70/1000 at 2025-01-01 (0.014166666666666666 DAYS) line 142
+Complete report step 70 (0.00020833333333333332 DAYS) at 2025-01-01 (0.014374999999999999 DAYS)
+
+Initializing report step 71/1000 at 2025-01-01 (0.014374999999999999 DAYS) line 142
+Complete report step 71 (0.00020833333333333332 DAYS) at 2025-01-01 (0.014583333333333332 DAYS)
+
+Initializing report step 72/1000 at 2025-01-01 (0.014583333333333332 DAYS) line 142
+Complete report step 72 (0.00020833333333333332 DAYS) at 2025-01-01 (0.014791666666666667 DAYS)
+
+Initializing report step 73/1000 at 2025-01-01 (0.014791666666666667 DAYS) line 142
+Complete report step 73 (0.00020833333333333332 DAYS) at 2025-01-01 (0.015 DAYS)
+
+Initializing report step 74/1000 at 2025-01-01 (0.015 DAYS) line 142
+Complete report step 74 (0.00020833333333333332 DAYS) at 2025-01-01 (0.015208333333333332 DAYS)
+
+Initializing report step 75/1000 at 2025-01-01 (0.015208333333333332 DAYS) line 142
+Complete report step 75 (0.00020833333333333332 DAYS) at 2025-01-01 (0.015416666666666665 DAYS)
+
+Initializing report step 76/1000 at 2025-01-01 (0.015416666666666665 DAYS) line 142
+Complete report step 76 (0.00020833333333333332 DAYS) at 2025-01-01 (0.015625 DAYS)
+
+Initializing report step 77/1000 at 2025-01-01 (0.015625 DAYS) line 142
+Complete report step 77 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01583333333333333 DAYS)
+
+Initializing report step 78/1000 at 2025-01-01 (0.01583333333333333 DAYS) line 142
+Complete report step 78 (0.00020833333333333332 DAYS) at 2025-01-01 (0.016041666666666666 DAYS)
+
+Initializing report step 79/1000 at 2025-01-01 (0.016041666666666666 DAYS) line 142
+Complete report step 79 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01625 DAYS)
+
+Initializing report step 80/1000 at 2025-01-01 (0.01625 DAYS) line 142
+Complete report step 80 (0.00020833333333333332 DAYS) at 2025-01-01 (0.016458333333333332 DAYS)
+
+Initializing report step 81/1000 at 2025-01-01 (0.016458333333333332 DAYS) line 142
+Complete report step 81 (0.00020833333333333332 DAYS) at 2025-01-01 (0.016666666666666666 DAYS)
+
+Initializing report step 82/1000 at 2025-01-01 (0.016666666666666666 DAYS) line 142
+Complete report step 82 (0.00020833333333333332 DAYS) at 2025-01-01 (0.016874999999999998 DAYS)
+
+Initializing report step 83/1000 at 2025-01-01 (0.016874999999999998 DAYS) line 142
+Complete report step 83 (0.00020833333333333332 DAYS) at 2025-01-01 (0.017083333333333332 DAYS)
+
+Initializing report step 84/1000 at 2025-01-01 (0.017083333333333332 DAYS) line 142
+Complete report step 84 (0.00020833333333333332 DAYS) at 2025-01-01 (0.017291666666666667 DAYS)
+
+Initializing report step 85/1000 at 2025-01-01 (0.017291666666666667 DAYS) line 142
+Complete report step 85 (0.00020833333333333332 DAYS) at 2025-01-01 (0.017499999999999998 DAYS)
+
+Initializing report step 86/1000 at 2025-01-01 (0.017499999999999998 DAYS) line 142
+Complete report step 86 (0.00020833333333333332 DAYS) at 2025-01-01 (0.017708333333333333 DAYS)
+
+Initializing report step 87/1000 at 2025-01-01 (0.017708333333333333 DAYS) line 142
+Complete report step 87 (0.00020833333333333332 DAYS) at 2025-01-01 (0.017916666666666664 DAYS)
+
+Initializing report step 88/1000 at 2025-01-01 (0.017916666666666664 DAYS) line 142
+Complete report step 88 (0.00020833333333333332 DAYS) at 2025-01-01 (0.018125 DAYS)
+
+Initializing report step 89/1000 at 2025-01-01 (0.018125 DAYS) line 142
+Complete report step 89 (0.00020833333333333332 DAYS) at 2025-01-01 (0.018333333333333333 DAYS)
+
+Initializing report step 90/1000 at 2025-01-01 (0.018333333333333333 DAYS) line 142
+Complete report step 90 (0.00020833333333333332 DAYS) at 2025-01-01 (0.018541666666666665 DAYS)
+
+Initializing report step 91/1000 at 2025-01-01 (0.018541666666666665 DAYS) line 142
+Complete report step 91 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01875 DAYS)
+
+Initializing report step 92/1000 at 2025-01-01 (0.01875 DAYS) line 142
+Complete report step 92 (0.00020833333333333332 DAYS) at 2025-01-01 (0.018958333333333334 DAYS)
+
+Initializing report step 93/1000 at 2025-01-01 (0.018958333333333334 DAYS) line 142
+Complete report step 93 (0.00020833333333333332 DAYS) at 2025-01-01 (0.019166666666666665 DAYS)
+
+Initializing report step 94/1000 at 2025-01-01 (0.019166666666666665 DAYS) line 142
+Complete report step 94 (0.00020833333333333332 DAYS) at 2025-01-01 (0.019375 DAYS)
+
+Initializing report step 95/1000 at 2025-01-01 (0.019375 DAYS) line 142
+Complete report step 95 (0.00020833333333333332 DAYS) at 2025-01-01 (0.01958333333333333 DAYS)
+
+Initializing report step 96/1000 at 2025-01-01 (0.01958333333333333 DAYS) line 142
+Complete report step 96 (0.00020833333333333332 DAYS) at 2025-01-01 (0.019791666666666666 DAYS)
+
+Initializing report step 97/1000 at 2025-01-01 (0.019791666666666666 DAYS) line 142
+Complete report step 97 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02 DAYS)
+
+Initializing report step 98/1000 at 2025-01-01 (0.02 DAYS) line 142
+Complete report step 98 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02020833333333333 DAYS)
+
+Initializing report step 99/1000 at 2025-01-01 (0.02020833333333333 DAYS) line 142
+Complete report step 99 (0.00020833333333333332 DAYS) at 2025-01-01 (0.020416666666666666 DAYS)
+
+Initializing report step 100/1000 at 2025-01-01 (0.020416666666666666 DAYS) line 142
+Complete report step 100 (0.00020833333333333332 DAYS) at 2025-01-01 (0.020624999999999998 DAYS)
+
+Initializing report step 101/1000 at 2025-01-01 (0.020624999999999998 DAYS) line 142
+Complete report step 101 (0.00020833333333333332 DAYS) at 2025-01-01 (0.020833333333333332 DAYS)
+
+Initializing report step 102/1000 at 2025-01-01 (0.020833333333333332 DAYS) line 142
+Complete report step 102 (0.00020833333333333332 DAYS) at 2025-01-01 (0.021041666666666667 DAYS)
+
+Initializing report step 103/1000 at 2025-01-01 (0.021041666666666667 DAYS) line 142
+Complete report step 103 (0.00020833333333333332 DAYS) at 2025-01-01 (0.021249999999999998 DAYS)
+
+Initializing report step 104/1000 at 2025-01-01 (0.021249999999999998 DAYS) line 142
+Complete report step 104 (0.00020833333333333332 DAYS) at 2025-01-01 (0.021458333333333333 DAYS)
+
+Initializing report step 105/1000 at 2025-01-01 (0.021458333333333333 DAYS) line 142
+Complete report step 105 (0.00020833333333333332 DAYS) at 2025-01-01 (0.021666666666666664 DAYS)
+
+Initializing report step 106/1000 at 2025-01-01 (0.021666666666666664 DAYS) line 142
+Complete report step 106 (0.00020833333333333332 DAYS) at 2025-01-01 (0.021875 DAYS)
+
+Initializing report step 107/1000 at 2025-01-01 (0.021875 DAYS) line 142
+Complete report step 107 (0.00020833333333333332 DAYS) at 2025-01-01 (0.022083333333333333 DAYS)
+
+Initializing report step 108/1000 at 2025-01-01 (0.022083333333333333 DAYS) line 142
+Complete report step 108 (0.00020833333333333332 DAYS) at 2025-01-01 (0.022291666666666664 DAYS)
+
+Initializing report step 109/1000 at 2025-01-01 (0.022291666666666664 DAYS) line 142
+Complete report step 109 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0225 DAYS)
+
+Initializing report step 110/1000 at 2025-01-01 (0.0225 DAYS) line 142
+Complete report step 110 (0.00020833333333333332 DAYS) at 2025-01-01 (0.022708333333333334 DAYS)
+
+Initializing report step 111/1000 at 2025-01-01 (0.022708333333333334 DAYS) line 142
+Complete report step 111 (0.00020833333333333332 DAYS) at 2025-01-01 (0.022916666666666665 DAYS)
+
+Initializing report step 112/1000 at 2025-01-01 (0.022916666666666665 DAYS) line 142
+Complete report step 112 (0.00020833333333333332 DAYS) at 2025-01-01 (0.023125 DAYS)
+
+Initializing report step 113/1000 at 2025-01-01 (0.023125 DAYS) line 142
+Complete report step 113 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02333333333333333 DAYS)
+
+Initializing report step 114/1000 at 2025-01-01 (0.02333333333333333 DAYS) line 142
+Complete report step 114 (0.00020833333333333332 DAYS) at 2025-01-01 (0.023541666666666666 DAYS)
+
+Initializing report step 115/1000 at 2025-01-01 (0.023541666666666666 DAYS) line 142
+Complete report step 115 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02375 DAYS)
+
+Initializing report step 116/1000 at 2025-01-01 (0.02375 DAYS) line 142
+Complete report step 116 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02395833333333333 DAYS)
+
+Initializing report step 117/1000 at 2025-01-01 (0.02395833333333333 DAYS) line 142
+Complete report step 117 (0.00020833333333333332 DAYS) at 2025-01-01 (0.024166666666666666 DAYS)
+
+Initializing report step 118/1000 at 2025-01-01 (0.024166666666666666 DAYS) line 142
+Complete report step 118 (0.00020833333333333332 DAYS) at 2025-01-01 (0.024374999999999997 DAYS)
+
+Initializing report step 119/1000 at 2025-01-01 (0.024374999999999997 DAYS) line 142
+Complete report step 119 (0.00020833333333333332 DAYS) at 2025-01-01 (0.024583333333333332 DAYS)
+
+Initializing report step 120/1000 at 2025-01-01 (0.024583333333333332 DAYS) line 142
+Complete report step 120 (0.00020833333333333332 DAYS) at 2025-01-01 (0.024791666666666667 DAYS)
+
+Initializing report step 121/1000 at 2025-01-01 (0.024791666666666667 DAYS) line 142
+Complete report step 121 (0.00020833333333333332 DAYS) at 2025-01-01 (0.024999999999999998 DAYS)
+
+Initializing report step 122/1000 at 2025-01-01 (0.024999999999999998 DAYS) line 142
+Complete report step 122 (0.00020833333333333332 DAYS) at 2025-01-01 (0.025208333333333333 DAYS)
+
+Initializing report step 123/1000 at 2025-01-01 (0.025208333333333333 DAYS) line 142
+Complete report step 123 (0.00020833333333333332 DAYS) at 2025-01-01 (0.025416666666666664 DAYS)
+
+Initializing report step 124/1000 at 2025-01-01 (0.025416666666666664 DAYS) line 142
+Complete report step 124 (0.00020833333333333332 DAYS) at 2025-01-01 (0.025625 DAYS)
+
+Initializing report step 125/1000 at 2025-01-01 (0.025625 DAYS) line 142
+Complete report step 125 (0.00020833333333333332 DAYS) at 2025-01-01 (0.025833333333333333 DAYS)
+
+Initializing report step 126/1000 at 2025-01-01 (0.025833333333333333 DAYS) line 142
+Complete report step 126 (0.00020833333333333332 DAYS) at 2025-01-01 (0.026041666666666664 DAYS)
+
+Initializing report step 127/1000 at 2025-01-01 (0.026041666666666664 DAYS) line 142
+Complete report step 127 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02625 DAYS)
+
+Initializing report step 128/1000 at 2025-01-01 (0.02625 DAYS) line 142
+Complete report step 128 (0.00020833333333333332 DAYS) at 2025-01-01 (0.026458333333333334 DAYS)
+
+Initializing report step 129/1000 at 2025-01-01 (0.026458333333333334 DAYS) line 142
+Complete report step 129 (0.00020833333333333332 DAYS) at 2025-01-01 (0.026666666666666665 DAYS)
+
+Initializing report step 130/1000 at 2025-01-01 (0.026666666666666665 DAYS) line 142
+Complete report step 130 (0.00020833333333333332 DAYS) at 2025-01-01 (0.026875 DAYS)
+
+Initializing report step 131/1000 at 2025-01-01 (0.026875 DAYS) line 142
+Complete report step 131 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02708333333333333 DAYS)
+
+Initializing report step 132/1000 at 2025-01-01 (0.02708333333333333 DAYS) line 142
+Complete report step 132 (0.00020833333333333332 DAYS) at 2025-01-01 (0.027291666666666665 DAYS)
+
+Initializing report step 133/1000 at 2025-01-01 (0.027291666666666665 DAYS) line 142
+Complete report step 133 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0275 DAYS)
+
+Initializing report step 134/1000 at 2025-01-01 (0.0275 DAYS) line 142
+Complete report step 134 (0.00020833333333333332 DAYS) at 2025-01-01 (0.02770833333333333 DAYS)
+
+Initializing report step 135/1000 at 2025-01-01 (0.02770833333333333 DAYS) line 142
+Complete report step 135 (0.00020833333333333332 DAYS) at 2025-01-01 (0.027916666666666666 DAYS)
+
+Initializing report step 136/1000 at 2025-01-01 (0.027916666666666666 DAYS) line 142
+Complete report step 136 (0.00020833333333333332 DAYS) at 2025-01-01 (0.028124999999999997 DAYS)
+
+Initializing report step 137/1000 at 2025-01-01 (0.028124999999999997 DAYS) line 142
+Complete report step 137 (0.00020833333333333332 DAYS) at 2025-01-01 (0.028333333333333332 DAYS)
+
+Initializing report step 138/1000 at 2025-01-01 (0.028333333333333332 DAYS) line 142
+Complete report step 138 (0.00020833333333333332 DAYS) at 2025-01-01 (0.028541666666666667 DAYS)
+
+Initializing report step 139/1000 at 2025-01-01 (0.028541666666666667 DAYS) line 142
+Complete report step 139 (0.00020833333333333332 DAYS) at 2025-01-01 (0.028749999999999998 DAYS)
+
+Initializing report step 140/1000 at 2025-01-01 (0.028749999999999998 DAYS) line 142
+Complete report step 140 (0.00020833333333333332 DAYS) at 2025-01-01 (0.028958333333333332 DAYS)
+
+Initializing report step 141/1000 at 2025-01-01 (0.028958333333333332 DAYS) line 142
+Complete report step 141 (0.00020833333333333332 DAYS) at 2025-01-01 (0.029166666666666664 DAYS)
+
+Initializing report step 142/1000 at 2025-01-01 (0.029166666666666664 DAYS) line 142
+Complete report step 142 (0.00020833333333333332 DAYS) at 2025-01-01 (0.029375 DAYS)
+
+Initializing report step 143/1000 at 2025-01-01 (0.029375 DAYS) line 142
+Complete report step 143 (0.00020833333333333332 DAYS) at 2025-01-01 (0.029583333333333333 DAYS)
+
+Initializing report step 144/1000 at 2025-01-01 (0.029583333333333333 DAYS) line 142
+Complete report step 144 (0.00020833333333333332 DAYS) at 2025-01-01 (0.029791666666666664 DAYS)
+
+Initializing report step 145/1000 at 2025-01-01 (0.029791666666666664 DAYS) line 142
+Complete report step 145 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03 DAYS)
+
+Initializing report step 146/1000 at 2025-01-01 (0.03 DAYS) line 142
+Complete report step 146 (0.00020833333333333332 DAYS) at 2025-01-01 (0.030208333333333334 DAYS)
+
+Initializing report step 147/1000 at 2025-01-01 (0.030208333333333334 DAYS) line 142
+Complete report step 147 (0.00020833333333333332 DAYS) at 2025-01-01 (0.030416666666666665 DAYS)
+
+Initializing report step 148/1000 at 2025-01-01 (0.030416666666666665 DAYS) line 142
+Complete report step 148 (0.00020833333333333332 DAYS) at 2025-01-01 (0.030625 DAYS)
+
+Initializing report step 149/1000 at 2025-01-01 (0.030625 DAYS) line 142
+Complete report step 149 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03083333333333333 DAYS)
+
+Initializing report step 150/1000 at 2025-01-01 (0.03083333333333333 DAYS) line 142
+Complete report step 150 (0.00020833333333333332 DAYS) at 2025-01-01 (0.031041666666666665 DAYS)
+
+Initializing report step 151/1000 at 2025-01-01 (0.031041666666666665 DAYS) line 142
+Complete report step 151 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03125 DAYS)
+
+Initializing report step 152/1000 at 2025-01-01 (0.03125 DAYS) line 142
+Complete report step 152 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03145833333333333 DAYS)
+
+Initializing report step 153/1000 at 2025-01-01 (0.03145833333333333 DAYS) line 142
+Complete report step 153 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03166666666666666 DAYS)
+
+Initializing report step 154/1000 at 2025-01-01 (0.03166666666666666 DAYS) line 142
+Complete report step 154 (0.00020833333333333332 DAYS) at 2025-01-01 (0.031875 DAYS)
+
+Initializing report step 155/1000 at 2025-01-01 (0.031875 DAYS) line 142
+Complete report step 155 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03208333333333333 DAYS)
+
+Initializing report step 156/1000 at 2025-01-01 (0.03208333333333333 DAYS) line 142
+Complete report step 156 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03229166666666666 DAYS)
+
+Initializing report step 157/1000 at 2025-01-01 (0.03229166666666666 DAYS) line 142
+Complete report step 157 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0325 DAYS)
+
+Initializing report step 158/1000 at 2025-01-01 (0.0325 DAYS) line 142
+Complete report step 158 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03270833333333333 DAYS)
+
+Initializing report step 159/1000 at 2025-01-01 (0.03270833333333333 DAYS) line 142
+Complete report step 159 (0.00020833333333333332 DAYS) at 2025-01-01 (0.032916666666666664 DAYS)
+
+Initializing report step 160/1000 at 2025-01-01 (0.032916666666666664 DAYS) line 142
+Complete report step 160 (0.00020833333333333332 DAYS) at 2025-01-01 (0.033125 DAYS)
+
+Initializing report step 161/1000 at 2025-01-01 (0.033125 DAYS) line 142
+Complete report step 161 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03333333333333333 DAYS)
+
+Initializing report step 162/1000 at 2025-01-01 (0.03333333333333333 DAYS) line 142
+Complete report step 162 (0.00020833333333333332 DAYS) at 2025-01-01 (0.033541666666666664 DAYS)
+
+Initializing report step 163/1000 at 2025-01-01 (0.033541666666666664 DAYS) line 142
+Complete report step 163 (0.00020833333333333332 DAYS) at 2025-01-01 (0.033749999999999995 DAYS)
+
+Initializing report step 164/1000 at 2025-01-01 (0.033749999999999995 DAYS) line 142
+Complete report step 164 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03395833333333333 DAYS)
+
+Initializing report step 165/1000 at 2025-01-01 (0.03395833333333333 DAYS) line 142
+Complete report step 165 (0.00020833333333333332 DAYS) at 2025-01-01 (0.034166666666666665 DAYS)
+
+Initializing report step 166/1000 at 2025-01-01 (0.034166666666666665 DAYS) line 142
+Complete report step 166 (0.00020833333333333332 DAYS) at 2025-01-01 (0.034374999999999996 DAYS)
+
+Initializing report step 167/1000 at 2025-01-01 (0.034374999999999996 DAYS) line 142
+Complete report step 167 (0.00020833333333333332 DAYS) at 2025-01-01 (0.034583333333333334 DAYS)
+
+Initializing report step 168/1000 at 2025-01-01 (0.034583333333333334 DAYS) line 142
+Complete report step 168 (0.00020833333333333332 DAYS) at 2025-01-01 (0.034791666666666665 DAYS)
+
+Initializing report step 169/1000 at 2025-01-01 (0.034791666666666665 DAYS) line 142
+Complete report step 169 (0.00020833333333333332 DAYS) at 2025-01-01 (0.034999999999999996 DAYS)
+
+Initializing report step 170/1000 at 2025-01-01 (0.034999999999999996 DAYS) line 142
+Complete report step 170 (0.00020833333333333332 DAYS) at 2025-01-01 (0.035208333333333335 DAYS)
+
+Initializing report step 171/1000 at 2025-01-01 (0.035208333333333335 DAYS) line 142
+Complete report step 171 (0.00020833333333333332 DAYS) at 2025-01-01 (0.035416666666666666 DAYS)
+
+Initializing report step 172/1000 at 2025-01-01 (0.035416666666666666 DAYS) line 142
+Complete report step 172 (0.00020833333333333332 DAYS) at 2025-01-01 (0.035625 DAYS)
+
+Initializing report step 173/1000 at 2025-01-01 (0.035625 DAYS) line 142
+Complete report step 173 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03583333333333333 DAYS)
+
+Initializing report step 174/1000 at 2025-01-01 (0.03583333333333333 DAYS) line 142
+Complete report step 174 (0.00020833333333333332 DAYS) at 2025-01-01 (0.036041666666666666 DAYS)
+
+Initializing report step 175/1000 at 2025-01-01 (0.036041666666666666 DAYS) line 142
+Complete report step 175 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03625 DAYS)
+
+Initializing report step 176/1000 at 2025-01-01 (0.03625 DAYS) line 142
+Complete report step 176 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03645833333333333 DAYS)
+
+Initializing report step 177/1000 at 2025-01-01 (0.03645833333333333 DAYS) line 142
+Complete report step 177 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03666666666666667 DAYS)
+
+Initializing report step 178/1000 at 2025-01-01 (0.03666666666666667 DAYS) line 142
+Complete report step 178 (0.00020833333333333332 DAYS) at 2025-01-01 (0.036875 DAYS)
+
+Initializing report step 179/1000 at 2025-01-01 (0.036875 DAYS) line 142
+Complete report step 179 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03708333333333333 DAYS)
+
+Initializing report step 180/1000 at 2025-01-01 (0.03708333333333333 DAYS) line 142
+Complete report step 180 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03729166666666667 DAYS)
+
+Initializing report step 181/1000 at 2025-01-01 (0.03729166666666667 DAYS) line 142
+Complete report step 181 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0375 DAYS)
+
+Initializing report step 182/1000 at 2025-01-01 (0.0375 DAYS) line 142
+Complete report step 182 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03770833333333333 DAYS)
+
+Initializing report step 183/1000 at 2025-01-01 (0.03770833333333333 DAYS) line 142
+Complete report step 183 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03791666666666667 DAYS)
+
+Initializing report step 184/1000 at 2025-01-01 (0.03791666666666667 DAYS) line 142
+Complete report step 184 (0.00020833333333333332 DAYS) at 2025-01-01 (0.038125 DAYS)
+
+Initializing report step 185/1000 at 2025-01-01 (0.038125 DAYS) line 142
+Complete report step 185 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03833333333333333 DAYS)
+
+Initializing report step 186/1000 at 2025-01-01 (0.03833333333333333 DAYS) line 142
+Complete report step 186 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03854166666666666 DAYS)
+
+Initializing report step 187/1000 at 2025-01-01 (0.03854166666666666 DAYS) line 142
+Complete report step 187 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03875 DAYS)
+
+Initializing report step 188/1000 at 2025-01-01 (0.03875 DAYS) line 142
+Complete report step 188 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03895833333333333 DAYS)
+
+Initializing report step 189/1000 at 2025-01-01 (0.03895833333333333 DAYS) line 142
+Complete report step 189 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03916666666666666 DAYS)
+
+Initializing report step 190/1000 at 2025-01-01 (0.03916666666666666 DAYS) line 142
+Complete report step 190 (0.00020833333333333332 DAYS) at 2025-01-01 (0.039375 DAYS)
+
+Initializing report step 191/1000 at 2025-01-01 (0.039375 DAYS) line 142
+Complete report step 191 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03958333333333333 DAYS)
+
+Initializing report step 192/1000 at 2025-01-01 (0.03958333333333333 DAYS) line 142
+Complete report step 192 (0.00020833333333333332 DAYS) at 2025-01-01 (0.03979166666666666 DAYS)
+
+Initializing report step 193/1000 at 2025-01-01 (0.03979166666666666 DAYS) line 142
+Complete report step 193 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04 DAYS)
+
+Initializing report step 194/1000 at 2025-01-01 (0.04 DAYS) line 142
+Complete report step 194 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04020833333333333 DAYS)
+
+Initializing report step 195/1000 at 2025-01-01 (0.04020833333333333 DAYS) line 142
+Complete report step 195 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04041666666666666 DAYS)
+
+Initializing report step 196/1000 at 2025-01-01 (0.04041666666666666 DAYS) line 142
+Complete report step 196 (0.00020833333333333332 DAYS) at 2025-01-01 (0.040625 DAYS)
+
+Initializing report step 197/1000 at 2025-01-01 (0.040625 DAYS) line 142
+Complete report step 197 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04083333333333333 DAYS)
+
+Initializing report step 198/1000 at 2025-01-01 (0.04083333333333333 DAYS) line 142
+Complete report step 198 (0.00020833333333333332 DAYS) at 2025-01-01 (0.041041666666666664 DAYS)
+
+Initializing report step 199/1000 at 2025-01-01 (0.041041666666666664 DAYS) line 142
+Complete report step 199 (0.00020833333333333332 DAYS) at 2025-01-01 (0.041249999999999995 DAYS)
+
+Initializing report step 200/1000 at 2025-01-01 (0.041249999999999995 DAYS) line 142
+Complete report step 200 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04145833333333333 DAYS)
+
+Initializing report step 201/1000 at 2025-01-01 (0.04145833333333333 DAYS) line 142
+Complete report step 201 (0.00020833333333333332 DAYS) at 2025-01-01 (0.041666666666666664 DAYS)
+
+Initializing report step 202/1000 at 2025-01-01 (0.041666666666666664 DAYS) line 142
+Complete report step 202 (0.00020833333333333332 DAYS) at 2025-01-01 (0.041874999999999996 DAYS)
+
+Initializing report step 203/1000 at 2025-01-01 (0.041874999999999996 DAYS) line 142
+Complete report step 203 (0.00020833333333333332 DAYS) at 2025-01-01 (0.042083333333333334 DAYS)
+
+Initializing report step 204/1000 at 2025-01-01 (0.042083333333333334 DAYS) line 142
+Complete report step 204 (0.00020833333333333332 DAYS) at 2025-01-01 (0.042291666666666665 DAYS)
+
+Initializing report step 205/1000 at 2025-01-01 (0.042291666666666665 DAYS) line 142
+Complete report step 205 (0.00020833333333333332 DAYS) at 2025-01-01 (0.042499999999999996 DAYS)
+
+Initializing report step 206/1000 at 2025-01-01 (0.042499999999999996 DAYS) line 142
+Complete report step 206 (0.00020833333333333332 DAYS) at 2025-01-01 (0.042708333333333334 DAYS)
+
+Initializing report step 207/1000 at 2025-01-01 (0.042708333333333334 DAYS) line 142
+Complete report step 207 (0.00020833333333333332 DAYS) at 2025-01-01 (0.042916666666666665 DAYS)
+
+Initializing report step 208/1000 at 2025-01-01 (0.042916666666666665 DAYS) line 142
+Complete report step 208 (0.00020833333333333332 DAYS) at 2025-01-01 (0.043125 DAYS)
+
+Initializing report step 209/1000 at 2025-01-01 (0.043125 DAYS) line 142
+Complete report step 209 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04333333333333333 DAYS)
+
+Initializing report step 210/1000 at 2025-01-01 (0.04333333333333333 DAYS) line 142
+Complete report step 210 (0.00020833333333333332 DAYS) at 2025-01-01 (0.043541666666666666 DAYS)
+
+Initializing report step 211/1000 at 2025-01-01 (0.043541666666666666 DAYS) line 142
+Complete report step 211 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04375 DAYS)
+
+Initializing report step 212/1000 at 2025-01-01 (0.04375 DAYS) line 142
+Complete report step 212 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04395833333333333 DAYS)
+
+Initializing report step 213/1000 at 2025-01-01 (0.04395833333333333 DAYS) line 142
+Complete report step 213 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04416666666666667 DAYS)
+
+Initializing report step 214/1000 at 2025-01-01 (0.04416666666666667 DAYS) line 142
+Complete report step 214 (0.00020833333333333332 DAYS) at 2025-01-01 (0.044375 DAYS)
+
+Initializing report step 215/1000 at 2025-01-01 (0.044375 DAYS) line 142
+Complete report step 215 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04458333333333333 DAYS)
+
+Initializing report step 216/1000 at 2025-01-01 (0.04458333333333333 DAYS) line 142
+Complete report step 216 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04479166666666667 DAYS)
+
+Initializing report step 217/1000 at 2025-01-01 (0.04479166666666667 DAYS) line 142
+Complete report step 217 (0.00020833333333333332 DAYS) at 2025-01-01 (0.045 DAYS)
+
+Initializing report step 218/1000 at 2025-01-01 (0.045 DAYS) line 142
+Complete report step 218 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04520833333333333 DAYS)
+
+Initializing report step 219/1000 at 2025-01-01 (0.04520833333333333 DAYS) line 142
+Complete report step 219 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04541666666666667 DAYS)
+
+Initializing report step 220/1000 at 2025-01-01 (0.04541666666666667 DAYS) line 142
+Complete report step 220 (0.00020833333333333332 DAYS) at 2025-01-01 (0.045625 DAYS)
+
+Initializing report step 221/1000 at 2025-01-01 (0.045625 DAYS) line 142
+Complete report step 221 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04583333333333333 DAYS)
+
+Initializing report step 222/1000 at 2025-01-01 (0.04583333333333333 DAYS) line 142
+Complete report step 222 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04604166666666666 DAYS)
+
+Initializing report step 223/1000 at 2025-01-01 (0.04604166666666666 DAYS) line 142
+Complete report step 223 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04625 DAYS)
+
+Initializing report step 224/1000 at 2025-01-01 (0.04625 DAYS) line 142
+Complete report step 224 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04645833333333333 DAYS)
+
+Initializing report step 225/1000 at 2025-01-01 (0.04645833333333333 DAYS) line 142
+Complete report step 225 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04666666666666666 DAYS)
+
+Initializing report step 226/1000 at 2025-01-01 (0.04666666666666666 DAYS) line 142
+Complete report step 226 (0.00020833333333333332 DAYS) at 2025-01-01 (0.046875 DAYS)
+
+Initializing report step 227/1000 at 2025-01-01 (0.046875 DAYS) line 142
+Complete report step 227 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04708333333333333 DAYS)
+
+Initializing report step 228/1000 at 2025-01-01 (0.04708333333333333 DAYS) line 142
+Complete report step 228 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04729166666666666 DAYS)
+
+Initializing report step 229/1000 at 2025-01-01 (0.04729166666666666 DAYS) line 142
+Complete report step 229 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0475 DAYS)
+
+Initializing report step 230/1000 at 2025-01-01 (0.0475 DAYS) line 142
+Complete report step 230 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04770833333333333 DAYS)
+
+Initializing report step 231/1000 at 2025-01-01 (0.04770833333333333 DAYS) line 142
+Complete report step 231 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04791666666666666 DAYS)
+
+Initializing report step 232/1000 at 2025-01-01 (0.04791666666666666 DAYS) line 142
+Complete report step 232 (0.00020833333333333332 DAYS) at 2025-01-01 (0.048124999999999994 DAYS)
+
+Initializing report step 233/1000 at 2025-01-01 (0.048124999999999994 DAYS) line 142
+Complete report step 233 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04833333333333333 DAYS)
+
+Initializing report step 234/1000 at 2025-01-01 (0.04833333333333333 DAYS) line 142
+Complete report step 234 (0.00020833333333333332 DAYS) at 2025-01-01 (0.048541666666666664 DAYS)
+
+Initializing report step 235/1000 at 2025-01-01 (0.048541666666666664 DAYS) line 142
+Complete report step 235 (0.00020833333333333332 DAYS) at 2025-01-01 (0.048749999999999995 DAYS)
+
+Initializing report step 236/1000 at 2025-01-01 (0.048749999999999995 DAYS) line 142
+Complete report step 236 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04895833333333333 DAYS)
+
+Initializing report step 237/1000 at 2025-01-01 (0.04895833333333333 DAYS) line 142
+Complete report step 237 (0.00020833333333333332 DAYS) at 2025-01-01 (0.049166666666666664 DAYS)
+
+Initializing report step 238/1000 at 2025-01-01 (0.049166666666666664 DAYS) line 142
+Complete report step 238 (0.00020833333333333332 DAYS) at 2025-01-01 (0.049374999999999995 DAYS)
+
+Initializing report step 239/1000 at 2025-01-01 (0.049374999999999995 DAYS) line 142
+Complete report step 239 (0.00020833333333333332 DAYS) at 2025-01-01 (0.04958333333333333 DAYS)
+
+Initializing report step 240/1000 at 2025-01-01 (0.04958333333333333 DAYS) line 142
+Complete report step 240 (0.00020833333333333332 DAYS) at 2025-01-01 (0.049791666666666665 DAYS)
+
+Initializing report step 241/1000 at 2025-01-01 (0.049791666666666665 DAYS) line 142
+Complete report step 241 (0.00020833333333333332 DAYS) at 2025-01-01 (0.049999999999999996 DAYS)
+
+Initializing report step 242/1000 at 2025-01-01 (0.049999999999999996 DAYS) line 142
+Complete report step 242 (0.00020833333333333332 DAYS) at 2025-01-01 (0.050208333333333334 DAYS)
+
+Initializing report step 243/1000 at 2025-01-01 (0.050208333333333334 DAYS) line 142
+Complete report step 243 (0.00020833333333333332 DAYS) at 2025-01-01 (0.050416666666666665 DAYS)
+
+Initializing report step 244/1000 at 2025-01-01 (0.050416666666666665 DAYS) line 142
+Complete report step 244 (0.00020833333333333332 DAYS) at 2025-01-01 (0.050624999999999996 DAYS)
+
+Initializing report step 245/1000 at 2025-01-01 (0.050624999999999996 DAYS) line 142
+Complete report step 245 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05083333333333333 DAYS)
+
+Initializing report step 246/1000 at 2025-01-01 (0.05083333333333333 DAYS) line 142
+Complete report step 246 (0.00020833333333333332 DAYS) at 2025-01-01 (0.051041666666666666 DAYS)
+
+Initializing report step 247/1000 at 2025-01-01 (0.051041666666666666 DAYS) line 142
+Complete report step 247 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05125 DAYS)
+
+Initializing report step 248/1000 at 2025-01-01 (0.05125 DAYS) line 142
+Complete report step 248 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05145833333333333 DAYS)
+
+Initializing report step 249/1000 at 2025-01-01 (0.05145833333333333 DAYS) line 142
+Complete report step 249 (0.00020833333333333332 DAYS) at 2025-01-01 (0.051666666666666666 DAYS)
+
+Initializing report step 250/1000 at 2025-01-01 (0.051666666666666666 DAYS) line 142
+Complete report step 250 (0.00020833333333333332 DAYS) at 2025-01-01 (0.051875 DAYS)
+
+Initializing report step 251/1000 at 2025-01-01 (0.051875 DAYS) line 142
+Complete report step 251 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05208333333333333 DAYS)
+
+Initializing report step 252/1000 at 2025-01-01 (0.05208333333333333 DAYS) line 142
+Complete report step 252 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05229166666666667 DAYS)
+
+Initializing report step 253/1000 at 2025-01-01 (0.05229166666666667 DAYS) line 142
+Complete report step 253 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0525 DAYS)
+
+Initializing report step 254/1000 at 2025-01-01 (0.0525 DAYS) line 142
+Complete report step 254 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05270833333333333 DAYS)
+
+Initializing report step 255/1000 at 2025-01-01 (0.05270833333333333 DAYS) line 142
+Complete report step 255 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05291666666666667 DAYS)
+
+Initializing report step 256/1000 at 2025-01-01 (0.05291666666666667 DAYS) line 142
+Complete report step 256 (0.00020833333333333332 DAYS) at 2025-01-01 (0.053125 DAYS)
+
+Initializing report step 257/1000 at 2025-01-01 (0.053125 DAYS) line 142
+Complete report step 257 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05333333333333333 DAYS)
+
+Initializing report step 258/1000 at 2025-01-01 (0.05333333333333333 DAYS) line 142
+Complete report step 258 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05354166666666666 DAYS)
+
+Initializing report step 259/1000 at 2025-01-01 (0.05354166666666666 DAYS) line 142
+Complete report step 259 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05375 DAYS)
+
+Initializing report step 260/1000 at 2025-01-01 (0.05375 DAYS) line 142
+Complete report step 260 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05395833333333333 DAYS)
+
+Initializing report step 261/1000 at 2025-01-01 (0.05395833333333333 DAYS) line 142
+Complete report step 261 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05416666666666666 DAYS)
+
+Initializing report step 262/1000 at 2025-01-01 (0.05416666666666666 DAYS) line 142
+Complete report step 262 (0.00020833333333333332 DAYS) at 2025-01-01 (0.054375 DAYS)
+
+Initializing report step 263/1000 at 2025-01-01 (0.054375 DAYS) line 142
+Complete report step 263 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05458333333333333 DAYS)
+
+Initializing report step 264/1000 at 2025-01-01 (0.05458333333333333 DAYS) line 142
+Complete report step 264 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05479166666666666 DAYS)
+
+Initializing report step 265/1000 at 2025-01-01 (0.05479166666666666 DAYS) line 142
+Complete report step 265 (0.00020833333333333332 DAYS) at 2025-01-01 (0.055 DAYS)
+
+Initializing report step 266/1000 at 2025-01-01 (0.055 DAYS) line 142
+Complete report step 266 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05520833333333333 DAYS)
+
+Initializing report step 267/1000 at 2025-01-01 (0.05520833333333333 DAYS) line 142
+Complete report step 267 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05541666666666666 DAYS)
+
+Initializing report step 268/1000 at 2025-01-01 (0.05541666666666666 DAYS) line 142
+Complete report step 268 (0.00020833333333333332 DAYS) at 2025-01-01 (0.055624999999999994 DAYS)
+
+Initializing report step 269/1000 at 2025-01-01 (0.055624999999999994 DAYS) line 142
+Complete report step 269 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05583333333333333 DAYS)
+
+Initializing report step 270/1000 at 2025-01-01 (0.05583333333333333 DAYS) line 142
+Complete report step 270 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05604166666666666 DAYS)
+
+Initializing report step 271/1000 at 2025-01-01 (0.05604166666666666 DAYS) line 142
+Complete report step 271 (0.00020833333333333332 DAYS) at 2025-01-01 (0.056249999999999994 DAYS)
+
+Initializing report step 272/1000 at 2025-01-01 (0.056249999999999994 DAYS) line 142
+Complete report step 272 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05645833333333333 DAYS)
+
+Initializing report step 273/1000 at 2025-01-01 (0.05645833333333333 DAYS) line 142
+Complete report step 273 (0.00020833333333333332 DAYS) at 2025-01-01 (0.056666666666666664 DAYS)
+
+Initializing report step 274/1000 at 2025-01-01 (0.056666666666666664 DAYS) line 142
+Complete report step 274 (0.00020833333333333332 DAYS) at 2025-01-01 (0.056874999999999995 DAYS)
+
+Initializing report step 275/1000 at 2025-01-01 (0.056874999999999995 DAYS) line 142
+Complete report step 275 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05708333333333333 DAYS)
+
+Initializing report step 276/1000 at 2025-01-01 (0.05708333333333333 DAYS) line 142
+Complete report step 276 (0.00020833333333333332 DAYS) at 2025-01-01 (0.057291666666666664 DAYS)
+
+Initializing report step 277/1000 at 2025-01-01 (0.057291666666666664 DAYS) line 142
+Complete report step 277 (0.00020833333333333332 DAYS) at 2025-01-01 (0.057499999999999996 DAYS)
+
+Initializing report step 278/1000 at 2025-01-01 (0.057499999999999996 DAYS) line 142
+Complete report step 278 (0.00020833333333333332 DAYS) at 2025-01-01 (0.057708333333333334 DAYS)
+
+Initializing report step 279/1000 at 2025-01-01 (0.057708333333333334 DAYS) line 142
+Complete report step 279 (0.00020833333333333332 DAYS) at 2025-01-01 (0.057916666666666665 DAYS)
+
+Initializing report step 280/1000 at 2025-01-01 (0.057916666666666665 DAYS) line 142
+Complete report step 280 (0.00020833333333333332 DAYS) at 2025-01-01 (0.058124999999999996 DAYS)
+
+Initializing report step 281/1000 at 2025-01-01 (0.058124999999999996 DAYS) line 142
+Complete report step 281 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05833333333333333 DAYS)
+
+Initializing report step 282/1000 at 2025-01-01 (0.05833333333333333 DAYS) line 142
+Complete report step 282 (0.00020833333333333332 DAYS) at 2025-01-01 (0.058541666666666665 DAYS)
+
+Initializing report step 283/1000 at 2025-01-01 (0.058541666666666665 DAYS) line 142
+Complete report step 283 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05875 DAYS)
+
+Initializing report step 284/1000 at 2025-01-01 (0.05875 DAYS) line 142
+Complete report step 284 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05895833333333333 DAYS)
+
+Initializing report step 285/1000 at 2025-01-01 (0.05895833333333333 DAYS) line 142
+Complete report step 285 (0.00020833333333333332 DAYS) at 2025-01-01 (0.059166666666666666 DAYS)
+
+Initializing report step 286/1000 at 2025-01-01 (0.059166666666666666 DAYS) line 142
+Complete report step 286 (0.00020833333333333332 DAYS) at 2025-01-01 (0.059375 DAYS)
+
+Initializing report step 287/1000 at 2025-01-01 (0.059375 DAYS) line 142
+Complete report step 287 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05958333333333333 DAYS)
+
+Initializing report step 288/1000 at 2025-01-01 (0.05958333333333333 DAYS) line 142
+Complete report step 288 (0.00020833333333333332 DAYS) at 2025-01-01 (0.05979166666666667 DAYS)
+
+Initializing report step 289/1000 at 2025-01-01 (0.05979166666666667 DAYS) line 142
+Complete report step 289 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06 DAYS)
+
+Initializing report step 290/1000 at 2025-01-01 (0.06 DAYS) line 142
+Complete report step 290 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06020833333333333 DAYS)
+
+Initializing report step 291/1000 at 2025-01-01 (0.06020833333333333 DAYS) line 142
+Complete report step 291 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06041666666666667 DAYS)
+
+Initializing report step 292/1000 at 2025-01-01 (0.06041666666666667 DAYS) line 142
+Complete report step 292 (0.00020833333333333332 DAYS) at 2025-01-01 (0.060625 DAYS)
+
+Initializing report step 293/1000 at 2025-01-01 (0.060625 DAYS) line 142
+Complete report step 293 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06083333333333333 DAYS)
+
+Initializing report step 294/1000 at 2025-01-01 (0.06083333333333333 DAYS) line 142
+Complete report step 294 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06104166666666666 DAYS)
+
+Initializing report step 295/1000 at 2025-01-01 (0.06104166666666666 DAYS) line 142
+Complete report step 295 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06125 DAYS)
+
+Initializing report step 296/1000 at 2025-01-01 (0.06125 DAYS) line 142
+Complete report step 296 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06145833333333333 DAYS)
+
+Initializing report step 297/1000 at 2025-01-01 (0.06145833333333333 DAYS) line 142
+Complete report step 297 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06166666666666666 DAYS)
+
+Initializing report step 298/1000 at 2025-01-01 (0.06166666666666666 DAYS) line 142
+Complete report step 298 (0.00020833333333333332 DAYS) at 2025-01-01 (0.061875 DAYS)
+
+Initializing report step 299/1000 at 2025-01-01 (0.061875 DAYS) line 142
+Complete report step 299 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06208333333333333 DAYS)
+
+Initializing report step 300/1000 at 2025-01-01 (0.06208333333333333 DAYS) line 142
+Complete report step 300 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06229166666666666 DAYS)
+
+Initializing report step 301/1000 at 2025-01-01 (0.06229166666666666 DAYS) line 142
+Complete report step 301 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0625 DAYS)
+
+Initializing report step 302/1000 at 2025-01-01 (0.0625 DAYS) line 142
+Complete report step 302 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06270833333333332 DAYS)
+
+Initializing report step 303/1000 at 2025-01-01 (0.06270833333333332 DAYS) line 142
+Complete report step 303 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06291666666666666 DAYS)
+
+Initializing report step 304/1000 at 2025-01-01 (0.06291666666666666 DAYS) line 142
+Complete report step 304 (0.00020833333333333332 DAYS) at 2025-01-01 (0.063125 DAYS)
+
+Initializing report step 305/1000 at 2025-01-01 (0.063125 DAYS) line 142
+Complete report step 305 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06333333333333332 DAYS)
+
+Initializing report step 306/1000 at 2025-01-01 (0.06333333333333332 DAYS) line 142
+Complete report step 306 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06354166666666666 DAYS)
+
+Initializing report step 307/1000 at 2025-01-01 (0.06354166666666666 DAYS) line 142
+Complete report step 307 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06375 DAYS)
+
+Initializing report step 308/1000 at 2025-01-01 (0.06375 DAYS) line 142
+Complete report step 308 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06395833333333333 DAYS)
+
+Initializing report step 309/1000 at 2025-01-01 (0.06395833333333333 DAYS) line 142
+Complete report step 309 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06416666666666666 DAYS)
+
+Initializing report step 310/1000 at 2025-01-01 (0.06416666666666666 DAYS) line 142
+Complete report step 310 (0.00020833333333333332 DAYS) at 2025-01-01 (0.064375 DAYS)
+
+Initializing report step 311/1000 at 2025-01-01 (0.064375 DAYS) line 142
+Complete report step 311 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06458333333333333 DAYS)
+
+Initializing report step 312/1000 at 2025-01-01 (0.06458333333333333 DAYS) line 142
+Complete report step 312 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06479166666666666 DAYS)
+
+Initializing report step 313/1000 at 2025-01-01 (0.06479166666666666 DAYS) line 142
+Complete report step 313 (0.00020833333333333332 DAYS) at 2025-01-01 (0.065 DAYS)
+
+Initializing report step 314/1000 at 2025-01-01 (0.065 DAYS) line 142
+Complete report step 314 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06520833333333333 DAYS)
+
+Initializing report step 315/1000 at 2025-01-01 (0.06520833333333333 DAYS) line 142
+Complete report step 315 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06541666666666666 DAYS)
+
+Initializing report step 316/1000 at 2025-01-01 (0.06541666666666666 DAYS) line 142
+Complete report step 316 (0.00020833333333333332 DAYS) at 2025-01-01 (0.065625 DAYS)
+
+Initializing report step 317/1000 at 2025-01-01 (0.065625 DAYS) line 142
+Complete report step 317 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06583333333333333 DAYS)
+
+Initializing report step 318/1000 at 2025-01-01 (0.06583333333333333 DAYS) line 142
+Complete report step 318 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06604166666666667 DAYS)
+
+Initializing report step 319/1000 at 2025-01-01 (0.06604166666666667 DAYS) line 142
+Complete report step 319 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06625 DAYS)
+
+Initializing report step 320/1000 at 2025-01-01 (0.06625 DAYS) line 142
+Complete report step 320 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06645833333333333 DAYS)
+
+Initializing report step 321/1000 at 2025-01-01 (0.06645833333333333 DAYS) line 142
+Complete report step 321 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06666666666666667 DAYS)
+
+Initializing report step 322/1000 at 2025-01-01 (0.06666666666666667 DAYS) line 142
+Complete report step 322 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06687499999999999 DAYS)
+
+Initializing report step 323/1000 at 2025-01-01 (0.06687499999999999 DAYS) line 142
+Complete report step 323 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06708333333333333 DAYS)
+
+Initializing report step 324/1000 at 2025-01-01 (0.06708333333333333 DAYS) line 142
+Complete report step 324 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06729166666666667 DAYS)
+
+Initializing report step 325/1000 at 2025-01-01 (0.06729166666666667 DAYS) line 142
+Complete report step 325 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06749999999999999 DAYS)
+
+Initializing report step 326/1000 at 2025-01-01 (0.06749999999999999 DAYS) line 142
+Complete report step 326 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06770833333333333 DAYS)
+
+Initializing report step 327/1000 at 2025-01-01 (0.06770833333333333 DAYS) line 142
+Complete report step 327 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06791666666666667 DAYS)
+
+Initializing report step 328/1000 at 2025-01-01 (0.06791666666666667 DAYS) line 142
+Complete report step 328 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06812499999999999 DAYS)
+
+Initializing report step 329/1000 at 2025-01-01 (0.06812499999999999 DAYS) line 142
+Complete report step 329 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06833333333333333 DAYS)
+
+Initializing report step 330/1000 at 2025-01-01 (0.06833333333333333 DAYS) line 142
+Complete report step 330 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06854166666666667 DAYS)
+
+Initializing report step 331/1000 at 2025-01-01 (0.06854166666666667 DAYS) line 142
+Complete report step 331 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06874999999999999 DAYS)
+
+Initializing report step 332/1000 at 2025-01-01 (0.06874999999999999 DAYS) line 142
+Complete report step 332 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06895833333333333 DAYS)
+
+Initializing report step 333/1000 at 2025-01-01 (0.06895833333333333 DAYS) line 142
+Complete report step 333 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06916666666666667 DAYS)
+
+Initializing report step 334/1000 at 2025-01-01 (0.06916666666666667 DAYS) line 142
+Complete report step 334 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06937499999999999 DAYS)
+
+Initializing report step 335/1000 at 2025-01-01 (0.06937499999999999 DAYS) line 142
+Complete report step 335 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06958333333333333 DAYS)
+
+Initializing report step 336/1000 at 2025-01-01 (0.06958333333333333 DAYS) line 142
+Complete report step 336 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06979166666666667 DAYS)
+
+Initializing report step 337/1000 at 2025-01-01 (0.06979166666666667 DAYS) line 142
+Complete report step 337 (0.00020833333333333332 DAYS) at 2025-01-01 (0.06999999999999999 DAYS)
+
+Initializing report step 338/1000 at 2025-01-01 (0.06999999999999999 DAYS) line 142
+Complete report step 338 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07020833333333333 DAYS)
+
+Initializing report step 339/1000 at 2025-01-01 (0.07020833333333333 DAYS) line 142
+Complete report step 339 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07041666666666667 DAYS)
+
+Initializing report step 340/1000 at 2025-01-01 (0.07041666666666667 DAYS) line 142
+Complete report step 340 (0.00020833333333333332 DAYS) at 2025-01-01 (0.070625 DAYS)
+
+Initializing report step 341/1000 at 2025-01-01 (0.070625 DAYS) line 142
+Complete report step 341 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07083333333333333 DAYS)
+
+Initializing report step 342/1000 at 2025-01-01 (0.07083333333333333 DAYS) line 142
+Complete report step 342 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07104166666666667 DAYS)
+
+Initializing report step 343/1000 at 2025-01-01 (0.07104166666666667 DAYS) line 142
+Complete report step 343 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07125 DAYS)
+
+Initializing report step 344/1000 at 2025-01-01 (0.07125 DAYS) line 142
+Complete report step 344 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07145833333333333 DAYS)
+
+Initializing report step 345/1000 at 2025-01-01 (0.07145833333333333 DAYS) line 142
+Complete report step 345 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07166666666666666 DAYS)
+
+Initializing report step 346/1000 at 2025-01-01 (0.07166666666666666 DAYS) line 142
+Complete report step 346 (0.00020833333333333332 DAYS) at 2025-01-01 (0.071875 DAYS)
+
+Initializing report step 347/1000 at 2025-01-01 (0.071875 DAYS) line 142
+Complete report step 347 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07208333333333333 DAYS)
+
+Initializing report step 348/1000 at 2025-01-01 (0.07208333333333333 DAYS) line 142
+Complete report step 348 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07229166666666666 DAYS)
+
+Initializing report step 349/1000 at 2025-01-01 (0.07229166666666666 DAYS) line 142
+Complete report step 349 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0725 DAYS)
+
+Initializing report step 350/1000 at 2025-01-01 (0.0725 DAYS) line 142
+Complete report step 350 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07270833333333333 DAYS)
+
+Initializing report step 351/1000 at 2025-01-01 (0.07270833333333333 DAYS) line 142
+Complete report step 351 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07291666666666666 DAYS)
+
+Initializing report step 352/1000 at 2025-01-01 (0.07291666666666666 DAYS) line 142
+Complete report step 352 (0.00020833333333333332 DAYS) at 2025-01-01 (0.073125 DAYS)
+
+Initializing report step 353/1000 at 2025-01-01 (0.073125 DAYS) line 142
+Complete report step 353 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07333333333333333 DAYS)
+
+Initializing report step 354/1000 at 2025-01-01 (0.07333333333333333 DAYS) line 142
+Complete report step 354 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07354166666666666 DAYS)
+
+Initializing report step 355/1000 at 2025-01-01 (0.07354166666666666 DAYS) line 142
+Complete report step 355 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07375 DAYS)
+
+Initializing report step 356/1000 at 2025-01-01 (0.07375 DAYS) line 142
+Complete report step 356 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07395833333333333 DAYS)
+
+Initializing report step 357/1000 at 2025-01-01 (0.07395833333333333 DAYS) line 142
+Complete report step 357 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07416666666666666 DAYS)
+
+Initializing report step 358/1000 at 2025-01-01 (0.07416666666666666 DAYS) line 142
+Complete report step 358 (0.00020833333333333332 DAYS) at 2025-01-01 (0.074375 DAYS)
+
+Initializing report step 359/1000 at 2025-01-01 (0.074375 DAYS) line 142
+Complete report step 359 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07458333333333333 DAYS)
+
+Initializing report step 360/1000 at 2025-01-01 (0.07458333333333333 DAYS) line 142
+Complete report step 360 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07479166666666666 DAYS)
+
+Initializing report step 361/1000 at 2025-01-01 (0.07479166666666666 DAYS) line 142
+Complete report step 361 (0.00020833333333333332 DAYS) at 2025-01-01 (0.075 DAYS)
+
+Initializing report step 362/1000 at 2025-01-01 (0.075 DAYS) line 142
+Complete report step 362 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07520833333333334 DAYS)
+
+Initializing report step 363/1000 at 2025-01-01 (0.07520833333333334 DAYS) line 142
+Complete report step 363 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07541666666666666 DAYS)
+
+Initializing report step 364/1000 at 2025-01-01 (0.07541666666666666 DAYS) line 142
+Complete report step 364 (0.00020833333333333332 DAYS) at 2025-01-01 (0.075625 DAYS)
+
+Initializing report step 365/1000 at 2025-01-01 (0.075625 DAYS) line 142
+Complete report step 365 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07583333333333334 DAYS)
+
+Initializing report step 366/1000 at 2025-01-01 (0.07583333333333334 DAYS) line 142
+Complete report step 366 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07604166666666666 DAYS)
+
+Initializing report step 367/1000 at 2025-01-01 (0.07604166666666666 DAYS) line 142
+Complete report step 367 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07625 DAYS)
+
+Initializing report step 368/1000 at 2025-01-01 (0.07625 DAYS) line 142
+Complete report step 368 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07645833333333332 DAYS)
+
+Initializing report step 369/1000 at 2025-01-01 (0.07645833333333332 DAYS) line 142
+Complete report step 369 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07666666666666666 DAYS)
+
+Initializing report step 370/1000 at 2025-01-01 (0.07666666666666666 DAYS) line 142
+Complete report step 370 (0.00020833333333333332 DAYS) at 2025-01-01 (0.076875 DAYS)
+
+Initializing report step 371/1000 at 2025-01-01 (0.076875 DAYS) line 142
+Complete report step 371 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07708333333333332 DAYS)
+
+Initializing report step 372/1000 at 2025-01-01 (0.07708333333333332 DAYS) line 142
+Complete report step 372 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07729166666666666 DAYS)
+
+Initializing report step 373/1000 at 2025-01-01 (0.07729166666666666 DAYS) line 142
+Complete report step 373 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0775 DAYS)
+
+Initializing report step 374/1000 at 2025-01-01 (0.0775 DAYS) line 142
+Complete report step 374 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07770833333333332 DAYS)
+
+Initializing report step 375/1000 at 2025-01-01 (0.07770833333333332 DAYS) line 142
+Complete report step 375 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07791666666666666 DAYS)
+
+Initializing report step 376/1000 at 2025-01-01 (0.07791666666666666 DAYS) line 142
+Complete report step 376 (0.00020833333333333332 DAYS) at 2025-01-01 (0.078125 DAYS)
+
+Initializing report step 377/1000 at 2025-01-01 (0.078125 DAYS) line 142
+Complete report step 377 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07833333333333332 DAYS)
+
+Initializing report step 378/1000 at 2025-01-01 (0.07833333333333332 DAYS) line 142
+Complete report step 378 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07854166666666666 DAYS)
+
+Initializing report step 379/1000 at 2025-01-01 (0.07854166666666666 DAYS) line 142
+Complete report step 379 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07875 DAYS)
+
+Initializing report step 380/1000 at 2025-01-01 (0.07875 DAYS) line 142
+Complete report step 380 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07895833333333332 DAYS)
+
+Initializing report step 381/1000 at 2025-01-01 (0.07895833333333332 DAYS) line 142
+Complete report step 381 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07916666666666666 DAYS)
+
+Initializing report step 382/1000 at 2025-01-01 (0.07916666666666666 DAYS) line 142
+Complete report step 382 (0.00020833333333333332 DAYS) at 2025-01-01 (0.079375 DAYS)
+
+Initializing report step 383/1000 at 2025-01-01 (0.079375 DAYS) line 142
+Complete report step 383 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07958333333333333 DAYS)
+
+Initializing report step 384/1000 at 2025-01-01 (0.07958333333333333 DAYS) line 142
+Complete report step 384 (0.00020833333333333332 DAYS) at 2025-01-01 (0.07979166666666666 DAYS)
+
+Initializing report step 385/1000 at 2025-01-01 (0.07979166666666666 DAYS) line 142
+Complete report step 385 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08 DAYS)
+
+Initializing report step 386/1000 at 2025-01-01 (0.08 DAYS) line 142
+Complete report step 386 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08020833333333333 DAYS)
+
+Initializing report step 387/1000 at 2025-01-01 (0.08020833333333333 DAYS) line 142
+Complete report step 387 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08041666666666666 DAYS)
+
+Initializing report step 388/1000 at 2025-01-01 (0.08041666666666666 DAYS) line 142
+Complete report step 388 (0.00020833333333333332 DAYS) at 2025-01-01 (0.080625 DAYS)
+
+Initializing report step 389/1000 at 2025-01-01 (0.080625 DAYS) line 142
+Complete report step 389 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08083333333333333 DAYS)
+
+Initializing report step 390/1000 at 2025-01-01 (0.08083333333333333 DAYS) line 142
+Complete report step 390 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08104166666666666 DAYS)
+
+Initializing report step 391/1000 at 2025-01-01 (0.08104166666666666 DAYS) line 142
+Complete report step 391 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08125 DAYS)
+
+Initializing report step 392/1000 at 2025-01-01 (0.08125 DAYS) line 142
+Complete report step 392 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08145833333333333 DAYS)
+
+Initializing report step 393/1000 at 2025-01-01 (0.08145833333333333 DAYS) line 142
+Complete report step 393 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08166666666666667 DAYS)
+
+Initializing report step 394/1000 at 2025-01-01 (0.08166666666666667 DAYS) line 142
+Complete report step 394 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08187499999999999 DAYS)
+
+Initializing report step 395/1000 at 2025-01-01 (0.08187499999999999 DAYS) line 142
+Complete report step 395 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08208333333333333 DAYS)
+
+Initializing report step 396/1000 at 2025-01-01 (0.08208333333333333 DAYS) line 142
+Complete report step 396 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08229166666666667 DAYS)
+
+Initializing report step 397/1000 at 2025-01-01 (0.08229166666666667 DAYS) line 142
+Complete report step 397 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08249999999999999 DAYS)
+
+Initializing report step 398/1000 at 2025-01-01 (0.08249999999999999 DAYS) line 142
+Complete report step 398 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08270833333333333 DAYS)
+
+Initializing report step 399/1000 at 2025-01-01 (0.08270833333333333 DAYS) line 142
+Complete report step 399 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08291666666666667 DAYS)
+
+Initializing report step 400/1000 at 2025-01-01 (0.08291666666666667 DAYS) line 142
+Complete report step 400 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08312499999999999 DAYS)
+
+Initializing report step 401/1000 at 2025-01-01 (0.08312499999999999 DAYS) line 142
+Complete report step 401 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08333333333333333 DAYS)
+
+Initializing report step 402/1000 at 2025-01-01 (0.08333333333333333 DAYS) line 142
+Complete report step 402 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08354166666666667 DAYS)
+
+Initializing report step 403/1000 at 2025-01-01 (0.08354166666666667 DAYS) line 142
+Complete report step 403 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08374999999999999 DAYS)
+
+Initializing report step 404/1000 at 2025-01-01 (0.08374999999999999 DAYS) line 142
+Complete report step 404 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08395833333333333 DAYS)
+
+Initializing report step 405/1000 at 2025-01-01 (0.08395833333333333 DAYS) line 142
+Complete report step 405 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08416666666666667 DAYS)
+
+Initializing report step 406/1000 at 2025-01-01 (0.08416666666666667 DAYS) line 142
+Complete report step 406 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08437499999999999 DAYS)
+
+Initializing report step 407/1000 at 2025-01-01 (0.08437499999999999 DAYS) line 142
+Complete report step 407 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08458333333333333 DAYS)
+
+Initializing report step 408/1000 at 2025-01-01 (0.08458333333333333 DAYS) line 142
+Complete report step 408 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08479166666666667 DAYS)
+
+Initializing report step 409/1000 at 2025-01-01 (0.08479166666666667 DAYS) line 142
+Complete report step 409 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08499999999999999 DAYS)
+
+Initializing report step 410/1000 at 2025-01-01 (0.08499999999999999 DAYS) line 142
+Complete report step 410 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08520833333333333 DAYS)
+
+Initializing report step 411/1000 at 2025-01-01 (0.08520833333333333 DAYS) line 142
+Complete report step 411 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08541666666666667 DAYS)
+
+Initializing report step 412/1000 at 2025-01-01 (0.08541666666666667 DAYS) line 142
+Complete report step 412 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08562499999999999 DAYS)
+
+Initializing report step 413/1000 at 2025-01-01 (0.08562499999999999 DAYS) line 142
+Complete report step 413 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08583333333333333 DAYS)
+
+Initializing report step 414/1000 at 2025-01-01 (0.08583333333333333 DAYS) line 142
+Complete report step 414 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08604166666666667 DAYS)
+
+Initializing report step 415/1000 at 2025-01-01 (0.08604166666666667 DAYS) line 142
+Complete report step 415 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08625 DAYS)
+
+Initializing report step 416/1000 at 2025-01-01 (0.08625 DAYS) line 142
+Complete report step 416 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08645833333333333 DAYS)
+
+Initializing report step 417/1000 at 2025-01-01 (0.08645833333333333 DAYS) line 142
+Complete report step 417 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08666666666666666 DAYS)
+
+Initializing report step 418/1000 at 2025-01-01 (0.08666666666666666 DAYS) line 142
+Complete report step 418 (0.00020833333333333332 DAYS) at 2025-01-01 (0.086875 DAYS)
+
+Initializing report step 419/1000 at 2025-01-01 (0.086875 DAYS) line 142
+Complete report step 419 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08708333333333333 DAYS)
+
+Initializing report step 420/1000 at 2025-01-01 (0.08708333333333333 DAYS) line 142
+Complete report step 420 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08729166666666666 DAYS)
+
+Initializing report step 421/1000 at 2025-01-01 (0.08729166666666666 DAYS) line 142
+Complete report step 421 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0875 DAYS)
+
+Initializing report step 422/1000 at 2025-01-01 (0.0875 DAYS) line 142
+Complete report step 422 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08770833333333333 DAYS)
+
+Initializing report step 423/1000 at 2025-01-01 (0.08770833333333333 DAYS) line 142
+Complete report step 423 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08791666666666666 DAYS)
+
+Initializing report step 424/1000 at 2025-01-01 (0.08791666666666666 DAYS) line 142
+Complete report step 424 (0.00020833333333333332 DAYS) at 2025-01-01 (0.088125 DAYS)
+
+Initializing report step 425/1000 at 2025-01-01 (0.088125 DAYS) line 142
+Complete report step 425 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08833333333333333 DAYS)
+
+Initializing report step 426/1000 at 2025-01-01 (0.08833333333333333 DAYS) line 142
+Complete report step 426 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08854166666666666 DAYS)
+
+Initializing report step 427/1000 at 2025-01-01 (0.08854166666666666 DAYS) line 142
+Complete report step 427 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08875 DAYS)
+
+Initializing report step 428/1000 at 2025-01-01 (0.08875 DAYS) line 142
+Complete report step 428 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08895833333333333 DAYS)
+
+Initializing report step 429/1000 at 2025-01-01 (0.08895833333333333 DAYS) line 142
+Complete report step 429 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08916666666666666 DAYS)
+
+Initializing report step 430/1000 at 2025-01-01 (0.08916666666666666 DAYS) line 142
+Complete report step 430 (0.00020833333333333332 DAYS) at 2025-01-01 (0.089375 DAYS)
+
+Initializing report step 431/1000 at 2025-01-01 (0.089375 DAYS) line 142
+Complete report step 431 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08958333333333333 DAYS)
+
+Initializing report step 432/1000 at 2025-01-01 (0.08958333333333333 DAYS) line 142
+Complete report step 432 (0.00020833333333333332 DAYS) at 2025-01-01 (0.08979166666666666 DAYS)
+
+Initializing report step 433/1000 at 2025-01-01 (0.08979166666666666 DAYS) line 142
+Complete report step 433 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09 DAYS)
+
+Initializing report step 434/1000 at 2025-01-01 (0.09 DAYS) line 142
+Complete report step 434 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09020833333333333 DAYS)
+
+Initializing report step 435/1000 at 2025-01-01 (0.09020833333333333 DAYS) line 142
+Complete report step 435 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09041666666666666 DAYS)
+
+Initializing report step 436/1000 at 2025-01-01 (0.09041666666666666 DAYS) line 142
+Complete report step 436 (0.00020833333333333332 DAYS) at 2025-01-01 (0.090625 DAYS)
+
+Initializing report step 437/1000 at 2025-01-01 (0.090625 DAYS) line 142
+Complete report step 437 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09083333333333334 DAYS)
+
+Initializing report step 438/1000 at 2025-01-01 (0.09083333333333334 DAYS) line 142
+Complete report step 438 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09104166666666666 DAYS)
+
+Initializing report step 439/1000 at 2025-01-01 (0.09104166666666666 DAYS) line 142
+Complete report step 439 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09125 DAYS)
+
+Initializing report step 440/1000 at 2025-01-01 (0.09125 DAYS) line 142
+Complete report step 440 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09145833333333332 DAYS)
+
+Initializing report step 441/1000 at 2025-01-01 (0.09145833333333332 DAYS) line 142
+Complete report step 441 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09166666666666666 DAYS)
+
+Initializing report step 442/1000 at 2025-01-01 (0.09166666666666666 DAYS) line 142
+Complete report step 442 (0.00020833333333333332 DAYS) at 2025-01-01 (0.091875 DAYS)
+
+Initializing report step 443/1000 at 2025-01-01 (0.091875 DAYS) line 142
+Complete report step 443 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09208333333333332 DAYS)
+
+Initializing report step 444/1000 at 2025-01-01 (0.09208333333333332 DAYS) line 142
+Complete report step 444 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09229166666666666 DAYS)
+
+Initializing report step 445/1000 at 2025-01-01 (0.09229166666666666 DAYS) line 142
+Complete report step 445 (0.00020833333333333332 DAYS) at 2025-01-01 (0.0925 DAYS)
+
+Initializing report step 446/1000 at 2025-01-01 (0.0925 DAYS) line 142
+Complete report step 446 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09270833333333332 DAYS)
+
+Initializing report step 447/1000 at 2025-01-01 (0.09270833333333332 DAYS) line 142
+Complete report step 447 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09291666666666666 DAYS)
+
+Initializing report step 448/1000 at 2025-01-01 (0.09291666666666666 DAYS) line 142
+Complete report step 448 (0.00020833333333333332 DAYS) at 2025-01-01 (0.093125 DAYS)
+
+Initializing report step 449/1000 at 2025-01-01 (0.093125 DAYS) line 142
+Complete report step 449 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09333333333333332 DAYS)
+
+Initializing report step 450/1000 at 2025-01-01 (0.09333333333333332 DAYS) line 142
+Complete report step 450 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09354166666666666 DAYS)
+
+Initializing report step 451/1000 at 2025-01-01 (0.09354166666666666 DAYS) line 142
+Complete report step 451 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09375 DAYS)
+
+Initializing report step 452/1000 at 2025-01-01 (0.09375 DAYS) line 142
+Complete report step 452 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09395833333333332 DAYS)
+
+Initializing report step 453/1000 at 2025-01-01 (0.09395833333333332 DAYS) line 142
+Complete report step 453 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09416666666666666 DAYS)
+
+Initializing report step 454/1000 at 2025-01-01 (0.09416666666666666 DAYS) line 142
+Complete report step 454 (0.00020833333333333332 DAYS) at 2025-01-01 (0.094375 DAYS)
+
+Initializing report step 455/1000 at 2025-01-01 (0.094375 DAYS) line 142
+Complete report step 455 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09458333333333332 DAYS)
+
+Initializing report step 456/1000 at 2025-01-01 (0.09458333333333332 DAYS) line 142
+Complete report step 456 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09479166666666666 DAYS)
+
+Initializing report step 457/1000 at 2025-01-01 (0.09479166666666666 DAYS) line 142
+Complete report step 457 (0.00020833333333333332 DAYS) at 2025-01-01 (0.095 DAYS)
+
+Initializing report step 458/1000 at 2025-01-01 (0.095 DAYS) line 142
+Complete report step 458 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09520833333333333 DAYS)
+
+Initializing report step 459/1000 at 2025-01-01 (0.09520833333333333 DAYS) line 142
+Complete report step 459 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09541666666666666 DAYS)
+
+Initializing report step 460/1000 at 2025-01-01 (0.09541666666666666 DAYS) line 142
+Complete report step 460 (0.00020833333333333332 DAYS) at 2025-01-01 (0.095625 DAYS)
+
+Initializing report step 461/1000 at 2025-01-01 (0.095625 DAYS) line 142
+Complete report step 461 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09583333333333333 DAYS)
+
+Initializing report step 462/1000 at 2025-01-01 (0.09583333333333333 DAYS) line 142
+Complete report step 462 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09604166666666666 DAYS)
+
+Initializing report step 463/1000 at 2025-01-01 (0.09604166666666666 DAYS) line 142
+Complete report step 463 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09624999999999999 DAYS)
+
+Initializing report step 464/1000 at 2025-01-01 (0.09624999999999999 DAYS) line 142
+Complete report step 464 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09645833333333333 DAYS)
+
+Initializing report step 465/1000 at 2025-01-01 (0.09645833333333333 DAYS) line 142
+Complete report step 465 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09666666666666666 DAYS)
+
+Initializing report step 466/1000 at 2025-01-01 (0.09666666666666666 DAYS) line 142
+Complete report step 466 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09687499999999999 DAYS)
+
+Initializing report step 467/1000 at 2025-01-01 (0.09687499999999999 DAYS) line 142
+Complete report step 467 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09708333333333333 DAYS)
+
+Initializing report step 468/1000 at 2025-01-01 (0.09708333333333333 DAYS) line 142
+Complete report step 468 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09729166666666667 DAYS)
+
+Initializing report step 469/1000 at 2025-01-01 (0.09729166666666667 DAYS) line 142
+Complete report step 469 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09749999999999999 DAYS)
+
+Initializing report step 470/1000 at 2025-01-01 (0.09749999999999999 DAYS) line 142
+Complete report step 470 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09770833333333333 DAYS)
+
+Initializing report step 471/1000 at 2025-01-01 (0.09770833333333333 DAYS) line 142
+Complete report step 471 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09791666666666667 DAYS)
+
+Initializing report step 472/1000 at 2025-01-01 (0.09791666666666667 DAYS) line 142
+Complete report step 472 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09812499999999999 DAYS)
+
+Initializing report step 473/1000 at 2025-01-01 (0.09812499999999999 DAYS) line 142
+Complete report step 473 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09833333333333333 DAYS)
+
+Initializing report step 474/1000 at 2025-01-01 (0.09833333333333333 DAYS) line 142
+Complete report step 474 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09854166666666667 DAYS)
+
+Initializing report step 475/1000 at 2025-01-01 (0.09854166666666667 DAYS) line 142
+Complete report step 475 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09874999999999999 DAYS)
+
+Initializing report step 476/1000 at 2025-01-01 (0.09874999999999999 DAYS) line 142
+Complete report step 476 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09895833333333333 DAYS)
+
+Initializing report step 477/1000 at 2025-01-01 (0.09895833333333333 DAYS) line 142
+Complete report step 477 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09916666666666667 DAYS)
+
+Initializing report step 478/1000 at 2025-01-01 (0.09916666666666667 DAYS) line 142
+Complete report step 478 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09937499999999999 DAYS)
+
+Initializing report step 479/1000 at 2025-01-01 (0.09937499999999999 DAYS) line 142
+Complete report step 479 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09958333333333333 DAYS)
+
+Initializing report step 480/1000 at 2025-01-01 (0.09958333333333333 DAYS) line 142
+Complete report step 480 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09979166666666667 DAYS)
+
+Initializing report step 481/1000 at 2025-01-01 (0.09979166666666667 DAYS) line 142
+Complete report step 481 (0.00020833333333333332 DAYS) at 2025-01-01 (0.09999999999999999 DAYS)
+
+Initializing report step 482/1000 at 2025-01-01 (0.09999999999999999 DAYS) line 142
+Complete report step 482 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10020833333333333 DAYS)
+
+Initializing report step 483/1000 at 2025-01-01 (0.10020833333333333 DAYS) line 142
+Complete report step 483 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10041666666666667 DAYS)
+
+Initializing report step 484/1000 at 2025-01-01 (0.10041666666666667 DAYS) line 142
+Complete report step 484 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10062499999999999 DAYS)
+
+Initializing report step 485/1000 at 2025-01-01 (0.10062499999999999 DAYS) line 142
+Complete report step 485 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10083333333333333 DAYS)
+
+Initializing report step 486/1000 at 2025-01-01 (0.10083333333333333 DAYS) line 142
+Complete report step 486 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10104166666666667 DAYS)
+
+Initializing report step 487/1000 at 2025-01-01 (0.10104166666666667 DAYS) line 142
+Complete report step 487 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10124999999999999 DAYS)
+
+Initializing report step 488/1000 at 2025-01-01 (0.10124999999999999 DAYS) line 142
+Complete report step 488 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10145833333333333 DAYS)
+
+Initializing report step 489/1000 at 2025-01-01 (0.10145833333333333 DAYS) line 142
+Complete report step 489 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10166666666666666 DAYS)
+
+Initializing report step 490/1000 at 2025-01-01 (0.10166666666666666 DAYS) line 142
+Complete report step 490 (0.00020833333333333332 DAYS) at 2025-01-01 (0.101875 DAYS)
+
+Initializing report step 491/1000 at 2025-01-01 (0.101875 DAYS) line 142
+Complete report step 491 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10208333333333333 DAYS)
+
+Initializing report step 492/1000 at 2025-01-01 (0.10208333333333333 DAYS) line 142
+Complete report step 492 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10229166666666666 DAYS)
+
+Initializing report step 493/1000 at 2025-01-01 (0.10229166666666666 DAYS) line 142
+Complete report step 493 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1025 DAYS)
+
+Initializing report step 494/1000 at 2025-01-01 (0.1025 DAYS) line 142
+Complete report step 494 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10270833333333333 DAYS)
+
+Initializing report step 495/1000 at 2025-01-01 (0.10270833333333333 DAYS) line 142
+Complete report step 495 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10291666666666666 DAYS)
+
+Initializing report step 496/1000 at 2025-01-01 (0.10291666666666666 DAYS) line 142
+Complete report step 496 (0.00020833333333333332 DAYS) at 2025-01-01 (0.103125 DAYS)
+
+Initializing report step 497/1000 at 2025-01-01 (0.103125 DAYS) line 142
+Complete report step 497 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10333333333333333 DAYS)
+
+Initializing report step 498/1000 at 2025-01-01 (0.10333333333333333 DAYS) line 142
+Complete report step 498 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10354166666666666 DAYS)
+
+Initializing report step 499/1000 at 2025-01-01 (0.10354166666666666 DAYS) line 142
+Complete report step 499 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10375 DAYS)
+
+Initializing report step 500/1000 at 2025-01-01 (0.10375 DAYS) line 142
+Complete report step 500 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10395833333333333 DAYS)
+
+Initializing report step 501/1000 at 2025-01-01 (0.10395833333333333 DAYS) line 142
+Processing keyword TUNING at line 145
+Processing keyword SOURCE at line 149
+Complete report step 501 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10416666666666666 DAYS)
+
+Initializing report step 502/1000 at 2025-01-01 (0.10416666666666666 DAYS) line 153
+Complete report step 502 (0.00020833333333333332 DAYS) at 2025-01-01 (0.104375 DAYS)
+
+Initializing report step 503/1000 at 2025-01-01 (0.104375 DAYS) line 153
+Complete report step 503 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10458333333333333 DAYS)
+
+Initializing report step 504/1000 at 2025-01-01 (0.10458333333333333 DAYS) line 153
+Complete report step 504 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10479166666666666 DAYS)
+
+Initializing report step 505/1000 at 2025-01-01 (0.10479166666666666 DAYS) line 153
+Complete report step 505 (0.00020833333333333332 DAYS) at 2025-01-01 (0.105 DAYS)
+
+Initializing report step 506/1000 at 2025-01-01 (0.105 DAYS) line 153
+Complete report step 506 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10520833333333333 DAYS)
+
+Initializing report step 507/1000 at 2025-01-01 (0.10520833333333333 DAYS) line 153
+Complete report step 507 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10541666666666666 DAYS)
+
+Initializing report step 508/1000 at 2025-01-01 (0.10541666666666666 DAYS) line 153
+Complete report step 508 (0.00020833333333333332 DAYS) at 2025-01-01 (0.105625 DAYS)
+
+Initializing report step 509/1000 at 2025-01-01 (0.105625 DAYS) line 153
+Complete report step 509 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10583333333333333 DAYS)
+
+Initializing report step 510/1000 at 2025-01-01 (0.10583333333333333 DAYS) line 153
+Complete report step 510 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10604166666666666 DAYS)
+
+Initializing report step 511/1000 at 2025-01-01 (0.10604166666666666 DAYS) line 153
+Complete report step 511 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10625 DAYS)
+
+Initializing report step 512/1000 at 2025-01-01 (0.10625 DAYS) line 153
+Complete report step 512 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10645833333333332 DAYS)
+
+Initializing report step 513/1000 at 2025-01-01 (0.10645833333333332 DAYS) line 153
+Complete report step 513 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10666666666666666 DAYS)
+
+Initializing report step 514/1000 at 2025-01-01 (0.10666666666666666 DAYS) line 153
+Complete report step 514 (0.00020833333333333332 DAYS) at 2025-01-01 (0.106875 DAYS)
+
+Initializing report step 515/1000 at 2025-01-01 (0.106875 DAYS) line 153
+Complete report step 515 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10708333333333332 DAYS)
+
+Initializing report step 516/1000 at 2025-01-01 (0.10708333333333332 DAYS) line 153
+Complete report step 516 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10729166666666666 DAYS)
+
+Initializing report step 517/1000 at 2025-01-01 (0.10729166666666666 DAYS) line 153
+Complete report step 517 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1075 DAYS)
+
+Initializing report step 518/1000 at 2025-01-01 (0.1075 DAYS) line 153
+Complete report step 518 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10770833333333332 DAYS)
+
+Initializing report step 519/1000 at 2025-01-01 (0.10770833333333332 DAYS) line 153
+Complete report step 519 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10791666666666666 DAYS)
+
+Initializing report step 520/1000 at 2025-01-01 (0.10791666666666666 DAYS) line 153
+Complete report step 520 (0.00020833333333333332 DAYS) at 2025-01-01 (0.108125 DAYS)
+
+Initializing report step 521/1000 at 2025-01-01 (0.108125 DAYS) line 153
+Complete report step 521 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10833333333333332 DAYS)
+
+Initializing report step 522/1000 at 2025-01-01 (0.10833333333333332 DAYS) line 153
+Complete report step 522 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10854166666666666 DAYS)
+
+Initializing report step 523/1000 at 2025-01-01 (0.10854166666666666 DAYS) line 153
+Complete report step 523 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10875 DAYS)
+
+Initializing report step 524/1000 at 2025-01-01 (0.10875 DAYS) line 153
+Complete report step 524 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10895833333333332 DAYS)
+
+Initializing report step 525/1000 at 2025-01-01 (0.10895833333333332 DAYS) line 153
+Complete report step 525 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10916666666666666 DAYS)
+
+Initializing report step 526/1000 at 2025-01-01 (0.10916666666666666 DAYS) line 153
+Complete report step 526 (0.00020833333333333332 DAYS) at 2025-01-01 (0.109375 DAYS)
+
+Initializing report step 527/1000 at 2025-01-01 (0.109375 DAYS) line 153
+Complete report step 527 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10958333333333332 DAYS)
+
+Initializing report step 528/1000 at 2025-01-01 (0.10958333333333332 DAYS) line 153
+Complete report step 528 (0.00020833333333333332 DAYS) at 2025-01-01 (0.10979166666666666 DAYS)
+
+Initializing report step 529/1000 at 2025-01-01 (0.10979166666666666 DAYS) line 153
+Complete report step 529 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11 DAYS)
+
+Initializing report step 530/1000 at 2025-01-01 (0.11 DAYS) line 153
+Complete report step 530 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11020833333333332 DAYS)
+
+Initializing report step 531/1000 at 2025-01-01 (0.11020833333333332 DAYS) line 153
+Complete report step 531 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11041666666666666 DAYS)
+
+Initializing report step 532/1000 at 2025-01-01 (0.11041666666666666 DAYS) line 153
+Complete report step 532 (0.00020833333333333332 DAYS) at 2025-01-01 (0.110625 DAYS)
+
+Initializing report step 533/1000 at 2025-01-01 (0.110625 DAYS) line 153
+Complete report step 533 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11083333333333333 DAYS)
+
+Initializing report step 534/1000 at 2025-01-01 (0.11083333333333333 DAYS) line 153
+Complete report step 534 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11104166666666666 DAYS)
+
+Initializing report step 535/1000 at 2025-01-01 (0.11104166666666666 DAYS) line 153
+Complete report step 535 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11124999999999999 DAYS)
+
+Initializing report step 536/1000 at 2025-01-01 (0.11124999999999999 DAYS) line 153
+Complete report step 536 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11145833333333333 DAYS)
+
+Initializing report step 537/1000 at 2025-01-01 (0.11145833333333333 DAYS) line 153
+Complete report step 537 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11166666666666666 DAYS)
+
+Initializing report step 538/1000 at 2025-01-01 (0.11166666666666666 DAYS) line 153
+Complete report step 538 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11187499999999999 DAYS)
+
+Initializing report step 539/1000 at 2025-01-01 (0.11187499999999999 DAYS) line 153
+Complete report step 539 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11208333333333333 DAYS)
+
+Initializing report step 540/1000 at 2025-01-01 (0.11208333333333333 DAYS) line 153
+Complete report step 540 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11229166666666666 DAYS)
+
+Initializing report step 541/1000 at 2025-01-01 (0.11229166666666666 DAYS) line 153
+Complete report step 541 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11249999999999999 DAYS)
+
+Initializing report step 542/1000 at 2025-01-01 (0.11249999999999999 DAYS) line 153
+Complete report step 542 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11270833333333333 DAYS)
+
+Initializing report step 543/1000 at 2025-01-01 (0.11270833333333333 DAYS) line 153
+Complete report step 543 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11291666666666667 DAYS)
+
+Initializing report step 544/1000 at 2025-01-01 (0.11291666666666667 DAYS) line 153
+Complete report step 544 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11312499999999999 DAYS)
+
+Initializing report step 545/1000 at 2025-01-01 (0.11312499999999999 DAYS) line 153
+Complete report step 545 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11333333333333333 DAYS)
+
+Initializing report step 546/1000 at 2025-01-01 (0.11333333333333333 DAYS) line 153
+Complete report step 546 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11354166666666667 DAYS)
+
+Initializing report step 547/1000 at 2025-01-01 (0.11354166666666667 DAYS) line 153
+Complete report step 547 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11374999999999999 DAYS)
+
+Initializing report step 548/1000 at 2025-01-01 (0.11374999999999999 DAYS) line 153
+Complete report step 548 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11395833333333333 DAYS)
+
+Initializing report step 549/1000 at 2025-01-01 (0.11395833333333333 DAYS) line 153
+Complete report step 549 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11416666666666667 DAYS)
+
+Initializing report step 550/1000 at 2025-01-01 (0.11416666666666667 DAYS) line 153
+Complete report step 550 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11437499999999999 DAYS)
+
+Initializing report step 551/1000 at 2025-01-01 (0.11437499999999999 DAYS) line 153
+Complete report step 551 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11458333333333333 DAYS)
+
+Initializing report step 552/1000 at 2025-01-01 (0.11458333333333333 DAYS) line 153
+Complete report step 552 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11479166666666667 DAYS)
+
+Initializing report step 553/1000 at 2025-01-01 (0.11479166666666667 DAYS) line 153
+Complete report step 553 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11499999999999999 DAYS)
+
+Initializing report step 554/1000 at 2025-01-01 (0.11499999999999999 DAYS) line 153
+Complete report step 554 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11520833333333333 DAYS)
+
+Initializing report step 555/1000 at 2025-01-01 (0.11520833333333333 DAYS) line 153
+Complete report step 555 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11541666666666667 DAYS)
+
+Initializing report step 556/1000 at 2025-01-01 (0.11541666666666667 DAYS) line 153
+Complete report step 556 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11562499999999999 DAYS)
+
+Initializing report step 557/1000 at 2025-01-01 (0.11562499999999999 DAYS) line 153
+Complete report step 557 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11583333333333333 DAYS)
+
+Initializing report step 558/1000 at 2025-01-01 (0.11583333333333333 DAYS) line 153
+Complete report step 558 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11604166666666665 DAYS)
+
+Initializing report step 559/1000 at 2025-01-01 (0.11604166666666665 DAYS) line 153
+Complete report step 559 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11624999999999999 DAYS)
+
+Initializing report step 560/1000 at 2025-01-01 (0.11624999999999999 DAYS) line 153
+Complete report step 560 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11645833333333333 DAYS)
+
+Initializing report step 561/1000 at 2025-01-01 (0.11645833333333333 DAYS) line 153
+Complete report step 561 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11666666666666665 DAYS)
+
+Initializing report step 562/1000 at 2025-01-01 (0.11666666666666665 DAYS) line 153
+Complete report step 562 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11687499999999999 DAYS)
+
+Initializing report step 563/1000 at 2025-01-01 (0.11687499999999999 DAYS) line 153
+Complete report step 563 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11708333333333333 DAYS)
+
+Initializing report step 564/1000 at 2025-01-01 (0.11708333333333333 DAYS) line 153
+Complete report step 564 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11729166666666666 DAYS)
+
+Initializing report step 565/1000 at 2025-01-01 (0.11729166666666666 DAYS) line 153
+Complete report step 565 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1175 DAYS)
+
+Initializing report step 566/1000 at 2025-01-01 (0.1175 DAYS) line 153
+Complete report step 566 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11770833333333333 DAYS)
+
+Initializing report step 567/1000 at 2025-01-01 (0.11770833333333333 DAYS) line 153
+Complete report step 567 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11791666666666666 DAYS)
+
+Initializing report step 568/1000 at 2025-01-01 (0.11791666666666666 DAYS) line 153
+Complete report step 568 (0.00020833333333333332 DAYS) at 2025-01-01 (0.118125 DAYS)
+
+Initializing report step 569/1000 at 2025-01-01 (0.118125 DAYS) line 153
+Complete report step 569 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11833333333333333 DAYS)
+
+Initializing report step 570/1000 at 2025-01-01 (0.11833333333333333 DAYS) line 153
+Complete report step 570 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11854166666666666 DAYS)
+
+Initializing report step 571/1000 at 2025-01-01 (0.11854166666666666 DAYS) line 153
+Complete report step 571 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11875 DAYS)
+
+Initializing report step 572/1000 at 2025-01-01 (0.11875 DAYS) line 153
+Complete report step 572 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11895833333333333 DAYS)
+
+Initializing report step 573/1000 at 2025-01-01 (0.11895833333333333 DAYS) line 153
+Complete report step 573 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11916666666666666 DAYS)
+
+Initializing report step 574/1000 at 2025-01-01 (0.11916666666666666 DAYS) line 153
+Complete report step 574 (0.00020833333333333332 DAYS) at 2025-01-01 (0.119375 DAYS)
+
+Initializing report step 575/1000 at 2025-01-01 (0.119375 DAYS) line 153
+Complete report step 575 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11958333333333333 DAYS)
+
+Initializing report step 576/1000 at 2025-01-01 (0.11958333333333333 DAYS) line 153
+Complete report step 576 (0.00020833333333333332 DAYS) at 2025-01-01 (0.11979166666666666 DAYS)
+
+Initializing report step 577/1000 at 2025-01-01 (0.11979166666666666 DAYS) line 153
+Complete report step 577 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12 DAYS)
+
+Initializing report step 578/1000 at 2025-01-01 (0.12 DAYS) line 153
+Complete report step 578 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12020833333333333 DAYS)
+
+Initializing report step 579/1000 at 2025-01-01 (0.12020833333333333 DAYS) line 153
+Complete report step 579 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12041666666666666 DAYS)
+
+Initializing report step 580/1000 at 2025-01-01 (0.12041666666666666 DAYS) line 153
+Complete report step 580 (0.00020833333333333332 DAYS) at 2025-01-01 (0.120625 DAYS)
+
+Initializing report step 581/1000 at 2025-01-01 (0.120625 DAYS) line 153
+Complete report step 581 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12083333333333333 DAYS)
+
+Initializing report step 582/1000 at 2025-01-01 (0.12083333333333333 DAYS) line 153
+Complete report step 582 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12104166666666666 DAYS)
+
+Initializing report step 583/1000 at 2025-01-01 (0.12104166666666666 DAYS) line 153
+Complete report step 583 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12125 DAYS)
+
+Initializing report step 584/1000 at 2025-01-01 (0.12125 DAYS) line 153
+Complete report step 584 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12145833333333332 DAYS)
+
+Initializing report step 585/1000 at 2025-01-01 (0.12145833333333332 DAYS) line 153
+Complete report step 585 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12166666666666666 DAYS)
+
+Initializing report step 586/1000 at 2025-01-01 (0.12166666666666666 DAYS) line 153
+Complete report step 586 (0.00020833333333333332 DAYS) at 2025-01-01 (0.121875 DAYS)
+
+Initializing report step 587/1000 at 2025-01-01 (0.121875 DAYS) line 153
+Complete report step 587 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12208333333333332 DAYS)
+
+Initializing report step 588/1000 at 2025-01-01 (0.12208333333333332 DAYS) line 153
+Complete report step 588 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12229166666666666 DAYS)
+
+Initializing report step 589/1000 at 2025-01-01 (0.12229166666666666 DAYS) line 153
+Complete report step 589 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1225 DAYS)
+
+Initializing report step 590/1000 at 2025-01-01 (0.1225 DAYS) line 153
+Complete report step 590 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12270833333333332 DAYS)
+
+Initializing report step 591/1000 at 2025-01-01 (0.12270833333333332 DAYS) line 153
+Complete report step 591 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12291666666666666 DAYS)
+
+Initializing report step 592/1000 at 2025-01-01 (0.12291666666666666 DAYS) line 153
+Complete report step 592 (0.00020833333333333332 DAYS) at 2025-01-01 (0.123125 DAYS)
+
+Initializing report step 593/1000 at 2025-01-01 (0.123125 DAYS) line 153
+Complete report step 593 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12333333333333332 DAYS)
+
+Initializing report step 594/1000 at 2025-01-01 (0.12333333333333332 DAYS) line 153
+Complete report step 594 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12354166666666666 DAYS)
+
+Initializing report step 595/1000 at 2025-01-01 (0.12354166666666666 DAYS) line 153
+Complete report step 595 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12375 DAYS)
+
+Initializing report step 596/1000 at 2025-01-01 (0.12375 DAYS) line 153
+Complete report step 596 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12395833333333332 DAYS)
+
+Initializing report step 597/1000 at 2025-01-01 (0.12395833333333332 DAYS) line 153
+Complete report step 597 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12416666666666666 DAYS)
+
+Initializing report step 598/1000 at 2025-01-01 (0.12416666666666666 DAYS) line 153
+Complete report step 598 (0.00020833333333333332 DAYS) at 2025-01-01 (0.124375 DAYS)
+
+Initializing report step 599/1000 at 2025-01-01 (0.124375 DAYS) line 153
+Complete report step 599 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12458333333333332 DAYS)
+
+Initializing report step 600/1000 at 2025-01-01 (0.12458333333333332 DAYS) line 153
+Complete report step 600 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12479166666666666 DAYS)
+
+Initializing report step 601/1000 at 2025-01-01 (0.12479166666666666 DAYS) line 153
+Complete report step 601 (0.00020833333333333332 DAYS) at 2025-01-01 (0.125 DAYS)
+
+Initializing report step 602/1000 at 2025-01-01 (0.125 DAYS) line 153
+Complete report step 602 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12520833333333334 DAYS)
+
+Initializing report step 603/1000 at 2025-01-01 (0.12520833333333334 DAYS) line 153
+Complete report step 603 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12541666666666665 DAYS)
+
+Initializing report step 604/1000 at 2025-01-01 (0.12541666666666665 DAYS) line 153
+Complete report step 604 (0.00020833333333333332 DAYS) at 2025-01-01 (0.125625 DAYS)
+
+Initializing report step 605/1000 at 2025-01-01 (0.125625 DAYS) line 153
+Complete report step 605 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12583333333333332 DAYS)
+
+Initializing report step 606/1000 at 2025-01-01 (0.12583333333333332 DAYS) line 153
+Complete report step 606 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12604166666666666 DAYS)
+
+Initializing report step 607/1000 at 2025-01-01 (0.12604166666666666 DAYS) line 153
+Complete report step 607 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12625 DAYS)
+
+Initializing report step 608/1000 at 2025-01-01 (0.12625 DAYS) line 153
+Complete report step 608 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12645833333333334 DAYS)
+
+Initializing report step 609/1000 at 2025-01-01 (0.12645833333333334 DAYS) line 153
+Complete report step 609 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12666666666666665 DAYS)
+
+Initializing report step 610/1000 at 2025-01-01 (0.12666666666666665 DAYS) line 153
+Complete report step 610 (0.00020833333333333332 DAYS) at 2025-01-01 (0.126875 DAYS)
+
+Initializing report step 611/1000 at 2025-01-01 (0.126875 DAYS) line 153
+Complete report step 611 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12708333333333333 DAYS)
+
+Initializing report step 612/1000 at 2025-01-01 (0.12708333333333333 DAYS) line 153
+Complete report step 612 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12729166666666666 DAYS)
+
+Initializing report step 613/1000 at 2025-01-01 (0.12729166666666666 DAYS) line 153
+Complete report step 613 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1275 DAYS)
+
+Initializing report step 614/1000 at 2025-01-01 (0.1275 DAYS) line 153
+Complete report step 614 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12770833333333334 DAYS)
+
+Initializing report step 615/1000 at 2025-01-01 (0.12770833333333334 DAYS) line 153
+Complete report step 615 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12791666666666665 DAYS)
+
+Initializing report step 616/1000 at 2025-01-01 (0.12791666666666665 DAYS) line 153
+Complete report step 616 (0.00020833333333333332 DAYS) at 2025-01-01 (0.128125 DAYS)
+
+Initializing report step 617/1000 at 2025-01-01 (0.128125 DAYS) line 153
+Complete report step 617 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12833333333333333 DAYS)
+
+Initializing report step 618/1000 at 2025-01-01 (0.12833333333333333 DAYS) line 153
+Complete report step 618 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12854166666666667 DAYS)
+
+Initializing report step 619/1000 at 2025-01-01 (0.12854166666666667 DAYS) line 153
+Complete report step 619 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12875 DAYS)
+
+Initializing report step 620/1000 at 2025-01-01 (0.12875 DAYS) line 153
+Complete report step 620 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1289583333333333 DAYS)
+
+Initializing report step 621/1000 at 2025-01-01 (0.1289583333333333 DAYS) line 153
+Complete report step 621 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12916666666666665 DAYS)
+
+Initializing report step 622/1000 at 2025-01-01 (0.12916666666666665 DAYS) line 153
+Complete report step 622 (0.00020833333333333332 DAYS) at 2025-01-01 (0.129375 DAYS)
+
+Initializing report step 623/1000 at 2025-01-01 (0.129375 DAYS) line 153
+Complete report step 623 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12958333333333333 DAYS)
+
+Initializing report step 624/1000 at 2025-01-01 (0.12958333333333333 DAYS) line 153
+Complete report step 624 (0.00020833333333333332 DAYS) at 2025-01-01 (0.12979166666666667 DAYS)
+
+Initializing report step 625/1000 at 2025-01-01 (0.12979166666666667 DAYS) line 153
+Complete report step 625 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13 DAYS)
+
+Initializing report step 626/1000 at 2025-01-01 (0.13 DAYS) line 153
+Complete report step 626 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13020833333333331 DAYS)
+
+Initializing report step 627/1000 at 2025-01-01 (0.13020833333333331 DAYS) line 153
+Complete report step 627 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13041666666666665 DAYS)
+
+Initializing report step 628/1000 at 2025-01-01 (0.13041666666666665 DAYS) line 153
+Complete report step 628 (0.00020833333333333332 DAYS) at 2025-01-01 (0.130625 DAYS)
+
+Initializing report step 629/1000 at 2025-01-01 (0.130625 DAYS) line 153
+Complete report step 629 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13083333333333333 DAYS)
+
+Initializing report step 630/1000 at 2025-01-01 (0.13083333333333333 DAYS) line 153
+Complete report step 630 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13104166666666667 DAYS)
+
+Initializing report step 631/1000 at 2025-01-01 (0.13104166666666667 DAYS) line 153
+Complete report step 631 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13125 DAYS)
+
+Initializing report step 632/1000 at 2025-01-01 (0.13125 DAYS) line 153
+Complete report step 632 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13145833333333332 DAYS)
+
+Initializing report step 633/1000 at 2025-01-01 (0.13145833333333332 DAYS) line 153
+Complete report step 633 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13166666666666665 DAYS)
+
+Initializing report step 634/1000 at 2025-01-01 (0.13166666666666665 DAYS) line 153
+Complete report step 634 (0.00020833333333333332 DAYS) at 2025-01-01 (0.131875 DAYS)
+
+Initializing report step 635/1000 at 2025-01-01 (0.131875 DAYS) line 153
+Complete report step 635 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13208333333333333 DAYS)
+
+Initializing report step 636/1000 at 2025-01-01 (0.13208333333333333 DAYS) line 153
+Complete report step 636 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13229166666666667 DAYS)
+
+Initializing report step 637/1000 at 2025-01-01 (0.13229166666666667 DAYS) line 153
+Complete report step 637 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1325 DAYS)
+
+Initializing report step 638/1000 at 2025-01-01 (0.1325 DAYS) line 153
+Complete report step 638 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13270833333333332 DAYS)
+
+Initializing report step 639/1000 at 2025-01-01 (0.13270833333333332 DAYS) line 153
+Complete report step 639 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13291666666666666 DAYS)
+
+Initializing report step 640/1000 at 2025-01-01 (0.13291666666666666 DAYS) line 153
+Complete report step 640 (0.00020833333333333332 DAYS) at 2025-01-01 (0.133125 DAYS)
+
+Initializing report step 641/1000 at 2025-01-01 (0.133125 DAYS) line 153
+Complete report step 641 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13333333333333333 DAYS)
+
+Initializing report step 642/1000 at 2025-01-01 (0.13333333333333333 DAYS) line 153
+Complete report step 642 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13354166666666667 DAYS)
+
+Initializing report step 643/1000 at 2025-01-01 (0.13354166666666667 DAYS) line 153
+Complete report step 643 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13374999999999998 DAYS)
+
+Initializing report step 644/1000 at 2025-01-01 (0.13374999999999998 DAYS) line 153
+Complete report step 644 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13395833333333332 DAYS)
+
+Initializing report step 645/1000 at 2025-01-01 (0.13395833333333332 DAYS) line 153
+Complete report step 645 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13416666666666666 DAYS)
+
+Initializing report step 646/1000 at 2025-01-01 (0.13416666666666666 DAYS) line 153
+Complete report step 646 (0.00020833333333333332 DAYS) at 2025-01-01 (0.134375 DAYS)
+
+Initializing report step 647/1000 at 2025-01-01 (0.134375 DAYS) line 153
+Complete report step 647 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13458333333333333 DAYS)
+
+Initializing report step 648/1000 at 2025-01-01 (0.13458333333333333 DAYS) line 153
+Complete report step 648 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13479166666666667 DAYS)
+
+Initializing report step 649/1000 at 2025-01-01 (0.13479166666666667 DAYS) line 153
+Complete report step 649 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13499999999999998 DAYS)
+
+Initializing report step 650/1000 at 2025-01-01 (0.13499999999999998 DAYS) line 153
+Complete report step 650 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13520833333333332 DAYS)
+
+Initializing report step 651/1000 at 2025-01-01 (0.13520833333333332 DAYS) line 153
+Complete report step 651 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13541666666666666 DAYS)
+
+Initializing report step 652/1000 at 2025-01-01 (0.13541666666666666 DAYS) line 153
+Complete report step 652 (0.00020833333333333332 DAYS) at 2025-01-01 (0.135625 DAYS)
+
+Initializing report step 653/1000 at 2025-01-01 (0.135625 DAYS) line 153
+Complete report step 653 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13583333333333333 DAYS)
+
+Initializing report step 654/1000 at 2025-01-01 (0.13583333333333333 DAYS) line 153
+Complete report step 654 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13604166666666667 DAYS)
+
+Initializing report step 655/1000 at 2025-01-01 (0.13604166666666667 DAYS) line 153
+Complete report step 655 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13624999999999998 DAYS)
+
+Initializing report step 656/1000 at 2025-01-01 (0.13624999999999998 DAYS) line 153
+Complete report step 656 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13645833333333332 DAYS)
+
+Initializing report step 657/1000 at 2025-01-01 (0.13645833333333332 DAYS) line 153
+Complete report step 657 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13666666666666666 DAYS)
+
+Initializing report step 658/1000 at 2025-01-01 (0.13666666666666666 DAYS) line 153
+Complete report step 658 (0.00020833333333333332 DAYS) at 2025-01-01 (0.136875 DAYS)
+
+Initializing report step 659/1000 at 2025-01-01 (0.136875 DAYS) line 153
+Complete report step 659 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13708333333333333 DAYS)
+
+Initializing report step 660/1000 at 2025-01-01 (0.13708333333333333 DAYS) line 153
+Complete report step 660 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13729166666666667 DAYS)
+
+Initializing report step 661/1000 at 2025-01-01 (0.13729166666666667 DAYS) line 153
+Complete report step 661 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13749999999999998 DAYS)
+
+Initializing report step 662/1000 at 2025-01-01 (0.13749999999999998 DAYS) line 153
+Complete report step 662 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13770833333333332 DAYS)
+
+Initializing report step 663/1000 at 2025-01-01 (0.13770833333333332 DAYS) line 153
+Complete report step 663 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13791666666666666 DAYS)
+
+Initializing report step 664/1000 at 2025-01-01 (0.13791666666666666 DAYS) line 153
+Complete report step 664 (0.00020833333333333332 DAYS) at 2025-01-01 (0.138125 DAYS)
+
+Initializing report step 665/1000 at 2025-01-01 (0.138125 DAYS) line 153
+Complete report step 665 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13833333333333334 DAYS)
+
+Initializing report step 666/1000 at 2025-01-01 (0.13833333333333334 DAYS) line 153
+Complete report step 666 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13854166666666665 DAYS)
+
+Initializing report step 667/1000 at 2025-01-01 (0.13854166666666665 DAYS) line 153
+Complete report step 667 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13874999999999998 DAYS)
+
+Initializing report step 668/1000 at 2025-01-01 (0.13874999999999998 DAYS) line 153
+Complete report step 668 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13895833333333332 DAYS)
+
+Initializing report step 669/1000 at 2025-01-01 (0.13895833333333332 DAYS) line 153
+Complete report step 669 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13916666666666666 DAYS)
+
+Initializing report step 670/1000 at 2025-01-01 (0.13916666666666666 DAYS) line 153
+Complete report step 670 (0.00020833333333333332 DAYS) at 2025-01-01 (0.139375 DAYS)
+
+Initializing report step 671/1000 at 2025-01-01 (0.139375 DAYS) line 153
+Complete report step 671 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13958333333333334 DAYS)
+
+Initializing report step 672/1000 at 2025-01-01 (0.13958333333333334 DAYS) line 153
+Complete report step 672 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13979166666666665 DAYS)
+
+Initializing report step 673/1000 at 2025-01-01 (0.13979166666666665 DAYS) line 153
+Complete report step 673 (0.00020833333333333332 DAYS) at 2025-01-01 (0.13999999999999999 DAYS)
+
+Initializing report step 674/1000 at 2025-01-01 (0.13999999999999999 DAYS) line 153
+Complete report step 674 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14020833333333332 DAYS)
+
+Initializing report step 675/1000 at 2025-01-01 (0.14020833333333332 DAYS) line 153
+Complete report step 675 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14041666666666666 DAYS)
+
+Initializing report step 676/1000 at 2025-01-01 (0.14041666666666666 DAYS) line 153
+Complete report step 676 (0.00020833333333333332 DAYS) at 2025-01-01 (0.140625 DAYS)
+
+Initializing report step 677/1000 at 2025-01-01 (0.140625 DAYS) line 153
+Complete report step 677 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14083333333333334 DAYS)
+
+Initializing report step 678/1000 at 2025-01-01 (0.14083333333333334 DAYS) line 153
+Complete report step 678 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14104166666666665 DAYS)
+
+Initializing report step 679/1000 at 2025-01-01 (0.14104166666666665 DAYS) line 153
+Complete report step 679 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14125 DAYS)
+
+Initializing report step 680/1000 at 2025-01-01 (0.14125 DAYS) line 153
+Complete report step 680 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14145833333333332 DAYS)
+
+Initializing report step 681/1000 at 2025-01-01 (0.14145833333333332 DAYS) line 153
+Complete report step 681 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14166666666666666 DAYS)
+
+Initializing report step 682/1000 at 2025-01-01 (0.14166666666666666 DAYS) line 153
+Complete report step 682 (0.00020833333333333332 DAYS) at 2025-01-01 (0.141875 DAYS)
+
+Initializing report step 683/1000 at 2025-01-01 (0.141875 DAYS) line 153
+Complete report step 683 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14208333333333334 DAYS)
+
+Initializing report step 684/1000 at 2025-01-01 (0.14208333333333334 DAYS) line 153
+Complete report step 684 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14229166666666665 DAYS)
+
+Initializing report step 685/1000 at 2025-01-01 (0.14229166666666665 DAYS) line 153
+Complete report step 685 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1425 DAYS)
+
+Initializing report step 686/1000 at 2025-01-01 (0.1425 DAYS) line 153
+Complete report step 686 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14270833333333333 DAYS)
+
+Initializing report step 687/1000 at 2025-01-01 (0.14270833333333333 DAYS) line 153
+Complete report step 687 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14291666666666666 DAYS)
+
+Initializing report step 688/1000 at 2025-01-01 (0.14291666666666666 DAYS) line 153
+Complete report step 688 (0.00020833333333333332 DAYS) at 2025-01-01 (0.143125 DAYS)
+
+Initializing report step 689/1000 at 2025-01-01 (0.143125 DAYS) line 153
+Complete report step 689 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1433333333333333 DAYS)
+
+Initializing report step 690/1000 at 2025-01-01 (0.1433333333333333 DAYS) line 153
+Complete report step 690 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14354166666666665 DAYS)
+
+Initializing report step 691/1000 at 2025-01-01 (0.14354166666666665 DAYS) line 153
+Complete report step 691 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14375 DAYS)
+
+Initializing report step 692/1000 at 2025-01-01 (0.14375 DAYS) line 153
+Complete report step 692 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14395833333333333 DAYS)
+
+Initializing report step 693/1000 at 2025-01-01 (0.14395833333333333 DAYS) line 153
+Complete report step 693 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14416666666666667 DAYS)
+
+Initializing report step 694/1000 at 2025-01-01 (0.14416666666666667 DAYS) line 153
+Complete report step 694 (0.00020833333333333332 DAYS) at 2025-01-01 (0.144375 DAYS)
+
+Initializing report step 695/1000 at 2025-01-01 (0.144375 DAYS) line 153
+Complete report step 695 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1445833333333333 DAYS)
+
+Initializing report step 696/1000 at 2025-01-01 (0.1445833333333333 DAYS) line 153
+Complete report step 696 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14479166666666665 DAYS)
+
+Initializing report step 697/1000 at 2025-01-01 (0.14479166666666665 DAYS) line 153
+Complete report step 697 (0.00020833333333333332 DAYS) at 2025-01-01 (0.145 DAYS)
+
+Initializing report step 698/1000 at 2025-01-01 (0.145 DAYS) line 153
+Complete report step 698 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14520833333333333 DAYS)
+
+Initializing report step 699/1000 at 2025-01-01 (0.14520833333333333 DAYS) line 153
+Complete report step 699 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14541666666666667 DAYS)
+
+Initializing report step 700/1000 at 2025-01-01 (0.14541666666666667 DAYS) line 153
+Complete report step 700 (0.00020833333333333332 DAYS) at 2025-01-01 (0.145625 DAYS)
+
+Initializing report step 701/1000 at 2025-01-01 (0.145625 DAYS) line 153
+Complete report step 701 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14583333333333331 DAYS)
+
+Initializing report step 702/1000 at 2025-01-01 (0.14583333333333331 DAYS) line 153
+Complete report step 702 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14604166666666665 DAYS)
+
+Initializing report step 703/1000 at 2025-01-01 (0.14604166666666665 DAYS) line 153
+Complete report step 703 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14625 DAYS)
+
+Initializing report step 704/1000 at 2025-01-01 (0.14625 DAYS) line 153
+Complete report step 704 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14645833333333333 DAYS)
+
+Initializing report step 705/1000 at 2025-01-01 (0.14645833333333333 DAYS) line 153
+Complete report step 705 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14666666666666667 DAYS)
+
+Initializing report step 706/1000 at 2025-01-01 (0.14666666666666667 DAYS) line 153
+Complete report step 706 (0.00020833333333333332 DAYS) at 2025-01-01 (0.146875 DAYS)
+
+Initializing report step 707/1000 at 2025-01-01 (0.146875 DAYS) line 153
+Complete report step 707 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14708333333333332 DAYS)
+
+Initializing report step 708/1000 at 2025-01-01 (0.14708333333333332 DAYS) line 153
+Complete report step 708 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14729166666666665 DAYS)
+
+Initializing report step 709/1000 at 2025-01-01 (0.14729166666666665 DAYS) line 153
+Complete report step 709 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1475 DAYS)
+
+Initializing report step 710/1000 at 2025-01-01 (0.1475 DAYS) line 153
+Complete report step 710 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14770833333333333 DAYS)
+
+Initializing report step 711/1000 at 2025-01-01 (0.14770833333333333 DAYS) line 153
+Complete report step 711 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14791666666666667 DAYS)
+
+Initializing report step 712/1000 at 2025-01-01 (0.14791666666666667 DAYS) line 153
+Complete report step 712 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14812499999999998 DAYS)
+
+Initializing report step 713/1000 at 2025-01-01 (0.14812499999999998 DAYS) line 153
+Complete report step 713 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14833333333333332 DAYS)
+
+Initializing report step 714/1000 at 2025-01-01 (0.14833333333333332 DAYS) line 153
+Complete report step 714 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14854166666666666 DAYS)
+
+Initializing report step 715/1000 at 2025-01-01 (0.14854166666666666 DAYS) line 153
+Complete report step 715 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14875 DAYS)
+
+Initializing report step 716/1000 at 2025-01-01 (0.14875 DAYS) line 153
+Complete report step 716 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14895833333333333 DAYS)
+
+Initializing report step 717/1000 at 2025-01-01 (0.14895833333333333 DAYS) line 153
+Complete report step 717 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14916666666666667 DAYS)
+
+Initializing report step 718/1000 at 2025-01-01 (0.14916666666666667 DAYS) line 153
+Complete report step 718 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14937499999999998 DAYS)
+
+Initializing report step 719/1000 at 2025-01-01 (0.14937499999999998 DAYS) line 153
+Complete report step 719 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14958333333333332 DAYS)
+
+Initializing report step 720/1000 at 2025-01-01 (0.14958333333333332 DAYS) line 153
+Complete report step 720 (0.00020833333333333332 DAYS) at 2025-01-01 (0.14979166666666666 DAYS)
+
+Initializing report step 721/1000 at 2025-01-01 (0.14979166666666666 DAYS) line 153
+Complete report step 721 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15 DAYS)
+
+Initializing report step 722/1000 at 2025-01-01 (0.15 DAYS) line 153
+Complete report step 722 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15020833333333333 DAYS)
+
+Initializing report step 723/1000 at 2025-01-01 (0.15020833333333333 DAYS) line 153
+Complete report step 723 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15041666666666667 DAYS)
+
+Initializing report step 724/1000 at 2025-01-01 (0.15041666666666667 DAYS) line 153
+Complete report step 724 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15062499999999998 DAYS)
+
+Initializing report step 725/1000 at 2025-01-01 (0.15062499999999998 DAYS) line 153
+Complete report step 725 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15083333333333332 DAYS)
+
+Initializing report step 726/1000 at 2025-01-01 (0.15083333333333332 DAYS) line 153
+Complete report step 726 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15104166666666666 DAYS)
+
+Initializing report step 727/1000 at 2025-01-01 (0.15104166666666666 DAYS) line 153
+Complete report step 727 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15125 DAYS)
+
+Initializing report step 728/1000 at 2025-01-01 (0.15125 DAYS) line 153
+Complete report step 728 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15145833333333333 DAYS)
+
+Initializing report step 729/1000 at 2025-01-01 (0.15145833333333333 DAYS) line 153
+Complete report step 729 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15166666666666667 DAYS)
+
+Initializing report step 730/1000 at 2025-01-01 (0.15166666666666667 DAYS) line 153
+Complete report step 730 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15187499999999998 DAYS)
+
+Initializing report step 731/1000 at 2025-01-01 (0.15187499999999998 DAYS) line 153
+Complete report step 731 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15208333333333332 DAYS)
+
+Initializing report step 732/1000 at 2025-01-01 (0.15208333333333332 DAYS) line 153
+Complete report step 732 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15229166666666666 DAYS)
+
+Initializing report step 733/1000 at 2025-01-01 (0.15229166666666666 DAYS) line 153
+Complete report step 733 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1525 DAYS)
+
+Initializing report step 734/1000 at 2025-01-01 (0.1525 DAYS) line 153
+Complete report step 734 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15270833333333333 DAYS)
+
+Initializing report step 735/1000 at 2025-01-01 (0.15270833333333333 DAYS) line 153
+Complete report step 735 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15291666666666665 DAYS)
+
+Initializing report step 736/1000 at 2025-01-01 (0.15291666666666665 DAYS) line 153
+Complete report step 736 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15312499999999998 DAYS)
+
+Initializing report step 737/1000 at 2025-01-01 (0.15312499999999998 DAYS) line 153
+Complete report step 737 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15333333333333332 DAYS)
+
+Initializing report step 738/1000 at 2025-01-01 (0.15333333333333332 DAYS) line 153
+Complete report step 738 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15354166666666666 DAYS)
+
+Initializing report step 739/1000 at 2025-01-01 (0.15354166666666666 DAYS) line 153
+Complete report step 739 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15375 DAYS)
+
+Initializing report step 740/1000 at 2025-01-01 (0.15375 DAYS) line 153
+Complete report step 740 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15395833333333334 DAYS)
+
+Initializing report step 741/1000 at 2025-01-01 (0.15395833333333334 DAYS) line 153
+Complete report step 741 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15416666666666665 DAYS)
+
+Initializing report step 742/1000 at 2025-01-01 (0.15416666666666665 DAYS) line 153
+Complete report step 742 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15437499999999998 DAYS)
+
+Initializing report step 743/1000 at 2025-01-01 (0.15437499999999998 DAYS) line 153
+Complete report step 743 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15458333333333332 DAYS)
+
+Initializing report step 744/1000 at 2025-01-01 (0.15458333333333332 DAYS) line 153
+Complete report step 744 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15479166666666666 DAYS)
+
+Initializing report step 745/1000 at 2025-01-01 (0.15479166666666666 DAYS) line 153
+Complete report step 745 (0.00020833333333333332 DAYS) at 2025-01-01 (0.155 DAYS)
+
+Initializing report step 746/1000 at 2025-01-01 (0.155 DAYS) line 153
+Complete report step 746 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15520833333333334 DAYS)
+
+Initializing report step 747/1000 at 2025-01-01 (0.15520833333333334 DAYS) line 153
+Complete report step 747 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15541666666666665 DAYS)
+
+Initializing report step 748/1000 at 2025-01-01 (0.15541666666666665 DAYS) line 153
+Complete report step 748 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15562499999999999 DAYS)
+
+Initializing report step 749/1000 at 2025-01-01 (0.15562499999999999 DAYS) line 153
+Complete report step 749 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15583333333333332 DAYS)
+
+Initializing report step 750/1000 at 2025-01-01 (0.15583333333333332 DAYS) line 153
+Complete report step 750 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15604166666666666 DAYS)
+
+Initializing report step 751/1000 at 2025-01-01 (0.15604166666666666 DAYS) line 153
+Complete report step 751 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15625 DAYS)
+
+Initializing report step 752/1000 at 2025-01-01 (0.15625 DAYS) line 153
+Complete report step 752 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15645833333333334 DAYS)
+
+Initializing report step 753/1000 at 2025-01-01 (0.15645833333333334 DAYS) line 153
+Complete report step 753 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15666666666666665 DAYS)
+
+Initializing report step 754/1000 at 2025-01-01 (0.15666666666666665 DAYS) line 153
+Complete report step 754 (0.00020833333333333332 DAYS) at 2025-01-01 (0.156875 DAYS)
+
+Initializing report step 755/1000 at 2025-01-01 (0.156875 DAYS) line 153
+Complete report step 755 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15708333333333332 DAYS)
+
+Initializing report step 756/1000 at 2025-01-01 (0.15708333333333332 DAYS) line 153
+Complete report step 756 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15729166666666666 DAYS)
+
+Initializing report step 757/1000 at 2025-01-01 (0.15729166666666666 DAYS) line 153
+Complete report step 757 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1575 DAYS)
+
+Initializing report step 758/1000 at 2025-01-01 (0.1575 DAYS) line 153
+Complete report step 758 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15770833333333334 DAYS)
+
+Initializing report step 759/1000 at 2025-01-01 (0.15770833333333334 DAYS) line 153
+Complete report step 759 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15791666666666665 DAYS)
+
+Initializing report step 760/1000 at 2025-01-01 (0.15791666666666665 DAYS) line 153
+Complete report step 760 (0.00020833333333333332 DAYS) at 2025-01-01 (0.158125 DAYS)
+
+Initializing report step 761/1000 at 2025-01-01 (0.158125 DAYS) line 153
+Complete report step 761 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15833333333333333 DAYS)
+
+Initializing report step 762/1000 at 2025-01-01 (0.15833333333333333 DAYS) line 153
+Complete report step 762 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15854166666666666 DAYS)
+
+Initializing report step 763/1000 at 2025-01-01 (0.15854166666666666 DAYS) line 153
+Complete report step 763 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15875 DAYS)
+
+Initializing report step 764/1000 at 2025-01-01 (0.15875 DAYS) line 153
+Complete report step 764 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1589583333333333 DAYS)
+
+Initializing report step 765/1000 at 2025-01-01 (0.1589583333333333 DAYS) line 153
+Complete report step 765 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15916666666666665 DAYS)
+
+Initializing report step 766/1000 at 2025-01-01 (0.15916666666666665 DAYS) line 153
+Complete report step 766 (0.00020833333333333332 DAYS) at 2025-01-01 (0.159375 DAYS)
+
+Initializing report step 767/1000 at 2025-01-01 (0.159375 DAYS) line 153
+Complete report step 767 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15958333333333333 DAYS)
+
+Initializing report step 768/1000 at 2025-01-01 (0.15958333333333333 DAYS) line 153
+Complete report step 768 (0.00020833333333333332 DAYS) at 2025-01-01 (0.15979166666666667 DAYS)
+
+Initializing report step 769/1000 at 2025-01-01 (0.15979166666666667 DAYS) line 153
+Complete report step 769 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16 DAYS)
+
+Initializing report step 770/1000 at 2025-01-01 (0.16 DAYS) line 153
+Complete report step 770 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1602083333333333 DAYS)
+
+Initializing report step 771/1000 at 2025-01-01 (0.1602083333333333 DAYS) line 153
+Complete report step 771 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16041666666666665 DAYS)
+
+Initializing report step 772/1000 at 2025-01-01 (0.16041666666666665 DAYS) line 153
+Complete report step 772 (0.00020833333333333332 DAYS) at 2025-01-01 (0.160625 DAYS)
+
+Initializing report step 773/1000 at 2025-01-01 (0.160625 DAYS) line 153
+Complete report step 773 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16083333333333333 DAYS)
+
+Initializing report step 774/1000 at 2025-01-01 (0.16083333333333333 DAYS) line 153
+Complete report step 774 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16104166666666667 DAYS)
+
+Initializing report step 775/1000 at 2025-01-01 (0.16104166666666667 DAYS) line 153
+Complete report step 775 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16125 DAYS)
+
+Initializing report step 776/1000 at 2025-01-01 (0.16125 DAYS) line 153
+Complete report step 776 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16145833333333331 DAYS)
+
+Initializing report step 777/1000 at 2025-01-01 (0.16145833333333331 DAYS) line 153
+Complete report step 777 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16166666666666665 DAYS)
+
+Initializing report step 778/1000 at 2025-01-01 (0.16166666666666665 DAYS) line 153
+Complete report step 778 (0.00020833333333333332 DAYS) at 2025-01-01 (0.161875 DAYS)
+
+Initializing report step 779/1000 at 2025-01-01 (0.161875 DAYS) line 153
+Complete report step 779 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16208333333333333 DAYS)
+
+Initializing report step 780/1000 at 2025-01-01 (0.16208333333333333 DAYS) line 153
+Complete report step 780 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16229166666666667 DAYS)
+
+Initializing report step 781/1000 at 2025-01-01 (0.16229166666666667 DAYS) line 153
+Complete report step 781 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1625 DAYS)
+
+Initializing report step 782/1000 at 2025-01-01 (0.1625 DAYS) line 153
+Complete report step 782 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16270833333333332 DAYS)
+
+Initializing report step 783/1000 at 2025-01-01 (0.16270833333333332 DAYS) line 153
+Complete report step 783 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16291666666666665 DAYS)
+
+Initializing report step 784/1000 at 2025-01-01 (0.16291666666666665 DAYS) line 153
+Complete report step 784 (0.00020833333333333332 DAYS) at 2025-01-01 (0.163125 DAYS)
+
+Initializing report step 785/1000 at 2025-01-01 (0.163125 DAYS) line 153
+Complete report step 785 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16333333333333333 DAYS)
+
+Initializing report step 786/1000 at 2025-01-01 (0.16333333333333333 DAYS) line 153
+Complete report step 786 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16354166666666667 DAYS)
+
+Initializing report step 787/1000 at 2025-01-01 (0.16354166666666667 DAYS) line 153
+Complete report step 787 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16374999999999998 DAYS)
+
+Initializing report step 788/1000 at 2025-01-01 (0.16374999999999998 DAYS) line 153
+Complete report step 788 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16395833333333332 DAYS)
+
+Initializing report step 789/1000 at 2025-01-01 (0.16395833333333332 DAYS) line 153
+Complete report step 789 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16416666666666666 DAYS)
+
+Initializing report step 790/1000 at 2025-01-01 (0.16416666666666666 DAYS) line 153
+Complete report step 790 (0.00020833333333333332 DAYS) at 2025-01-01 (0.164375 DAYS)
+
+Initializing report step 791/1000 at 2025-01-01 (0.164375 DAYS) line 153
+Complete report step 791 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16458333333333333 DAYS)
+
+Initializing report step 792/1000 at 2025-01-01 (0.16458333333333333 DAYS) line 153
+Complete report step 792 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16479166666666667 DAYS)
+
+Initializing report step 793/1000 at 2025-01-01 (0.16479166666666667 DAYS) line 153
+Complete report step 793 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16499999999999998 DAYS)
+
+Initializing report step 794/1000 at 2025-01-01 (0.16499999999999998 DAYS) line 153
+Complete report step 794 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16520833333333332 DAYS)
+
+Initializing report step 795/1000 at 2025-01-01 (0.16520833333333332 DAYS) line 153
+Complete report step 795 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16541666666666666 DAYS)
+
+Initializing report step 796/1000 at 2025-01-01 (0.16541666666666666 DAYS) line 153
+Complete report step 796 (0.00020833333333333332 DAYS) at 2025-01-01 (0.165625 DAYS)
+
+Initializing report step 797/1000 at 2025-01-01 (0.165625 DAYS) line 153
+Complete report step 797 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16583333333333333 DAYS)
+
+Initializing report step 798/1000 at 2025-01-01 (0.16583333333333333 DAYS) line 153
+Complete report step 798 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16604166666666667 DAYS)
+
+Initializing report step 799/1000 at 2025-01-01 (0.16604166666666667 DAYS) line 153
+Complete report step 799 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16624999999999998 DAYS)
+
+Initializing report step 800/1000 at 2025-01-01 (0.16624999999999998 DAYS) line 153
+Complete report step 800 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16645833333333332 DAYS)
+
+Initializing report step 801/1000 at 2025-01-01 (0.16645833333333332 DAYS) line 153
+Complete report step 801 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16666666666666666 DAYS)
+
+Initializing report step 802/1000 at 2025-01-01 (0.16666666666666666 DAYS) line 153
+Complete report step 802 (0.00020833333333333332 DAYS) at 2025-01-01 (0.166875 DAYS)
+
+Initializing report step 803/1000 at 2025-01-01 (0.166875 DAYS) line 153
+Complete report step 803 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16708333333333333 DAYS)
+
+Initializing report step 804/1000 at 2025-01-01 (0.16708333333333333 DAYS) line 153
+Complete report step 804 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16729166666666667 DAYS)
+
+Initializing report step 805/1000 at 2025-01-01 (0.16729166666666667 DAYS) line 153
+Complete report step 805 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16749999999999998 DAYS)
+
+Initializing report step 806/1000 at 2025-01-01 (0.16749999999999998 DAYS) line 153
+Complete report step 806 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16770833333333332 DAYS)
+
+Initializing report step 807/1000 at 2025-01-01 (0.16770833333333332 DAYS) line 153
+Complete report step 807 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16791666666666666 DAYS)
+
+Initializing report step 808/1000 at 2025-01-01 (0.16791666666666666 DAYS) line 153
+Complete report step 808 (0.00020833333333333332 DAYS) at 2025-01-01 (0.168125 DAYS)
+
+Initializing report step 809/1000 at 2025-01-01 (0.168125 DAYS) line 153
+Complete report step 809 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16833333333333333 DAYS)
+
+Initializing report step 810/1000 at 2025-01-01 (0.16833333333333333 DAYS) line 153
+Complete report step 810 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16854166666666665 DAYS)
+
+Initializing report step 811/1000 at 2025-01-01 (0.16854166666666665 DAYS) line 153
+Complete report step 811 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16874999999999998 DAYS)
+
+Initializing report step 812/1000 at 2025-01-01 (0.16874999999999998 DAYS) line 153
+Complete report step 812 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16895833333333332 DAYS)
+
+Initializing report step 813/1000 at 2025-01-01 (0.16895833333333332 DAYS) line 153
+Complete report step 813 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16916666666666666 DAYS)
+
+Initializing report step 814/1000 at 2025-01-01 (0.16916666666666666 DAYS) line 153
+Complete report step 814 (0.00020833333333333332 DAYS) at 2025-01-01 (0.169375 DAYS)
+
+Initializing report step 815/1000 at 2025-01-01 (0.169375 DAYS) line 153
+Complete report step 815 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16958333333333334 DAYS)
+
+Initializing report step 816/1000 at 2025-01-01 (0.16958333333333334 DAYS) line 153
+Complete report step 816 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16979166666666665 DAYS)
+
+Initializing report step 817/1000 at 2025-01-01 (0.16979166666666665 DAYS) line 153
+Complete report step 817 (0.00020833333333333332 DAYS) at 2025-01-01 (0.16999999999999998 DAYS)
+
+Initializing report step 818/1000 at 2025-01-01 (0.16999999999999998 DAYS) line 153
+Complete report step 818 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17020833333333332 DAYS)
+
+Initializing report step 819/1000 at 2025-01-01 (0.17020833333333332 DAYS) line 153
+Complete report step 819 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17041666666666666 DAYS)
+
+Initializing report step 820/1000 at 2025-01-01 (0.17041666666666666 DAYS) line 153
+Complete report step 820 (0.00020833333333333332 DAYS) at 2025-01-01 (0.170625 DAYS)
+
+Initializing report step 821/1000 at 2025-01-01 (0.170625 DAYS) line 153
+Complete report step 821 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17083333333333334 DAYS)
+
+Initializing report step 822/1000 at 2025-01-01 (0.17083333333333334 DAYS) line 153
+Complete report step 822 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17104166666666665 DAYS)
+
+Initializing report step 823/1000 at 2025-01-01 (0.17104166666666665 DAYS) line 153
+Complete report step 823 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17124999999999999 DAYS)
+
+Initializing report step 824/1000 at 2025-01-01 (0.17124999999999999 DAYS) line 153
+Complete report step 824 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17145833333333332 DAYS)
+
+Initializing report step 825/1000 at 2025-01-01 (0.17145833333333332 DAYS) line 153
+Complete report step 825 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17166666666666666 DAYS)
+
+Initializing report step 826/1000 at 2025-01-01 (0.17166666666666666 DAYS) line 153
+Complete report step 826 (0.00020833333333333332 DAYS) at 2025-01-01 (0.171875 DAYS)
+
+Initializing report step 827/1000 at 2025-01-01 (0.171875 DAYS) line 153
+Complete report step 827 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17208333333333334 DAYS)
+
+Initializing report step 828/1000 at 2025-01-01 (0.17208333333333334 DAYS) line 153
+Complete report step 828 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17229166666666665 DAYS)
+
+Initializing report step 829/1000 at 2025-01-01 (0.17229166666666665 DAYS) line 153
+Complete report step 829 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1725 DAYS)
+
+Initializing report step 830/1000 at 2025-01-01 (0.1725 DAYS) line 153
+Complete report step 830 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17270833333333332 DAYS)
+
+Initializing report step 831/1000 at 2025-01-01 (0.17270833333333332 DAYS) line 153
+Complete report step 831 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17291666666666666 DAYS)
+
+Initializing report step 832/1000 at 2025-01-01 (0.17291666666666666 DAYS) line 153
+Complete report step 832 (0.00020833333333333332 DAYS) at 2025-01-01 (0.173125 DAYS)
+
+Initializing report step 833/1000 at 2025-01-01 (0.173125 DAYS) line 153
+Complete report step 833 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1733333333333333 DAYS)
+
+Initializing report step 834/1000 at 2025-01-01 (0.1733333333333333 DAYS) line 153
+Complete report step 834 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17354166666666665 DAYS)
+
+Initializing report step 835/1000 at 2025-01-01 (0.17354166666666665 DAYS) line 153
+Complete report step 835 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17375 DAYS)
+
+Initializing report step 836/1000 at 2025-01-01 (0.17375 DAYS) line 153
+Complete report step 836 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17395833333333333 DAYS)
+
+Initializing report step 837/1000 at 2025-01-01 (0.17395833333333333 DAYS) line 153
+Complete report step 837 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17416666666666666 DAYS)
+
+Initializing report step 838/1000 at 2025-01-01 (0.17416666666666666 DAYS) line 153
+Complete report step 838 (0.00020833333333333332 DAYS) at 2025-01-01 (0.174375 DAYS)
+
+Initializing report step 839/1000 at 2025-01-01 (0.174375 DAYS) line 153
+Complete report step 839 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1745833333333333 DAYS)
+
+Initializing report step 840/1000 at 2025-01-01 (0.1745833333333333 DAYS) line 153
+Complete report step 840 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17479166666666665 DAYS)
+
+Initializing report step 841/1000 at 2025-01-01 (0.17479166666666665 DAYS) line 153
+Complete report step 841 (0.00020833333333333332 DAYS) at 2025-01-01 (0.175 DAYS)
+
+Initializing report step 842/1000 at 2025-01-01 (0.175 DAYS) line 153
+Complete report step 842 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17520833333333333 DAYS)
+
+Initializing report step 843/1000 at 2025-01-01 (0.17520833333333333 DAYS) line 153
+Complete report step 843 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17541666666666667 DAYS)
+
+Initializing report step 844/1000 at 2025-01-01 (0.17541666666666667 DAYS) line 153
+Complete report step 844 (0.00020833333333333332 DAYS) at 2025-01-01 (0.175625 DAYS)
+
+Initializing report step 845/1000 at 2025-01-01 (0.175625 DAYS) line 153
+Complete report step 845 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1758333333333333 DAYS)
+
+Initializing report step 846/1000 at 2025-01-01 (0.1758333333333333 DAYS) line 153
+Complete report step 846 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17604166666666665 DAYS)
+
+Initializing report step 847/1000 at 2025-01-01 (0.17604166666666665 DAYS) line 153
+Complete report step 847 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17625 DAYS)
+
+Initializing report step 848/1000 at 2025-01-01 (0.17625 DAYS) line 153
+Complete report step 848 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17645833333333333 DAYS)
+
+Initializing report step 849/1000 at 2025-01-01 (0.17645833333333333 DAYS) line 153
+Complete report step 849 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17666666666666667 DAYS)
+
+Initializing report step 850/1000 at 2025-01-01 (0.17666666666666667 DAYS) line 153
+Complete report step 850 (0.00020833333333333332 DAYS) at 2025-01-01 (0.176875 DAYS)
+
+Initializing report step 851/1000 at 2025-01-01 (0.176875 DAYS) line 153
+Complete report step 851 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17708333333333331 DAYS)
+
+Initializing report step 852/1000 at 2025-01-01 (0.17708333333333331 DAYS) line 153
+Complete report step 852 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17729166666666665 DAYS)
+
+Initializing report step 853/1000 at 2025-01-01 (0.17729166666666665 DAYS) line 153
+Complete report step 853 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1775 DAYS)
+
+Initializing report step 854/1000 at 2025-01-01 (0.1775 DAYS) line 153
+Complete report step 854 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17770833333333333 DAYS)
+
+Initializing report step 855/1000 at 2025-01-01 (0.17770833333333333 DAYS) line 153
+Complete report step 855 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17791666666666667 DAYS)
+
+Initializing report step 856/1000 at 2025-01-01 (0.17791666666666667 DAYS) line 153
+Complete report step 856 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17812499999999998 DAYS)
+
+Initializing report step 857/1000 at 2025-01-01 (0.17812499999999998 DAYS) line 153
+Complete report step 857 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17833333333333332 DAYS)
+
+Initializing report step 858/1000 at 2025-01-01 (0.17833333333333332 DAYS) line 153
+Complete report step 858 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17854166666666665 DAYS)
+
+Initializing report step 859/1000 at 2025-01-01 (0.17854166666666665 DAYS) line 153
+Complete report step 859 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17875 DAYS)
+
+Initializing report step 860/1000 at 2025-01-01 (0.17875 DAYS) line 153
+Complete report step 860 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17895833333333333 DAYS)
+
+Initializing report step 861/1000 at 2025-01-01 (0.17895833333333333 DAYS) line 153
+Complete report step 861 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17916666666666667 DAYS)
+
+Initializing report step 862/1000 at 2025-01-01 (0.17916666666666667 DAYS) line 153
+Complete report step 862 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17937499999999998 DAYS)
+
+Initializing report step 863/1000 at 2025-01-01 (0.17937499999999998 DAYS) line 153
+Complete report step 863 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17958333333333332 DAYS)
+
+Initializing report step 864/1000 at 2025-01-01 (0.17958333333333332 DAYS) line 153
+Complete report step 864 (0.00020833333333333332 DAYS) at 2025-01-01 (0.17979166666666666 DAYS)
+
+Initializing report step 865/1000 at 2025-01-01 (0.17979166666666666 DAYS) line 153
+Complete report step 865 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18 DAYS)
+
+Initializing report step 866/1000 at 2025-01-01 (0.18 DAYS) line 153
+Complete report step 866 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18020833333333333 DAYS)
+
+Initializing report step 867/1000 at 2025-01-01 (0.18020833333333333 DAYS) line 153
+Complete report step 867 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18041666666666667 DAYS)
+
+Initializing report step 868/1000 at 2025-01-01 (0.18041666666666667 DAYS) line 153
+Complete report step 868 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18062499999999998 DAYS)
+
+Initializing report step 869/1000 at 2025-01-01 (0.18062499999999998 DAYS) line 153
+Complete report step 869 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18083333333333332 DAYS)
+
+Initializing report step 870/1000 at 2025-01-01 (0.18083333333333332 DAYS) line 153
+Complete report step 870 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18104166666666666 DAYS)
+
+Initializing report step 871/1000 at 2025-01-01 (0.18104166666666666 DAYS) line 153
+Complete report step 871 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18125 DAYS)
+
+Initializing report step 872/1000 at 2025-01-01 (0.18125 DAYS) line 153
+Complete report step 872 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18145833333333333 DAYS)
+
+Initializing report step 873/1000 at 2025-01-01 (0.18145833333333333 DAYS) line 153
+Complete report step 873 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18166666666666667 DAYS)
+
+Initializing report step 874/1000 at 2025-01-01 (0.18166666666666667 DAYS) line 153
+Complete report step 874 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18187499999999998 DAYS)
+
+Initializing report step 875/1000 at 2025-01-01 (0.18187499999999998 DAYS) line 153
+Complete report step 875 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18208333333333332 DAYS)
+
+Initializing report step 876/1000 at 2025-01-01 (0.18208333333333332 DAYS) line 153
+Complete report step 876 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18229166666666666 DAYS)
+
+Initializing report step 877/1000 at 2025-01-01 (0.18229166666666666 DAYS) line 153
+Complete report step 877 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1825 DAYS)
+
+Initializing report step 878/1000 at 2025-01-01 (0.1825 DAYS) line 153
+Complete report step 878 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18270833333333333 DAYS)
+
+Initializing report step 879/1000 at 2025-01-01 (0.18270833333333333 DAYS) line 153
+Complete report step 879 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18291666666666664 DAYS)
+
+Initializing report step 880/1000 at 2025-01-01 (0.18291666666666664 DAYS) line 153
+Complete report step 880 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18312499999999998 DAYS)
+
+Initializing report step 881/1000 at 2025-01-01 (0.18312499999999998 DAYS) line 153
+Complete report step 881 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18333333333333332 DAYS)
+
+Initializing report step 882/1000 at 2025-01-01 (0.18333333333333332 DAYS) line 153
+Complete report step 882 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18354166666666666 DAYS)
+
+Initializing report step 883/1000 at 2025-01-01 (0.18354166666666666 DAYS) line 153
+Complete report step 883 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18375 DAYS)
+
+Initializing report step 884/1000 at 2025-01-01 (0.18375 DAYS) line 153
+Complete report step 884 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18395833333333333 DAYS)
+
+Initializing report step 885/1000 at 2025-01-01 (0.18395833333333333 DAYS) line 153
+Complete report step 885 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18416666666666665 DAYS)
+
+Initializing report step 886/1000 at 2025-01-01 (0.18416666666666665 DAYS) line 153
+Complete report step 886 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18437499999999998 DAYS)
+
+Initializing report step 887/1000 at 2025-01-01 (0.18437499999999998 DAYS) line 153
+Complete report step 887 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18458333333333332 DAYS)
+
+Initializing report step 888/1000 at 2025-01-01 (0.18458333333333332 DAYS) line 153
+Complete report step 888 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18479166666666666 DAYS)
+
+Initializing report step 889/1000 at 2025-01-01 (0.18479166666666666 DAYS) line 153
+Complete report step 889 (0.00020833333333333332 DAYS) at 2025-01-01 (0.185 DAYS)
+
+Initializing report step 890/1000 at 2025-01-01 (0.185 DAYS) line 153
+Complete report step 890 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18520833333333334 DAYS)
+
+Initializing report step 891/1000 at 2025-01-01 (0.18520833333333334 DAYS) line 153
+Complete report step 891 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18541666666666665 DAYS)
+
+Initializing report step 892/1000 at 2025-01-01 (0.18541666666666665 DAYS) line 153
+Complete report step 892 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18562499999999998 DAYS)
+
+Initializing report step 893/1000 at 2025-01-01 (0.18562499999999998 DAYS) line 153
+Complete report step 893 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18583333333333332 DAYS)
+
+Initializing report step 894/1000 at 2025-01-01 (0.18583333333333332 DAYS) line 153
+Complete report step 894 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18604166666666666 DAYS)
+
+Initializing report step 895/1000 at 2025-01-01 (0.18604166666666666 DAYS) line 153
+Complete report step 895 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18625 DAYS)
+
+Initializing report step 896/1000 at 2025-01-01 (0.18625 DAYS) line 153
+Complete report step 896 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18645833333333334 DAYS)
+
+Initializing report step 897/1000 at 2025-01-01 (0.18645833333333334 DAYS) line 153
+Complete report step 897 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18666666666666665 DAYS)
+
+Initializing report step 898/1000 at 2025-01-01 (0.18666666666666665 DAYS) line 153
+Complete report step 898 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18687499999999999 DAYS)
+
+Initializing report step 899/1000 at 2025-01-01 (0.18687499999999999 DAYS) line 153
+Complete report step 899 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18708333333333332 DAYS)
+
+Initializing report step 900/1000 at 2025-01-01 (0.18708333333333332 DAYS) line 153
+Complete report step 900 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18729166666666666 DAYS)
+
+Initializing report step 901/1000 at 2025-01-01 (0.18729166666666666 DAYS) line 153
+Complete report step 901 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1875 DAYS)
+
+Initializing report step 902/1000 at 2025-01-01 (0.1875 DAYS) line 153
+Complete report step 902 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1877083333333333 DAYS)
+
+Initializing report step 903/1000 at 2025-01-01 (0.1877083333333333 DAYS) line 153
+Complete report step 903 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18791666666666665 DAYS)
+
+Initializing report step 904/1000 at 2025-01-01 (0.18791666666666665 DAYS) line 153
+Complete report step 904 (0.00020833333333333332 DAYS) at 2025-01-01 (0.188125 DAYS)
+
+Initializing report step 905/1000 at 2025-01-01 (0.188125 DAYS) line 153
+Complete report step 905 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18833333333333332 DAYS)
+
+Initializing report step 906/1000 at 2025-01-01 (0.18833333333333332 DAYS) line 153
+Complete report step 906 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18854166666666666 DAYS)
+
+Initializing report step 907/1000 at 2025-01-01 (0.18854166666666666 DAYS) line 153
+Complete report step 907 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18875 DAYS)
+
+Initializing report step 908/1000 at 2025-01-01 (0.18875 DAYS) line 153
+Complete report step 908 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1889583333333333 DAYS)
+
+Initializing report step 909/1000 at 2025-01-01 (0.1889583333333333 DAYS) line 153
+Complete report step 909 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18916666666666665 DAYS)
+
+Initializing report step 910/1000 at 2025-01-01 (0.18916666666666665 DAYS) line 153
+Complete report step 910 (0.00020833333333333332 DAYS) at 2025-01-01 (0.189375 DAYS)
+
+Initializing report step 911/1000 at 2025-01-01 (0.189375 DAYS) line 153
+Complete report step 911 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18958333333333333 DAYS)
+
+Initializing report step 912/1000 at 2025-01-01 (0.18958333333333333 DAYS) line 153
+Complete report step 912 (0.00020833333333333332 DAYS) at 2025-01-01 (0.18979166666666666 DAYS)
+
+Initializing report step 913/1000 at 2025-01-01 (0.18979166666666666 DAYS) line 153
+Complete report step 913 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19 DAYS)
+
+Initializing report step 914/1000 at 2025-01-01 (0.19 DAYS) line 153
+Complete report step 914 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1902083333333333 DAYS)
+
+Initializing report step 915/1000 at 2025-01-01 (0.1902083333333333 DAYS) line 153
+Complete report step 915 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19041666666666665 DAYS)
+
+Initializing report step 916/1000 at 2025-01-01 (0.19041666666666665 DAYS) line 153
+Complete report step 916 (0.00020833333333333332 DAYS) at 2025-01-01 (0.190625 DAYS)
+
+Initializing report step 917/1000 at 2025-01-01 (0.190625 DAYS) line 153
+Complete report step 917 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19083333333333333 DAYS)
+
+Initializing report step 918/1000 at 2025-01-01 (0.19083333333333333 DAYS) line 153
+Complete report step 918 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19104166666666667 DAYS)
+
+Initializing report step 919/1000 at 2025-01-01 (0.19104166666666667 DAYS) line 153
+Complete report step 919 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19125 DAYS)
+
+Initializing report step 920/1000 at 2025-01-01 (0.19125 DAYS) line 153
+Complete report step 920 (0.00020833333333333332 DAYS) at 2025-01-01 (0.1914583333333333 DAYS)
+
+Initializing report step 921/1000 at 2025-01-01 (0.1914583333333333 DAYS) line 153
+Complete report step 921 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19166666666666665 DAYS)
+
+Initializing report step 922/1000 at 2025-01-01 (0.19166666666666665 DAYS) line 153
+Complete report step 922 (0.00020833333333333332 DAYS) at 2025-01-01 (0.191875 DAYS)
+
+Initializing report step 923/1000 at 2025-01-01 (0.191875 DAYS) line 153
+Complete report step 923 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19208333333333333 DAYS)
+
+Initializing report step 924/1000 at 2025-01-01 (0.19208333333333333 DAYS) line 153
+Complete report step 924 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19229166666666667 DAYS)
+
+Initializing report step 925/1000 at 2025-01-01 (0.19229166666666667 DAYS) line 153
+Complete report step 925 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19249999999999998 DAYS)
+
+Initializing report step 926/1000 at 2025-01-01 (0.19249999999999998 DAYS) line 153
+Complete report step 926 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19270833333333331 DAYS)
+
+Initializing report step 927/1000 at 2025-01-01 (0.19270833333333331 DAYS) line 153
+Complete report step 927 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19291666666666665 DAYS)
+
+Initializing report step 928/1000 at 2025-01-01 (0.19291666666666665 DAYS) line 153
+Complete report step 928 (0.00020833333333333332 DAYS) at 2025-01-01 (0.193125 DAYS)
+
+Initializing report step 929/1000 at 2025-01-01 (0.193125 DAYS) line 153
+Complete report step 929 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19333333333333333 DAYS)
+
+Initializing report step 930/1000 at 2025-01-01 (0.19333333333333333 DAYS) line 153
+Complete report step 930 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19354166666666667 DAYS)
+
+Initializing report step 931/1000 at 2025-01-01 (0.19354166666666667 DAYS) line 153
+Complete report step 931 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19374999999999998 DAYS)
+
+Initializing report step 932/1000 at 2025-01-01 (0.19374999999999998 DAYS) line 153
+Complete report step 932 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19395833333333332 DAYS)
+
+Initializing report step 933/1000 at 2025-01-01 (0.19395833333333332 DAYS) line 153
+Complete report step 933 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19416666666666665 DAYS)
+
+Initializing report step 934/1000 at 2025-01-01 (0.19416666666666665 DAYS) line 153
+Complete report step 934 (0.00020833333333333332 DAYS) at 2025-01-01 (0.194375 DAYS)
+
+Initializing report step 935/1000 at 2025-01-01 (0.194375 DAYS) line 153
+Complete report step 935 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19458333333333333 DAYS)
+
+Initializing report step 936/1000 at 2025-01-01 (0.19458333333333333 DAYS) line 153
+Complete report step 936 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19479166666666667 DAYS)
+
+Initializing report step 937/1000 at 2025-01-01 (0.19479166666666667 DAYS) line 153
+Complete report step 937 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19499999999999998 DAYS)
+
+Initializing report step 938/1000 at 2025-01-01 (0.19499999999999998 DAYS) line 153
+Complete report step 938 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19520833333333332 DAYS)
+
+Initializing report step 939/1000 at 2025-01-01 (0.19520833333333332 DAYS) line 153
+Complete report step 939 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19541666666666666 DAYS)
+
+Initializing report step 940/1000 at 2025-01-01 (0.19541666666666666 DAYS) line 153
+Complete report step 940 (0.00020833333333333332 DAYS) at 2025-01-01 (0.195625 DAYS)
+
+Initializing report step 941/1000 at 2025-01-01 (0.195625 DAYS) line 153
+Complete report step 941 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19583333333333333 DAYS)
+
+Initializing report step 942/1000 at 2025-01-01 (0.19583333333333333 DAYS) line 153
+Complete report step 942 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19604166666666667 DAYS)
+
+Initializing report step 943/1000 at 2025-01-01 (0.19604166666666667 DAYS) line 153
+Complete report step 943 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19624999999999998 DAYS)
+
+Initializing report step 944/1000 at 2025-01-01 (0.19624999999999998 DAYS) line 153
+Complete report step 944 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19645833333333332 DAYS)
+
+Initializing report step 945/1000 at 2025-01-01 (0.19645833333333332 DAYS) line 153
+Complete report step 945 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19666666666666666 DAYS)
+
+Initializing report step 946/1000 at 2025-01-01 (0.19666666666666666 DAYS) line 153
+Complete report step 946 (0.00020833333333333332 DAYS) at 2025-01-01 (0.196875 DAYS)
+
+Initializing report step 947/1000 at 2025-01-01 (0.196875 DAYS) line 153
+Complete report step 947 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19708333333333333 DAYS)
+
+Initializing report step 948/1000 at 2025-01-01 (0.19708333333333333 DAYS) line 153
+Complete report step 948 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19729166666666667 DAYS)
+
+Initializing report step 949/1000 at 2025-01-01 (0.19729166666666667 DAYS) line 153
+Complete report step 949 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19749999999999998 DAYS)
+
+Initializing report step 950/1000 at 2025-01-01 (0.19749999999999998 DAYS) line 153
+Complete report step 950 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19770833333333332 DAYS)
+
+Initializing report step 951/1000 at 2025-01-01 (0.19770833333333332 DAYS) line 153
+Complete report step 951 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19791666666666666 DAYS)
+
+Initializing report step 952/1000 at 2025-01-01 (0.19791666666666666 DAYS) line 153
+Complete report step 952 (0.00020833333333333332 DAYS) at 2025-01-01 (0.198125 DAYS)
+
+Initializing report step 953/1000 at 2025-01-01 (0.198125 DAYS) line 153
+Complete report step 953 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19833333333333333 DAYS)
+
+Initializing report step 954/1000 at 2025-01-01 (0.19833333333333333 DAYS) line 153
+Complete report step 954 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19854166666666664 DAYS)
+
+Initializing report step 955/1000 at 2025-01-01 (0.19854166666666664 DAYS) line 153
+Complete report step 955 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19874999999999998 DAYS)
+
+Initializing report step 956/1000 at 2025-01-01 (0.19874999999999998 DAYS) line 153
+Complete report step 956 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19895833333333332 DAYS)
+
+Initializing report step 957/1000 at 2025-01-01 (0.19895833333333332 DAYS) line 153
+Complete report step 957 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19916666666666666 DAYS)
+
+Initializing report step 958/1000 at 2025-01-01 (0.19916666666666666 DAYS) line 153
+Complete report step 958 (0.00020833333333333332 DAYS) at 2025-01-01 (0.199375 DAYS)
+
+Initializing report step 959/1000 at 2025-01-01 (0.199375 DAYS) line 153
+Complete report step 959 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19958333333333333 DAYS)
+
+Initializing report step 960/1000 at 2025-01-01 (0.19958333333333333 DAYS) line 153
+Complete report step 960 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19979166666666665 DAYS)
+
+Initializing report step 961/1000 at 2025-01-01 (0.19979166666666665 DAYS) line 153
+Complete report step 961 (0.00020833333333333332 DAYS) at 2025-01-01 (0.19999999999999998 DAYS)
+
+Initializing report step 962/1000 at 2025-01-01 (0.19999999999999998 DAYS) line 153
+Complete report step 962 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20020833333333332 DAYS)
+
+Initializing report step 963/1000 at 2025-01-01 (0.20020833333333332 DAYS) line 153
+Complete report step 963 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20041666666666666 DAYS)
+
+Initializing report step 964/1000 at 2025-01-01 (0.20041666666666666 DAYS) line 153
+Complete report step 964 (0.00020833333333333332 DAYS) at 2025-01-01 (0.200625 DAYS)
+
+Initializing report step 965/1000 at 2025-01-01 (0.200625 DAYS) line 153
+Complete report step 965 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20083333333333334 DAYS)
+
+Initializing report step 966/1000 at 2025-01-01 (0.20083333333333334 DAYS) line 153
+Complete report step 966 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20104166666666665 DAYS)
+
+Initializing report step 967/1000 at 2025-01-01 (0.20104166666666665 DAYS) line 153
+Complete report step 967 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20124999999999998 DAYS)
+
+Initializing report step 968/1000 at 2025-01-01 (0.20124999999999998 DAYS) line 153
+Complete report step 968 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20145833333333332 DAYS)
+
+Initializing report step 969/1000 at 2025-01-01 (0.20145833333333332 DAYS) line 153
+Complete report step 969 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20166666666666666 DAYS)
+
+Initializing report step 970/1000 at 2025-01-01 (0.20166666666666666 DAYS) line 153
+Complete report step 970 (0.00020833333333333332 DAYS) at 2025-01-01 (0.201875 DAYS)
+
+Initializing report step 971/1000 at 2025-01-01 (0.201875 DAYS) line 153
+Complete report step 971 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20208333333333334 DAYS)
+
+Initializing report step 972/1000 at 2025-01-01 (0.20208333333333334 DAYS) line 153
+Complete report step 972 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20229166666666665 DAYS)
+
+Initializing report step 973/1000 at 2025-01-01 (0.20229166666666665 DAYS) line 153
+Complete report step 973 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20249999999999999 DAYS)
+
+Initializing report step 974/1000 at 2025-01-01 (0.20249999999999999 DAYS) line 153
+Complete report step 974 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20270833333333332 DAYS)
+
+Initializing report step 975/1000 at 2025-01-01 (0.20270833333333332 DAYS) line 153
+Complete report step 975 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20291666666666666 DAYS)
+
+Initializing report step 976/1000 at 2025-01-01 (0.20291666666666666 DAYS) line 153
+Complete report step 976 (0.00020833333333333332 DAYS) at 2025-01-01 (0.203125 DAYS)
+
+Initializing report step 977/1000 at 2025-01-01 (0.203125 DAYS) line 153
+Complete report step 977 (0.00020833333333333332 DAYS) at 2025-01-01 (0.2033333333333333 DAYS)
+
+Initializing report step 978/1000 at 2025-01-01 (0.2033333333333333 DAYS) line 153
+Complete report step 978 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20354166666666665 DAYS)
+
+Initializing report step 979/1000 at 2025-01-01 (0.20354166666666665 DAYS) line 153
+Complete report step 979 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20375 DAYS)
+
+Initializing report step 980/1000 at 2025-01-01 (0.20375 DAYS) line 153
+Complete report step 980 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20395833333333332 DAYS)
+
+Initializing report step 981/1000 at 2025-01-01 (0.20395833333333332 DAYS) line 153
+Complete report step 981 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20416666666666666 DAYS)
+
+Initializing report step 982/1000 at 2025-01-01 (0.20416666666666666 DAYS) line 153
+Complete report step 982 (0.00020833333333333332 DAYS) at 2025-01-01 (0.204375 DAYS)
+
+Initializing report step 983/1000 at 2025-01-01 (0.204375 DAYS) line 153
+Complete report step 983 (0.00020833333333333332 DAYS) at 2025-01-01 (0.2045833333333333 DAYS)
+
+Initializing report step 984/1000 at 2025-01-01 (0.2045833333333333 DAYS) line 153
+Complete report step 984 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20479166666666665 DAYS)
+
+Initializing report step 985/1000 at 2025-01-01 (0.20479166666666665 DAYS) line 153
+Complete report step 985 (0.00020833333333333332 DAYS) at 2025-01-01 (0.205 DAYS)
+
+Initializing report step 986/1000 at 2025-01-01 (0.205 DAYS) line 153
+Complete report step 986 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20520833333333333 DAYS)
+
+Initializing report step 987/1000 at 2025-01-01 (0.20520833333333333 DAYS) line 153
+Complete report step 987 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20541666666666666 DAYS)
+
+Initializing report step 988/1000 at 2025-01-01 (0.20541666666666666 DAYS) line 153
+Complete report step 988 (0.00020833333333333332 DAYS) at 2025-01-01 (0.205625 DAYS)
+
+Initializing report step 989/1000 at 2025-01-01 (0.205625 DAYS) line 153
+Complete report step 989 (0.00020833333333333332 DAYS) at 2025-01-01 (0.2058333333333333 DAYS)
+
+Initializing report step 990/1000 at 2025-01-01 (0.2058333333333333 DAYS) line 153
+Complete report step 990 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20604166666666665 DAYS)
+
+Initializing report step 991/1000 at 2025-01-01 (0.20604166666666665 DAYS) line 153
+Complete report step 991 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20625 DAYS)
+
+Initializing report step 992/1000 at 2025-01-01 (0.20625 DAYS) line 153
+Complete report step 992 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20645833333333333 DAYS)
+
+Initializing report step 993/1000 at 2025-01-01 (0.20645833333333333 DAYS) line 153
+Complete report step 993 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20666666666666667 DAYS)
+
+Initializing report step 994/1000 at 2025-01-01 (0.20666666666666667 DAYS) line 153
+Complete report step 994 (0.00020833333333333332 DAYS) at 2025-01-01 (0.206875 DAYS)
+
+Initializing report step 995/1000 at 2025-01-01 (0.206875 DAYS) line 153
+Complete report step 995 (0.00020833333333333332 DAYS) at 2025-01-01 (0.2070833333333333 DAYS)
+
+Initializing report step 996/1000 at 2025-01-01 (0.2070833333333333 DAYS) line 153
+Complete report step 996 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20729166666666665 DAYS)
+
+Initializing report step 997/1000 at 2025-01-01 (0.20729166666666665 DAYS) line 153
+Complete report step 997 (0.00020833333333333332 DAYS) at 2025-01-01 (0.2075 DAYS)
+
+Initializing report step 998/1000 at 2025-01-01 (0.2075 DAYS) line 153
+Complete report step 998 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20770833333333333 DAYS)
+
+Initializing report step 999/1000 at 2025-01-01 (0.20770833333333333 DAYS) line 153
+Complete report step 999 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20791666666666667 DAYS)
+
+Initializing report step 1000/1000 at 2025-01-01 (0.20791666666666667 DAYS) line 153
+Complete report step 1000 (0.00020833333333333332 DAYS) at 2025-01-01 (0.20812499999999998 DAYS)
+
+
+Processing grid
+2 pinch-out connections generated
+Total number of active cells: 31034 / total pore volume: 0 RM3
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System:  Water-Gas system.
+Relative permeability input format: Saturation Family II.
+Number of saturation regions: 7
+
+Dispersion is activated in combination with VAPWAT/VAPOIL. 
+Water/oil is still allowed to vaporize, but dispersion in the gas phase is ignored.
+CO2STORE/CO2SOL is enabled. 
+ The surface density of CO2 is  1.868433kg/m3 
+ The surface density of Brine is  998.107723kg/m3
+ The surface densities are computed using the reference pressure ( 101325.000000Pa) and the reference temperature (288.710000K).
+
+
+================ Starting main simulation loop ===============
+
+
+
+---------------    Simulation step number 0    ---------------
+      Current time (days)     0
+      Current stepsize (days) 0.000208333
+      Total time (days)       0.208333
+
+
+
+Report step  0/1000 at day 0/0.208333, date = 01-Jan-2025
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 0.000208333 days, at day 0/0.000208333, date = 01-Jan-2025
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  3.264e-05  1.081e-04  3.593e-03  3.408e+00
+Linear system blocksize: 2 size:   31034 block nonzeroes:    154218
+   1  1.501e-06  7.923e-05  8.084e-02  2.486e+00
+   2  9.522e-05  1.105e-05  6.441e+00  1.394e+02
+   3  1.665e-04  2.256e-07  1.560e-01  3.571e+01
+   4  4.100e-05  4.531e-05  5.246e-02  9.607e+00
+   5  4.215e-05  4.500e-06  7.602e+00  1.401e+02
+   6  1.918e-04  4.520e-08  1.418e-01  3.549e+01
+   7  2.122e-05  1.271e-05  2.031e-02  9.085e+00
+   8  9.826e-06  7.247e-07  8.625e+00  1.406e+02
+   9  2.359e-04  1.782e-05  1.551e-01  3.456e+01
+  10  2.458e-05  1.069e-06  2.327e-02  9.391e+00
+  11  1.741e-07  2.742e-08  4.785e-03  2.147e+00
+  12  9.126e-07  1.616e-08  8.469e-04  3.863e-01
+  13  1.668e-07  1.111e-09  2.441e-04  4.229e-02
+  14  3.472e-08  2.825e-10  8.895e-06  6.300e-06
+Overall linear iterations used: 42
+ Newton its=14, linearizations=15 (0.2sec), linear its= 42 (0.5sec)
+Sub steps started at time = 0 (days)
+ step[ 0 ] = 0.000208333 (days)
+sub steps end time = 0.000208333 (days)
+Suggested next step size = 0.000119048 (days)
+
+Time step took 1.145027 seconds; total solver time 1.145027 seconds.
+
+
+---------------    Simulation step number 1    ---------------
+      Current time (days)     0.000208333
+      Current stepsize (days) 0.000208333
+      Total time (days)       0.208333
+
+
+
+Report step  1/1000 at day 0.000208333/0.208333, date = 01-Jan-2025
+
+Starting time step 0, stepsize 0.000208333 days, at day 0.000208333/0.000416667, date = 01-Jan-2025
+Iter    MB(W)      MB(G)      CNV(W)     CNV(G) 
+   0  1.055e-05  1.080e-04  1.141e-01  9.223e-01
+   1  1.582e-06  7.920e-05  8.098e-02  2.440e+01
+   2  4.251e-05  9.022e-06  6.598e+00  1.393e+02
+   3  1.618e-04  7.480e-07  1.236e-01  3.576e+01
+   4  1.378e-05  4.923e-05  5.387e-02  9.670e+00
+   5  4.588e-05  4.984e-06  7.470e+00  1.397e+02
+   6  1.788e-04  1.144e-06  1.357e-01  3.544e+01

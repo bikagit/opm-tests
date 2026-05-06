@@ -1,0 +1,2675 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2026.04-pre (54a7646b5*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 25.3.0, Darwin Kernel Version 25.3.0: Wed Jan 28 20:53:15 PST 2026; root:xnu-12377.81.4~5/RELEASE_ARM64_T6000 )
+Build time       =  2026-05-05 at 02:04:25 hrs
+User             =  macbookn
+Simulation started on 05-05-2026 at 02:10:26 hrs
+Using 5 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EclDeckFileName="SPE11A.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AddCorners="0"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="1"
+ConserveInnerEnergyThermal="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+CprWeightsThreadParallel="0"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DebugVerbosityLevel="1"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeConformal="0"
+EdgeWeightsMethod="transmissibility"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDriftCompensationTemp="1"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="1"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableOpmRstFile="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheck="1"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ExternalPartition=""
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuAwareMpi="0"
+GpuDeviceId="0"
+HybridNewtonConfigFile="hybridNewtonConfig.json"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+ImbalanceTol="1.1"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverAccelerator="cpu"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="99"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWellStatusSwitchForWells="99"
+MaxWellStatusSwitchInInnerIterWells="99"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MetisParams="default"
+MiluVariant="ilu"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepBeforeShuttingProblematicWellsInDays="0.01"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="3"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="100"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxIterations="20"
+NewtonMaxRelax="0.5"
+NewtonMinIterations="2"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NlddRelativeMobilityChangeTol="0.1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumOverlap="1"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputDir=""
+OutputExtraConvergenceInfo="none"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PartitionMethod="zoltanwell"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedMaxPvFraction="0.03"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+SerialPartitioning="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlMaxReductionTimeStep="0.1"
+TimeStepControlParameters="0.125;0.25;0.125;0.75;0.25"
+TimeStepControlRejectCompletedStep="0"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepControlToleranceTestVersion="standard"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.4182"
+ToleranceCnvEnergyRelaxed="41.82"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="4.182e-06"
+ToleranceEnergyBalanceRelaxed="4.182e-05"
+ToleranceMaxDp="0"
+ToleranceMaxDrs="0"
+ToleranceMaxDrv="0"
+ToleranceMaxDs="0"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseHybridNewton="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VerifyGpuAwareMpi="0"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+WellGroupConstraintsMaxIterations="1"
+ZoltanImbalanceTol="1.1"
+ZoltanParams="graph"
+ZoltanPhgEdgeSizeThreshold="0.35"
+
+Reading deck file 'SPE11A.DATA'
+    0 Reading RUNSPEC  in SPE11A.DATA line 4
+    1 Reading DIMENS   in SPE11A.DATA line 6
+    2 Reading EQLDIMS  in SPE11A.DATA line 9
+    3 Reading TABDIMS  in SPE11A.DATA line 12
+    4 Reading WATER    in SPE11A.DATA line 15
+    5 Reading GAS      in SPE11A.DATA line 16
+    6 Reading CO2STORE in SPE11A.DATA line 17
+    7 Reading DISGASW  in SPE11A.DATA line 18
+    8 Reading VAPWAT   in SPE11A.DATA line 19
+    9 Reading DIFFUSE  in SPE11A.DATA line 20
+   10 Reading METRIC   in SPE11A.DATA line 22
+   11 Reading START    in SPE11A.DATA line 24
+   12 Reading UNIFOUT  in SPE11A.DATA line 27
+   13 Reading GRID     in SPE11A.DATA line 29
+   14 Reading INIT     in SPE11A.DATA line 31
+   15 Reading COORD    in /Users/macbookn/activopmwkspc/cpr/opm-tests/spe11pyopm/GRID.INC line 3
+   16 Reading ZCORN    in /Users/macbookn/activopmwkspc/cpr/opm-tests/spe11pyopm/GRID.INC line 5
+   17 Reading FLUXNUM  in /Users/macbookn/activopmwkspc/cpr/opm-tests/spe11pyopm/FLUXNUM.INC line 3
+   18 Reading DISPERC  in SPE11A.DATA line 39
+   19 Reading EQUALREG in SPE11A.DATA line 42
+   20 Reading BCCON    in SPE11A.DATA line 80
+   21 Reading PROPS    in SPE11A.DATA line 84
+   22 Reading SGWFN    in /Users/macbookn/activopmwkspc/cpr/opm-tests/spe11pyopm/TABLES.INC line 3
+   23 Reading DIFFAWAT in SPE11A.DATA line 89
+   24 Reading DIFFAGAS in SPE11A.DATA line 92
+   25 Reading THCO2MIX in SPE11A.DATA line 95
+   26 Reading REGIONS  in SPE11A.DATA line 98
+   27 Reading COPY     in SPE11A.DATA line 100
+   28 Reading FIPNUM   in /Users/macbookn/activopmwkspc/cpr/opm-tests/spe11pyopm/FIPNUM.INC line 3
+   29 Reading SOLUTION in SPE11A.DATA line 107
+   30 Reading EQUIL    in SPE11A.DATA line 109
+   31 Reading RPTRST   in SPE11A.DATA line 112
+   32 Reading RTEMPVD  in SPE11A.DATA line 115
+   33 Reading SUMMARY  in SPE11A.DATA line 119
+   34 Reading PERFORMA in SPE11A.DATA line 121
+   35 Reading FGMIP    in SPE11A.DATA line 122
+   36 Reading RGKTR    in SPE11A.DATA line 123
+   37 Reading RGKMO    in SPE11A.DATA line 125
+   38 Reading RGMDS    in SPE11A.DATA line 127
+   39 Reading BWPR     in SPE11A.DATA line 129
+   40 Reading SCHEDULE in SPE11A.DATA line 134
+   41 Reading RPTRST   in SPE11A.DATA line 136
+   42 Reading BCPROP   in SPE11A.DATA line 139
+   43 Reading SOURCE   in SPE11A.DATA line 143
+   44 Reading TSTEP    in SPE11A.DATA line 147
+
+The CO2 storage option is given. PVT properties from the Brine-CO2 system are used.
+See the OPM manual for details on the used models.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+2 fluid phases are active
+
+Processing dynamic information from
+SPE11A.DATA line 134
+Initializing report step 0/3 at 2025-01-01 0 DAYS line 134
+Processing keyword RPTRST at line 136
+Processing keyword BCPROP at line 139
+Processing keyword SOURCE at line 143
+Complete report step 1 (0.020833333333333332 DAYS) at 2025-01-01 (0 DAYS)
+
+Initializing report step 2/3 at 2025-01-01 (0 DAYS) line 147
+Complete report step 2 (0.020833333333333332 DAYS) at 2025-01-01 (0.020833333333333332 DAYS)
+
+Initializing report step 3/3 at 2025-01-01 (0.020833333333333332 DAYS) line 147
+Complete report step 3 (0.020833333333333332 DAYS) at 2025-01-01 (0.041666666666666664 DAYS)
+
+
+The CO2 storage option is given. PVT properties from the Brine-CO2 system are used.
+See the OPM manual for details on the used models.
+
+Processing grid
+Total number of active cells: 50866 / total pore volume: 0 RM3
+
+Load balancing distributes level 0 with 50866 active cells on 5 processes as follows:
+  rank   owned cells   overlap cells   total cells
+--------------------------------------------------
+     0         10401             292         10693
+     1          9814             322         10136
+     2         10291             203         10494
+     3         11020             339         11359
+     4          9340             291          9631
+--------------------------------------------------
+   sum         50866            1447         52313
+
+
+Load balancing distributed the wells as follows:
+  well name            ranks with perforated cells
+---------------------------------------------------
+
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "paroverilu0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ilu0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+NeuralCprPolicy: active (rule-based fallback)
+CO2STORE/CO2SOL is enabled.
+The surface density of CO2 is 1.868433 KG/M3.
+The surface density of brine is 998.107723 KG/M3.
+The surface densities are computed using the reference pressure (1.013 BARSA) and reference temperature (15.56 DEG C).
+
+Warning: Dispersion is activated in combination with VAPWAT/VAPOIL. 
+Water/oil is still allowed to vaporize, but dispersion in the gas phase is ignored.
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/3 at day 0/0.0625, date = 01-Jan-2025
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 0.0208333 days, at day 0/0.0208333, date = 01-Jan-2025
+Restart file written for report step 0/3, date = 01-Jan-2025 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 0.006875 days
+
+
+Starting time step 0, stepsize 0.006875 days, at day 0/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 0.00226875 days
+
+
+Starting time step 0, stepsize 0.00226875 days, at day 0/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0007486875000000001 days
+
+
+Starting time step 0, stepsize 0.000748688 days, at day 0/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0002470668750000001 days
+
+
+Starting time step 0, stepsize 0.000247067 days, at day 0/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 8.153206875000001e-05 days
+
+
+Starting time step 0, stepsize 8.15321e-05 days, at day 0/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 32 (0.2sec)
+
+Starting time step 1, stepsize 5.92961e-05 days, at day 8.15321e-05/0.0208333, date = 01-Jan-2025
+ Newton its=14, linearizations=15 (0.1sec), linear its= 31 (0.2sec)
+
+Starting time step 2, stepsize 3.38835e-05 days, at day 0.000140828/0.0208333, date = 01-Jan-2025
+ Newton its=12, linearizations=13 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 3, stepsize 2.2589e-05 days, at day 0.000174712/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 4, stepsize 3.16246e-05 days, at day 0.000197301/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 5, stepsize 3.16246e-05 days, at day 0.000228925/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 6, stepsize 2.81107e-05 days, at day 0.00026055/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 7, stepsize 3.9355e-05 days, at day 0.00028866/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 8, stepsize 3.9355e-05 days, at day 0.000328015/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 9, stepsize 3.9355e-05 days, at day 0.00036737/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 10, stepsize 3.9355e-05 days, at day 0.000406725/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 11, stepsize 3.9355e-05 days, at day 0.00044608/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 12, stepsize 3.9355e-05 days, at day 0.000485435/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 16 (0.1sec)
+
+Starting time step 13, stepsize 3.9355e-05 days, at day 0.00052479/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 18 (0.1sec)
+
+Starting time step 14, stepsize 3.9355e-05 days, at day 0.000564145/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 20 (0.1sec)
+
+Starting time step 15, stepsize 3.9355e-05 days, at day 0.0006035/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 16, stepsize 3.9355e-05 days, at day 0.000642855/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 17, stepsize 7.0839e-05 days, at day 0.00068221/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 30 (0.2sec)
+
+Starting time step 18, stepsize 5.15193e-05 days, at day 0.000753049/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 19, stepsize 5.15193e-05 days, at day 0.000804569/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 20, stepsize 5.15193e-05 days, at day 0.000856088/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 26 (0.1sec)
+
+Starting time step 21, stepsize 5.15193e-05 days, at day 0.000907607/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 22, stepsize 5.15193e-05 days, at day 0.000959127/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 23, stepsize 5.15193e-05 days, at day 0.00101065/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 26 (0.1sec)
+
+Starting time step 24, stepsize 5.15193e-05 days, at day 0.00106217/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 25, stepsize 5.15193e-05 days, at day 0.00111368/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 26, stepsize 5.15193e-05 days, at day 0.0011652/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 27, stepsize 9.27347e-05 days, at day 0.00121672/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 28, stepsize 0.000129829 days, at day 0.00130946/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 29, stepsize 9.44208e-05 days, at day 0.00143929/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 33 (0.1sec)
+
+Starting time step 30, stepsize 8.39296e-05 days, at day 0.00153371/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 31, stepsize 0.000151073 days, at day 0.00161764/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=20, linearizations=21 (0.1sec), linear its= 58 (0.3sec)
+
+Starting time step 32, stepsize 6.04293e-05 days, at day 0.00176871/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 21 (0.1sec)
+
+Starting time step 33, stepsize 0.000108773 days, at day 0.00182914/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 34, stepsize 7.91075e-05 days, at day 0.00193791/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 35, stepsize 5.75327e-05 days, at day 0.00201702/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 36, stepsize 4.1842e-05 days, at day 0.00207455/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 15 (0.1sec)
+
+Starting time step 37, stepsize 4.1842e-05 days, at day 0.00211639/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 20 (0.1sec)
+
+Starting time step 38, stepsize 4.1842e-05 days, at day 0.00215824/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 39, stepsize 0.000125526 days, at day 0.00220008/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 40, stepsize 8.36839e-05 days, at day 0.0023256/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 21 (0.1sec)
+
+Starting time step 41, stepsize 0.000117157 days, at day 0.00240929/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 33 (0.2sec)
+
+Starting time step 42, stepsize 7.20969e-05 days, at day 0.00252645/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 43, stepsize 0.000100936 days, at day 0.00259854/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 3.3308776521926635e-05 days
+
+
+Starting time step 43, stepsize 3.33088e-05 days, at day 0.00259854/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 44, stepsize 5.99558e-05 days, at day 0.00263185/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 23 (0.1sec)
+
+Starting time step 45, stepsize 3.99705e-05 days, at day 0.00269181/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 23 (0.1sec)
+
+Starting time step 46, stepsize 3.55294e-05 days, at day 0.00273178/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 47, stepsize 3.15817e-05 days, at day 0.00276731/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 48, stepsize 6.94796e-05 days, at day 0.00279889/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.292828136762665e-05 days
+
+
+Starting time step 48, stepsize 2.29283e-05 days, at day 0.00279889/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 49, stepsize 4.58566e-05 days, at day 0.00282182/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.5132665702633589e-05 days
+
+
+Starting time step 49, stepsize 1.51327e-05 days, at day 0.00282182/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 50, stepsize 3.02653e-05 days, at day 0.00283695/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 51, stepsize 6.65837e-05 days, at day 0.00286721/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=18, linearizations=19 (0.1sec), linear its= 49 (0.2sec)
+
+Starting time step 52, stepsize 2.95928e-05 days, at day 0.0029338/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.1sec)
+
+Starting time step 53, stepsize 4.14299e-05 days, at day 0.00296339/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 54, stepsize 0.00012429 days, at day 0.00300482/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.1015577120418084e-05 days
+
+
+Starting time step 54, stepsize 4.10156e-05 days, at day 0.00300482/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.3535140449737969e-05 days
+
+
+Starting time step 54, stepsize 1.35351e-05 days, at day 0.00300482/0.0208333, date = 01-Jan-2025
+ Newton its=12, linearizations=13 (0.1sec), linear its= 43 (0.2sec)
+
+Starting time step 55, stepsize 9.02343e-06 days, at day 0.00301836/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 56, stepsize 2.70703e-05 days, at day 0.00302738/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 57, stepsize 7.03827e-05 days, at day 0.00305445/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+ Newton its=20, linearizations=21 (0.1sec), linear its= 55 (0.4sec)
+
+Starting time step 58, stepsize 2.81531e-05 days, at day 0.00312483/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 11 (0.1sec)
+
+Starting time step 59, stepsize 7.3198e-05 days, at day 0.00315299/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.415535305222037e-05 days
+
+
+Starting time step 59, stepsize 2.41554e-05 days, at day 0.00315299/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.971266507232722e-06 days
+
+
+Starting time step 59, stepsize 7.97127e-06 days, at day 0.00315299/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.6305179473867985e-06 days
+
+
+Starting time step 59, stepsize 2.63052e-06 days, at day 0.00315299/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 26 (0.1sec)
+
+Starting time step 60, stepsize 2.63052e-06 days, at day 0.00315562/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 61, stepsize 7.89155e-06 days, at day 0.00315825/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 11 (0.1sec)
+
+Starting time step 62, stepsize 2.36747e-05 days, at day 0.00316614/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 10 (0.1sec)
+
+Starting time step 63, stepsize 7.1024e-05 days, at day 0.00318981/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=14, linearizations=15 (0.1sec), linear its= 32 (0.2sec)
+
+Starting time step 64, stepsize 4.05851e-05 days, at day 0.00326084/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 65, stepsize 7.30532e-05 days, at day 0.00330142/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 66, stepsize 6.49362e-05 days, at day 0.00337448/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 67, stepsize 0.00014286 days, at day 0.00343941/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 32 (0.2sec)
+
+Starting time step 68, stepsize 9.52398e-05 days, at day 0.00358227/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 69, stepsize 7.61918e-05 days, at day 0.00367751/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.1sec)
+
+Starting time step 70, stepsize 0.000198099 days, at day 0.0037537/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+ Newton its=20, linearizations=21 (0.1sec), linear its= 57 (0.3sec)
+
+Starting time step 71, stepsize 7.92395e-05 days, at day 0.0039518/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 29 (0.2sec)
+
+Starting time step 72, stepsize 6.33916e-05 days, at day 0.00403104/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 73, stepsize 0.000114105 days, at day 0.00409443/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 22 (0.1sec)
+
+Starting time step 74, stepsize 0.000114105 days, at day 0.00420854/0.0208333, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 27 (0.1sec)
+
+Starting time step 75, stepsize 9.12839e-05 days, at day 0.00432264/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 76, stepsize 8.11412e-05 days, at day 0.00441393/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 27 (0.1sec)
+
+Starting time step 77, stepsize 7.21256e-05 days, at day 0.00449507/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 78, stepsize 0.000129826 days, at day 0.00456719/0.0208333, date = 01-Jan-2025
+ Newton its=14, linearizations=15 (0.1sec), linear its= 38 (0.2sec)
+
+Starting time step 79, stepsize 7.41863e-05 days, at day 0.00469702/0.0208333, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 35 (0.2sec)
+
+Starting time step 80, stepsize 5.9349e-05 days, at day 0.00477121/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 81, stepsize 0.000106828 days, at day 0.00483055/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 28 (0.2sec)
+
+Starting time step 82, stepsize 7.76933e-05 days, at day 0.00493738/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 37 (0.2sec)
+
+Starting time step 83, stepsize 4.78112e-05 days, at day 0.00501508/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 84, stepsize 6.69357e-05 days, at day 0.00506289/0.0208333, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 30 (0.2sec)
+
+Starting time step 85, stepsize 5.35486e-05 days, at day 0.00512982/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 86, stepsize 9.63875e-05 days, at day 0.00518337/0.0208333, date = 01-Jan-2025
+ Newton its=14, linearizations=15 (0.1sec), linear its= 40 (0.2sec)
+
+Starting time step 87, stepsize 5.50786e-05 days, at day 0.00527976/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 88, stepsize 4.00571e-05 days, at day 0.00533484/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 89, stepsize 8.81257e-05 days, at day 0.00537489/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 90, stepsize 5.87505e-05 days, at day 0.00546302/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 91, stepsize 0.000105751 days, at day 0.00552177/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 31 (0.2sec)
+
+Starting time step 92, stepsize 7.69097e-05 days, at day 0.00562752/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 93, stepsize 0.000138437 days, at day 0.00570443/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=16, linearizations=17 (0.1sec), linear its= 43 (0.2sec)
+
+Starting time step 94, stepsize 6.92187e-05 days, at day 0.00584287/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 95, stepsize 0.000124594 days, at day 0.00591209/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 96, stepsize 9.9675e-05 days, at day 0.00603668/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 24 (0.1sec)
+
+Starting time step 97, stepsize 7.974e-05 days, at day 0.00613636/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 19 (0.1sec)
+
+Starting time step 98, stepsize 7.088e-05 days, at day 0.0062161/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 22 (0.1sec)
+
+Starting time step 99, stepsize 6.30044e-05 days, at day 0.00628698/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 17 (0.1sec)
+
+Starting time step 100, stepsize 6.30044e-05 days, at day 0.00634998/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 101, stepsize 8.82062e-05 days, at day 0.00641298/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 102, stepsize 0.000158771 days, at day 0.00650119/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 103, stepsize 0.00014113 days, at day 0.00665996/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 35 (0.1sec)
+
+Starting time step 104, stepsize 0.000112904 days, at day 0.00680109/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 25 (0.1sec)
+
+Starting time step 105, stepsize 0.000112904 days, at day 0.006914/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 106, stepsize 0.000203227 days, at day 0.0070269/0.0208333, date = 01-Jan-2025
+ Newton its=12, linearizations=13 (0.1sec), linear its= 42 (0.2sec)
+
+Starting time step 107, stepsize 0.000135485 days, at day 0.00723013/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 108, stepsize 0.000243872 days, at day 0.00736561/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 42 (0.2sec)
+
+Starting time step 109, stepsize 0.000150075 days, at day 0.00760948/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 110, stepsize 0.000150075 days, at day 0.00775956/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 111, stepsize 0.000150075 days, at day 0.00790963/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 112, stepsize 0.000150075 days, at day 0.00805971/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 30 (0.1sec)
+
+Starting time step 113, stepsize 0.0001334 days, at day 0.00820979/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 114, stepsize 0.000240121 days, at day 0.00834319/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 58 (0.2sec)
+
+Starting time step 115, stepsize 0.000213441 days, at day 0.00858331/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 7.04353665669125e-05 days
+
+
+Starting time step 115, stepsize 7.04354e-05 days, at day 0.00858331/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 36 (0.2sec)
+
+Starting time step 116, stepsize 7.04354e-05 days, at day 0.00865374/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 117, stepsize 0.000126784 days, at day 0.00872418/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 44 (0.2sec)
+
+Starting time step 118, stepsize 0.000177497 days, at day 0.00885096/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.857405083704443e-05 days
+
+
+Starting time step 118, stepsize 5.85741e-05 days, at day 0.00885096/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=16, linearizations=17 (0.1sec), linear its= 87 (0.4sec)
+
+Starting time step 119, stepsize 2.9287e-05 days, at day 0.00890953/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 120, stepsize 7.61463e-05 days, at day 0.00893882/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 121, stepsize 0.00019798 days, at day 0.00901497/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.533349630363937e-05 days
+
+
+Starting time step 121, stepsize 6.53335e-05 days, at day 0.00901497/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.1560053780200993e-05 days
+
+
+Starting time step 121, stepsize 2.15601e-05 days, at day 0.00901497/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.114817747466327e-06 days
+
+
+Starting time step 121, stepsize 7.11482e-06 days, at day 0.00901497/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.3478898566638884e-06 days
+
+
+Starting time step 121, stepsize 2.34789e-06 days, at day 0.00901497/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 122, stepsize 3.28705e-06 days, at day 0.00901732/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 123, stepsize 9.86114e-06 days, at day 0.0090206/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 124, stepsize 2.95834e-05 days, at day 0.00903046/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 125, stepsize 8.87502e-05 days, at day 0.00906005/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.1sec), linear its= 92 (0.4sec)
+
+Starting time step 126, stepsize 3.55001e-05 days, at day 0.0091488/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 127, stepsize 0.0001065 days, at day 0.0091843/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 49 (0.2sec)
+
+Starting time step 128, stepsize 7.10002e-05 days, at day 0.0092908/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 37 (0.1sec)
+
+Starting time step 129, stepsize 0.0001562 days, at day 0.0093618/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.154613740676461e-05 days
+
+
+Starting time step 129, stepsize 5.15461e-05 days, at day 0.0093618/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.701022534423232e-05 days
+
+
+Starting time step 129, stepsize 1.70102e-05 days, at day 0.0093618/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.613374363596666e-06 days
+
+
+Starting time step 129, stepsize 5.61337e-06 days, at day 0.0093618/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.8524135399868998e-06 days
+
+
+Starting time step 129, stepsize 1.85241e-06 days, at day 0.0093618/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 23 (0.1sec)
+
+Starting time step 130, stepsize 3.70483e-06 days, at day 0.00936365/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 131, stepsize 1.11145e-05 days, at day 0.00936736/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 132, stepsize 3.33434e-05 days, at day 0.00937847/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 21 (0.1sec)
+
+Starting time step 133, stepsize 8.6693e-05 days, at day 0.00941181/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 39 (0.2sec)
+
+Starting time step 134, stepsize 0.000156047 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.1495614480803826e-05 days
+
+
+Starting time step 134, stepsize 5.14956e-05 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.6993552778665264e-05 days
+
+
+Starting time step 134, stepsize 1.69936e-05 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.607872416959537e-06 days
+
+
+Starting time step 134, stepsize 5.60787e-06 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.850597897596647e-06 days
+
+
+Starting time step 134, stepsize 1.8506e-06 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.106973062068936e-07 days
+
+
+Starting time step 134, stepsize 6.10697e-07 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.0153011104827488e-07 days
+
+
+Starting time step 134, stepsize 2.0153e-07 days, at day 0.00949851/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 135, stepsize 4.0306e-07 days, at day 0.00949871/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 136, stepsize 1.20918e-06 days, at day 0.00949911/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.1sec)
+
+Starting time step 137, stepsize 3.62754e-06 days, at day 0.00950032/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 138, stepsize 1.08826e-05 days, at day 0.00950395/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 139, stepsize 3.26479e-05 days, at day 0.00951483/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 140, stepsize 9.79436e-05 days, at day 0.00954748/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 40 (0.1sec)
+
+Starting time step 141, stepsize 0.000137121 days, at day 0.00964542/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=20, linearizations=21 (0.1sec), linear its=109 (0.4sec)
+
+Starting time step 142, stepsize 5.48484e-05 days, at day 0.00978254/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 1.8099983557556503e-05 days
+
+
+Starting time step 142, stepsize 1.81e-05 days, at day 0.00978254/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 34 (0.2sec)
+
+Starting time step 143, stepsize 1.60889e-05 days, at day 0.00980064/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.1sec)
+
+Starting time step 144, stepsize 4.82666e-05 days, at day 0.00981673/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 43 (0.2sec)
+
+Starting time step 145, stepsize 2.97025e-05 days, at day 0.009865/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 146, stepsize 8.91076e-05 days, at day 0.0098947/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=20, linearizations=21 (0.2sec), linear its= 64 (0.8sec)
+
+Starting time step 147, stepsize 3.5643e-05 days, at day 0.00998381/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.1sec), linear its= 21 (0.2sec)
+
+Starting time step 148, stepsize 7.84147e-05 days, at day 0.0100195/0.0208333, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 34 (0.3sec)
+
+Starting time step 149, stepsize 6.9702e-05 days, at day 0.0100979/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 28 (0.2sec)
+
+Starting time step 150, stepsize 6.9702e-05 days, at day 0.0101676/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=18, linearizations=19 (0.2sec), linear its= 43 (0.5sec)
+
+Starting time step 151, stepsize 3.09786e-05 days, at day 0.0102373/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 152, stepsize 9.29359e-05 days, at day 0.0102682/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=16, linearizations=17 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 153, stepsize 4.6468e-05 days, at day 0.0103612/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 154, stepsize 8.36423e-05 days, at day 0.0104077/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 155, stepsize 8.36423e-05 days, at day 0.0104913/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 156, stepsize 0.000150556 days, at day 0.0105749/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=17, linearizations=18 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 157, stepsize 7.085e-05 days, at day 0.0107255/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 158, stepsize 0.00012753 days, at day 0.0107963/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 38 (0.2sec)
+
+Starting time step 159, stepsize 9.27491e-05 days, at day 0.0109239/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=14, linearizations=15 (0.1sec), linear its= 37 (0.2sec)
+
+Starting time step 160, stepsize 5.29995e-05 days, at day 0.0110166/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 161, stepsize 0.000116599 days, at day 0.0110696/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 162, stepsize 0.000116599 days, at day 0.0111862/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 163, stepsize 0.000209878 days, at day 0.0113028/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 58 (0.2sec)
+
+Starting time step 164, stepsize 0.000152638 days, at day 0.0115127/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 28 (0.1sec)
+
+Starting time step 165, stepsize 0.000274749 days, at day 0.0116653/0.0208333, date = 01-Jan-2025
+ Newton its=14, linearizations=15 (0.1sec), linear its= 62 (0.3sec)
+
+Starting time step 166, stepsize 0.000157 days, at day 0.0119401/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 44 (0.2sec)
+
+Starting time step 167, stepsize 0.000157 days, at day 0.0120971/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 45 (0.2sec)
+
+Starting time step 168, stepsize 0.0001256 days, at day 0.0122541/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 45 (0.2sec)
+
+Starting time step 169, stepsize 0.00010048 days, at day 0.0123797/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 170, stepsize 0.000180864 days, at day 0.0124802/0.0208333, date = 01-Jan-2025
+ Newton its=13, linearizations=14 (0.1sec), linear its= 65 (0.2sec)
+
+Starting time step 171, stepsize 0.000111301 days, at day 0.012661/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 41 (0.2sec)
+
+Starting time step 172, stepsize 0.000155821 days, at day 0.0127723/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 173, stepsize 0.000218149 days, at day 0.0129281/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.198924120023947e-05 days
+
+
+Starting time step 173, stepsize 7.19892e-05 days, at day 0.0129281/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.3756449596079026e-05 days
+
+
+Starting time step 173, stepsize 2.37564e-05 days, at day 0.0129281/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.839628366706079e-06 days
+
+
+Starting time step 173, stepsize 7.83963e-06 days, at day 0.0129281/0.0208333, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00501596 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.5870773610130063e-06 days
+
+
+Starting time step 173, stepsize 2.58708e-06 days, at day 0.0129281/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 174, stepsize 4.65674e-06 days, at day 0.0129307/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 175, stepsize 1.39702e-05 days, at day 0.0129354/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 176, stepsize 4.19107e-05 days, at day 0.0129494/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 19 (0.1sec)
+
+Starting time step 177, stepsize 9.22034e-05 days, at day 0.0129913/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 41 (0.2sec)
+
+Starting time step 178, stepsize 0.000129085 days, at day 0.0130835/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 28 (0.1sec)
+
+Starting time step 179, stepsize 0.000180719 days, at day 0.0132126/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 71 (0.3sec)
+
+Starting time step 180, stepsize 0.000131432 days, at day 0.0133933/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 43 (0.2sec)
+
+Starting time step 181, stepsize 0.000131432 days, at day 0.0135247/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=17, linearizations=18 (0.1sec), linear its=101 (0.4sec)
+
+Starting time step 182, stepsize 6.18503e-05 days, at day 0.0136561/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 28 (0.1sec)
+
+Starting time step 183, stepsize 0.000136071 days, at day 0.013718/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 40 (0.2sec)
+
+Starting time step 184, stepsize 0.000136071 days, at day 0.0138541/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 73 (0.3sec)
+
+Starting time step 185, stepsize 8.37357e-05 days, at day 0.0139901/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 186, stepsize 0.000150724 days, at day 0.0140739/0.0208333, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 56 (0.2sec)
+
+Starting time step 187, stepsize 0.000120579 days, at day 0.0142246/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 3.979122388248616e-05 days
+
+
+Starting time step 187, stepsize 3.97912e-05 days, at day 0.0142246/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 188, stepsize 7.95824e-05 days, at day 0.0142644/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 63 (0.3sec)
+
+Starting time step 189, stepsize 5.3055e-05 days, at day 0.014344/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 41 (0.2sec)
+
+Starting time step 190, stepsize 4.2444e-05 days, at day 0.014397/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 191, stepsize 9.33767e-05 days, at day 0.0144395/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 192, stepsize 6.79104e-05 days, at day 0.0145328/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 193, stepsize 0.000122239 days, at day 0.0146008/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.0338751123109165e-05 days
+
+
+Starting time step 193, stepsize 4.03388e-05 days, at day 0.0146008/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 194, stepsize 8.06775e-05 days, at day 0.0146411/0.0208333, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00829099 after 20 iterations 
+ Newton its= 9, linearizations=10 (0.1sec), linear its=115 (0.5sec)
+
+Starting time step 195, stepsize 7.17133e-05 days, at day 0.0147218/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 63 (0.3sec)
+
+Starting time step 196, stepsize 6.37452e-05 days, at day 0.0147935/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 28 (0.1sec)
+
+Starting time step 197, stepsize 8.92433e-05 days, at day 0.0148572/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 198, stepsize 8.92433e-05 days, at day 0.0149465/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 199, stepsize 0.000124941 days, at day 0.0150357/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 38 (0.2sec)
+
+Starting time step 200, stepsize 9.99525e-05 days, at day 0.0151607/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 201, stepsize 0.000179914 days, at day 0.0152606/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 5.9371757173025015e-05 days
+
+
+Starting time step 201, stepsize 5.93718e-05 days, at day 0.0152606/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 202, stepsize 0.000106869 days, at day 0.01532/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 203, stepsize 0.000149617 days, at day 0.0154269/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+ Newton its=20, linearizations=21 (0.1sec), linear its= 57 (0.3sec)
+
+Starting time step 204, stepsize 5.98467e-05 days, at day 0.0155765/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 205, stepsize 0.000107724 days, at day 0.0156363/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 206, stepsize 0.000236993 days, at day 0.015744/0.0208333, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 57 (0.2sec)
+
+Starting time step 207, stepsize 0.000172359 days, at day 0.015981/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 208, stepsize 0.000172359 days, at day 0.0161534/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 37 (0.2sec)
+
+Starting time step 209, stepsize 0.000137887 days, at day 0.0163257/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 41 (0.2sec)
+
+Starting time step 210, stepsize 0.000110309 days, at day 0.0164636/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 37 (0.1sec)
+
+Starting time step 211, stepsize 0.000242681 days, at day 0.0165739/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=15, linearizations=16 (0.1sec), linear its= 52 (0.2sec)
+
+Starting time step 212, stepsize 0.00012943 days, at day 0.0168166/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 213, stepsize 0.000232974 days, at day 0.0169461/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 7.688130563791137e-05 days
+
+
+Starting time step 213, stepsize 7.68813e-05 days, at day 0.0169461/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.5370830860510752e-05 days
+
+
+Starting time step 213, stepsize 2.53708e-05 days, at day 0.0169461/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.37237418396855e-06 days
+
+
+Starting time step 213, stepsize 8.37237e-06 days, at day 0.0169461/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.7628834807096214e-06 days
+
+
+Starting time step 213, stepsize 2.76288e-06 days, at day 0.0169461/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 27 (0.1sec)
+
+Starting time step 214, stepsize 2.76288e-06 days, at day 0.0169488/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 215, stepsize 8.28865e-06 days, at day 0.0169516/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 216, stepsize 2.4866e-05 days, at day 0.0169599/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 217, stepsize 7.45979e-05 days, at day 0.0169847/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 36 (0.1sec)
+
+Starting time step 218, stepsize 7.45979e-05 days, at day 0.0170593/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 37 (0.1sec)
+
+Starting time step 219, stepsize 0.000164115 days, at day 0.0171339/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.1sec), linear its= 46 (0.2sec)
+
+Starting time step 220, stepsize 8.75281e-05 days, at day 0.017298/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 221, stepsize 8.75281e-05 days, at day 0.0173856/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 34 (0.1sec)
+
+Starting time step 222, stepsize 0.000122539 days, at day 0.0174731/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 46 (0.2sec)
+
+Starting time step 223, stepsize 7.54089e-05 days, at day 0.0175956/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 33 (0.1sec)
+
+Starting time step 224, stepsize 0.000105572 days, at day 0.0176711/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 225, stepsize 9.38421e-05 days, at day 0.0177766/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 33 (0.1sec)
+
+Starting time step 226, stepsize 0.000168916 days, at day 0.0178705/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 227, stepsize 0.000103948 days, at day 0.0180394/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 37 (0.1sec)
+
+Starting time step 228, stepsize 0.000145528 days, at day 0.0181433/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 49 (0.2sec)
+
+Starting time step 229, stepsize 0.000145528 days, at day 0.0182889/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 41 (0.2sec)
+
+Starting time step 230, stepsize 0.000105838 days, at day 0.0184344/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 33 (0.1sec)
+
+Starting time step 231, stepsize 0.000190509 days, at day 0.0185402/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=17, linearizations=18 (0.1sec), linear its= 84 (0.3sec)
+
+Starting time step 232, stepsize 8.96512e-05 days, at day 0.0187307/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 36 (0.1sec)
+
+Starting time step 233, stepsize 8.96512e-05 days, at day 0.0188204/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 38 (0.1sec)
+
+Starting time step 234, stepsize 0.000197233 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.508675130339625e-05 days
+
+
+Starting time step 234, stepsize 6.50868e-05 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.1478627930120762e-05 days
+
+
+Starting time step 234, stepsize 2.14786e-05 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.087947216939851e-06 days
+
+
+Starting time step 234, stepsize 7.08795e-06 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.339022581590151e-06 days
+
+
+Starting time step 234, stepsize 2.33902e-06 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.718774519247499e-07 days
+
+
+Starting time step 234, stepsize 7.71877e-07 days, at day 0.01891/0.0208333, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 235, stepsize 7.71877e-07 days, at day 0.0189108/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 236, stepsize 2.31563e-06 days, at day 0.0189116/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 237, stepsize 6.9469e-06 days, at day 0.0189139/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 238, stepsize 2.08407e-05 days, at day 0.0189208/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 239, stepsize 6.25221e-05 days, at day 0.0189417/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 240, stepsize 0.000162557 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.3643939153866276e-05 days
+
+
+Starting time step 240, stepsize 5.36439e-05 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.7702499920775872e-05 days
+
+
+Starting time step 240, stepsize 1.77025e-05 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.841824973856039e-06 days
+
+
+Starting time step 240, stepsize 5.84182e-06 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.927802241372493e-06 days
+
+
+Starting time step 240, stepsize 1.9278e-06 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.361747396529226e-07 days
+
+
+Starting time step 240, stepsize 6.36175e-07 days, at day 0.0190042/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 43 (0.2sec)
+
+Starting time step 241, stepsize 1.14511e-06 days, at day 0.0190048/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 242, stepsize 3.43534e-06 days, at day 0.019006/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 243, stepsize 1.0306e-05 days, at day 0.0190094/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 244, stepsize 3.09181e-05 days, at day 0.0190197/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 42 (0.2sec)
+
+Starting time step 245, stepsize 6.80198e-05 days, at day 0.0190506/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 76 (0.3sec)
+
+Starting time step 246, stepsize 0.000122436 days, at day 0.0191187/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.040376307923215e-05 days
+
+
+Starting time step 246, stepsize 4.04038e-05 days, at day 0.0191187/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.333324181614661e-05 days
+
+
+Starting time step 246, stepsize 1.33332e-05 days, at day 0.0191187/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 247, stepsize 2.66665e-05 days, at day 0.019132/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 53 (0.2sec)
+
+Starting time step 248, stepsize 5.86663e-05 days, at day 0.0191587/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.9359867117044883e-05 days
+
+
+Starting time step 248, stepsize 1.93599e-05 days, at day 0.0191587/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 23 (0.1sec)
+
+Starting time step 249, stepsize 3.87197e-05 days, at day 0.019178/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 61 (0.2sec)
+
+Starting time step 250, stepsize 0.000100671 days, at day 0.0192167/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.322153197284902e-05 days
+
+
+Starting time step 250, stepsize 3.32215e-05 days, at day 0.0192167/0.0208333, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00519169 after 20 iterations 
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 39 (0.1sec)
+
+Starting time step 251, stepsize 6.64431e-05 days, at day 0.01925/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.1926211102080356e-05 days
+
+
+Starting time step 251, stepsize 2.19262e-05 days, at day 0.01925/0.0208333, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00726238 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.235649663686518e-06 days
+
+
+Starting time step 251, stepsize 7.23565e-06 days, at day 0.01925/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 252, stepsize 1.44713e-05 days, at day 0.0192572/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 253, stepsize 4.34139e-05 days, at day 0.0192717/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 254, stepsize 0.000130242 days, at day 0.0193151/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 76 (0.3sec)
+
+Starting time step 255, stepsize 0.00011577 days, at day 0.0194453/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 86 (0.3sec)
+
+Starting time step 256, stepsize 0.00011577 days, at day 0.0195611/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 76 (0.3sec)
+
+Starting time step 257, stepsize 0.000102907 days, at day 0.0196769/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 258, stepsize 0.000267558 days, at day 0.0197798/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 8.829422096274537e-05 days
+
+
+Starting time step 258, stepsize 8.82942e-05 days, at day 0.0197798/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 259, stepsize 0.00015893 days, at day 0.0198681/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 5.2446767251870746e-05 days
+
+
+Starting time step 259, stepsize 5.24468e-05 days, at day 0.0198681/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 260, stepsize 0.000104894 days, at day 0.0199205/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 45 (0.2sec)
+
+Starting time step 261, stepsize 6.9929e-05 days, at day 0.0200254/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 262, stepsize 6.9929e-05 days, at day 0.0200953/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 263, stepsize 9.79006e-05 days, at day 0.0201653/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 264, stepsize 0.000176221 days, at day 0.0202632/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.815297552887428e-05 days
+
+
+Starting time step 264, stepsize 5.8153e-05 days, at day 0.0202632/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.9190481924528513e-05 days
+
+
+Starting time step 264, stepsize 1.91905e-05 days, at day 0.0202632/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.33285903509441e-06 days
+
+
+Starting time step 264, stepsize 6.33286e-06 days, at day 0.0202632/0.0208333, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.0898434815811556e-06 days
+
+
+Starting time step 264, stepsize 2.08984e-06 days, at day 0.0202632/0.0208333, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 265, stepsize 2.92578e-06 days, at day 0.0202653/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 266, stepsize 8.77734e-06 days, at day 0.0202682/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 267, stepsize 2.6332e-05 days, at day 0.020277/0.0208333, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 268, stepsize 7.89961e-05 days, at day 0.0203033/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 29 (0.1sec)
+
+Starting time step 269, stepsize 5.74517e-05 days, at day 0.0203823/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 270, stepsize 5.74517e-05 days, at day 0.0204397/0.0208333, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 271, stepsize 0.000103413 days, at day 0.0204972/0.0208333, date = 01-Jan-2025
+ Newton its=20, linearizations=21 (0.1sec), linear its= 70 (0.3sec)
+
+Starting time step 272, stepsize 4.13652e-05 days, at day 0.0206006/0.0208333, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 16 (0.1sec)
+
+Starting time step 273, stepsize 0.00010755 days, at day 0.020642/0.0208333, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+ Newton its=19, linearizations=20 (0.1sec), linear its= 83 (0.4sec)
+
+Starting time step 274, stepsize 4.5284e-05 days, at day 0.0207495/0.0208333, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 275, stepsize 3.85282e-05 days, at day 0.0207948/0.0208333, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 15 (0.1sec)
+
+
+Report step  1/3 at day 0.0208333/0.0625, date = 01-Jan-2025
+
+Starting time step 0, stepsize 0.000115585 days, at day 0.0208333/0.0416667, date = 01-Jan-2025
+Restart file written for report step 1/3, date = 01-Jan-2025 00:30:00
+ Newton its=10, linearizations=11 (0.1sec), linear its= 38 (0.2sec)
+
+Starting time step 1, stepsize 9.24677e-05 days, at day 0.0209489/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 33 (0.1sec)
+
+Starting time step 2, stepsize 0.000129455 days, at day 0.0210414/0.0416667, date = 01-Jan-2025
+ Newton its=16, linearizations=17 (0.1sec), linear its= 70 (0.3sec)
+
+Starting time step 3, stepsize 6.47274e-05 days, at day 0.0211708/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 4, stepsize 0.000116509 days, at day 0.0212356/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 34 (0.2sec)
+
+Starting time step 5, stepsize 8.4734e-05 days, at day 0.0213521/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 6, stepsize 0.000220309 days, at day 0.0214368/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=14, linearizations=15 (0.1sec), linear its= 45 (0.2sec)
+
+Starting time step 7, stepsize 0.000125891 days, at day 0.0216571/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 20 (0.1sec)
+
+Starting time step 8, stepsize 0.000327316 days, at day 0.021783/0.0416667, date = 01-Jan-2025
+ Newton its=15, linearizations=16 (0.1sec), linear its= 64 (0.3sec)
+
+Starting time step 9, stepsize 0.000174568 days, at day 0.0221103/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=14, linearizations=15 (0.1sec), linear its= 65 (0.3sec)
+
+Starting time step 10, stepsize 9.97533e-05 days, at day 0.0222849/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 11, stepsize 0.00029926 days, at day 0.0223846/0.0416667, date = 01-Jan-2025
+ Newton its=15, linearizations=16 (0.1sec), linear its= 68 (0.3sec)
+
+Starting time step 12, stepsize 0.000159605 days, at day 0.0226839/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 13, stepsize 0.000127684 days, at day 0.0228435/0.0416667, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 49 (0.2sec)
+
+Starting time step 14, stepsize 0.000102147 days, at day 0.0229712/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 39 (0.2sec)
+
+Starting time step 15, stepsize 0.000143006 days, at day 0.0230733/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 16, stepsize 0.000127117 days, at day 0.0232164/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 34 (0.1sec)
+
+Starting time step 17, stepsize 0.00022881 days, at day 0.0233435/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+ Newton its=19, linearizations=20 (0.1sec), linear its= 81 (0.4sec)
+
+Starting time step 18, stepsize 9.63411e-05 days, at day 0.0235723/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 35 (0.1sec)
+
+Starting time step 19, stepsize 0.000134878 days, at day 0.0236686/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 20, stepsize 0.000296731 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.792110102358724e-05 days
+
+
+Starting time step 20, stepsize 9.79211e-05 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00537775 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.231396333778379e-05 days
+
+
+Starting time step 20, stepsize 3.2314e-05 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.0663607901468651e-05 days
+
+
+Starting time step 20, stepsize 1.06636e-05 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.5189906074846553e-06 days
+
+
+Starting time step 20, stepsize 3.51899e-06 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00580538 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.1612669004699362e-06 days
+
+
+Starting time step 20, stepsize 1.16127e-06 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.8321807715507895e-07 days
+
+
+Starting time step 20, stepsize 3.83218e-07 days, at day 0.0238035/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 21, stepsize 7.66436e-07 days, at day 0.0238039/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 22, stepsize 2.29931e-06 days, at day 0.0238046/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 12 (0.1sec)
+
+Starting time step 23, stepsize 6.89793e-06 days, at day 0.0238069/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 14 (0.1sec)
+
+Starting time step 24, stepsize 2.06938e-05 days, at day 0.0238138/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 25, stepsize 6.20813e-05 days, at day 0.0238345/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 26, stepsize 0.000136579 days, at day 0.0238966/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 40 (0.2sec)
+
+Starting time step 27, stepsize 0.000109263 days, at day 0.0240332/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 33 (0.1sec)
+
+Starting time step 28, stepsize 0.000152968 days, at day 0.0241425/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 67 (0.2sec)
+
+Starting time step 29, stepsize 0.000152968 days, at day 0.0242954/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 30, stepsize 0.000214156 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00634846 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.067139776088944e-05 days
+
+
+Starting time step 30, stepsize 7.06714e-05 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.3321561261093515e-05 days
+
+
+Starting time step 30, stepsize 2.33216e-05 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.696115216160862e-06 days
+
+
+Starting time step 30, stepsize 7.69612e-06 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.5397180213330843e-06 days
+
+
+Starting time step 30, stepsize 2.53972e-06 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.381069470399179e-07 days
+
+
+Starting time step 30, stepsize 8.38107e-07 days, at day 0.0244484/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 46 (0.2sec)
+
+Starting time step 31, stepsize 8.38107e-07 days, at day 0.0244492/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 32, stepsize 2.51432e-06 days, at day 0.0244501/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 33, stepsize 7.54296e-06 days, at day 0.0244526/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 34, stepsize 2.26289e-05 days, at day 0.0244601/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 35, stepsize 4.0732e-05 days, at day 0.0244828/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 36, stepsize 8.96104e-05 days, at day 0.0245235/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 37, stepsize 0.000161299 days, at day 0.0246131/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 84 (0.3sec)
+
+Starting time step 38, stepsize 0.000107532 days, at day 0.0247744/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 44 (0.2sec)
+
+Starting time step 39, stepsize 0.000107532 days, at day 0.0248819/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 40, stepsize 0.000150545 days, at day 0.0249895/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+ Newton its=14, linearizations=15 (0.1sec), linear its= 63 (0.3sec)
+
+Starting time step 41, stepsize 8.6026e-05 days, at day 0.02514/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 33 (0.1sec)
+
+Starting time step 42, stepsize 0.000120436 days, at day 0.025226/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 43, stepsize 0.000168611 days, at day 0.0253465/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 53 (0.3sec)
+
+Starting time step 44, stepsize 0.000103761 days, at day 0.0255151/0.0416667, date = 01-Jan-2025
+ Newton its=12, linearizations=13 (0.1sec), linear its= 52 (0.3sec)
+
+Starting time step 45, stepsize 6.91737e-05 days, at day 0.0256188/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 32 (0.1sec)
+
+Starting time step 46, stepsize 9.68432e-05 days, at day 0.025688/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 44 (0.2sec)
+
+Starting time step 47, stepsize 0.000174318 days, at day 0.0257849/0.0416667, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 57 (0.2sec)
+
+Starting time step 48, stepsize 0.000126777 days, at day 0.0259592/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 4.1836259978797764e-05 days
+
+
+Starting time step 48, stepsize 4.18363e-05 days, at day 0.0259592/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 15 (0.1sec)
+
+Starting time step 49, stepsize 8.36725e-05 days, at day 0.026001/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 35 (0.2sec)
+
+Starting time step 50, stepsize 8.36725e-05 days, at day 0.0260847/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 51 (0.2sec)
+
+Starting time step 51, stepsize 0.00018408 days, at day 0.0261684/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.074624948921436e-05 days
+
+
+Starting time step 51, stepsize 6.07462e-05 days, at day 0.0261684/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 54 (0.2sec)
+
+Starting time step 52, stepsize 0.000121492 days, at day 0.0262291/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00945152 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00808543 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.0092524662881474e-05 days
+
+
+Starting time step 52, stepsize 4.00925e-05 days, at day 0.0262291/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 37 (0.1sec)
+
+Starting time step 53, stepsize 8.0185e-05 days, at day 0.0262692/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00750816 after 20 iterations 
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.6461066277501773e-05 days
+
+
+Starting time step 53, stepsize 2.64611e-05 days, at day 0.0262692/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.732151871575586e-06 days
+
+
+Starting time step 53, stepsize 8.73215e-06 days, at day 0.0262692/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.8816101176199437e-06 days
+
+
+Starting time step 53, stepsize 2.88161e-06 days, at day 0.0262692/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 28 (0.1sec)
+
+Starting time step 54, stepsize 5.76322e-06 days, at day 0.0262721/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.9018626776291627e-06 days
+
+
+Starting time step 54, stepsize 1.90186e-06 days, at day 0.0262721/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  9 (0.1sec)
+
+Starting time step 55, stepsize 3.80373e-06 days, at day 0.026274/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 56, stepsize 1.14112e-05 days, at day 0.0262778/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 57, stepsize 3.42335e-05 days, at day 0.0262892/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 23 (0.1sec)
+
+Starting time step 58, stepsize 7.53138e-05 days, at day 0.0263234/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.1sec), linear its= 45 (0.3sec)
+
+Starting time step 59, stepsize 0.000135565 days, at day 0.0263987/0.0416667, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 67 (0.3sec)
+
+Starting time step 60, stepsize 0.000120502 days, at day 0.0265343/0.0416667, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 55 (0.2sec)
+
+Starting time step 61, stepsize 0.000107113 days, at day 0.0266548/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 35 (0.1sec)
+
+Starting time step 62, stepsize 0.000149958 days, at day 0.0267619/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=10, linearizations=11 (0.1sec), linear its= 47 (0.2sec)
+
+Starting time step 63, stepsize 0.000119966 days, at day 0.0269119/0.0416667, date = 01-Jan-2025
+ Newton its=11, linearizations=12 (0.1sec), linear its= 48 (0.2sec)
+
+Starting time step 64, stepsize 8.72483e-05 days, at day 0.0270318/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 27 (0.1sec)
+
+Starting time step 65, stepsize 0.000122148 days, at day 0.0271191/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 4.03087287874533e-05 days
+
+
+Starting time step 65, stepsize 4.03087e-05 days, at day 0.0271191/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 21 (0.1sec)
+
+Starting time step 66, stepsize 8.06175e-05 days, at day 0.0271594/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 2.660376099971918e-05 days
+
+
+Starting time step 66, stepsize 2.66038e-05 days, at day 0.0271594/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 67, stepsize 5.32075e-05 days, at day 0.027186/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 23 (0.1sec)
+
+Starting time step 68, stepsize 0.000117057 days, at day 0.0272392/0.0416667, date = 01-Jan-2025
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 71 (0.3sec)
+
+Starting time step 69, stepsize 0.00010405 days, at day 0.0273563/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 63 (0.2sec)
+
+Starting time step 70, stepsize 0.00010405 days, at day 0.0274603/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 73 (0.2sec)
+
+Starting time step 71, stepsize 0.00010405 days, at day 0.0275644/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 47 (0.2sec)
+
+Starting time step 72, stepsize 0.00014567 days, at day 0.0276684/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 85 (0.3sec)
+
+Starting time step 73, stepsize 0.00014567 days, at day 0.0278141/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00589281 after 20 iterations 
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.807122254242591e-05 days
+
+
+Starting time step 73, stepsize 4.80712e-05 days, at day 0.0278141/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 62 (0.2sec)
+
+Starting time step 74, stepsize 9.61424e-05 days, at day 0.0278622/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 32 (0.1sec)
+
+Starting time step 75, stepsize 0.000211513 days, at day 0.0279583/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=16, linearizations=17 (0.1sec), linear its= 76 (0.3sec)
+
+Starting time step 76, stepsize 0.000105757 days, at day 0.0281698/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 77, stepsize 0.000190362 days, at day 0.0282756/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=12, linearizations=13 (0.1sec), linear its= 60 (0.3sec)
+
+Starting time step 78, stepsize 0.000126908 days, at day 0.0284659/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 79, stepsize 0.000329961 days, at day 0.0285928/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=19, linearizations=20 (0.1sec), linear its= 99 (0.4sec)
+
+Starting time step 80, stepsize 0.000138931 days, at day 0.0289228/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 40 (0.2sec)
+
+Starting time step 81, stepsize 0.000138931 days, at day 0.0290617/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 50 (0.2sec)
+
+Starting time step 82, stepsize 0.000123494 days, at day 0.0292007/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 54 (0.2sec)
+
+Starting time step 83, stepsize 0.000172892 days, at day 0.0293242/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 70 (0.3sec)
+
+Starting time step 84, stepsize 0.000125739 days, at day 0.0294971/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 85, stepsize 0.000276627 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.128685894208057e-05 days
+
+
+Starting time step 85, stepsize 9.12869e-05 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.012466345088659e-05 days
+
+
+Starting time step 85, stepsize 3.01247e-05 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.941138938792575e-06 days
+
+
+Starting time step 85, stepsize 9.94114e-06 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.2805758498015498e-06 days
+
+
+Starting time step 85, stepsize 3.28058e-06 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.0825900304345112e-06 days
+
+
+Starting time step 85, stepsize 1.08259e-06 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.5725471004338877e-07 days
+
+
+Starting time step 85, stepsize 3.57255e-07 days, at day 0.0296228/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 21 (0.1sec)
+
+Starting time step 86, stepsize 7.14509e-07 days, at day 0.0296232/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 87, stepsize 2.14353e-06 days, at day 0.0296239/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 88, stepsize 6.43058e-06 days, at day 0.029626/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 49 (0.2sec)
+
+Starting time step 89, stepsize 1.92918e-05 days, at day 0.0296324/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.366278932973188e-06 days
+
+
+Starting time step 89, stepsize 6.36628e-06 days, at day 0.0296324/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 32 (0.1sec)
+
+Starting time step 90, stepsize 1.27326e-05 days, at day 0.0296388/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.201744095762304e-06 days
+
+
+Starting time step 90, stepsize 4.20174e-06 days, at day 0.0296388/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 91, stepsize 8.40349e-06 days, at day 0.029643/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 38 (0.1sec)
+
+Starting time step 92, stepsize 2.52105e-05 days, at day 0.0296514/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.319453309609362e-06 days
+
+
+Starting time step 92, stepsize 8.31945e-06 days, at day 0.0296514/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.7454195921710896e-06 days
+
+
+Starting time step 92, stepsize 2.74542e-06 days, at day 0.0296514/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.059884654164596e-07 days
+
+
+Starting time step 92, stepsize 9.05988e-07 days, at day 0.0296514/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 93, stepsize 1.81198e-06 days, at day 0.0296523/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 94, stepsize 5.43593e-06 days, at day 0.0296541/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.0097878 after 20 iterations 
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 35 (0.1sec)
+
+Starting time step 95, stepsize 1.63078e-05 days, at day 0.0296596/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.38157148457377e-06 days
+
+
+Starting time step 95, stepsize 5.38157e-06 days, at day 0.0296596/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 96, stepsize 1.07631e-05 days, at day 0.0296649/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 97, stepsize 3.22894e-05 days, at day 0.0296757/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.0655511539456065e-05 days
+
+
+Starting time step 97, stepsize 1.06555e-05 days, at day 0.0296757/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 98, stepsize 2.1311e-05 days, at day 0.0296864/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 99, stepsize 6.39331e-05 days, at day 0.0297077/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 100, stepsize 0.000140653 days, at day 0.0297716/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.641540826587063e-05 days
+
+
+Starting time step 100, stepsize 4.64154e-05 days, at day 0.0297716/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 101, stepsize 9.28308e-05 days, at day 0.029818/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 49 (0.2sec)
+
+Starting time step 102, stepsize 0.000167095 days, at day 0.0299109/0.0416667, date = 01-Jan-2025
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 95 (0.3sec)
+
+Starting time step 103, stepsize 0.000167095 days, at day 0.030078/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 48 (0.2sec)
+
+Starting time step 104, stepsize 0.000102828 days, at day 0.030245/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 32 (0.1sec)
+
+Starting time step 105, stepsize 0.00018509 days, at day 0.0303479/0.0416667, date = 01-Jan-2025
+ Newton its=14, linearizations=15 (0.1sec), linear its= 71 (0.3sec)
+
+Starting time step 106, stepsize 0.000105766 days, at day 0.030533/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (0.1sec), linear its= 53 (0.2sec)
+
+Starting time step 107, stepsize 9.40142e-05 days, at day 0.0306387/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 45 (0.2sec)
+
+Starting time step 108, stepsize 0.00013162 days, at day 0.0307327/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.1sec), linear its= 57 (0.2sec)
+
+Starting time step 109, stepsize 0.00013162 days, at day 0.0308644/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 44 (0.2sec)
+
+Starting time step 110, stepsize 0.000184268 days, at day 0.030996/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.1sec), linear its= 56 (0.2sec)
+
+Starting time step 111, stepsize 0.000113396 days, at day 0.0311803/0.0416667, date = 01-Jan-2025
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 49 (0.2sec)
+
+Starting time step 112, stepsize 0.000158754 days, at day 0.0312937/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=16, linearizations=17 (0.1sec), linear its= 56 (0.3sec)
+
+Starting time step 113, stepsize 7.93769e-05 days, at day 0.0314524/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 114, stepsize 0.000174629 days, at day 0.0315318/0.0416667, date = 01-Jan-2025
+ Newton its=10, linearizations=11 (0.1sec), linear its= 56 (0.2sec)
+
+Starting time step 115, stepsize 0.000139703 days, at day 0.0317064/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 30 (0.1sec)
+
+Starting time step 116, stepsize 0.000307347 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 0.00010142459421114968 days
+
+
+Starting time step 116, stepsize 0.000101425 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.34701160896794e-05 days
+
+
+Starting time step 116, stepsize 3.34701e-05 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.1045138309594202e-05 days
+
+
+Starting time step 116, stepsize 1.10451e-05 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.6448956421660868e-06 days
+
+
+Starting time step 116, stepsize 3.6449e-06 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00560449 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 1.2028155619148087e-06 days
+
+
+Starting time step 116, stepsize 1.20282e-06 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.9692913543188683e-07 days
+
+
+Starting time step 116, stepsize 3.96929e-07 days, at day 0.0318461/0.0416667, date = 01-Jan-2025
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 117, stepsize 7.93858e-07 days, at day 0.0318465/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 118, stepsize 2.38157e-06 days, at day 0.0318473/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 119, stepsize 7.14472e-06 days, at day 0.0318497/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 120, stepsize 2.14342e-05 days, at day 0.0318568/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 121, stepsize 6.43025e-05 days, at day 0.0318783/0.0416667, date = 01-Jan-2025
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 17 (0.1sec)
+
+Starting time step 122, stepsize 0.000192908 days, at day 0.0319426/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.1sec), linear its= 71 (0.3sec)
+
+Starting time step 123, stepsize 0.000102884 days, at day 0.0321355/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 124, stepsize 0.000267498 days, at day 0.0322384/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.827449937358486e-05 days
+
+
+Starting time step 124, stepsize 8.82745e-05 days, at day 0.0322384/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.9130584793283006e-05 days
+
+
+Starting time step 124, stepsize 2.91306e-05 days, at day 0.0322384/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.613092981783393e-06 days
+
+
+Starting time step 124, stepsize 9.61309e-06 days, at day 0.0322384/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.1723206839885195e-06 days
+
+
+Starting time step 124, stepsize 3.17232e-06 days, at day 0.0322384/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 44 (0.2sec)
+
+Starting time step 125, stepsize 2.30714e-06 days, at day 0.0322415/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 126, stepsize 6.92143e-06 days, at day 0.0322438/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 127, stepsize 2.07643e-05 days, at day 0.0322508/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 39 (0.1sec)
+
+Starting time step 128, stepsize 5.39871e-05 days, at day 0.0322715/0.0416667, date = 01-Jan-2025
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 59 (0.2sec)
+
+Starting time step 129, stepsize 9.71768e-05 days, at day 0.0323255/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00818032 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.206835533030315e-05 days
+
+
+Starting time step 129, stepsize 3.20684e-05 days, at day 0.0323255/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00614162 after 20 iterations 
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 67 (0.2sec)
+
+Starting time step 130, stepsize 6.41367e-05 days, at day 0.0323576/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.1165114518000078e-05 days
+
+
+Starting time step 130, stepsize 2.11651e-05 days, at day 0.0323576/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 131, stepsize 4.23302e-05 days, at day 0.0323787/0.0416667, date = 01-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 132, stepsize 0.000126991 days, at day 0.0324211/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.190692674564016e-05 days
+
+
+Starting time step 132, stepsize 4.19069e-05 days, at day 0.0324211/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 40 (0.2sec)
+
+Starting time step 133, stepsize 5.86697e-05 days, at day 0.032463/0.0416667, date = 01-Jan-2025
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 18 (0.1sec)
+
+Starting time step 134, stepsize 0.000152541 days, at day 0.0325217/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (0.1sec), linear its= 58 (0.2sec)
+
+Starting time step 135, stepsize 0.000110939 days, at day 0.0326742/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 42 (0.2sec)
+
+Starting time step 136, stepsize 0.000244066 days, at day 0.0327851/0.0416667, date = 01-Jan-2025
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.054176065098075e-05 days
+
+
+Starting time step 136, stepsize 8.05418e-05 days, at day 0.0327851/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00993909 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.6578781014823644e-05 days
+
+
+Starting time step 136, stepsize 2.65788e-05 days, at day 0.0327851/0.0416667, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00779637 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.770997734891804e-06 days
+
+
+Starting time step 136, stepsize 8.771e-06 days, at day 0.0327851/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 2.894429252514295e-06 days
+
+
+Starting time step 136, stepsize 2.89443e-06 days, at day 0.0327851/0.0416667, date = 01-Jan-2025
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.551616533297174e-07 days
+
+
+Starting time step 136, stepsize 9.55162e-07 days, at day 0.0327851/0.0416667, date = 01-Jan-2025

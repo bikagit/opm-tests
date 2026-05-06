@@ -1,0 +1,3075 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.10-pre (04484abca)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.6.0, Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:29 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T6000 )
+Build time       =  2025-10-11 at 19:29:21 hrs
+User             =  root
+Simulation started on 13-11-2025 at 17:01:26 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="ClassicKillough-hystnew-output" # default: ""
+EclDeckFileName="CORE_Example.DATA" # default: ""
+EnableWriteAllSolutions="TRUE" # default: "0"
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+ActivateMLRelPErm="0"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="10"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'CORE_Example.DATA'
+    0 Reading RUNSPEC  in CORE_Example.DATA line 19
+    1 Reading TITLE    in CORE_Example.DATA line 22
+    2 Reading DIMENS   in CORE_Example.DATA line 25
+    3 Reading EQLDIMS  in CORE_Example.DATA line 30
+    4 Reading TABDIMS  in CORE_Example.DATA line 35
+    5 Reading OIL      in CORE_Example.DATA line 39
+    6 Reading WATER    in CORE_Example.DATA line 40
+    7 Reading METRIC   in CORE_Example.DATA line 43
+    8 Reading SATOPTS  in CORE_Example.DATA line 46
+    9 Reading START    in CORE_Example.DATA line 50
+   10 Reading WELLDIMS in CORE_Example.DATA line 53
+   11 Reading UNIFIN   in CORE_Example.DATA line 64
+   12 Reading UNIFOUT  in CORE_Example.DATA line 65
+   13 Reading GRID     in CORE_Example.DATA line 67
+   14 Reading INIT     in CORE_Example.DATA line 74
+   15 Reading NOECHO   in CORE_Example.DATA line 77
+   16 Reading DX       in CORE_Example.DATA line 79
+   17 Reading DY       in CORE_Example.DATA line 82
+   18 Reading DZ       in CORE_Example.DATA line 85
+   19 Reading TOPS     in CORE_Example.DATA line 89
+   20 Reading PORO     in CORE_Example.DATA line 93
+   21 Reading PERMX    in CORE_Example.DATA line 97
+   22 Reading PERMY    in CORE_Example.DATA line 101
+   23 Reading PERMZ    in CORE_Example.DATA line 105
+   24 Reading ECHO     in CORE_Example.DATA line 109
+   25 Reading PROPS    in CORE_Example.DATA line 111
+   26 Reading EHYSTR   in CORE_Example.DATA line 114
+   27 Reading PVTW     in CORE_Example.DATA line 117
+   28 Reading PVCDO    in CORE_Example.DATA line 130
+   29 Reading SWATINIT in CORE_Example.DATA line 143
+   30 Reading ROCK     in CORE_Example.DATA line 148
+   31 Reading SWOF     in CORE_Example.DATA line 155
+   32 Reading DENSITY  in CORE_Example.DATA line 316
+   33 Reading REGIONS  in CORE_Example.DATA line 338
+   34 Reading EQUALS   in CORE_Example.DATA line 341
+   35 Reading SOLUTION in CORE_Example.DATA line 346
+   36 Reading EQUIL    in CORE_Example.DATA line 349
+   37 Reading SUMMARY  in CORE_Example.DATA line 370
+   38 Reading FOPR     in CORE_Example.DATA line 374
+   39 Reading WBHP     in CORE_Example.DATA line 379
+   40 Reading WOIR     in CORE_Example.DATA line 385
+   41 Reading WOIT     in CORE_Example.DATA line 391
+   42 Reading WOPR     in CORE_Example.DATA line 395
+   43 Reading WOPT     in CORE_Example.DATA line 399
+   44 Reading WWIR     in CORE_Example.DATA line 403
+   45 Reading WWIT     in CORE_Example.DATA line 407
+   46 Reading WWPR     in CORE_Example.DATA line 411
+   47 Reading WWPT     in CORE_Example.DATA line 415
+   48 Reading SCHEDULE in CORE_Example.DATA line 419
+   49 Reading RPTSCHED in CORE_Example.DATA line 421
+   50 Reading RPTRST   in CORE_Example.DATA line 424
+   51 Reading WELSPECS in CORE_Example.DATA line 435
+   52 Reading COMPDAT  in CORE_Example.DATA line 447
+   53 Reading WCONPROD in CORE_Example.DATA line 460
+   54 Reading WCONINJE in CORE_Example.DATA line 470
+   55 Reading TSTEP    in CORE_Example.DATA line 480
+   56 Reading WELOPEN  in CORE_Example.DATA line 483
+   57 Reading TSTEP    in CORE_Example.DATA line 492
+   58 Reading WELOPEN  in CORE_Example.DATA line 494
+   59 Reading TSTEP    in CORE_Example.DATA line 503
+   60 Reading WELOPEN  in CORE_Example.DATA line 505
+   61 Reading TSTEP    in CORE_Example.DATA line 514
+   62 Reading WELOPEN  in CORE_Example.DATA line 516
+   63 Reading TSTEP    in CORE_Example.DATA line 525
+   64 Reading WELOPEN  in CORE_Example.DATA line 527
+   65 Reading TSTEP    in CORE_Example.DATA line 536
+   66 Reading WELOPEN  in CORE_Example.DATA line 538
+   67 Reading TSTEP    in CORE_Example.DATA line 546
+   68 Reading WELOPEN  in CORE_Example.DATA line 548
+   69 Reading TSTEP    in CORE_Example.DATA line 557
+   70 Reading WELOPEN  in CORE_Example.DATA line 559
+   71 Reading TSTEP    in CORE_Example.DATA line 568
+
+Warning: Unsupported keywords or keyword items:
+
+  NOECHO: keyword not supported
+  In file: CORE_Example.DATA, line 77
+
+  ECHO: keyword not supported
+  In file: CORE_Example.DATA, line 109
+
+Warning: The ALL CAPS case: CORE_EXAMPLE will be used when writing output files from this simulation.
+
+Creating grid from keywords DX, DY, DZ and TOPS
+2 fluid phases are active
+
+Processing dynamic information from
+CORE_Example.DATA line 419
+Initializing report step 0/9 at 2015-01-01 0 DAYS line 419
+Processing keyword RPTSCHED at line 421
+Processing keyword RPTRST at line 424
+Processing keyword WELSPECS at line 435
+Processing keyword COMPDAT at line 447
+Processing keyword WCONPROD at line 460
+Processing keyword WCONINJE at line 470
+Complete report step 1 (1 DAYS) at 2015-01-02 (0 DAYS)
+
+Initializing report step 2/9 at 2015-01-02 (0 DAYS) line 480
+Processing keyword WELOPEN at line 483
+Complete report step 2 (1 DAYS) at 2015-01-03 (1 DAYS)
+
+Initializing report step 3/9 at 2015-01-03 (1 DAYS) line 492
+Processing keyword WELOPEN at line 494
+Complete report step 3 (1 DAYS) at 2015-01-04 (2 DAYS)
+
+Initializing report step 4/9 at 2015-01-04 (2 DAYS) line 503
+Processing keyword WELOPEN at line 505
+Complete report step 4 (1 DAYS) at 2015-01-05 (3 DAYS)
+
+Initializing report step 5/9 at 2015-01-05 (3 DAYS) line 514
+Processing keyword WELOPEN at line 516
+Complete report step 5 (1 DAYS) at 2015-01-06 (4 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/9 at 2015-01-06 (4 DAYS) line 525
+Processing keyword WELOPEN at line 527
+Complete report step 6 (1 DAYS) at 2015-01-07 (5 DAYS)
+
+Initializing report step 7/9 at 2015-01-07 (5 DAYS) line 536
+Processing keyword WELOPEN at line 538
+Complete report step 7 (1 DAYS) at 2015-01-08 (6 DAYS)
+
+Initializing report step 8/9 at 2015-01-08 (6 DAYS) line 546
+Processing keyword WELOPEN at line 548
+Complete report step 8 (1 DAYS) at 2015-01-09 (7 DAYS)
+
+Initializing report step 9/9 at 2015-01-09 (7 DAYS) line 557
+Processing keyword WELOPEN at line 559
+Complete report step 9 (1 DAYS) at 2015-01-10 (8 DAYS)
+
+
+Processing grid
+Total number of active cells: 10 / total pore volume: 0 RM3
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System: Oil-Water system.
+Relative permeability input format: Saturation Family I.
+Number of saturation regions: 2
+
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/9 at day 0/9, date = 01-Jan-2015
+Using Newton nonlinear solver.
+Restart file written for report step 0/9, date = 01-Jan-2015 00:00:00
+
+Starting time step 0, stepsize 1 days, at day 0/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.33 days
+
+
+Starting time step 0, stepsize 0.33 days, at day 0/1, date = 01-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.10890000000000001 days
+
+
+Starting time step 0, stepsize 0.1089 days, at day 0/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 1, stepsize 0.2178 days, at day 0.1089/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 02:36:48
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.07187400000000001 days
+
+
+Starting time step 1, stepsize 0.071874 days, at day 0.1089/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 2, stepsize 0.143748 days, at day 0.180774/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 04:20:18
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=17, linearizations=18 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 3, stepsize 0.0676461 days, at day 0.324522/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 07:47:18
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0270584 days, at day 0.392168/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+Restart file written for report step 1/9, date = 01-Jan-2015 09:24:43
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 5, stepsize 0.0487052 days, at day 0.419227/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+Restart file written for report step 1/9, date = 01-Jan-2015 10:03:41
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 6, stepsize 0.126634 days, at day 0.467932/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 11:13:49
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04178906563764707 days
+
+
+Starting time step 6, stepsize 0.0417891 days, at day 0.467932/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 7, stepsize 0.0835781 days, at day 0.509721/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 12:13:59
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 8, stepsize 0.0334313 days, at day 0.593299/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 14:14:21
+
+Starting time step 9, stepsize 0.0869213 days, at day 0.62673/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 15:02:29
+
+Starting time step 10, stepsize 0.156458 days, at day 0.713651/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 17:07:39
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.05163122637662571 days
+
+
+Starting time step 10, stepsize 0.0516312 days, at day 0.713651/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.017038304704286487 days
+
+
+Starting time step 10, stepsize 0.0170383 days, at day 0.713651/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=10, linearizations=11 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 11, stepsize 0.0136306 days, at day 0.73069/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 17:32:11
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=18, linearizations=19 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 12, stepsize 0.00605806 days, at day 0.74432/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 17:51:49
+
+Starting time step 13, stepsize 0.0181742 days, at day 0.750378/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 18:00:32
+
+Starting time step 14, stepsize 0.0545226 days, at day 0.768553/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 18:26:42
+
+Starting time step 15, stepsize 0.021809 days, at day 0.823075/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+Restart file written for report step 1/9, date = 01-Jan-2015 19:45:13
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 16, stepsize 0.00872361 days, at day 0.844884/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 20:16:38
+
+Starting time step 17, stepsize 0.0261708 days, at day 0.853608/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 20:29:11
+
+Starting time step 18, stepsize 0.0471075 days, at day 0.879779/1, date = 01-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01554547659931572 days
+
+
+Starting time step 18, stepsize 0.0155455 days, at day 0.879779/1, date = 01-Jan-2015
+Restart file written for report step 1/9, date = 01-Jan-2015 21:06:52
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 19, stepsize 0.031091 days, at day 0.895324/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 21:29:16
+
+Starting time step 20, stepsize 0.0735848 days, at day 0.926415/1, date = 01-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 1/9, date = 01-Jan-2015 22:14:02
+
+                              **************************************************************************
+  WELLS    AT         1  DAYS *                   COREEXAMPLE                                          *
+  REPORT    1    02 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.540:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.540:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.540:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  1/9 at day 1/9, date = 02-Jan-2015
+
+Starting time step 0, stepsize 0.220755 days, at day 1/2, date = 02-Jan-2015
+Restart file written for report step 1/9, date = 02-Jan-2015 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.07284898930735394 days
+
+
+Starting time step 0, stepsize 0.072849 days, at day 1/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=16, linearizations=17 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 0.0364245 days, at day 1.07285/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0120200832357134 days
+
+
+Starting time step 1, stepsize 0.0120201 days, at day 1.07285/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 01:44:54
+
+Starting time step 2, stepsize 0.0240402 days, at day 1.08487/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 02:02:12
+
+Starting time step 3, stepsize 0.0432723 days, at day 1.10891/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 02:36:49
+
+Starting time step 4, stepsize 0.0951991 days, at day 1.15218/2, date = 02-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03141568954486054 days
+
+
+Starting time step 4, stepsize 0.0314157 days, at day 1.15218/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 03:39:08
+
+Starting time step 5, stepsize 0.0628314 days, at day 1.1836/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02073435509960796 days
+
+
+Starting time step 5, stepsize 0.0207344 days, at day 1.1836/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 04:24:22
+
+Starting time step 6, stepsize 0.0290281 days, at day 1.20433/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 04:54:14
+
+Starting time step 7, stepsize 0.0870843 days, at day 1.23336/2, date = 02-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.028737816168056634 days
+
+
+Starting time step 7, stepsize 0.0287378 days, at day 1.23336/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 05:36:02
+
+Starting time step 8, stepsize 0.0574756 days, at day 1.2621/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 06:17:25
+
+Starting time step 9, stepsize 0.149437 days, at day 1.31957/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=11, linearizations=12 (0.0sec), linear its= 10 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 07:40:11
+
+Starting time step 10, stepsize 0.108681 days, at day 1.46901/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 11:15:22
+
+Starting time step 11, stepsize 0.195626 days, at day 1.57769/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 13:51:52
+
+Starting time step 12, stepsize 0.226683 days, at day 1.77332/2, date = 02-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 2/9, date = 02-Jan-2015 18:33:34
+
+                              **************************************************************************
+  WELLS    AT         2  DAYS *                   COREEXAMPLE                                          *
+  REPORT    2    03 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.549:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.549:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.549:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  2/9 at day 2/9, date = 03-Jan-2015
+
+Starting time step 0, stepsize 0.589375 days, at day 2/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.19449391021860168 days
+
+
+Starting time step 0, stepsize 0.194494 days, at day 2/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.06418299037213855 days
+
+
+Starting time step 0, stepsize 0.064183 days, at day 2/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.021180386822805725 days
+
+
+Starting time step 0, stepsize 0.0211804 days, at day 2/3, date = 03-Jan-2015
+Restart file written for report step 2/9, date = 03-Jan-2015 00:00:00
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 1, stepsize 0.0423608 days, at day 2.02118/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 00:30:29
+
+Starting time step 2, stepsize 0.127082 days, at day 2.06354/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04193716590915534 days
+
+
+Starting time step 2, stepsize 0.0419372 days, at day 2.06354/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 01:31:29
+
+Starting time step 3, stepsize 0.0838743 days, at day 2.10548/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02767852950004253 days
+
+
+Starting time step 3, stepsize 0.0276785 days, at day 2.10548/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 02:31:53
+
+Starting time step 4, stepsize 0.0553571 days, at day 2.13316/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018267829470028068 days
+
+
+Starting time step 4, stepsize 0.0182678 days, at day 2.13316/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 03:11:44
+
+Starting time step 5, stepsize 0.0365357 days, at day 2.15142/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012056767450218525 days
+
+
+Starting time step 5, stepsize 0.0120568 days, at day 2.15142/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 03:38:03
+
+Starting time step 6, stepsize 0.0241135 days, at day 2.16348/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 03:55:24
+
+Starting time step 7, stepsize 0.0723406 days, at day 2.18759/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02387239955143268 days
+
+
+Starting time step 7, stepsize 0.0238724 days, at day 2.18759/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 04:30:08
+
+Starting time step 8, stepsize 0.0477448 days, at day 2.21147/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01575578370394557 days
+
+
+Starting time step 8, stepsize 0.0157558 days, at day 2.21147/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 05:04:30
+
+Starting time step 9, stepsize 0.0315116 days, at day 2.22722/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=16, linearizations=17 (0.0sec), linear its= 15 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 05:27:12
+
+Starting time step 10, stepsize 0.0157558 days, at day 2.25873/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 06:12:34
+
+Starting time step 11, stepsize 0.0472674 days, at day 2.27449/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015598225866906113 days
+
+
+Starting time step 11, stepsize 0.0155982 days, at day 2.27449/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 06:35:15
+
+Starting time step 12, stepsize 0.0311965 days, at day 2.29009/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=13, linearizations=14 (0.0sec), linear its= 11 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 06:57:43
+
+Starting time step 13, stepsize 0.0191978 days, at day 2.32129/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 07:42:39
+
+Starting time step 14, stepsize 0.0345561 days, at day 2.34048/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 08:10:17
+
+Starting time step 15, stepsize 0.0898458 days, at day 2.37504/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 18 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 09:00:03
+
+Starting time step 16, stepsize 0.0359383 days, at day 2.46488/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 11:09:26
+
+Starting time step 17, stepsize 0.0790643 days, at day 2.50082/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.026091214800477325 days
+
+
+Starting time step 17, stepsize 0.0260912 days, at day 2.50082/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 12:01:11
+
+Starting time step 18, stepsize 0.0521824 days, at day 2.52691/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.017220201768315034 days
+
+
+Starting time step 18, stepsize 0.0172202 days, at day 2.52691/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 12:38:45
+
+Starting time step 19, stepsize 0.0344404 days, at day 2.54413/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 13:03:33
+
+Starting time step 20, stepsize 0.0137762 days, at day 2.57857/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 13:53:08
+
+Starting time step 21, stepsize 0.0413285 days, at day 2.59235/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01363839980050551 days
+
+
+Starting time step 21, stepsize 0.0136384 days, at day 2.59235/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 14:12:59
+
+Starting time step 22, stepsize 0.0272768 days, at day 2.60599/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009001343868333638 days
+
+
+Starting time step 22, stepsize 0.00900134 days, at day 2.60599/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 14:32:37
+
+Starting time step 23, stepsize 0.0180027 days, at day 2.61499/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 14:45:35
+
+Starting time step 24, stepsize 0.0540081 days, at day 2.63299/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.017822660859300603 days
+
+
+Starting time step 24, stepsize 0.0178227 days, at day 2.63299/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005881478083569199 days
+
+
+Starting time step 24, stepsize 0.00588148 days, at day 2.63299/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 15:11:30
+
+Starting time step 25, stepsize 0.011763 days, at day 2.63888/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 15:19:58
+
+Starting time step 26, stepsize 0.0352889 days, at day 2.65064/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011645326605467014 days
+
+
+Starting time step 26, stepsize 0.0116453 days, at day 2.65064/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 15:36:55
+
+Starting time step 27, stepsize 0.0232907 days, at day 2.66228/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00768591555960823 days
+
+
+Starting time step 27, stepsize 0.00768592 days, at day 2.66228/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 15:53:41
+
+Starting time step 28, stepsize 0.0153718 days, at day 2.66997/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 16:04:45
+
+Starting time step 29, stepsize 0.033818 days, at day 2.68534/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 16:26:53
+
+Starting time step 30, stepsize 0.0879269 days, at day 2.71916/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 17:15:35
+
+Starting time step 31, stepsize 0.0351707 days, at day 2.80709/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 19:22:12
+
+Starting time step 32, stepsize 0.0788716 days, at day 2.84226/3, date = 03-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02602763597825821 days
+
+
+Starting time step 32, stepsize 0.0260276 days, at day 2.84226/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 20:12:50
+
+Starting time step 33, stepsize 0.0520553 days, at day 2.86828/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 20:50:19
+
+Starting time step 34, stepsize 0.0796603 days, at day 2.92034/3, date = 03-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02628791233804074 days
+
+
+Starting time step 34, stepsize 0.0262879 days, at day 2.92034/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 22:05:17
+
+Starting time step 35, stepsize 0.0533724 days, at day 2.94663/3, date = 03-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 3/9, date = 03-Jan-2015 22:43:08
+
+                              **************************************************************************
+  WELLS    AT         3  DAYS *                   COREEXAMPLE                                          *
+  REPORT    3    04 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  3/9 at day 3/9, date = 04-Jan-2015
+
+Starting time step 0, stepsize 0.0474422 days, at day 3/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015655912236877626 days
+
+
+Starting time step 0, stepsize 0.0156559 days, at day 3/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 3/9, date = 04-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.0139164 days, at day 3.01566/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 00:22:32
+
+Starting time step 2, stepsize 0.0361826 days, at day 3.02957/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 00:42:35
+
+Starting time step 3, stepsize 0.0940746 days, at day 3.06575/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.031044630238245878 days
+
+
+Starting time step 3, stepsize 0.0310446 days, at day 3.06575/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 01:34:41
+
+Starting time step 4, stepsize 0.0558803 days, at day 3.0968/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 02:19:23
+
+Starting time step 5, stepsize 0.100585 days, at day 3.15268/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 03:39:51
+
+Starting time step 6, stepsize 0.140818 days, at day 3.25326/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=17, linearizations=18 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 06:04:42
+
+Starting time step 7, stepsize 0.0662675 days, at day 3.39408/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02186827581695317 days
+
+
+Starting time step 7, stepsize 0.0218683 days, at day 3.39408/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=10, linearizations=11 (0.0sec), linear its= 10 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 09:27:28
+
+Starting time step 8, stepsize 0.0174946 days, at day 3.41595/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 09:58:58
+
+Starting time step 9, stepsize 0.0524839 days, at day 3.43345/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.017319674447026912 days
+
+
+Starting time step 9, stepsize 0.0173197 days, at day 3.43345/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 10:24:09
+
+Starting time step 10, stepsize 0.0346393 days, at day 3.45077/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 10:49:06
+
+Starting time step 11, stepsize 0.103918 days, at day 3.4854/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03429295540511329 days
+
+
+Starting time step 11, stepsize 0.034293 days, at day 3.4854/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 11:38:58
+
+Starting time step 12, stepsize 0.0617273 days, at day 3.5197/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 12:28:21
+
+Starting time step 13, stepsize 0.185182 days, at day 3.58143/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.061110046531911884 days
+
+
+Starting time step 13, stepsize 0.06111 days, at day 3.58143/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=11, linearizations=12 (0.0sec), linear its=  9 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 13:57:15
+
+Starting time step 14, stepsize 0.0444437 days, at day 3.64254/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014666411167658853 days
+
+
+Starting time step 14, stepsize 0.0146664 days, at day 3.64254/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 15:25:15
+
+Starting time step 15, stepsize 0.0293328 days, at day 3.6572/4, date = 04-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 15:46:22
+
+Starting time step 16, stepsize 0.0117331 days, at day 3.68653/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 16:28:36
+
+Starting time step 17, stepsize 0.0351994 days, at day 3.69827/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 16:45:30
+
+Starting time step 18, stepsize 0.105598 days, at day 3.73347/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 17:36:11
+
+Starting time step 19, stepsize 0.160935 days, at day 3.83906/4, date = 04-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.053108552666720786 days
+
+
+Starting time step 19, stepsize 0.0531086 days, at day 3.83906/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 20:08:15
+
+Starting time step 20, stepsize 0.107826 days, at day 3.89217/4, date = 04-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=16, linearizations=17 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 4/9, date = 04-Jan-2015 21:24:43
+
+                              **************************************************************************
+  WELLS    AT         4  DAYS *                   COREEXAMPLE                                          *
+  REPORT    4    05 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.531:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.531:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.531:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  4/9 at day 4/9, date = 05-Jan-2015
+
+Starting time step 0, stepsize 0.0539132 days, at day 4/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=13, linearizations=14 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 4/9, date = 05-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.0331774 days, at day 4.05391/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 01:17:38
+
+Starting time step 2, stepsize 0.0331774 days, at day 4.08709/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 02:05:24
+
+Starting time step 3, stepsize 0.0729902 days, at day 4.12027/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 02:53:11
+
+Starting time step 4, stepsize 0.189775 days, at day 4.19326/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0626256053045973 days
+
+
+Starting time step 4, stepsize 0.0626256 days, at day 4.19326/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.020666449750517114 days
+
+
+Starting time step 4, stepsize 0.0206664 days, at day 4.19326/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 04:38:17
+
+Starting time step 5, stepsize 0.0413329 days, at day 4.21392/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 05:08:03
+
+Starting time step 6, stepsize 0.0165332 days, at day 4.25526/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 06:07:34
+
+Starting time step 7, stepsize 0.036373 days, at day 4.27179/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 06:31:22
+
+Starting time step 8, stepsize 0.0800205 days, at day 4.30816/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02640676283322075 days
+
+
+Starting time step 8, stepsize 0.0264068 days, at day 4.30816/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 07:23:45
+
+Starting time step 9, stepsize 0.0528135 days, at day 4.33457/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 08:01:46
+
+Starting time step 10, stepsize 0.137315 days, at day 4.38738/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04531400502180681 days
+
+
+Starting time step 10, stepsize 0.045314 days, at day 4.38738/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014953621657196247 days
+
+
+Starting time step 10, stepsize 0.0149536 days, at day 4.38738/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 09:17:49
+
+Starting time step 11, stepsize 0.0299072 days, at day 4.40234/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=17, linearizations=18 (0.0sec), linear its= 10 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 09:39:21
+
+Starting time step 12, stepsize 0.014074 days, at day 4.43224/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 10:22:25
+
+Starting time step 13, stepsize 0.042222 days, at day 4.44632/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.013933256885293442 days
+
+
+Starting time step 13, stepsize 0.0139333 days, at day 4.44632/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 10:42:41
+
+Starting time step 14, stepsize 0.0278665 days, at day 4.46025/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.009195949544293673 days
+
+
+Starting time step 14, stepsize 0.00919595 days, at day 4.46025/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 11:02:45
+
+Starting time step 15, stepsize 0.0183919 days, at day 4.46945/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 11:16:00
+
+Starting time step 16, stepsize 0.0551757 days, at day 4.48784/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01820798009770147 days
+
+
+Starting time step 16, stepsize 0.018208 days, at day 4.48784/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 11:42:29
+
+Starting time step 17, stepsize 0.036416 days, at day 4.50605/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01201726686448297 days
+
+
+Starting time step 17, stepsize 0.0120173 days, at day 4.50605/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 12:08:42
+
+Starting time step 18, stepsize 0.0240345 days, at day 4.51807/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 12:26:00
+
+Starting time step 19, stepsize 0.0721036 days, at day 4.5421/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.023794188391676283 days
+
+
+Starting time step 19, stepsize 0.0237942 days, at day 4.5421/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 13:00:37
+
+Starting time step 20, stepsize 0.0475884 days, at day 4.56589/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 13:34:53
+
+Starting time step 21, stepsize 0.0666237 days, at day 4.61348/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 14:43:24
+
+Starting time step 22, stepsize 0.146572 days, at day 4.68011/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.048368826162599556 days
+
+
+Starting time step 22, stepsize 0.0483688 days, at day 4.68011/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015961712633657855 days
+
+
+Starting time step 22, stepsize 0.0159617 days, at day 4.68011/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 16:19:21
+
+Starting time step 23, stepsize 0.0319234 days, at day 4.69607/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 16:42:20
+
+Starting time step 24, stepsize 0.0574622 days, at day 4.72799/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 17:28:18
+
+Starting time step 25, stepsize 0.107273 days, at day 4.78545/5, date = 05-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03540020901872663 days
+
+
+Starting time step 25, stepsize 0.0354002 days, at day 4.78545/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 18:51:03
+
+Starting time step 26, stepsize 0.0708004 days, at day 4.82085/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 19:42:01
+
+Starting time step 27, stepsize 0.108346 days, at day 4.89165/5, date = 05-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0357542111089138 days
+
+
+Starting time step 27, stepsize 0.0357542 days, at day 4.89165/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 21:23:58
+
+Starting time step 28, stepsize 0.0725919 days, at day 4.92741/5, date = 05-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 5/9, date = 05-Jan-2015 22:15:28
+
+                              **************************************************************************
+  WELLS    AT         5  DAYS *                   COREEXAMPLE                                          *
+  REPORT    5    06 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  5/9 at day 5/9, date = 06-Jan-2015
+
+Starting time step 0, stepsize 0.0290368 days, at day 5/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00958212857718886 days
+
+
+Starting time step 0, stepsize 0.00958213 days, at day 5/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 5/9, date = 06-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.0191643 days, at day 5.00958/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 00:13:47
+
+Starting time step 2, stepsize 0.0498271 days, at day 5.02875/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 00:41:23
+
+Starting time step 3, stepsize 0.0442907 days, at day 5.07857/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.014615940123072074 days
+
+
+Starting time step 3, stepsize 0.0146159 days, at day 5.07857/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 01:53:08
+
+Starting time step 4, stepsize 0.0292319 days, at day 5.09319/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 02:14:11
+
+Starting time step 5, stepsize 0.0526174 days, at day 5.12242/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 02:56:17
+
+Starting time step 6, stepsize 0.046771 days, at day 5.17504/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 04:12:03
+
+Starting time step 7, stepsize 0.140313 days, at day 5.22181/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.046303298309892334 days
+
+
+Starting time step 7, stepsize 0.0463033 days, at day 5.22181/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 05:19:24
+
+Starting time step 8, stepsize 0.0926066 days, at day 5.26811/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=18, linearizations=19 (0.0sec), linear its= 10 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 06:26:04
+
+Starting time step 9, stepsize 0.0411585 days, at day 5.36072/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 08:39:26
+
+Starting time step 10, stepsize 0.123475 days, at day 5.40188/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.040746902512705255 days
+
+
+Starting time step 10, stepsize 0.0407469 days, at day 5.40188/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 09:38:42
+
+Starting time step 11, stepsize 0.0733444 days, at day 5.44262/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 10:37:22
+
+Starting time step 12, stepsize 0.220033 days, at day 5.51597/6, date = 06-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.07261098027764078 days
+
+
+Starting time step 12, stepsize 0.072611 days, at day 5.51597/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 12:22:59
+
+Starting time step 13, stepsize 0.0580888 days, at day 5.58858/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 14:07:33
+
+Starting time step 14, stepsize 0.0232355 days, at day 5.64667/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 15:31:12
+
+Starting time step 15, stepsize 0.0697065 days, at day 5.6699/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 11 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 16:04:39
+
+Starting time step 16, stepsize 0.0278826 days, at day 5.73961/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 17:45:02
+
+Starting time step 17, stepsize 0.0836478 days, at day 5.76749/6, date = 06-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.027603790262347917 days
+
+
+Starting time step 17, stepsize 0.0276038 days, at day 5.76749/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 18:25:11
+
+Starting time step 18, stepsize 0.0552076 days, at day 5.7951/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=11, linearizations=12 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 19:04:56
+
+Starting time step 19, stepsize 0.040151 days, at day 5.85031/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 20:24:26
+
+Starting time step 20, stepsize 0.109544 days, at day 5.89046/6, date = 06-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 6/9, date = 06-Jan-2015 21:22:15
+
+                              **************************************************************************
+  WELLS    AT         6  DAYS *                   COREEXAMPLE                                          *
+  REPORT    6    07 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.523:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  6/9 at day 6/9, date = 07-Jan-2015
+
+Starting time step 0, stepsize 0.197179 days, at day 6/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.06506904629768841 days
+
+
+Starting time step 0, stepsize 0.065069 days, at day 6/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 6/9, date = 07-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.130138 days, at day 6.06507/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04294557055647435 days
+
+
+Starting time step 1, stepsize 0.0429456 days, at day 6.06507/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 01:33:41
+
+Starting time step 2, stepsize 0.0858911 days, at day 6.10801/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02834407656727307 days
+
+
+Starting time step 2, stepsize 0.0283441 days, at day 6.10801/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 02:35:32
+
+Starting time step 3, stepsize 0.0566882 days, at day 6.13636/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018707090534400228 days
+
+
+Starting time step 3, stepsize 0.0187071 days, at day 6.13636/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 03:16:21
+
+Starting time step 4, stepsize 0.0374142 days, at day 6.15507/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 03:43:17
+
+Starting time step 5, stepsize 0.0972769 days, at day 6.19248/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03210136735703079 days
+
+
+Starting time step 5, stepsize 0.0321014 days, at day 6.19248/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 04:37:10
+
+Starting time step 6, stepsize 0.0642027 days, at day 6.22458/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=15, linearizations=16 (0.0sec), linear its= 12 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 05:23:23
+
+Starting time step 7, stepsize 0.0342415 days, at day 6.28878/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 06:55:50
+
+Starting time step 8, stepsize 0.102724 days, at day 6.32303/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 07:45:09
+
+Starting time step 9, stepsize 0.184904 days, at day 6.42575/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.06101827907224412 days
+
+
+Starting time step 9, stepsize 0.0610183 days, at day 6.42575/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02013603209384056 days
+
+
+Starting time step 9, stepsize 0.020136 days, at day 6.42575/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 10:13:04
+
+Starting time step 10, stepsize 0.0402721 days, at day 6.44589/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01328978118193477 days
+
+
+Starting time step 10, stepsize 0.0132898 days, at day 6.44589/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 10:42:04
+
+Starting time step 11, stepsize 0.0265796 days, at day 6.45918/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008771255580076949 days
+
+
+Starting time step 11, stepsize 0.00877126 days, at day 6.45918/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 11:01:12
+
+Starting time step 12, stepsize 0.0175425 days, at day 6.46795/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005789028682850787 days
+
+
+Starting time step 12, stepsize 0.00578903 days, at day 6.46795/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 11:13:50
+
+Starting time step 13, stepsize 0.0115781 days, at day 6.47374/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 11:22:10
+
+Starting time step 14, stepsize 0.0254717 days, at day 6.48531/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 11:38:51
+
+Starting time step 15, stepsize 0.0764152 days, at day 6.51079/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02521700894249803 days
+
+
+Starting time step 15, stepsize 0.025217 days, at day 6.51079/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 12:15:31
+
+Starting time step 16, stepsize 0.050434 days, at day 6.536/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 12:51:50
+
+Starting time step 17, stepsize 0.151302 days, at day 6.58644/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0499296777061461 days
+
+
+Starting time step 17, stepsize 0.0499297 days, at day 6.58644/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 14:04:28
+
+Starting time step 18, stepsize 0.0998594 days, at day 6.63637/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03295358728605643 days
+
+
+Starting time step 18, stepsize 0.0329536 days, at day 6.63637/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=11, linearizations=12 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 15:16:22
+
+Starting time step 19, stepsize 0.0239662 days, at day 6.66932/7, date = 07-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007908860948653543 days
+
+
+Starting time step 19, stepsize 0.00790886 days, at day 6.66932/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 16:03:49
+
+Starting time step 20, stepsize 0.0158177 days, at day 6.67723/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 16:15:12
+
+Starting time step 21, stepsize 0.0474532 days, at day 6.69305/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 16:37:59
+
+Starting time step 22, stepsize 0.142359 days, at day 6.7405/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04697863403500205 days
+
+
+Starting time step 22, stepsize 0.0469786 days, at day 6.7405/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 11 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 17:46:19
+
+Starting time step 23, stepsize 0.0187915 days, at day 6.78748/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.006201179692620271 days
+
+
+Starting time step 23, stepsize 0.00620118 days, at day 6.78748/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 18:53:58
+
+Starting time step 24, stepsize 0.0124024 days, at day 6.79368/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 19:02:53
+
+Starting time step 25, stepsize 0.0110243 days, at day 6.80608/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 19:20:45
+
+Starting time step 26, stepsize 0.033073 days, at day 6.81711/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 19:36:37
+
+Starting time step 27, stepsize 0.0992189 days, at day 6.85018/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03274222877703503 days
+
+
+Starting time step 27, stepsize 0.0327422 days, at day 6.85018/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  6 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 20:24:15
+
+Starting time step 28, stepsize 0.0327422 days, at day 6.88292/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 21:11:24
+
+Starting time step 29, stepsize 0.0130969 days, at day 6.91566/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 21:58:33
+
+Starting time step 30, stepsize 0.0392907 days, at day 6.92876/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 22:17:24
+
+Starting time step 31, stepsize 0.0319487 days, at day 6.96805/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01054307194271108 days
+
+
+Starting time step 31, stepsize 0.0105431 days, at day 6.96805/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 23:13:59
+
+Starting time step 32, stepsize 0.0214056 days, at day 6.97859/7, date = 07-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.007063858201616232 days
+
+
+Starting time step 32, stepsize 0.00706386 days, at day 6.97859/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 23:29:10
+
+Starting time step 33, stepsize 0.0143418 days, at day 6.98566/7, date = 07-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 7/9, date = 07-Jan-2015 23:39:20
+
+                              **************************************************************************
+  WELLS    AT         7  DAYS *                   COREEXAMPLE                                          *
+  REPORT    7    08 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  7/9 at day 7/9, date = 08-Jan-2015
+
+Starting time step 0, stepsize 0.0430253 days, at day 7/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01419835498524808 days
+
+
+Starting time step 0, stepsize 0.0141984 days, at day 7/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 7/9, date = 08-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.00567934 days, at day 7.0142/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 00:20:26
+
+Starting time step 2, stepsize 0.017038 days, at day 7.01988/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 00:28:37
+
+Starting time step 3, stepsize 0.017038 days, at day 7.03692/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=14, linearizations=15 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 00:53:09
+
+Starting time step 4, stepsize 0.00973601 days, at day 7.05395/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 01:17:41
+
+Starting time step 5, stepsize 0.029208 days, at day 7.06369/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 01:31:42
+
+Starting time step 6, stepsize 0.0759409 days, at day 7.0929/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.025060502216248157 days
+
+
+Starting time step 6, stepsize 0.0250605 days, at day 7.0929/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 02:13:46
+
+Starting time step 7, stepsize 0.050121 days, at day 7.11796/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.016539931462723784 days
+
+
+Starting time step 7, stepsize 0.0165399 days, at day 7.11796/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 02:49:51
+
+Starting time step 8, stepsize 0.0330799 days, at day 7.1345/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.010916354765397696 days
+
+
+Starting time step 8, stepsize 0.0109164 days, at day 7.1345/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 03:13:40
+
+Starting time step 9, stepsize 0.0218327 days, at day 7.14541/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 03:29:23
+
+Starting time step 10, stepsize 0.0654981 days, at day 7.16725/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02161438243548744 days
+
+
+Starting time step 10, stepsize 0.0216144 days, at day 7.16725/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 04:00:50
+
+Starting time step 11, stepsize 0.0432288 days, at day 7.18886/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01426549240742171 days
+
+
+Starting time step 11, stepsize 0.0142655 days, at day 7.18886/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 04:31:57
+
+Starting time step 12, stepsize 0.028531 days, at day 7.20313/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.00941522498889833 days
+
+
+Starting time step 12, stepsize 0.00941522 days, at day 7.20313/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 04:52:30
+
+Starting time step 13, stepsize 0.0188304 days, at day 7.21254/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=12, linearizations=13 (0.0sec), linear its= 12 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 05:06:03
+
+Starting time step 14, stepsize 0.0125536 days, at day 7.23137/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 05:33:10
+
+Starting time step 15, stepsize 0.0376609 days, at day 7.24393/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012428096985345798 days
+
+
+Starting time step 15, stepsize 0.0124281 days, at day 7.24393/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 05:51:15
+
+Starting time step 16, stepsize 0.0248562 days, at day 7.25635/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 06:09:09
+
+Starting time step 17, stepsize 0.0745686 days, at day 7.28121/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.024607632030984677 days
+
+
+Starting time step 17, stepsize 0.0246076 days, at day 7.28121/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 06:44:56
+
+Starting time step 18, stepsize 0.0344507 days, at day 7.30582/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.011368725998314922 days
+
+
+Starting time step 18, stepsize 0.0113687 days, at day 7.30582/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 07:20:22
+
+Starting time step 19, stepsize 0.0227375 days, at day 7.31719/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=11, linearizations=12 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 07:36:44
+
+Starting time step 20, stepsize 0.0165363 days, at day 7.33992/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 08:09:29
+
+Starting time step 21, stepsize 0.049609 days, at day 7.35646/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 08:33:18
+
+Starting time step 22, stepsize 0.10914 days, at day 7.40607/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03601612396266168 days
+
+
+Starting time step 22, stepsize 0.0360161 days, at day 7.40607/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 09:44:44
+
+Starting time step 23, stepsize 0.0720322 days, at day 7.44209/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 10:36:36
+
+Starting time step 24, stepsize 0.187284 days, at day 7.51412/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 12:20:19
+
+Starting time step 25, stepsize 0.0749135 days, at day 7.7014/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 16:50:01
+
+Starting time step 26, stepsize 0.111842 days, at day 7.77632/8, date = 08-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03690791615729296 days
+
+
+Starting time step 26, stepsize 0.0369079 days, at day 7.77632/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  8 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 18:37:53
+
+Starting time step 27, stepsize 0.032807 days, at day 7.81322/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 19:31:02
+
+Starting time step 28, stepsize 0.0984211 days, at day 7.84603/8, date = 08-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0324789662184178 days
+
+
+Starting time step 28, stepsize 0.032479 days, at day 7.84603/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 20:18:17
+
+Starting time step 29, stepsize 0.0649579 days, at day 7.87851/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 21:05:03
+
+Starting time step 30, stepsize 0.0565325 days, at day 7.94347/8, date = 08-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 8/9, date = 08-Jan-2015 22:38:35
+
+                              **************************************************************************
+  WELLS    AT         8  DAYS *                   COREEXAMPLE                                          *
+  REPORT    8    09 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.522:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.522:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:SECPROD :  1,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.522:     -0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+Report step  8/9 at day 8/9, date = 09-Jan-2015
+
+Starting time step 0, stepsize 0.169597 days, at day 8/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.05596716406091862 days
+
+
+Starting time step 0, stepsize 0.0559672 days, at day 8/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 8/9, date = 09-Jan-2015 00:00:00
+
+Starting time step 1, stepsize 0.111934 days, at day 8.05597/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.03693832828020629 days
+
+
+Starting time step 1, stepsize 0.0369383 days, at day 8.05597/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 01:20:35
+
+Starting time step 2, stepsize 0.0738767 days, at day 8.09291/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 02:13:47
+
+Starting time step 3, stepsize 0.0591013 days, at day 8.16678/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 04:00:09
+
+Starting time step 4, stepsize 0.130023 days, at day 8.22588/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04290756213028764 days
+
+
+Starting time step 4, stepsize 0.0429076 days, at day 8.22588/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01415949550299492 days
+
+
+Starting time step 4, stepsize 0.0141595 days, at day 8.22588/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 05:25:16
+
+Starting time step 5, stepsize 0.028319 days, at day 8.24004/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 05:45:39
+
+Starting time step 6, stepsize 0.084957 days, at day 8.26836/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=12, linearizations=13 (0.0sec), linear its= 11 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 06:26:26
+
+Starting time step 7, stepsize 0.056638 days, at day 8.35332/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.018690534063953296 days
+
+
+Starting time step 7, stepsize 0.0186905 days, at day 8.35332/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  7 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 08:28:46
+
+Starting time step 8, stepsize 0.0166138 days, at day 8.37201/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=16, linearizations=17 (0.0sec), linear its= 12 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 08:55:41
+
+Starting time step 9, stepsize 0.0083069 days, at day 8.38862/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 09:19:37
+
+Starting time step 10, stepsize 0.0249207 days, at day 8.39693/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 09:31:34
+
+Starting time step 11, stepsize 0.0747621 days, at day 8.42185/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02467150496441835 days
+
+
+Starting time step 11, stepsize 0.0246715 days, at day 8.42185/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008141596638258057 days
+
+
+Starting time step 11, stepsize 0.0081416 days, at day 8.42185/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  0 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 10:07:27
+
+Starting time step 12, stepsize 0.0162832 days, at day 8.42999/9, date = 09-Jan-2015
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.005373453781250317 days
+
+
+Starting time step 12, stepsize 0.00537345 days, at day 8.42999/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  0 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 10:19:11
+
+Starting time step 13, stepsize 0.0107469 days, at day 8.43537/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 10:26:55
+
+Starting time step 14, stepsize 0.0322407 days, at day 8.44611/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.01063943848687563 days
+
+
+Starting time step 14, stepsize 0.0106394 days, at day 8.44611/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 10:42:24
+
+Starting time step 15, stepsize 0.0212789 days, at day 8.45675/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 10:57:43
+
+Starting time step 16, stepsize 0.0638366 days, at day 8.47803/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 11:28:21
+
+Starting time step 17, stepsize 0.140441 days, at day 8.54187/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.046345394048830243 days
+
+
+Starting time step 17, stepsize 0.0463454 days, at day 8.54187/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 13:00:17
+
+Starting time step 18, stepsize 0.0926908 days, at day 8.58821/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.030587960072227964 days
+
+
+Starting time step 18, stepsize 0.030588 days, at day 8.58821/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 14:07:01
+
+Starting time step 19, stepsize 0.0611759 days, at day 8.6188/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 19 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 14:51:04
+
+Starting time step 20, stepsize 0.0244704 days, at day 8.67998/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008075221459068182 days
+
+
+Starting time step 20, stepsize 0.00807522 days, at day 8.67998/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 16:19:10
+
+Starting time step 21, stepsize 0.0161504 days, at day 8.68805/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=14, linearizations=15 (0.0sec), linear its= 13 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 16:30:47
+
+Starting time step 22, stepsize 0.00922882 days, at day 8.7042/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 16:54:03
+
+Starting time step 23, stepsize 0.0276865 days, at day 8.71343/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 17:07:20
+
+Starting time step 24, stepsize 0.0719848 days, at day 8.74112/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.02375499432644743 days
+
+
+Starting time step 24, stepsize 0.023755 days, at day 8.74112/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 17:47:12
+
+Starting time step 25, stepsize 0.04751 days, at day 8.76487/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.015678296255455304 days
+
+
+Starting time step 25, stepsize 0.0156783 days, at day 8.76487/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=19, linearizations=20 (0.0sec), linear its= 14 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 18:21:25
+
+Starting time step 26, stepsize 0.00660139 days, at day 8.78055/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 18:43:59
+
+Starting time step 27, stepsize 0.0198042 days, at day 8.78715/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 18:53:29
+
+Starting time step 28, stepsize 0.0514908 days, at day 8.80696/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 19:22:01
+
+Starting time step 29, stepsize 0.141552 days, at day 8.85845/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.04671225874147022 days
+
+
+Starting time step 29, stepsize 0.0467123 days, at day 8.85845/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its=20, linearizations=21 (0.0sec), linear its= 20 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 20:36:09
+
+Starting time step 30, stepsize 0.0186849 days, at day 8.90516/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.0061660181538740685 days
+
+
+Starting time step 30, stepsize 0.00616602 days, at day 8.90516/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 21:43:25
+
+Starting time step 31, stepsize 0.012332 days, at day 8.91133/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 21:52:18
+
+Starting time step 32, stepsize 0.0369961 days, at day 8.92366/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 22:10:04
+
+Starting time step 33, stepsize 0.0393459 days, at day 8.96065/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.012984139439779272 days
+
+
+Starting time step 33, stepsize 0.0129841 days, at day 8.96065/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 23:03:20
+
+Starting time step 34, stepsize 0.0263617 days, at day 8.97364/9, date = 09-Jan-2015
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.008699373424652126 days
+
+
+Starting time step 34, stepsize 0.00869937 days, at day 8.97364/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 23:22:02
+
+Starting time step 35, stepsize 0.0176624 days, at day 8.98234/9, date = 09-Jan-2015
+
+Warning: Keyword 'WELLS' is unhandled for output to restart file.
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 9/9, date = 09-Jan-2015 23:34:33
+
+                              **************************************************************************
+  WELLS    AT         9  DAYS *                   COREEXAMPLE                                          *
+  REPORT    9    10 Jan 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:G1      :           :    :        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:        0.0:        0.0:       -0.0:        0.0:      0.536:     -0.00:      0.0000:   245.0:     0.0:
+:SECPROD :  1,  1    : BHP:       -0.0:       -0.0:       -0.0:       -0.0:      0.000:      0.00:      0.0000:     0.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:G1      :           :      :      :      :        0.0:        0.0:        0.0:        0.0:        :        :
+:INJ     : 10,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:   245.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:G1      :           :        :    :        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:SECPROD :  1,  1    :    PROD: BHP:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     : 10,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+Restart file written for report step 9/9, date = 10-Jan-2015 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.06 s
+  Deck input:                    0.04 s
+Number of timesteps:           352
+Simulation time:                 3.10 s
+  Assembly time:                 0.09 s (Wasted: 0.0 s; 50.6%)
+    Well assembly:               0.08 s (Wasted: 0.0 s; 49.8%)
+  Linear solve time:             0.13 s (Wasted: 0.1 s; 61.3%)
+    Linear setup:                0.10 s (Wasted: 0.1 s; 61.6%)
+  Props/update time:             0.08 s (Wasted: 0.0 s; 57.9%)
+  Pre/post step:                 0.13 s (Wasted: 0.0 s; 10.9%)
+  Output write time:             2.67 s
+Overall Linearizations:       3985      (Wasted:  2310; 58.0%)
+Overall Newton Iterations:    3743      (Wasted:  2310; 61.7%)
+Overall Linear Iterations:    3015      (Wasted:  1836; 60.9%)
+
+
+
+Error summary:
+Warnings          244
+Info              1042
+Errors            0
+Bugs              0
+Debug             0
+Problems          110
+

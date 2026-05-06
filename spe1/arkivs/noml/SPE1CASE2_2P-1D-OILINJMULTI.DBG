@@ -1,0 +1,1755 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.10-pre (835ecba76*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.5.0, Darwin Kernel Version 24.5.0: Tue Apr 22 19:54:49 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T6000 )
+Build time       =  2025-06-19 at 16:48:09 hrs
+User             =  macbookn
+Simulation started on 02-07-2025 at 13:48:35 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+ActivateMLRelPErm="False" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+OutputDir="noml" # default: ""
+EclDeckFileName="SPE1CASE2_2P-1D-OILINJMULTI.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="10"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'SPE1CASE2_2P-1D-OILINJMULTI.DATA'
+    0 Reading RUNSPEC  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 19
+    1 Reading TITLE    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 22
+    2 Reading DIMENS   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 25
+    3 Reading EQLDIMS  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 30
+    4 Reading TABDIMS  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 35
+    5 Reading OIL      in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 39
+    6 Reading WATER    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 40
+    7 Reading METRIC   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 43
+    8 Reading SATOPTS  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 46
+    9 Reading START    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 50
+   10 Reading WELLDIMS in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 53
+   11 Reading UNIFIN   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 64
+   12 Reading UNIFOUT  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 65
+   13 Reading GRID     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 67
+   14 Reading INIT     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 74
+   15 Reading NOECHO   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 77
+   16 Reading DX       in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 79
+   17 Reading DY       in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 82
+   18 Reading DZ       in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 85
+   19 Reading TOPS     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 89
+   20 Reading PORO     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 93
+   21 Reading PERMX    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 97
+   22 Reading PERMY    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 101
+   23 Reading PERMZ    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 105
+   24 Reading ECHO     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 109
+   25 Reading PROPS    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 111
+   26 Reading PVTW     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 117
+   27 Reading PVCDO    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 130
+   28 Reading SWATINIT in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 143
+   29 Reading ROCK     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 147
+   30 Reading SWOF     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 154
+   31 Reading DENSITY  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 338
+   32 Reading REGIONS  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 361
+   33 Reading EQUALS   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 364
+   34 Reading SOLUTION in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 369
+   35 Reading EQUIL    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 372
+   36 Reading SUMMARY  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 393
+   37 Reading FOPR     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 397
+   38 Reading WBHP     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 402
+   39 Reading WOIR     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 407
+   40 Reading WOIT     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 412
+   41 Reading WOPR     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 416
+   42 Reading WOPT     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 420
+   43 Reading WWIR     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 424
+   44 Reading WWIT     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 428
+   45 Reading WWPR     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 432
+   46 Reading WWPT     in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 436
+   47 Reading SCHEDULE in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 440
+   48 Reading RPTSCHED in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 442
+   49 Reading RPTRST   in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 445
+   50 Reading WELSPECS in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 456
+   51 Reading COMPDAT  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 467
+   52 Reading WCONPROD in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 479
+   53 Reading WCONINJE in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 488
+   54 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 498
+   55 Reading WELOPEN  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 501
+   56 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 509
+   57 Reading WELOPEN  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 511
+   58 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 518
+   59 Reading WELOPEN  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 520
+   60 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 529
+   61 Reading WELOPEN  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 531
+   62 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 536
+   63 Reading WELOPEN  in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 539
+   64 Reading TSTEP    in SPE1CASE2_2P-1D-OILINJMULTI.DATA line 546
+Unsupported keywords or keyword items:
+
+  NOECHO: keyword not supported
+  In file: SPE1CASE2_2P-1D-OILINJMULTI.DATA, line 77
+
+  ECHO: keyword not supported
+  In file: SPE1CASE2_2P-1D-OILINJMULTI.DATA, line 109
+Hysteresis is enabled via the HYST parameter for SATOPTS, but the EHYSTR keyword is not present in the deck. 
+Default values are used for the EHYSTR keyword.
+
+Creating grid from keywords DX, DY, DZ and TOPS
+2 fluid phases are active
+
+Processing dynamic information from
+SPE1CASE2_2P-1D-OILINJMULTI.DATA line 440
+Initializing report step 0/18 at 2015-01-01 0 DAYS line 440
+Processing keyword RPTSCHED at line 442
+Processing keyword RPTRST at line 445
+Processing keyword WELSPECS at line 456
+Processing keyword COMPDAT at line 467
+Processing keyword WCONPROD at line 479
+Processing keyword WCONINJE at line 488
+Complete report step 1 (31 DAYS) at 2015-02-01 (0 DAYS)
+
+Initializing report step 2/18 at 2015-02-01 (0 DAYS) line 498
+Complete report step 2 (28 DAYS) at 2015-03-01 (31 DAYS)
+
+Initializing report step 3/18 at 2015-03-01 (31 DAYS) line 498
+Complete report step 3 (31 DAYS) at 2015-04-01 (59 DAYS)
+
+Initializing report step 4/18 at 2015-04-01 (59 DAYS) line 498
+Processing keyword WELOPEN at line 501
+Complete report step 4 (31 DAYS) at 2015-05-02 (90 DAYS)
+
+Initializing report step 5/18 at 2015-05-02 (90 DAYS) line 509
+Complete report step 5 (28 DAYS) at 2015-05-30 (121 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/18 at 2015-05-30 (121 DAYS) line 509
+Complete report step 6 (31 DAYS) at 2015-06-30 (149 DAYS)
+
+Initializing report step 7/18 at 2015-06-30 (149 DAYS) line 509
+Processing keyword WELOPEN at line 511
+Complete report step 7 (31 DAYS) at 2015-07-31 (180 DAYS)
+
+Initializing report step 8/18 at 2015-07-31 (180 DAYS) line 518
+Complete report step 8 (28 DAYS) at 2015-08-28 (211 DAYS)
+
+Initializing report step 9/18 at 2015-08-28 (211 DAYS) line 518
+Complete report step 9 (31 DAYS) at 2015-09-28 (239 DAYS)
+
+Initializing report step 10/18 at 2015-09-28 (239 DAYS) line 518
+Processing keyword WELOPEN at line 520
+Complete report step 10 (31 DAYS) at 2015-10-29 (270 DAYS)
+
+Initializing report step 11/18 at 2015-10-29 (270 DAYS) line 529
+Complete report step 11 (28 DAYS) at 2015-11-26 (301 DAYS)
+
+Initializing report step 12/18 at 2015-11-26 (301 DAYS) line 529
+Complete report step 12 (31 DAYS) at 2015-12-27 (329 DAYS)
+
+Initializing report step 13/18 at 2015-12-27 (329 DAYS) line 529
+Processing keyword WELOPEN at line 531
+Complete report step 13 (31 DAYS) at 2016-01-27 (360 DAYS)
+
+Initializing report step 14/18 at 2016-01-27 (360 DAYS) line 536
+Complete report step 14 (28 DAYS) at 2016-02-24 (391 DAYS)
+
+Initializing report step 15/18 at 2016-02-24 (391 DAYS) line 536
+Complete report step 15 (31 DAYS) at 2016-03-26 (419 DAYS)
+
+Initializing report step 16/18 at 2016-03-26 (419 DAYS) line 536
+Processing keyword WELOPEN at line 539
+Complete report step 16 (31 DAYS) at 2016-04-26 (450 DAYS)
+
+Initializing report step 17/18 at 2016-04-26 (450 DAYS) line 546
+Complete report step 17 (28 DAYS) at 2016-05-24 (481 DAYS)
+
+Initializing report step 18/18 at 2016-05-24 (481 DAYS) line 546
+Complete report step 18 (31 DAYS) at 2016-06-24 (509 DAYS)
+
+
+Processing grid
+Total number of active cells: 10 / total pore volume: 2034000 RM3
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System: Oil-Water system.
+Relative permeability input format: Saturation Family I.
+Number of saturation regions: 2
+
+
+
+================ Starting main simulation loop ===============
+
+
+
+---------------    Simulation step number 0    ---------------
+      Current time (days)     0
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  0/18 at day 0/540, date = 01-Jan-2015
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 1 days, at day 0/31, date = 01-Jan-2015
+Restart file written for report step  0/18, date = 01-Jan-2015 00:00:00
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  1.088e-03  9.453e-04  1.088e-02  9.453e-03
+Linear system blocksize: 2 size:      10 block nonzeroes:        28
+   1  1.001e-07  8.904e-07  1.001e-06  2.921e-04
+   2  1.335e-10  1.519e-12  1.335e-09  1.409e-09
+Overall linear iterations used: 0
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 1, stepsize 2.79332 days, at day 1/31, date = 02-Jan-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.038e-03  1.792e-03  3.038e-02  2.755e-02
+   1  4.483e-06  4.042e-06  4.483e-05  2.875e-03
+   2  5.882e-08  6.442e-11  5.882e-07  2.021e-07
+Overall linear iterations used: 0
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  0 (0.0sec)
+
+Starting time step 2, stepsize 7.54797 days, at day 3.79332/31, date = 04-Jan-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  8.209e-03  7.497e-03  8.209e-02  8.097e-02
+   1  2.360e-06  1.185e-06  2.360e-05  2.847e-02
+   2  3.042e-07  3.867e-10  3.042e-06  8.942e-07
+   3  1.334e-09  1.403e-12  1.334e-08  3.421e-09
+Overall linear iterations used: 2
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 3, stepsize 19.6587 days, at day 11.3413/31, date = 12-Jan-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  2.138e-02  2.121e-02  2.138e-01  2.134e-01
+   1  1.373e-03  1.364e-03  4.818e-02  1.574e-01
+   2  5.613e-07  1.321e-06  1.603e-03  1.579e-02
+   3  4.038e-06  1.725e-09  4.090e-05  6.624e-05
+   4  1.468e-09  9.240e-13  1.474e-08  2.658e-08
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 0 (days)
+ step[ 0 ] = 1 (days)
+ step[ 1 ] = 2.79332 (days)
+ step[ 2 ] = 7.54797 (days)
+ step[ 3 ] = 19.6587 (days)
+sub steps end time = 31 (days)
+Suggested next step size = 51.1127 (days)
+
+Time step took 0.014484 seconds; total solver time 0.014484 seconds.
+
+                              **************************************************************************
+  WELLS    AT        31  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    1    01 Feb 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2129.8:       -0.0:     2210.8:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2129.8:       -0.0:     2210.8:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2129.8:       -0.0:     2210.8:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.0:   292.8:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:       64.5:        0.0:       67.0:       62.0:        0.0:        0.0:       68.6:
+:G1      :           :        :    :        0.0:       64.5:        0.0:       67.0:       62.0:        0.0:        0.0:       68.6:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:       64.5:        0.0:       67.0:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:       62.0:        0.0:        0.0:       68.6:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 1    ---------------
+      Current time (days)     31
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step  1/18 at day 31/540, date = 01-Feb-2015
+
+Starting time step 0, stepsize 28 days, at day 31/59, date = 01-Feb-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.045e-02  3.045e-02  2.688e-01  2.689e-01
+   1  5.743e-03  5.742e-03  4.677e-02  1.632e-01
+Restart file written for report step  1/18, date = 01-Feb-2015 00:00:00
+   2  6.650e-05  5.605e-07  6.419e-04  9.271e-02
+   3  9.228e-06  1.779e-10  9.219e-05  1.082e-05
+   4  3.412e-09  4.733e-12  4.011e-08  2.176e-09
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 31 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 59 (days)
+Suggested next step size = 72.8 (days)
+
+Time step took 0.000566 seconds; total solver time 0.015050 seconds.
+
+                              **************************************************************************
+  WELLS    AT        59  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    2    01 Mar 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2129.1:       -0.0:     2209.5:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2129.1:       -0.0:     2209.5:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2129.1:       -0.0:     2209.5:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.0:   302.9:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      124.1:        0.0:      128.8:      118.0:        0.0:        0.0:      130.5:
+:G1      :           :        :    :        0.0:      124.1:        0.0:      128.8:      118.0:        0.0:        0.0:      130.5:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      124.1:        0.0:      128.8:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      118.0:        0.0:        0.0:      130.5:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 2    ---------------
+      Current time (days)     59
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  2/18 at day 59/540, date = 01-Mar-2015
+
+Starting time step 0, stepsize 31 days, at day 59/90, date = 01-Mar-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.371e-02  3.370e-02  2.179e-01  2.179e-01
+Restart file written for report step  2/18, date = 01-Mar-2015 00:00:00
+   1  1.174e-04  1.269e-04  6.950e-02  1.335e-01
+   2  3.747e-07  4.151e-06  1.937e-02  5.014e-02
+   3  1.029e-07  2.029e-08  6.183e-05  1.250e-04
+   4  9.269e-11  6.766e-12  2.105e-08  4.322e-08
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 4
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Sub steps started at time = 59 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 90 (days)
+Suggested next step size = 80.6 (days)
+
+Time step took 0.000682 seconds; total solver time 0.015731 seconds.
+
+                              **************************************************************************
+  WELLS    AT        90  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    3    01 Apr 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2129.1:       -0.0:     2208.9:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2129.1:       -0.0:     2208.9:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2129.1:       -0.0:     2208.9:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.0:   320.4:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      190.1:        0.0:      197.3:      180.0:        0.0:        0.0:      199.1:
+:G1      :           :        :    :        0.0:      190.1:        0.0:      197.3:      180.0:        0.0:        0.0:      199.1:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      190.1:        0.0:      197.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:        0.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:        0.0:      199.1:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 3    ---------------
+      Current time (days)     90
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  3/18 at day 90/540, date = 01-Apr-2015
+
+Starting time step 0, stepsize 31 days, at day 90/121, date = 01-Apr-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  6.316e-19  1.787e-02  2.529e-01  2.110e-01
+   1  4.832e-07  5.520e-06  2.759e-02  1.274e-01
+   2  9.088e-08  7.725e-05  9.695e-03  6.348e-02
+   3  1.402e-08  6.213e-08  4.918e-03  3.200e-02
+Restart file written for report step  3/18, date = 01-Apr-2015 00:00:00
+   4  7.292e-09  9.133e-08  4.751e-03  1.036e-02
+   5  1.865e-11  1.176e-04  7.991e-04  1.119e-03
+   6  4.776e-12  4.504e-07  2.222e-06  4.371e-06
+   7  2.906e-17  2.938e-12  3.382e-12  4.788e-11
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 6
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+Sub steps started at time = 90 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 121 (days)
+Suggested next step size = 43.4 (days)
+
+Time step took 0.000746 seconds; total solver time 0.016477 seconds.
+
+                              **************************************************************************
+  WELLS    AT       121  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    4    02 May 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1027.5:       -0.0:     1065.7:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1027.5:       -0.0:     1065.7:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1027.5:       -0.0:     1065.7:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1037.2:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1037.2:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1037.2:   276.8:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      222.0:        0.0:      230.4:      180.0:       31.0:        0.0:      231.2:
+:G1      :           :        :    :        0.0:      222.0:        0.0:      230.4:      180.0:       31.0:        0.0:      231.2:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      222.0:        0.0:      230.4:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       31.0:        0.0:       32.2:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:        0.0:      199.1:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 4    ---------------
+      Current time (days)     121
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step  4/18 at day 121/540, date = 02-May-2015
+
+Starting time step 0, stepsize 28 days, at day 121/149, date = 02-May-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  8.558e-19  3.929e-04  5.674e-02  5.613e-02
+   1  2.838e-08  1.420e-06  6.720e-03  4.989e-02
+   2  1.557e-08  6.767e-08  9.543e-04  6.275e-03
+Keyword 'WELLS' is unhandled for output to restart file.
+Restart file written for report step  4/18, date = 02-May-2015 00:00:00
+Overall linear iterations used: 2
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Sub steps started at time = 121 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 149 (days)
+Suggested next step size = 84 (days)
+
+Time step took 0.000564 seconds; total solver time 0.017041 seconds.
+
+                              **************************************************************************
+  WELLS    AT       149  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    5    30 May 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1000.4:       -0.0:     1038.9:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1000.4:       -0.0:     1038.9:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1000.4:       -0.0:     1038.9:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1038.5:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1038.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1038.5:   276.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      250.0:        0.0:      259.4:      180.0:       59.0:        0.0:      260.3:
+:G1      :           :        :    :        0.0:      250.0:        0.0:      259.4:      180.0:       59.0:        0.0:      260.3:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      250.0:        0.0:      259.4:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       59.0:        0.0:       61.2:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:        0.0:      199.1:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 5    ---------------
+      Current time (days)     149
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  5/18 at day 149/540, date = 30-May-2015
+
+Starting time step 0, stepsize 31 days, at day 149/180, date = 30-May-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  6.316e-19  5.746e-06  4.444e-02  4.400e-02
+   1  3.147e-09  7.160e-06  7.817e-03  1.911e-02
+   2  2.883e-10  2.186e-05  2.554e-04  2.559e-04
+Linear system blocksize: 2 size:      10 block nonzeroes:        28
+Restart file written for report step  5/18, date = 30-May-2015 00:00:00
+   3  8.660e-13  7.265e-09  3.064e-08  1.080e-07
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 149 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 180 (days)
+Suggested next step size = 93 (days)
+
+Time step took 0.000977 seconds; total solver time 0.018018 seconds.
+
+                              **************************************************************************
+  WELLS    AT       180  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    6    30 Jun 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:      999.3:       -0.0:     1037.8:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:      999.3:       -0.0:     1037.8:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:      999.3:       -0.0:     1037.8:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1038.5:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1038.5:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1038.5:   277.1:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      281.0:        0.0:      291.6:      180.0:       90.0:        0.0:      292.5:
+:G1      :           :        :    :        0.0:      281.0:        0.0:      291.6:      180.0:       90.0:        0.0:      292.5:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      281.0:        0.0:      291.6:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       90.0:        0.0:       93.4:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:        0.0:      199.1:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 6    ---------------
+      Current time (days)     180
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  6/18 at day 180/540, date = 30-Jun-2015
+
+Starting time step 0, stepsize 31 days, at day 180/211, date = 30-Jun-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.371e-02  1.582e-02  3.036e-01  1.247e-01
+   1  2.453e-03  2.396e-03  1.187e-01  1.333e-01
+   2  4.184e-07  4.660e-06  7.517e-02  1.407e-01
+   3  1.878e-05  6.225e-10  2.016e-02  2.334e-02
+   4  7.344e-06  6.281e-09  1.958e-02  1.622e-02
+   5  2.904e-09  7.133e-09  1.193e-03  3.510e-03
+Keyword 'WELLS' is unhandled for output to restart file.
+Restart file written for report step  6/18, date = 30-Jun-2015 00:00:00
+Overall linear iterations used: 5
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Sub steps started at time = 180 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 211 (days)
+Suggested next step size = 31.9332 (days)
+
+Time step took 0.000664 seconds; total solver time 0.018683 seconds.
+
+                              **************************************************************************
+  WELLS    AT       211  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    7    31 Jul 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2101.3:       -0.0:     2182.2:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2101.3:       -0.0:     2182.2:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2101.3:       -0.0:     2182.2:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.1:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.1:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.1:   325.1:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      346.1:        0.0:      359.3:      242.0:       90.0:        0.0:      361.1:
+:G1      :           :        :    :        0.0:      346.1:        0.0:      359.3:      242.0:       90.0:        0.0:      361.1:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      346.1:        0.0:      359.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       90.0:        0.0:       93.4:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      242.0:        0.0:        0.0:      267.7:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 7    ---------------
+      Current time (days)     211
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step  7/18 at day 211/540, date = 31-Jul-2015
+
+Starting time step 0, stepsize 28 days, at day 211/239, date = 31-Jul-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.045e-02  3.004e-02  1.073e-01  1.065e-01
+   1  4.644e-07  5.117e-06  6.789e-02  1.053e-01
+   2  2.514e-08  4.297e-07  1.192e-02  4.715e-02
+   3  4.581e-07  2.896e-08  7.421e-05  1.091e-03
+   4  3.457e-11  1.837e-13  2.413e-09  1.144e-07
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 4
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Sub steps started at time = 211 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 239 (days)
+Suggested next step size = 72.8 (days)
+
+Restart file written for report step  7/18, date = 31-Jul-2015 00:00:00
+Time step took 0.000736 seconds; total solver time 0.019418 seconds.
+
+                              **************************************************************************
+  WELLS    AT       239  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    8    28 Aug 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2128.3:       -0.0:     2207.5:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2128.3:       -0.0:     2207.5:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2128.3:       -0.0:     2207.5:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.0:   330.6:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      405.7:        0.0:      421.1:      298.0:       90.0:        0.0:      423.0:
+:G1      :           :        :    :        0.0:      405.7:        0.0:      421.1:      298.0:       90.0:        0.0:      423.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      405.7:        0.0:      421.1:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       90.0:        0.0:       93.4:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      298.0:        0.0:        0.0:      329.6:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 8    ---------------
+      Current time (days)     239
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  8/18 at day 239/540, date = 28-Aug-2015
+
+Starting time step 0, stepsize 31 days, at day 239/270, date = 28-Aug-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.371e-02  3.368e-02  1.561e-01  1.560e-01
+   1  5.056e-06  2.374e-06  8.477e-02  1.719e-01
+   2  2.937e-07  1.906e-06  8.854e-02  1.125e-01
+   3  1.038e-08  1.116e-07  6.819e-03  2.336e-02
+   4  2.704e-07  6.872e-09  8.201e-05  2.163e-04
+   5  1.089e-07  8.443e-14  1.089e-06  9.078e-09
+   6  5.919e-13  2.775e-15  2.960e-11  3.598e-10
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 239 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 270 (days)
+Suggested next step size = 55.8 (days)
+
+Restart file written for report step  8/18, date = 28-Aug-2015 00:00:00
+Time step took 0.000872 seconds; total solver time 0.020290 seconds.
+
+                              **************************************************************************
+  WELLS    AT       270  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT    9    28 Sep 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2127.1:       -0.0:     2205.8:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2127.1:       -0.0:     2205.8:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2127.1:       -0.0:     2205.8:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.0:   337.4:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      471.6:        0.0:      489.4:      360.0:       90.0:        0.0:      491.6:
+:G1      :           :        :    :        0.0:      471.6:        0.0:      489.4:      360.0:       90.0:        0.0:      491.6:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      471.6:        0.0:      489.4:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:       90.0:        0.0:       93.4:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      360.0:        0.0:        0.0:      398.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 9    ---------------
+      Current time (days)     270
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step  9/18 at day 270/540, date = 28-Sep-2015
+
+Starting time step 0, stepsize 31 days, at day 270/301, date = 28-Sep-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  5.053e-18  1.784e-02  2.723e-01  1.377e-01
+   1  1.316e-06  9.617e-06  5.159e-02  2.588e-02
+   2  2.868e-08  3.296e-07  3.961e-03  1.945e-02
+   3  4.444e-10  7.595e-08  2.041e-05  3.358e-04
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 270 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 301 (days)
+Suggested next step size = 41.9605 (days)
+
+Restart file written for report step  9/18, date = 28-Sep-2015 00:00:00
+Time step took 0.000934 seconds; total solver time 0.021225 seconds.
+
+                              **************************************************************************
+  WELLS    AT       301  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   10    29 Oct 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1026.4:       -0.0:     1064.1:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1026.4:       -0.0:     1064.1:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1026.4:       -0.0:     1064.1:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1036.7:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1036.7:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1036.7:   295.9:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      503.5:        0.0:      522.4:      360.0:      121.0:        0.0:      523.7:
+:G1      :           :        :    :        0.0:      503.5:        0.0:      522.4:      360.0:      121.0:        0.0:      523.7:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      503.5:        0.0:      522.4:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      121.0:        0.0:      125.6:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      360.0:        0.0:        0.0:      398.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 10    ---------------
+      Current time (days)     301
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step 10/18 at day 301/540, date = 29-Oct-2015
+
+Starting time step 0, stepsize 28 days, at day 301/329, date = 29-Oct-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  8.558e-19  3.775e-04  1.008e-01  1.003e-01
+   1  1.370e-07  3.545e-07  1.737e-02  1.491e-01
+   2  4.284e-08  4.802e-07  1.344e-02  2.564e-02
+   3  2.827e-10  7.601e-10  4.330e-06  4.187e-04
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 301 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 329 (days)
+Suggested next step size = 84 (days)
+
+Restart file written for report step 10/18, date = 29-Oct-2015 00:00:00
+Time step took 0.001031 seconds; total solver time 0.022256 seconds.
+
+                              **************************************************************************
+  WELLS    AT       329  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   11    26 Nov 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1038.2:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1038.2:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1038.2:   291.3:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      531.5:        0.0:      551.5:      360.0:      149.0:        0.0:      552.8:
+:G1      :           :        :    :        0.0:      531.5:        0.0:      551.5:      360.0:      149.0:        0.0:      552.8:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      531.5:        0.0:      551.5:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      149.0:        0.0:      154.6:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      360.0:        0.0:        0.0:      398.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 11    ---------------
+      Current time (days)     329
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step 11/18 at day 329/540, date = 26-Nov-2015
+
+Starting time step 0, stepsize 31 days, at day 329/360, date = 26-Nov-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  0.000e+00  2.347e-07  6.360e-02  6.347e-02
+   1  5.395e-08  5.951e-07  9.559e-03  6.612e-02
+   2  1.051e-08  1.234e-07  4.921e-04  3.166e-02
+   3  6.818e-09  8.584e-08  2.836e-03  1.313e-02
+   4  4.461e-10  4.956e-09  3.263e-05  3.992e-04
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 4
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Sub steps started at time = 329 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 360 (days)
+Suggested next step size = 80.6 (days)
+
+Restart file written for report step 11/18, date = 26-Nov-2015 00:00:00
+Time step took 0.001125 seconds; total solver time 0.023381 seconds.
+
+                              **************************************************************************
+  WELLS    AT       360  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   12    27 Dec 2015  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1000.0:       -0.0:     1038.2:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1038.3:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1038.3:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1038.3:   286.4:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      562.5:        0.0:      583.7:      360.0:      180.0:        0.0:      585.0:
+:G1      :           :        :    :        0.0:      562.5:        0.0:      583.7:      360.0:      180.0:        0.0:      585.0:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      562.5:        0.0:      583.7:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:      186.8:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      360.0:        0.0:        0.0:      398.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 12    ---------------
+      Current time (days)     360
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step 12/18 at day 360/540, date = 27-Dec-2015
+
+Starting time step 0, stepsize 31 days, at day 360/391, date = 27-Dec-2015
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.371e-02  1.583e-02  3.013e-01  1.225e-01
+   1  3.165e-03  3.125e-03  1.362e-01  1.590e-01
+   2  5.716e-07  6.369e-06  1.274e-01  2.663e-02
+   3  1.596e-07  3.463e-07  7.767e-03  3.599e-02
+   4  8.770e-09  9.499e-08  1.916e-03  4.091e-03
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 4
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Sub steps started at time = 360 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 391 (days)
+Suggested next step size = 27.2021 (days)
+
+Restart file written for report step 12/18, date = 27-Dec-2015 00:00:00
+Time step took 0.001202 seconds; total solver time 0.024584 seconds.
+
+                              **************************************************************************
+  WELLS    AT       391  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   13    27 Jan 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2094.9:       -0.0:     2175.2:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2094.9:       -0.0:     2175.2:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2094.9:       -0.0:     2175.2:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2212.1:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2212.1:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2212.1:   359.8:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      627.4:        0.0:      651.1:      422.0:      180.0:        0.0:      653.6:
+:G1      :           :        :    :        0.0:      627.4:        0.0:      651.1:      422.0:      180.0:        0.0:      653.6:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      627.4:        0.0:      651.1:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:      186.8:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      422.0:        0.0:        0.0:      466.7:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 13    ---------------
+      Current time (days)     391
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step 13/18 at day 391/540, date = 27-Jan-2016
+
+Starting time step 0, stepsize 28 days, at day 391/419, date = 27-Jan-2016
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.045e-02  2.993e-02  8.866e-02  8.848e-02
+Linear system blocksize: 2 size:      10 block nonzeroes:        28
+   1  9.120e-05  9.125e-05  4.529e-02  9.295e-02
+   2  5.431e-07  1.638e-06  4.469e-02  1.673e-01
+   3  1.518e-08  4.165e-07  5.509e-03  3.602e-02
+   4  5.320e-09  5.644e-08  1.239e-02  1.867e-02
+   5  1.545e-10  1.706e-09  6.001e-05  8.392e-05
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 5
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Sub steps started at time = 391 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 419 (days)
+Suggested next step size = 61.6 (days)
+
+Restart file written for report step 13/18, date = 27-Jan-2016 00:00:00
+Time step took 0.001256 seconds; total solver time 0.025839 seconds.
+
+                              **************************************************************************
+  WELLS    AT       419  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   14    24 Feb 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2129.9:       -0.0:     2207.7:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2129.9:       -0.0:     2207.7:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2129.9:       -0.0:     2207.7:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2211.9:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2211.9:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2211.9:   354.9:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      687.0:        0.0:      712.9:      478.0:      180.0:        0.0:      715.5:
+:G1      :           :        :    :        0.0:      687.0:        0.0:      712.9:      478.0:      180.0:        0.0:      715.5:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      687.0:        0.0:      712.9:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:      186.8:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      478.0:        0.0:        0.0:      528.7:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 14    ---------------
+      Current time (days)     419
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step 14/18 at day 419/540, date = 24-Feb-2016
+
+Starting time step 0, stepsize 31 days, at day 419/450, date = 24-Feb-2016
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  3.371e-02  3.369e-02  1.117e-01  1.116e-01
+   1  1.042e-05  6.238e-06  5.947e-02  1.650e-01
+   2  3.078e-07  5.093e-07  8.422e-03  3.437e-02
+   3  1.046e-10  1.316e-09  1.177e-03  5.543e-03
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 419 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 450 (days)
+Suggested next step size = 67.9268 (days)
+
+Restart file written for report step 14/18, date = 24-Feb-2016 00:00:00
+Time step took 0.001375 seconds; total solver time 0.027214 seconds.
+
+                              **************************************************************************
+  WELLS    AT       450  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   15    26 Mar 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     2126.4:       -0.0:     2204.0:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     2126.4:       -0.0:     2204.0:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     2126.4:       -0.0:     2204.0:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :     2000.0:        0.0:        0.0:     2211.9:        :        :
+:G1      :           :      :      :      :     2000.0:        0.0:        0.0:     2211.9:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :     2000.0:        0.0:        0.0:     2211.9:   361.5:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      752.9:        0.0:      781.3:      540.0:      180.0:        0.0:      784.1:
+:G1      :           :        :    :        0.0:      752.9:        0.0:      781.3:      540.0:      180.0:        0.0:      784.1:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      752.9:        0.0:      781.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      180.0:        0.0:      186.8:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      540.0:        0.0:        0.0:      597.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 15    ---------------
+      Current time (days)     450
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step 15/18 at day 450/540, date = 26-Mar-2016
+
+Starting time step 0, stepsize 31 days, at day 450/481, date = 26-Mar-2016
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  5.053e-18  1.781e-02  2.811e-01  1.527e-01
+   1  1.680e-06  2.623e-05  5.231e-02  9.693e-02
+   2  1.337e-07  6.036e-07  2.359e-02  3.166e-02
+   3  2.966e-08  2.304e-05  7.916e-03  7.938e-03
+   4  2.001e-11  8.363e-09  8.529e-05  8.141e-05
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 450 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 481 (days)
+Suggested next step size = 37.9133 (days)
+
+Restart file written for report step 15/18, date = 26-Mar-2016 00:00:00
+Time step took 0.001493 seconds; total solver time 0.028707 seconds.
+
+                              **************************************************************************
+  WELLS    AT       481  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   16    26 Apr 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1027.2:       -0.0:     1064.4:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1027.2:       -0.0:     1064.4:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1027.2:       -0.0:     1064.4:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1036.3:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1036.3:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1036.3:   310.0:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      784.8:        0.0:      814.3:      540.0:      211.0:        0.0:      816.2:
+:G1      :           :        :    :        0.0:      784.8:        0.0:      814.3:      540.0:      211.0:        0.0:      816.2:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      784.8:        0.0:      814.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      211.0:        0.0:      218.9:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      540.0:        0.0:        0.0:      597.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 16    ---------------
+      Current time (days)     481
+      Current stepsize (days) 28
+      Total time (days)       540
+
+
+
+Report step 16/18 at day 481/540, date = 26-Apr-2016
+
+Starting time step 0, stepsize 28 days, at day 481/509, date = 26-Apr-2016
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  2.853e-18  3.883e-04  1.018e-01  1.012e-01
+   1  2.295e-07  2.533e-06  4.031e-03  1.459e-01
+   2  2.829e-08  3.065e-06  7.170e-03  2.355e-02
+   3  6.035e-09  1.573e-06  8.409e-03  2.150e-03
+   4  6.362e-10  9.843e-05  5.705e-04  6.164e-04
+   5  3.006e-12  3.936e-08  5.619e-07  3.656e-07
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 5
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Sub steps started at time = 481 (days)
+ step[ 0 ] = 28 (days)
+sub steps end time = 509 (days)
+Suggested next step size = 61.6 (days)
+
+Restart file written for report step 16/18, date = 26-Apr-2016 00:00:00
+Time step took 0.001639 seconds; total solver time 0.030346 seconds.
+
+                              **************************************************************************
+  WELLS    AT       509  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   17    24 May 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:      999.5:       -0.0:     1037.3:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:      999.5:       -0.0:     1037.3:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:      999.5:       -0.0:     1037.3:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1037.9:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1037.9:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1037.9:   305.9:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      812.8:        0.0:      843.3:      540.0:      239.0:        0.0:      845.2:
+:G1      :           :        :    :        0.0:      812.8:        0.0:      843.3:      540.0:      239.0:        0.0:      845.2:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      812.8:        0.0:      843.3:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      239.0:        0.0:      248.0:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      540.0:        0.0:        0.0:      597.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+
+
+---------------    Simulation step number 17    ---------------
+      Current time (days)     509
+      Current stepsize (days) 31
+      Total time (days)       540
+
+
+
+Report step 17/18 at day 509/540, date = 24-May-2016
+
+Starting time step 0, stepsize 31 days, at day 509/540, date = 24-May-2016
+Iter    MB(O)      MB(W)      CNV(O)     CNV(W) 
+   0  6.316e-19  8.716e-06  6.544e-02  6.548e-02
+   1  1.609e-07  1.723e-06  1.725e-02  1.060e-01
+   2  2.637e-08  5.841e-05  2.934e-03  2.396e-02
+   3  8.066e-10  2.536e-06  4.511e-05  2.521e-04
+   4  7.669e-13  1.404e-10  3.903e-08  2.145e-07
+Keyword 'WELLS' is unhandled for output to restart file.
+Overall linear iterations used: 3
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  3 (0.0sec)
+Sub steps started at time = 509 (days)
+ step[ 0 ] = 31 (days)
+sub steps end time = 540 (days)
+Suggested next step size = 80.6 (days)
+
+Restart file written for report step 17/18, date = 24-May-2016 00:00:00
+Time step took 0.001870 seconds; total solver time 0.032215 seconds.
+
+                              **************************************************************************
+  WELLS    AT       540  DAYS *                 SPE1 - CASE 2                                          *
+  REPORT   18    24 Jun 2016  *                                             Flow  version 2025.10-pre  *
+                              **************************************************************************
+
+
+======================================================= PRODUCTION REPORT =======================================================
+:  WELL  : LOCATION  :CTRL:    OIL    :   WATER   :    GAS    :   FLUID   :   WATER   : GAS/OIL  :  WAT/GAS   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  :MODE:   RATE    :   RATE    :   RATE    : RES.VOL.  :    CUT    :  RATIO   :   RATIO    :CON.PR. :BLK.PR. :
+:        :           :    :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  :  SCM/SCM  :  SCM/SCM  : SCM/SCM  :  SCM/SCM   : BARSA  : BARSA  :
+=================================================================================================================================
+:FIELD   :           :    :       -0.0:     1000.5:       -0.0:     1038.5:      1.000:      0.00:      0.0000:        :        :
+:G1      :           :    :       -0.0:     1000.5:       -0.0:     1038.5:      1.000:      0.00:      0.0000:        :        :
+:PROD    : 10,  1    : BHP:       -0.0:     1000.5:       -0.0:     1038.5:      1.000:      0.00:      0.0000:   245.0:     0.0:
+:--------:-----------:----:-----------:-----------:-----------:-----------:-----------:----------:------------:--------:--------:
+
+============================================= INJECTION REPORT ==============================================
+:  WELL  : LOCATION  : CTRL : CTRL : CTRL :    OIL    :   WATER   :    GAS    :   FLUID   : BHP OR : THP OR :
+:  NAME  :  (I,J,K)  : MODE : MODE : MODE :   RATE    :   RATE    :   RATE    : RES.VOL.  :CON.PR. :BLK.PR. :
+:        :           : OIL  : WAT  : GAS  :  SCM/DAY  :  SCM/DAY  :  SCM/DAY  :  RCM/DAY  : BARSA  : BARSA  :
+=============================================================================================================
+:FIELD   :           :      :      :      :        0.0:     1000.0:        0.0:     1038.0:        :        :
+:G1      :           :      :      :      :        0.0:     1000.0:        0.0:     1038.0:        :        :
+:INJ     :  1,  1    :      :  WRAT:      :        0.0:     1000.0:        0.0:     1038.0:   299.4:     0.0:
+:OILINJ  :  1,  1    :  ORAT:      :      :        0.0:        0.0:        0.0:        0.0:     0.0:     0.0:
+:--------:-----------:------:------:------:-----------:-----------:-----------:-----------:--------:--------:
+
+============================================== CUMULATIVE PRODUCTION/INJECTION TOTALS ==============================================
+:  WELL  : LOCATION  :  WELL  :CTRL:    OIL    :   WATER   :    GAS    :   Prod    :    OIL    :   WATER   :    GAS    :    INJ    :
+:  NAME  :  (I,J,K)  :  TYPE  :MODE:   PROD    :   PROD    :   PROD    : RES.VOL.  :    INJ    :    INJ    :    INJ    : RES.VOL.  :
+:        :           :        :    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :   MSCM    :   MSCM    :   MMSCM   :   MRCM    :
+====================================================================================================================================
+:FIELD   :           :        :    :        0.0:      843.8:        0.0:      875.5:      540.0:      270.0:        0.0:      877.4:
+:G1      :           :        :    :        0.0:      843.8:        0.0:      875.5:      540.0:      270.0:        0.0:      877.4:
+:PROD    : 10,  1    :    PROD: BHP:        0.0:      843.8:        0.0:      875.5:        0.0:        0.0:        0.0:        0.0:
+:INJ     :  1,  1    :     INJ:WRAT:        0.0:        0.0:        0.0:        0.0:        0.0:      270.0:        0.0:      280.2:
+:OILINJ  :  1,  1    :     INJ:ORAT:        0.0:        0.0:        0.0:        0.0:      540.0:        0.0:        0.0:      597.2:
+:--------:-----------:--------:----:-----------:-----------:-----------:-----------:-----------:-----------:-----------:-----------:
+
+Restart file written for report step 18/18, date = 24-Jun-2016 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.04 s
+  Deck input:                    0.03 s
+Number of timesteps:            21
+Simulation time:                 0.03 s
+  Assembly time:                 0.00 s (Wasted: 0.0 s; 0.0%)
+    Well assembly:               0.00 s (Wasted: 0.0 s; 0.0%)
+  Linear solve time:             0.01 s (Wasted: 0.0 s; 0.0%)
+    Linear setup:                0.01 s (Wasted: 0.0 s; 0.0%)
+  Props/update time:             0.00 s (Wasted: 0.0 s; 0.0%)
+  Pre/post step:                 0.01 s (Wasted: 0.0 s; 0.0%)
+  Output write time:             0.01 s
+Overall Linearizations:        102      (Wasted:     0; 0.0%)
+Overall Newton Iterations:      81      (Wasted:     0; 0.0%)
+Overall Linear Iterations:      68      (Wasted:     0; 0.0%)
+
+
+
+Error summary:
+Warnings          20
+Info              180
+Errors            0
+Bugs              0
+Debug             201
+Problems          0
+

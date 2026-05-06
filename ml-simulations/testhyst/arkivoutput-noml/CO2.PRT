@@ -1,0 +1,3454 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.04-pre (fd6ac3aa9*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.3.0, Darwin Kernel Version 24.3.0: Thu Jan  2 20:24:16 PST 2025; root:xnu-11215.81.4~3/RELEASE_ARM64_T6000 )
+Build time       =  2025-03-18 at 16:31:48 hrs
+User             =  macbookn
+Simulation started on 19-03-2025 at 14:36:34 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EclDeckFileName="CO2.DATA" # default: ""
+ActivateMLRelPErm="0" # default: "0"
+NewtonMaxIterations="20" # default: "20"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableOpmRstFile="true" # default: "0"
+NewtonMinIterations="1" # default: "2"
+EnableWellOperabilityCheck="false" # default: "1"
+MinTimeStepBeforeShuttingProblematicWellsInDays="1e-99" # default: "0.01"
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuDeviceId="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepSize="0"
+NetworkMaxIterations="20"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputDir=""
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'CO2.DATA'
+    0 Reading RUNSPEC  in CO2.DATA line 4
+    1 Reading DIMENS   in CO2.DATA line 6
+    2 Reading WATER    in CO2.DATA line 9
+    3 Reading GAS      in CO2.DATA line 10
+    4 Reading CO2STORE in CO2.DATA line 11
+    5 Reading DIFFUSE  in CO2.DATA line 12
+    6 Reading DISGASW  in CO2.DATA line 13
+    7 Reading METRIC   in CO2.DATA line 15
+    8 Reading START    in CO2.DATA line 17
+    9 Reading EQLDIMS  in CO2.DATA line 21
+   10 Reading TABDIMS  in CO2.DATA line 24
+   11 Reading SATOPTS  in CO2.DATA line 27
+   12 Reading WELLDIMS in CO2.DATA line 30
+   13 Reading UNIFIN   in CO2.DATA line 33
+   14 Reading UNIFOUT  in CO2.DATA line 34
+   15 Reading GRID     in CO2.DATA line 36
+   16 Reading INIT     in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GEOLOGY.INC line 4
+   17 Reading SPECGRID in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GRID.INC line 5
+   18 Reading COORD    in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GRID.INC line 9
+   19 Reading ZCORN    in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GRID.INC line 174
+   20 Reading EQUALS   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GEOLOGY.INC line 8
+   21 Reading EQUALS   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GEOLOGY.INC line 64
+   22 Reading COPY     in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GEOLOGY.INC line 120
+   23 Reading EQUALS   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/GEOLOGY.INC line 124
+   24 Reading EDIT     in CO2.DATA line 41
+   25 Reading BOX      in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/MULTPV.INC line 3
+   26 Reading MULTPV   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/MULTPV.INC line 5
+   27 Reading ENDBOX   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/MULTPV.INC line 7
+   28 Reading PROPS    in CO2.DATA line 46
+   29 Reading SGFN     in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/TABLES.INC line 1
+   30 Reading SWFN     in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/TABLES.INC line 10030
+   31 Reading EHYSTR   in CO2.DATA line 51
+   32 Reading REGIONS  in CO2.DATA line 54
+   33 Reading EQUALS   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/REGIONS.INC line 4
+   34 Reading EQUALS   in /Users/macbookn/activopmwkspc/edgedev/opm-tests/testhyst/REGIONS.INC line 60
+   35 Reading SOLUTION in CO2.DATA line 59
+   36 Reading EQUIL    in CO2.DATA line 61
+   37 Reading RTEMPVD  in CO2.DATA line 64
+   38 Reading RVW      in CO2.DATA line 68
+   39 Reading RPTRST   in CO2.DATA line 71
+   40 Reading SUMMARY  in CO2.DATA line 74
+   41 Reading CGIR     in CO2.DATA line 76
+   42 Reading CGIRL    in CO2.DATA line 80
+   43 Reading CPI      in CO2.DATA line 84
+   44 Reading CGIR     in CO2.DATA line 88
+   45 Reading CGIRL    in CO2.DATA line 92
+   46 Reading WGIRL    in CO2.DATA line 96
+   47 Reading CGIT     in CO2.DATA line 100
+   48 Reading CGITL    in CO2.DATA line 104
+   49 Reading WGITL    in CO2.DATA line 108
+   50 Reading FPR      in CO2.DATA line 112
+   51 Reading FGIP     in CO2.DATA line 114
+   52 Reading FWIP     in CO2.DATA line 116
+   53 Reading FGIR     in CO2.DATA line 118
+   54 Reading FWIR     in CO2.DATA line 120
+   55 Reading FGIT     in CO2.DATA line 122
+   56 Reading FWIT     in CO2.DATA line 124
+   57 Reading FWCD     in CO2.DATA line 126
+   58 Reading WGIR     in CO2.DATA line 128
+   59 Reading WGIT     in CO2.DATA line 131
+   60 Reading WBHP     in CO2.DATA line 134
+   61 Reading RPR      in CO2.DATA line 137
+   62 Reading RWIP     in CO2.DATA line 140
+   63 Reading RGIP     in CO2.DATA line 143
+   64 Reading WPI      in CO2.DATA line 146
+   65 Reading SCHEDULE in CO2.DATA line 149
+   66 Reading RPTRST   in CO2.DATA line 151
+   67 Reading WELSPECS in CO2.DATA line 154
+   68 Reading COMPDAT  in CO2.DATA line 157
+   69 Reading TUNING   in CO2.DATA line 160
+   70 Reading WCONINJE in CO2.DATA line 164
+   71 Reading TSTEP    in CO2.DATA line 168
+   72 Reading TUNING   in CO2.DATA line 171
+   73 Reading WCONINJE in CO2.DATA line 175
+   74 Reading TSTEP    in CO2.DATA line 179
+   75 Reading TUNING   in CO2.DATA line 182
+   76 Reading WCONINJE in CO2.DATA line 186
+   77 Reading TSTEP    in CO2.DATA line 190
+The CO2 storage option is given. PVT properties from the Brine-CO2 system is used
+See the OPM manual for details on the used models.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+2 fluid phases are active
+
+Processing dynamic information from
+CO2.DATA line 149
+Initializing report step 0/210 at 2000-01-01 0 DAYS line 149
+Processing keyword RPTRST at line 151
+Processing keyword WELSPECS at line 154
+Processing keyword COMPDAT at line 157
+Processing keyword TUNING at line 160
+Processing keyword WCONINJE at line 164
+Complete report step 1 (0.09999999999999999 DAYS) at 2000-01-01 (0 DAYS)
+
+Initializing report step 2/210 at 2000-01-01 (0 DAYS) line 168
+Complete report step 2 (0.09999999999999999 DAYS) at 2000-01-01 (0.09999999999999999 DAYS)
+
+Initializing report step 3/210 at 2000-01-01 (0.09999999999999999 DAYS) line 168
+Complete report step 3 (0.09999999999999999 DAYS) at 2000-01-01 (0.19999999999999998 DAYS)
+
+Initializing report step 4/210 at 2000-01-01 (0.19999999999999998 DAYS) line 168
+Complete report step 4 (0.09999999999999999 DAYS) at 2000-01-01 (0.3 DAYS)
+
+Initializing report step 5/210 at 2000-01-01 (0.3 DAYS) line 168
+Complete report step 5 (0.09999999999999999 DAYS) at 2000-01-01 (0.39999999999999997 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/210 at 2000-01-01 (0.39999999999999997 DAYS) line 168
+Complete report step 6 (0.09999999999999999 DAYS) at 2000-01-01 (0.5 DAYS)
+
+Initializing report step 7/210 at 2000-01-01 (0.5 DAYS) line 168
+Complete report step 7 (0.09999999999999999 DAYS) at 2000-01-01 (0.6 DAYS)
+
+Initializing report step 8/210 at 2000-01-01 (0.6 DAYS) line 168
+Complete report step 8 (0.09999999999999999 DAYS) at 2000-01-01 (0.7 DAYS)
+
+Initializing report step 9/210 at 2000-01-01 (0.7 DAYS) line 168
+Complete report step 9 (0.09999999999999999 DAYS) at 2000-01-01 (0.7999999999999999 DAYS)
+
+Initializing report step 10/210 at 2000-01-01 (0.7999999999999999 DAYS) line 168
+Complete report step 10 (0.09999999999999999 DAYS) at 2000-01-02 (0.8999999999999999 DAYS)
+
+Initializing report step 11/210 at 2000-01-02 (0.8999999999999999 DAYS) line 168
+Complete report step 11 (0.09999999999999999 DAYS) at 2000-01-02 (1 DAYS)
+
+Initializing report step 12/210 at 2000-01-02 (1 DAYS) line 168
+Complete report step 12 (0.09999999999999999 DAYS) at 2000-01-02 (1.0999999999999999 DAYS)
+
+Initializing report step 13/210 at 2000-01-02 (1.0999999999999999 DAYS) line 168
+Complete report step 13 (0.09999999999999999 DAYS) at 2000-01-02 (1.2 DAYS)
+
+Initializing report step 14/210 at 2000-01-02 (1.2 DAYS) line 168
+Complete report step 14 (0.09999999999999999 DAYS) at 2000-01-02 (1.3 DAYS)
+
+Initializing report step 15/210 at 2000-01-02 (1.3 DAYS) line 168
+Complete report step 15 (0.09999999999999999 DAYS) at 2000-01-02 (1.4 DAYS)
+
+Initializing report step 16/210 at 2000-01-02 (1.4 DAYS) line 168
+Complete report step 16 (0.09999999999999999 DAYS) at 2000-01-02 (1.5 DAYS)
+
+Initializing report step 17/210 at 2000-01-02 (1.5 DAYS) line 168
+Complete report step 17 (0.09999999999999999 DAYS) at 2000-01-02 (1.5999999999999999 DAYS)
+
+Initializing report step 18/210 at 2000-01-02 (1.5999999999999999 DAYS) line 168
+Complete report step 18 (0.09999999999999999 DAYS) at 2000-01-02 (1.7 DAYS)
+
+Initializing report step 19/210 at 2000-01-02 (1.7 DAYS) line 168
+Complete report step 19 (0.09999999999999999 DAYS) at 2000-01-02 (1.7999999999999998 DAYS)
+
+Initializing report step 20/210 at 2000-01-02 (1.7999999999999998 DAYS) line 168
+Complete report step 20 (0.09999999999999999 DAYS) at 2000-01-03 (1.9 DAYS)
+
+Initializing report step 21/210 at 2000-01-03 (1.9 DAYS) line 168
+Complete report step 21 (0.09999999999999999 DAYS) at 2000-01-03 (2 DAYS)
+
+Initializing report step 22/210 at 2000-01-03 (2 DAYS) line 168
+Complete report step 22 (0.09999999999999999 DAYS) at 2000-01-03 (2.1 DAYS)
+
+Initializing report step 23/210 at 2000-01-03 (2.1 DAYS) line 168
+Complete report step 23 (0.09999999999999999 DAYS) at 2000-01-03 (2.1999999999999997 DAYS)
+
+Initializing report step 24/210 at 2000-01-03 (2.1999999999999997 DAYS) line 168
+Complete report step 24 (0.09999999999999999 DAYS) at 2000-01-03 (2.3 DAYS)
+
+Initializing report step 25/210 at 2000-01-03 (2.3 DAYS) line 168
+Complete report step 25 (0.09999999999999999 DAYS) at 2000-01-03 (2.4 DAYS)
+
+Initializing report step 26/210 at 2000-01-03 (2.4 DAYS) line 168
+Complete report step 26 (0.09999999999999999 DAYS) at 2000-01-03 (2.5 DAYS)
+
+Initializing report step 27/210 at 2000-01-03 (2.5 DAYS) line 168
+Complete report step 27 (0.09999999999999999 DAYS) at 2000-01-03 (2.6 DAYS)
+
+Initializing report step 28/210 at 2000-01-03 (2.6 DAYS) line 168
+Complete report step 28 (0.09999999999999999 DAYS) at 2000-01-03 (2.6999999999999997 DAYS)
+
+Initializing report step 29/210 at 2000-01-03 (2.6999999999999997 DAYS) line 168
+Complete report step 29 (0.09999999999999999 DAYS) at 2000-01-03 (2.8 DAYS)
+
+Initializing report step 30/210 at 2000-01-03 (2.8 DAYS) line 168
+Complete report step 30 (0.09999999999999999 DAYS) at 2000-01-04 (2.9 DAYS)
+
+Initializing report step 31/210 at 2000-01-04 (2.9 DAYS) line 168
+Complete report step 31 (0.09999999999999999 DAYS) at 2000-01-04 (3 DAYS)
+
+Initializing report step 32/210 at 2000-01-04 (3 DAYS) line 168
+Complete report step 32 (0.09999999999999999 DAYS) at 2000-01-04 (3.0999999999999996 DAYS)
+
+Initializing report step 33/210 at 2000-01-04 (3.0999999999999996 DAYS) line 168
+Complete report step 33 (0.09999999999999999 DAYS) at 2000-01-04 (3.1999999999999997 DAYS)
+
+Initializing report step 34/210 at 2000-01-04 (3.1999999999999997 DAYS) line 168
+Complete report step 34 (0.09999999999999999 DAYS) at 2000-01-04 (3.3 DAYS)
+
+Initializing report step 35/210 at 2000-01-04 (3.3 DAYS) line 168
+Complete report step 35 (0.09999999999999999 DAYS) at 2000-01-04 (3.4 DAYS)
+
+Initializing report step 36/210 at 2000-01-04 (3.4 DAYS) line 168
+Complete report step 36 (0.09999999999999999 DAYS) at 2000-01-04 (3.5 DAYS)
+
+Initializing report step 37/210 at 2000-01-04 (3.5 DAYS) line 168
+Complete report step 37 (0.09999999999999999 DAYS) at 2000-01-04 (3.5999999999999996 DAYS)
+
+Initializing report step 38/210 at 2000-01-04 (3.5999999999999996 DAYS) line 168
+Complete report step 38 (0.09999999999999999 DAYS) at 2000-01-04 (3.6999999999999997 DAYS)
+
+Initializing report step 39/210 at 2000-01-04 (3.6999999999999997 DAYS) line 168
+Complete report step 39 (0.09999999999999999 DAYS) at 2000-01-04 (3.8 DAYS)
+
+Initializing report step 40/210 at 2000-01-04 (3.8 DAYS) line 168
+Complete report step 40 (0.09999999999999999 DAYS) at 2000-01-05 (3.9 DAYS)
+
+Initializing report step 41/210 at 2000-01-05 (3.9 DAYS) line 168
+Complete report step 41 (0.09999999999999999 DAYS) at 2000-01-05 (4 DAYS)
+
+Initializing report step 42/210 at 2000-01-05 (4 DAYS) line 168
+Complete report step 42 (0.09999999999999999 DAYS) at 2000-01-05 (4.1 DAYS)
+
+Initializing report step 43/210 at 2000-01-05 (4.1 DAYS) line 168
+Complete report step 43 (0.09999999999999999 DAYS) at 2000-01-05 (4.2 DAYS)
+
+Initializing report step 44/210 at 2000-01-05 (4.2 DAYS) line 168
+Complete report step 44 (0.09999999999999999 DAYS) at 2000-01-05 (4.3 DAYS)
+
+Initializing report step 45/210 at 2000-01-05 (4.3 DAYS) line 168
+Complete report step 45 (0.09999999999999999 DAYS) at 2000-01-05 (4.3999999999999995 DAYS)
+
+Initializing report step 46/210 at 2000-01-05 (4.3999999999999995 DAYS) line 168
+Complete report step 46 (0.09999999999999999 DAYS) at 2000-01-05 (4.5 DAYS)
+
+Initializing report step 47/210 at 2000-01-05 (4.5 DAYS) line 168
+Complete report step 47 (0.09999999999999999 DAYS) at 2000-01-05 (4.6 DAYS)
+
+Initializing report step 48/210 at 2000-01-05 (4.6 DAYS) line 168
+Complete report step 48 (0.09999999999999999 DAYS) at 2000-01-05 (4.7 DAYS)
+
+Initializing report step 49/210 at 2000-01-05 (4.7 DAYS) line 168
+Complete report step 49 (0.09999999999999999 DAYS) at 2000-01-05 (4.8 DAYS)
+
+Initializing report step 50/210 at 2000-01-05 (4.8 DAYS) line 168
+Complete report step 50 (0.09999999999999999 DAYS) at 2000-01-06 (4.8999999999999995 DAYS)
+
+Initializing report step 51/210 at 2000-01-06 (4.8999999999999995 DAYS) line 168
+Complete report step 51 (0.09999999999999999 DAYS) at 2000-01-06 (5 DAYS)
+
+Initializing report step 52/210 at 2000-01-06 (5 DAYS) line 168
+Complete report step 52 (0.09999999999999999 DAYS) at 2000-01-06 (5.1 DAYS)
+
+Initializing report step 53/210 at 2000-01-06 (5.1 DAYS) line 168
+Complete report step 53 (0.09999999999999999 DAYS) at 2000-01-06 (5.2 DAYS)
+
+Initializing report step 54/210 at 2000-01-06 (5.2 DAYS) line 168
+Complete report step 54 (0.09999999999999999 DAYS) at 2000-01-06 (5.3 DAYS)
+
+Initializing report step 55/210 at 2000-01-06 (5.3 DAYS) line 168
+Complete report step 55 (0.09999999999999999 DAYS) at 2000-01-06 (5.3999999999999995 DAYS)
+
+Initializing report step 56/210 at 2000-01-06 (5.3999999999999995 DAYS) line 168
+Complete report step 56 (0.09999999999999999 DAYS) at 2000-01-06 (5.5 DAYS)
+
+Initializing report step 57/210 at 2000-01-06 (5.5 DAYS) line 168
+Complete report step 57 (0.09999999999999999 DAYS) at 2000-01-06 (5.6 DAYS)
+
+Initializing report step 58/210 at 2000-01-06 (5.6 DAYS) line 168
+Complete report step 58 (0.09999999999999999 DAYS) at 2000-01-06 (5.699999999999999 DAYS)
+
+Initializing report step 59/210 at 2000-01-06 (5.699999999999999 DAYS) line 168
+Complete report step 59 (0.09999999999999999 DAYS) at 2000-01-06 (5.8 DAYS)
+
+Initializing report step 60/210 at 2000-01-06 (5.8 DAYS) line 168
+Complete report step 60 (0.09999999999999999 DAYS) at 2000-01-07 (5.8999999999999995 DAYS)
+
+Initializing report step 61/210 at 2000-01-07 (5.8999999999999995 DAYS) line 168
+Complete report step 61 (0.09999999999999999 DAYS) at 2000-01-07 (6 DAYS)
+
+Initializing report step 62/210 at 2000-01-07 (6 DAYS) line 168
+Complete report step 62 (0.09999999999999999 DAYS) at 2000-01-07 (6.1 DAYS)
+
+Initializing report step 63/210 at 2000-01-07 (6.1 DAYS) line 168
+Complete report step 63 (0.09999999999999999 DAYS) at 2000-01-07 (6.199999999999999 DAYS)
+
+Initializing report step 64/210 at 2000-01-07 (6.199999999999999 DAYS) line 168
+Complete report step 64 (0.09999999999999999 DAYS) at 2000-01-07 (6.3 DAYS)
+
+Initializing report step 65/210 at 2000-01-07 (6.3 DAYS) line 168
+Complete report step 65 (0.09999999999999999 DAYS) at 2000-01-07 (6.3999999999999995 DAYS)
+
+Initializing report step 66/210 at 2000-01-07 (6.3999999999999995 DAYS) line 168
+Complete report step 66 (0.09999999999999999 DAYS) at 2000-01-07 (6.5 DAYS)
+
+Initializing report step 67/210 at 2000-01-07 (6.5 DAYS) line 168
+Complete report step 67 (0.09999999999999999 DAYS) at 2000-01-07 (6.6 DAYS)
+
+Initializing report step 68/210 at 2000-01-07 (6.6 DAYS) line 168
+Complete report step 68 (0.09999999999999999 DAYS) at 2000-01-07 (6.699999999999999 DAYS)
+
+Initializing report step 69/210 at 2000-01-07 (6.699999999999999 DAYS) line 168
+Complete report step 69 (0.09999999999999999 DAYS) at 2000-01-07 (6.8 DAYS)
+
+Initializing report step 70/210 at 2000-01-07 (6.8 DAYS) line 168
+Complete report step 70 (0.09999999999999999 DAYS) at 2000-01-08 (6.8999999999999995 DAYS)
+
+Initializing report step 71/210 at 2000-01-08 (6.8999999999999995 DAYS) line 168
+Processing keyword TUNING at line 171
+Processing keyword WCONINJE at line 175
+Complete report step 71 (0.09999999999999999 DAYS) at 2000-01-08 (7 DAYS)
+
+Initializing report step 72/210 at 2000-01-08 (7 DAYS) line 179
+Complete report step 72 (0.09999999999999999 DAYS) at 2000-01-08 (7.1 DAYS)
+
+Initializing report step 73/210 at 2000-01-08 (7.1 DAYS) line 179
+Complete report step 73 (0.09999999999999999 DAYS) at 2000-01-08 (7.199999999999999 DAYS)
+
+Initializing report step 74/210 at 2000-01-08 (7.199999999999999 DAYS) line 179
+Complete report step 74 (0.09999999999999999 DAYS) at 2000-01-08 (7.3 DAYS)
+
+Initializing report step 75/210 at 2000-01-08 (7.3 DAYS) line 179
+Complete report step 75 (0.09999999999999999 DAYS) at 2000-01-08 (7.3999999999999995 DAYS)
+
+Initializing report step 76/210 at 2000-01-08 (7.3999999999999995 DAYS) line 179
+Complete report step 76 (0.09999999999999999 DAYS) at 2000-01-08 (7.5 DAYS)
+
+Initializing report step 77/210 at 2000-01-08 (7.5 DAYS) line 179
+Complete report step 77 (0.09999999999999999 DAYS) at 2000-01-08 (7.6 DAYS)
+
+Initializing report step 78/210 at 2000-01-08 (7.6 DAYS) line 179
+Complete report step 78 (0.09999999999999999 DAYS) at 2000-01-08 (7.699999999999999 DAYS)
+
+Initializing report step 79/210 at 2000-01-08 (7.699999999999999 DAYS) line 179
+Complete report step 79 (0.09999999999999999 DAYS) at 2000-01-08 (7.8 DAYS)
+
+Initializing report step 80/210 at 2000-01-08 (7.8 DAYS) line 179
+Complete report step 80 (0.09999999999999999 DAYS) at 2000-01-09 (7.8999999999999995 DAYS)
+
+Initializing report step 81/210 at 2000-01-09 (7.8999999999999995 DAYS) line 179
+Complete report step 81 (0.09999999999999999 DAYS) at 2000-01-09 (8 DAYS)
+
+Initializing report step 82/210 at 2000-01-09 (8 DAYS) line 179
+Complete report step 82 (0.09999999999999999 DAYS) at 2000-01-09 (8.1 DAYS)
+
+Initializing report step 83/210 at 2000-01-09 (8.1 DAYS) line 179
+Complete report step 83 (0.09999999999999999 DAYS) at 2000-01-09 (8.2 DAYS)
+
+Initializing report step 84/210 at 2000-01-09 (8.2 DAYS) line 179
+Complete report step 84 (0.09999999999999999 DAYS) at 2000-01-09 (8.299999999999999 DAYS)
+
+Initializing report step 85/210 at 2000-01-09 (8.299999999999999 DAYS) line 179
+Complete report step 85 (0.09999999999999999 DAYS) at 2000-01-09 (8.4 DAYS)
+
+Initializing report step 86/210 at 2000-01-09 (8.4 DAYS) line 179
+Complete report step 86 (0.09999999999999999 DAYS) at 2000-01-09 (8.5 DAYS)
+
+Initializing report step 87/210 at 2000-01-09 (8.5 DAYS) line 179
+Complete report step 87 (0.09999999999999999 DAYS) at 2000-01-09 (8.6 DAYS)
+
+Initializing report step 88/210 at 2000-01-09 (8.6 DAYS) line 179
+Complete report step 88 (0.09999999999999999 DAYS) at 2000-01-09 (8.7 DAYS)
+
+Initializing report step 89/210 at 2000-01-09 (8.7 DAYS) line 179
+Complete report step 89 (0.09999999999999999 DAYS) at 2000-01-09 (8.799999999999999 DAYS)
+
+Initializing report step 90/210 at 2000-01-09 (8.799999999999999 DAYS) line 179
+Complete report step 90 (0.09999999999999999 DAYS) at 2000-01-10 (8.9 DAYS)
+
+Initializing report step 91/210 at 2000-01-10 (8.9 DAYS) line 179
+Complete report step 91 (0.09999999999999999 DAYS) at 2000-01-10 (9 DAYS)
+
+Initializing report step 92/210 at 2000-01-10 (9 DAYS) line 179
+Complete report step 92 (0.09999999999999999 DAYS) at 2000-01-10 (9.1 DAYS)
+
+Initializing report step 93/210 at 2000-01-10 (9.1 DAYS) line 179
+Complete report step 93 (0.09999999999999999 DAYS) at 2000-01-10 (9.2 DAYS)
+
+Initializing report step 94/210 at 2000-01-10 (9.2 DAYS) line 179
+Complete report step 94 (0.09999999999999999 DAYS) at 2000-01-10 (9.299999999999999 DAYS)
+
+Initializing report step 95/210 at 2000-01-10 (9.299999999999999 DAYS) line 179
+Complete report step 95 (0.09999999999999999 DAYS) at 2000-01-10 (9.4 DAYS)
+
+Initializing report step 96/210 at 2000-01-10 (9.4 DAYS) line 179
+Complete report step 96 (0.09999999999999999 DAYS) at 2000-01-10 (9.5 DAYS)
+
+Initializing report step 97/210 at 2000-01-10 (9.5 DAYS) line 179
+Complete report step 97 (0.09999999999999999 DAYS) at 2000-01-10 (9.6 DAYS)
+
+Initializing report step 98/210 at 2000-01-10 (9.6 DAYS) line 179
+Complete report step 98 (0.09999999999999999 DAYS) at 2000-01-10 (9.7 DAYS)
+
+Initializing report step 99/210 at 2000-01-10 (9.7 DAYS) line 179
+Complete report step 99 (0.09999999999999999 DAYS) at 2000-01-10 (9.799999999999999 DAYS)
+
+Initializing report step 100/210 at 2000-01-10 (9.799999999999999 DAYS) line 179
+Complete report step 100 (0.09999999999999999 DAYS) at 2000-01-11 (9.9 DAYS)
+
+Initializing report step 101/210 at 2000-01-11 (9.9 DAYS) line 179
+Complete report step 101 (0.09999999999999999 DAYS) at 2000-01-11 (10 DAYS)
+
+Initializing report step 102/210 at 2000-01-11 (10 DAYS) line 179
+Complete report step 102 (0.09999999999999999 DAYS) at 2000-01-11 (10.1 DAYS)
+
+Initializing report step 103/210 at 2000-01-11 (10.1 DAYS) line 179
+Complete report step 103 (0.09999999999999999 DAYS) at 2000-01-11 (10.2 DAYS)
+
+Initializing report step 104/210 at 2000-01-11 (10.2 DAYS) line 179
+Complete report step 104 (0.09999999999999999 DAYS) at 2000-01-11 (10.299999999999999 DAYS)
+
+Initializing report step 105/210 at 2000-01-11 (10.299999999999999 DAYS) line 179
+Complete report step 105 (0.09999999999999999 DAYS) at 2000-01-11 (10.4 DAYS)
+
+Initializing report step 106/210 at 2000-01-11 (10.4 DAYS) line 179
+Complete report step 106 (0.09999999999999999 DAYS) at 2000-01-11 (10.5 DAYS)
+
+Initializing report step 107/210 at 2000-01-11 (10.5 DAYS) line 179
+Complete report step 107 (0.09999999999999999 DAYS) at 2000-01-11 (10.6 DAYS)
+
+Initializing report step 108/210 at 2000-01-11 (10.6 DAYS) line 179
+Complete report step 108 (0.09999999999999999 DAYS) at 2000-01-11 (10.7 DAYS)
+
+Initializing report step 109/210 at 2000-01-11 (10.7 DAYS) line 179
+Complete report step 109 (0.09999999999999999 DAYS) at 2000-01-11 (10.799999999999999 DAYS)
+
+Initializing report step 110/210 at 2000-01-11 (10.799999999999999 DAYS) line 179
+Complete report step 110 (0.09999999999999999 DAYS) at 2000-01-12 (10.899999999999999 DAYS)
+
+Initializing report step 111/210 at 2000-01-12 (10.899999999999999 DAYS) line 179
+Complete report step 111 (0.09999999999999999 DAYS) at 2000-01-12 (11 DAYS)
+
+Initializing report step 112/210 at 2000-01-12 (11 DAYS) line 179
+Complete report step 112 (0.09999999999999999 DAYS) at 2000-01-12 (11.1 DAYS)
+
+Initializing report step 113/210 at 2000-01-12 (11.1 DAYS) line 179
+Complete report step 113 (0.09999999999999999 DAYS) at 2000-01-12 (11.2 DAYS)
+
+Initializing report step 114/210 at 2000-01-12 (11.2 DAYS) line 179
+Complete report step 114 (0.09999999999999999 DAYS) at 2000-01-12 (11.299999999999999 DAYS)
+
+Initializing report step 115/210 at 2000-01-12 (11.299999999999999 DAYS) line 179
+Complete report step 115 (0.09999999999999999 DAYS) at 2000-01-12 (11.399999999999999 DAYS)
+
+Initializing report step 116/210 at 2000-01-12 (11.399999999999999 DAYS) line 179
+Complete report step 116 (0.09999999999999999 DAYS) at 2000-01-12 (11.5 DAYS)
+
+Initializing report step 117/210 at 2000-01-12 (11.5 DAYS) line 179
+Complete report step 117 (0.09999999999999999 DAYS) at 2000-01-12 (11.6 DAYS)
+
+Initializing report step 118/210 at 2000-01-12 (11.6 DAYS) line 179
+Complete report step 118 (0.09999999999999999 DAYS) at 2000-01-12 (11.7 DAYS)
+
+Initializing report step 119/210 at 2000-01-12 (11.7 DAYS) line 179
+Complete report step 119 (0.09999999999999999 DAYS) at 2000-01-12 (11.799999999999999 DAYS)
+
+Initializing report step 120/210 at 2000-01-12 (11.799999999999999 DAYS) line 179
+Complete report step 120 (0.09999999999999999 DAYS) at 2000-01-13 (11.899999999999999 DAYS)
+
+Initializing report step 121/210 at 2000-01-13 (11.899999999999999 DAYS) line 179
+Complete report step 121 (0.09999999999999999 DAYS) at 2000-01-13 (12 DAYS)
+
+Initializing report step 122/210 at 2000-01-13 (12 DAYS) line 179
+Complete report step 122 (0.09999999999999999 DAYS) at 2000-01-13 (12.1 DAYS)
+
+Initializing report step 123/210 at 2000-01-13 (12.1 DAYS) line 179
+Complete report step 123 (0.09999999999999999 DAYS) at 2000-01-13 (12.2 DAYS)
+
+Initializing report step 124/210 at 2000-01-13 (12.2 DAYS) line 179
+Complete report step 124 (0.09999999999999999 DAYS) at 2000-01-13 (12.299999999999999 DAYS)
+
+Initializing report step 125/210 at 2000-01-13 (12.299999999999999 DAYS) line 179
+Complete report step 125 (0.09999999999999999 DAYS) at 2000-01-13 (12.399999999999999 DAYS)
+
+Initializing report step 126/210 at 2000-01-13 (12.399999999999999 DAYS) line 179
+Complete report step 126 (0.09999999999999999 DAYS) at 2000-01-13 (12.5 DAYS)
+
+Initializing report step 127/210 at 2000-01-13 (12.5 DAYS) line 179
+Complete report step 127 (0.09999999999999999 DAYS) at 2000-01-13 (12.6 DAYS)
+
+Initializing report step 128/210 at 2000-01-13 (12.6 DAYS) line 179
+Complete report step 128 (0.09999999999999999 DAYS) at 2000-01-13 (12.7 DAYS)
+
+Initializing report step 129/210 at 2000-01-13 (12.7 DAYS) line 179
+Complete report step 129 (0.09999999999999999 DAYS) at 2000-01-13 (12.799999999999999 DAYS)
+
+Initializing report step 130/210 at 2000-01-13 (12.799999999999999 DAYS) line 179
+Complete report step 130 (0.09999999999999999 DAYS) at 2000-01-14 (12.899999999999999 DAYS)
+
+Initializing report step 131/210 at 2000-01-14 (12.899999999999999 DAYS) line 179
+Complete report step 131 (0.09999999999999999 DAYS) at 2000-01-14 (13 DAYS)
+
+Initializing report step 132/210 at 2000-01-14 (13 DAYS) line 179
+Complete report step 132 (0.09999999999999999 DAYS) at 2000-01-14 (13.1 DAYS)
+
+Initializing report step 133/210 at 2000-01-14 (13.1 DAYS) line 179
+Complete report step 133 (0.09999999999999999 DAYS) at 2000-01-14 (13.2 DAYS)
+
+Initializing report step 134/210 at 2000-01-14 (13.2 DAYS) line 179
+Complete report step 134 (0.09999999999999999 DAYS) at 2000-01-14 (13.299999999999999 DAYS)
+
+Initializing report step 135/210 at 2000-01-14 (13.299999999999999 DAYS) line 179
+Complete report step 135 (0.09999999999999999 DAYS) at 2000-01-14 (13.399999999999999 DAYS)
+
+Initializing report step 136/210 at 2000-01-14 (13.399999999999999 DAYS) line 179
+Complete report step 136 (0.09999999999999999 DAYS) at 2000-01-14 (13.5 DAYS)
+
+Initializing report step 137/210 at 2000-01-14 (13.5 DAYS) line 179
+Complete report step 137 (0.09999999999999999 DAYS) at 2000-01-14 (13.6 DAYS)
+
+Initializing report step 138/210 at 2000-01-14 (13.6 DAYS) line 179
+Complete report step 138 (0.09999999999999999 DAYS) at 2000-01-14 (13.7 DAYS)
+
+Initializing report step 139/210 at 2000-01-14 (13.7 DAYS) line 179
+Complete report step 139 (0.09999999999999999 DAYS) at 2000-01-14 (13.799999999999999 DAYS)
+
+Initializing report step 140/210 at 2000-01-14 (13.799999999999999 DAYS) line 179
+Complete report step 140 (0.09999999999999999 DAYS) at 2000-01-15 (13.899999999999999 DAYS)
+
+Initializing report step 141/210 at 2000-01-15 (13.899999999999999 DAYS) line 179
+Processing keyword TUNING at line 182
+Processing keyword WCONINJE at line 186
+Complete report step 141 (0.09999999999999999 DAYS) at 2000-01-15 (14 DAYS)
+
+Initializing report step 142/210 at 2000-01-15 (14 DAYS) line 190
+Complete report step 142 (0.09999999999999999 DAYS) at 2000-01-15 (14.1 DAYS)
+
+Initializing report step 143/210 at 2000-01-15 (14.1 DAYS) line 190
+Complete report step 143 (0.09999999999999999 DAYS) at 2000-01-15 (14.2 DAYS)
+
+Initializing report step 144/210 at 2000-01-15 (14.2 DAYS) line 190
+Complete report step 144 (0.09999999999999999 DAYS) at 2000-01-15 (14.299999999999999 DAYS)
+
+Initializing report step 145/210 at 2000-01-15 (14.299999999999999 DAYS) line 190
+Complete report step 145 (0.09999999999999999 DAYS) at 2000-01-15 (14.399999999999999 DAYS)
+
+Initializing report step 146/210 at 2000-01-15 (14.399999999999999 DAYS) line 190
+Complete report step 146 (0.09999999999999999 DAYS) at 2000-01-15 (14.5 DAYS)
+
+Initializing report step 147/210 at 2000-01-15 (14.5 DAYS) line 190
+Complete report step 147 (0.09999999999999999 DAYS) at 2000-01-15 (14.6 DAYS)
+
+Initializing report step 148/210 at 2000-01-15 (14.6 DAYS) line 190
+Complete report step 148 (0.09999999999999999 DAYS) at 2000-01-15 (14.7 DAYS)
+
+Initializing report step 149/210 at 2000-01-15 (14.7 DAYS) line 190
+Complete report step 149 (0.09999999999999999 DAYS) at 2000-01-15 (14.799999999999999 DAYS)
+
+Initializing report step 150/210 at 2000-01-15 (14.799999999999999 DAYS) line 190
+Complete report step 150 (0.09999999999999999 DAYS) at 2000-01-16 (14.899999999999999 DAYS)
+
+Initializing report step 151/210 at 2000-01-16 (14.899999999999999 DAYS) line 190
+Complete report step 151 (0.09999999999999999 DAYS) at 2000-01-16 (15 DAYS)
+
+Initializing report step 152/210 at 2000-01-16 (15 DAYS) line 190
+Complete report step 152 (0.09999999999999999 DAYS) at 2000-01-16 (15.1 DAYS)
+
+Initializing report step 153/210 at 2000-01-16 (15.1 DAYS) line 190
+Complete report step 153 (0.09999999999999999 DAYS) at 2000-01-16 (15.2 DAYS)
+
+Initializing report step 154/210 at 2000-01-16 (15.2 DAYS) line 190
+Complete report step 154 (0.09999999999999999 DAYS) at 2000-01-16 (15.299999999999999 DAYS)
+
+Initializing report step 155/210 at 2000-01-16 (15.299999999999999 DAYS) line 190
+Complete report step 155 (0.09999999999999999 DAYS) at 2000-01-16 (15.399999999999999 DAYS)
+
+Initializing report step 156/210 at 2000-01-16 (15.399999999999999 DAYS) line 190
+Complete report step 156 (0.09999999999999999 DAYS) at 2000-01-16 (15.5 DAYS)
+
+Initializing report step 157/210 at 2000-01-16 (15.5 DAYS) line 190
+Complete report step 157 (0.09999999999999999 DAYS) at 2000-01-16 (15.6 DAYS)
+
+Initializing report step 158/210 at 2000-01-16 (15.6 DAYS) line 190
+Complete report step 158 (0.09999999999999999 DAYS) at 2000-01-16 (15.7 DAYS)
+
+Initializing report step 159/210 at 2000-01-16 (15.7 DAYS) line 190
+Complete report step 159 (0.09999999999999999 DAYS) at 2000-01-16 (15.799999999999999 DAYS)
+
+Initializing report step 160/210 at 2000-01-16 (15.799999999999999 DAYS) line 190
+Complete report step 160 (0.09999999999999999 DAYS) at 2000-01-17 (15.899999999999999 DAYS)
+
+Initializing report step 161/210 at 2000-01-17 (15.899999999999999 DAYS) line 190
+Complete report step 161 (0.09999999999999999 DAYS) at 2000-01-17 (16 DAYS)
+
+Initializing report step 162/210 at 2000-01-17 (16 DAYS) line 190
+Complete report step 162 (0.09999999999999999 DAYS) at 2000-01-17 (16.099999999999998 DAYS)
+
+Initializing report step 163/210 at 2000-01-17 (16.099999999999998 DAYS) line 190
+Complete report step 163 (0.09999999999999999 DAYS) at 2000-01-17 (16.2 DAYS)
+
+Initializing report step 164/210 at 2000-01-17 (16.2 DAYS) line 190
+Complete report step 164 (0.09999999999999999 DAYS) at 2000-01-17 (16.3 DAYS)
+
+Initializing report step 165/210 at 2000-01-17 (16.3 DAYS) line 190
+Complete report step 165 (0.09999999999999999 DAYS) at 2000-01-17 (16.4 DAYS)
+
+Initializing report step 166/210 at 2000-01-17 (16.4 DAYS) line 190
+Complete report step 166 (0.09999999999999999 DAYS) at 2000-01-17 (16.5 DAYS)
+
+Initializing report step 167/210 at 2000-01-17 (16.5 DAYS) line 190
+Complete report step 167 (0.09999999999999999 DAYS) at 2000-01-17 (16.599999999999998 DAYS)
+
+Initializing report step 168/210 at 2000-01-17 (16.599999999999998 DAYS) line 190
+Complete report step 168 (0.09999999999999999 DAYS) at 2000-01-17 (16.7 DAYS)
+
+Initializing report step 169/210 at 2000-01-17 (16.7 DAYS) line 190
+Complete report step 169 (0.09999999999999999 DAYS) at 2000-01-17 (16.8 DAYS)
+
+Initializing report step 170/210 at 2000-01-17 (16.8 DAYS) line 190
+Complete report step 170 (0.09999999999999999 DAYS) at 2000-01-18 (16.9 DAYS)
+
+Initializing report step 171/210 at 2000-01-18 (16.9 DAYS) line 190
+Complete report step 171 (0.09999999999999999 DAYS) at 2000-01-18 (17 DAYS)
+
+Initializing report step 172/210 at 2000-01-18 (17 DAYS) line 190
+Complete report step 172 (0.09999999999999999 DAYS) at 2000-01-18 (17.099999999999998 DAYS)
+
+Initializing report step 173/210 at 2000-01-18 (17.099999999999998 DAYS) line 190
+Complete report step 173 (0.09999999999999999 DAYS) at 2000-01-18 (17.2 DAYS)
+
+Initializing report step 174/210 at 2000-01-18 (17.2 DAYS) line 190
+Complete report step 174 (0.09999999999999999 DAYS) at 2000-01-18 (17.3 DAYS)
+
+Initializing report step 175/210 at 2000-01-18 (17.3 DAYS) line 190
+Complete report step 175 (0.09999999999999999 DAYS) at 2000-01-18 (17.4 DAYS)
+
+Initializing report step 176/210 at 2000-01-18 (17.4 DAYS) line 190
+Complete report step 176 (0.09999999999999999 DAYS) at 2000-01-18 (17.5 DAYS)
+
+Initializing report step 177/210 at 2000-01-18 (17.5 DAYS) line 190
+Complete report step 177 (0.09999999999999999 DAYS) at 2000-01-18 (17.599999999999998 DAYS)
+
+Initializing report step 178/210 at 2000-01-18 (17.599999999999998 DAYS) line 190
+Complete report step 178 (0.09999999999999999 DAYS) at 2000-01-18 (17.7 DAYS)
+
+Initializing report step 179/210 at 2000-01-18 (17.7 DAYS) line 190
+Complete report step 179 (0.09999999999999999 DAYS) at 2000-01-18 (17.8 DAYS)
+
+Initializing report step 180/210 at 2000-01-18 (17.8 DAYS) line 190
+Complete report step 180 (0.09999999999999999 DAYS) at 2000-01-19 (17.9 DAYS)
+
+Initializing report step 181/210 at 2000-01-19 (17.9 DAYS) line 190
+Complete report step 181 (0.09999999999999999 DAYS) at 2000-01-19 (18 DAYS)
+
+Initializing report step 182/210 at 2000-01-19 (18 DAYS) line 190
+Complete report step 182 (0.09999999999999999 DAYS) at 2000-01-19 (18.099999999999998 DAYS)
+
+Initializing report step 183/210 at 2000-01-19 (18.099999999999998 DAYS) line 190
+Complete report step 183 (0.09999999999999999 DAYS) at 2000-01-19 (18.2 DAYS)
+
+Initializing report step 184/210 at 2000-01-19 (18.2 DAYS) line 190
+Complete report step 184 (0.09999999999999999 DAYS) at 2000-01-19 (18.3 DAYS)
+
+Initializing report step 185/210 at 2000-01-19 (18.3 DAYS) line 190
+Complete report step 185 (0.09999999999999999 DAYS) at 2000-01-19 (18.4 DAYS)
+
+Initializing report step 186/210 at 2000-01-19 (18.4 DAYS) line 190
+Complete report step 186 (0.09999999999999999 DAYS) at 2000-01-19 (18.5 DAYS)
+
+Initializing report step 187/210 at 2000-01-19 (18.5 DAYS) line 190
+Complete report step 187 (0.09999999999999999 DAYS) at 2000-01-19 (18.599999999999998 DAYS)
+
+Initializing report step 188/210 at 2000-01-19 (18.599999999999998 DAYS) line 190
+Complete report step 188 (0.09999999999999999 DAYS) at 2000-01-19 (18.7 DAYS)
+
+Initializing report step 189/210 at 2000-01-19 (18.7 DAYS) line 190
+Complete report step 189 (0.09999999999999999 DAYS) at 2000-01-19 (18.8 DAYS)
+
+Initializing report step 190/210 at 2000-01-19 (18.8 DAYS) line 190
+Complete report step 190 (0.09999999999999999 DAYS) at 2000-01-20 (18.9 DAYS)
+
+Initializing report step 191/210 at 2000-01-20 (18.9 DAYS) line 190
+Complete report step 191 (0.09999999999999999 DAYS) at 2000-01-20 (19 DAYS)
+
+Initializing report step 192/210 at 2000-01-20 (19 DAYS) line 190
+Complete report step 192 (0.09999999999999999 DAYS) at 2000-01-20 (19.099999999999998 DAYS)
+
+Initializing report step 193/210 at 2000-01-20 (19.099999999999998 DAYS) line 190
+Complete report step 193 (0.09999999999999999 DAYS) at 2000-01-20 (19.2 DAYS)
+
+Initializing report step 194/210 at 2000-01-20 (19.2 DAYS) line 190
+Complete report step 194 (0.09999999999999999 DAYS) at 2000-01-20 (19.3 DAYS)
+
+Initializing report step 195/210 at 2000-01-20 (19.3 DAYS) line 190
+Complete report step 195 (0.09999999999999999 DAYS) at 2000-01-20 (19.4 DAYS)
+
+Initializing report step 196/210 at 2000-01-20 (19.4 DAYS) line 190
+Complete report step 196 (0.09999999999999999 DAYS) at 2000-01-20 (19.5 DAYS)
+
+Initializing report step 197/210 at 2000-01-20 (19.5 DAYS) line 190
+Complete report step 197 (0.09999999999999999 DAYS) at 2000-01-20 (19.599999999999998 DAYS)
+
+Initializing report step 198/210 at 2000-01-20 (19.599999999999998 DAYS) line 190
+Complete report step 198 (0.09999999999999999 DAYS) at 2000-01-20 (19.7 DAYS)
+
+Initializing report step 199/210 at 2000-01-20 (19.7 DAYS) line 190
+Complete report step 199 (0.09999999999999999 DAYS) at 2000-01-20 (19.8 DAYS)
+
+Initializing report step 200/210 at 2000-01-20 (19.8 DAYS) line 190
+Complete report step 200 (0.09999999999999999 DAYS) at 2000-01-21 (19.9 DAYS)
+
+Initializing report step 201/210 at 2000-01-21 (19.9 DAYS) line 190
+Complete report step 201 (0.09999999999999999 DAYS) at 2000-01-21 (20 DAYS)
+
+Initializing report step 202/210 at 2000-01-21 (20 DAYS) line 190
+Complete report step 202 (0.09999999999999999 DAYS) at 2000-01-21 (20.099999999999998 DAYS)
+
+Initializing report step 203/210 at 2000-01-21 (20.099999999999998 DAYS) line 190
+Complete report step 203 (0.09999999999999999 DAYS) at 2000-01-21 (20.2 DAYS)
+
+Initializing report step 204/210 at 2000-01-21 (20.2 DAYS) line 190
+Complete report step 204 (0.09999999999999999 DAYS) at 2000-01-21 (20.3 DAYS)
+
+Initializing report step 205/210 at 2000-01-21 (20.3 DAYS) line 190
+Complete report step 205 (0.09999999999999999 DAYS) at 2000-01-21 (20.4 DAYS)
+
+Initializing report step 206/210 at 2000-01-21 (20.4 DAYS) line 190
+Complete report step 206 (0.09999999999999999 DAYS) at 2000-01-21 (20.5 DAYS)
+
+Initializing report step 207/210 at 2000-01-21 (20.5 DAYS) line 190
+Complete report step 207 (0.09999999999999999 DAYS) at 2000-01-21 (20.599999999999998 DAYS)
+
+Initializing report step 208/210 at 2000-01-21 (20.599999999999998 DAYS) line 190
+Complete report step 208 (0.09999999999999999 DAYS) at 2000-01-21 (20.7 DAYS)
+
+Initializing report step 209/210 at 2000-01-21 (20.7 DAYS) line 190
+Complete report step 209 (0.09999999999999999 DAYS) at 2000-01-21 (20.8 DAYS)
+
+Initializing report step 210/210 at 2000-01-21 (20.8 DAYS) line 190
+Complete report step 210 (0.09999999999999999 DAYS) at 2000-01-22 (20.9 DAYS)
+
+
+Processing grid
+Total number of active cells: 3840 / total pore volume: 5804889493122 RM3
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System:  Water-Gas system.
+Relative permeability input format: Saturation Family II.
+Number of saturation regions: 10
+
+CO2STORE/CO2SOL is enabled. 
+ The surface density of CO2 is  1.868433kg/m3 
+ The surface density of Brine is  998.107723kg/m3
+ The surface densities are computed using the reference pressure ( 101325.000000Pa) and the reference temperature (288.710000K).
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/210 at day 0/21, date = 01-Jan-2000
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 0.1 days, at day 0/0.1, date = 01-Jan-2000
+Restart file written for report step   0/210, date = 01-Jan-2000 00:00:00
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 0.033 days
+
+
+Starting time step 0, stepsize 0.033 days, at day 0/0.1, date = 01-Jan-2000
+ Newton its=19, linearizations=20 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 1, stepsize 0.0138947 days, at day 0.033/0.1, date = 01-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 2, stepsize 0.0250105 days, at day 0.0468947/0.1, date = 01-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0280947 days, at day 0.0719053/0.1, date = 01-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step  1/210 at day 0.1/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.0618084 days, at day 0.1/0.2, date = 01-Jan-2000
+Restart file written for report step   1/210, date = 01-Jan-2000 02:24:00
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 1, stepsize 0.0381916 days, at day 0.161808/0.2, date = 01-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+
+Report step  2/210 at day 0.2/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.2/0.3, date = 01-Jan-2000
+Restart file written for report step   2/210, date = 01-Jan-2000 04:48:00
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step  3/210 at day 0.3/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.3/0.4, date = 01-Jan-2000
+Restart file written for report step   3/210, date = 01-Jan-2000 07:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step  4/210 at day 0.4/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.4/0.5, date = 01-Jan-2000
+Restart file written for report step   4/210, date = 01-Jan-2000 09:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step  5/210 at day 0.5/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.5/0.6, date = 01-Jan-2000
+Restart file written for report step   5/210, date = 01-Jan-2000 12:00:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step  6/210 at day 0.6/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.6/0.7, date = 01-Jan-2000
+Restart file written for report step   6/210, date = 01-Jan-2000 14:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step  7/210 at day 0.7/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.7/0.8, date = 01-Jan-2000
+Restart file written for report step   7/210, date = 01-Jan-2000 16:48:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step  8/210 at day 0.8/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.8/0.9, date = 01-Jan-2000
+Restart file written for report step   8/210, date = 01-Jan-2000 19:12:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step  9/210 at day 0.9/21, date = 01-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 0.9/1, date = 01-Jan-2000
+Restart file written for report step   9/210, date = 01-Jan-2000 21:36:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  7 (0.0sec)
+
+
+Report step 10/210 at day 1/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1/1.1, date = 02-Jan-2000
+Restart file written for report step  10/210, date = 02-Jan-2000 00:00:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 11/210 at day 1.1/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.1/1.2, date = 02-Jan-2000
+Restart file written for report step  11/210, date = 02-Jan-2000 02:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 12/210 at day 1.2/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.2/1.3, date = 02-Jan-2000
+Restart file written for report step  12/210, date = 02-Jan-2000 04:48:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 13/210 at day 1.3/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.3/1.4, date = 02-Jan-2000
+Restart file written for report step  13/210, date = 02-Jan-2000 07:12:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 14/210 at day 1.4/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.4/1.5, date = 02-Jan-2000
+Restart file written for report step  14/210, date = 02-Jan-2000 09:36:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 15/210 at day 1.5/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.5/1.6, date = 02-Jan-2000
+Restart file written for report step  15/210, date = 02-Jan-2000 12:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 16/210 at day 1.6/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.6/1.7, date = 02-Jan-2000
+Restart file written for report step  16/210, date = 02-Jan-2000 14:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 17/210 at day 1.7/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.7/1.8, date = 02-Jan-2000
+Restart file written for report step  17/210, date = 02-Jan-2000 16:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 18/210 at day 1.8/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.8/1.9, date = 02-Jan-2000
+Restart file written for report step  18/210, date = 02-Jan-2000 19:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 19/210 at day 1.9/21, date = 02-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 1.9/2, date = 02-Jan-2000
+Restart file written for report step  19/210, date = 02-Jan-2000 21:36:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 20/210 at day 2/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2/2.1, date = 03-Jan-2000
+Restart file written for report step  20/210, date = 03-Jan-2000 00:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 21/210 at day 2.1/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.1/2.2, date = 03-Jan-2000
+Restart file written for report step  21/210, date = 03-Jan-2000 02:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 22/210 at day 2.2/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.2/2.3, date = 03-Jan-2000
+Restart file written for report step  22/210, date = 03-Jan-2000 04:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 23/210 at day 2.3/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.3/2.4, date = 03-Jan-2000
+Restart file written for report step  23/210, date = 03-Jan-2000 07:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 24/210 at day 2.4/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.4/2.5, date = 03-Jan-2000
+Restart file written for report step  24/210, date = 03-Jan-2000 09:36:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 25/210 at day 2.5/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.5/2.6, date = 03-Jan-2000
+Restart file written for report step  25/210, date = 03-Jan-2000 12:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 26/210 at day 2.6/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.6/2.7, date = 03-Jan-2000
+Restart file written for report step  26/210, date = 03-Jan-2000 14:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 27/210 at day 2.7/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.7/2.8, date = 03-Jan-2000
+Restart file written for report step  27/210, date = 03-Jan-2000 16:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 28/210 at day 2.8/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.8/2.9, date = 03-Jan-2000
+Restart file written for report step  28/210, date = 03-Jan-2000 19:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 29/210 at day 2.9/21, date = 03-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 2.9/3, date = 03-Jan-2000
+Restart file written for report step  29/210, date = 03-Jan-2000 21:36:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 30/210 at day 3/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3/3.1, date = 04-Jan-2000
+Restart file written for report step  30/210, date = 04-Jan-2000 00:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 31/210 at day 3.1/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.1/3.2, date = 04-Jan-2000
+Restart file written for report step  31/210, date = 04-Jan-2000 02:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 32/210 at day 3.2/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.2/3.3, date = 04-Jan-2000
+Restart file written for report step  32/210, date = 04-Jan-2000 04:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 33/210 at day 3.3/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.3/3.4, date = 04-Jan-2000
+Restart file written for report step  33/210, date = 04-Jan-2000 07:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 34/210 at day 3.4/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.4/3.5, date = 04-Jan-2000
+Restart file written for report step  34/210, date = 04-Jan-2000 09:36:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 35/210 at day 3.5/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.5/3.6, date = 04-Jan-2000
+Restart file written for report step  35/210, date = 04-Jan-2000 12:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 36/210 at day 3.6/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.6/3.7, date = 04-Jan-2000
+Restart file written for report step  36/210, date = 04-Jan-2000 14:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 37/210 at day 3.7/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.7/3.8, date = 04-Jan-2000
+Restart file written for report step  37/210, date = 04-Jan-2000 16:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 38/210 at day 3.8/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.8/3.9, date = 04-Jan-2000
+Restart file written for report step  38/210, date = 04-Jan-2000 19:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 39/210 at day 3.9/21, date = 04-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 3.9/4, date = 04-Jan-2000
+Restart file written for report step  39/210, date = 04-Jan-2000 21:36:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 40/210 at day 4/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4/4.1, date = 05-Jan-2000
+Restart file written for report step  40/210, date = 05-Jan-2000 00:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 41/210 at day 4.1/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.1/4.2, date = 05-Jan-2000
+Restart file written for report step  41/210, date = 05-Jan-2000 02:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 42/210 at day 4.2/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.2/4.3, date = 05-Jan-2000
+Restart file written for report step  42/210, date = 05-Jan-2000 04:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 43/210 at day 4.3/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.3/4.4, date = 05-Jan-2000
+Restart file written for report step  43/210, date = 05-Jan-2000 07:12:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 44/210 at day 4.4/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.4/4.5, date = 05-Jan-2000
+Restart file written for report step  44/210, date = 05-Jan-2000 09:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 45/210 at day 4.5/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.5/4.6, date = 05-Jan-2000
+Restart file written for report step  45/210, date = 05-Jan-2000 12:00:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 46/210 at day 4.6/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.6/4.7, date = 05-Jan-2000
+Restart file written for report step  46/210, date = 05-Jan-2000 14:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 47/210 at day 4.7/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.7/4.8, date = 05-Jan-2000
+Restart file written for report step  47/210, date = 05-Jan-2000 16:48:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 48/210 at day 4.8/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.8/4.9, date = 05-Jan-2000
+Restart file written for report step  48/210, date = 05-Jan-2000 19:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 49/210 at day 4.9/21, date = 05-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 4.9/5, date = 05-Jan-2000
+Restart file written for report step  49/210, date = 05-Jan-2000 21:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 50/210 at day 5/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5/5.1, date = 06-Jan-2000
+Restart file written for report step  50/210, date = 06-Jan-2000 00:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 51/210 at day 5.1/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.1/5.2, date = 06-Jan-2000
+Restart file written for report step  51/210, date = 06-Jan-2000 02:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 52/210 at day 5.2/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.2/5.3, date = 06-Jan-2000
+Restart file written for report step  52/210, date = 06-Jan-2000 04:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 53/210 at day 5.3/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.3/5.4, date = 06-Jan-2000
+Restart file written for report step  53/210, date = 06-Jan-2000 07:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 54/210 at day 5.4/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.4/5.5, date = 06-Jan-2000
+Restart file written for report step  54/210, date = 06-Jan-2000 09:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 55/210 at day 5.5/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.5/5.6, date = 06-Jan-2000
+Restart file written for report step  55/210, date = 06-Jan-2000 12:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 56/210 at day 5.6/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.6/5.7, date = 06-Jan-2000
+Restart file written for report step  56/210, date = 06-Jan-2000 14:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 57/210 at day 5.7/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.7/5.8, date = 06-Jan-2000
+Restart file written for report step  57/210, date = 06-Jan-2000 16:48:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 58/210 at day 5.8/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.8/5.9, date = 06-Jan-2000
+Restart file written for report step  58/210, date = 06-Jan-2000 19:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 59/210 at day 5.9/21, date = 06-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 5.9/6, date = 06-Jan-2000
+Restart file written for report step  59/210, date = 06-Jan-2000 21:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 60/210 at day 6/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6/6.1, date = 07-Jan-2000
+Restart file written for report step  60/210, date = 07-Jan-2000 00:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 61/210 at day 6.1/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.1/6.2, date = 07-Jan-2000
+Restart file written for report step  61/210, date = 07-Jan-2000 02:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 62/210 at day 6.2/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.2/6.3, date = 07-Jan-2000
+Restart file written for report step  62/210, date = 07-Jan-2000 04:48:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 63/210 at day 6.3/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.3/6.4, date = 07-Jan-2000
+Restart file written for report step  63/210, date = 07-Jan-2000 07:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 64/210 at day 6.4/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.4/6.5, date = 07-Jan-2000
+Restart file written for report step  64/210, date = 07-Jan-2000 09:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 65/210 at day 6.5/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.5/6.6, date = 07-Jan-2000
+Restart file written for report step  65/210, date = 07-Jan-2000 12:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 66/210 at day 6.6/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.6/6.7, date = 07-Jan-2000
+Restart file written for report step  66/210, date = 07-Jan-2000 14:24:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 67/210 at day 6.7/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.7/6.8, date = 07-Jan-2000
+Restart file written for report step  67/210, date = 07-Jan-2000 16:48:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 68/210 at day 6.8/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.8/6.9, date = 07-Jan-2000
+Restart file written for report step  68/210, date = 07-Jan-2000 19:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+
+
+Report step 69/210 at day 6.9/21, date = 07-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 6.9/7, date = 07-Jan-2000
+Restart file written for report step  69/210, date = 07-Jan-2000 21:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+
+
+Report step 70/210 at day 7/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 7/7.1, date = 08-Jan-2000
+Restart file written for report step  70/210, date = 08-Jan-2000 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=18, linearizations=19 (0.0sec), linear its= 31 (0.1sec)
+
+
+Report step 71/210 at day 7.1/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0444444 days, at day 7.1/7.2, date = 08-Jan-2000
+Restart file written for report step  71/210, date = 08-Jan-2000 02:24:00
+ Newton its=15, linearizations=16 (0.0sec), linear its= 23 (0.1sec)
+
+Starting time step 1, stepsize 0.0237037 days, at day 7.14444/7.2, date = 08-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 2, stepsize 0.02107 days, at day 7.16815/7.2, date = 08-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 3, stepsize 0.0107819 days, at day 7.18922/7.2, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 72/210 at day 7.2/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0107819 days, at day 7.2/7.3, date = 08-Jan-2000
+Restart file written for report step  72/210, date = 08-Jan-2000 04:48:00
+ Newton its=10, linearizations=11 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 1, stepsize 0.00862551 days, at day 7.21078/7.3, date = 08-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 0.0120757 days, at day 7.21941/7.3, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 3, stepsize 0.0120757 days, at day 7.23148/7.3, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 4, stepsize 0.0120757 days, at day 7.24356/7.3, date = 08-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.016906 days, at day 7.25563/7.3, date = 08-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 6, stepsize 0.0274594 days, at day 7.27254/7.3, date = 08-Jan-2000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 21 (0.0sec)
+
+
+Report step 73/210 at day 7.3/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0156911 days, at day 7.3/7.4, date = 08-Jan-2000
+Restart file written for report step  73/210, date = 08-Jan-2000 07:12:00
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 1, stepsize 0.0156911 days, at day 7.31569/7.4, date = 08-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0104607 days, at day 7.33138/7.4, date = 08-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.0188293 days, at day 7.34184/7.4, date = 08-Jan-2000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 4, stepsize 0.0107596 days, at day 7.36067/7.4, date = 08-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.0142841 days, at day 7.37143/7.4, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 6, stepsize 0.0142841 days, at day 7.38572/7.4, date = 08-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 74/210 at day 7.4/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0257113 days, at day 7.4/7.5, date = 08-Jan-2000
+Restart file written for report step  74/210, date = 08-Jan-2000 09:36:00
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 1, stepsize 0.0137127 days, at day 7.42571/7.5, date = 08-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 0.0191978 days, at day 7.43942/7.5, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 3, stepsize 0.0191978 days, at day 7.45862/7.5, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 4, stepsize 0.0110902 days, at day 7.47782/7.5, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.0110902 days, at day 7.48891/7.5, date = 08-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 75/210 at day 7.5/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0155263 days, at day 7.5/7.6, date = 08-Jan-2000
+Restart file written for report step  75/210, date = 08-Jan-2000 12:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 1, stepsize 0.0341578 days, at day 7.51553/7.6, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.025158 days, at day 7.54968/7.6, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.025158 days, at day 7.57484/7.6, date = 08-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 12 (0.0sec)
+
+
+Report step 76/210 at day 7.6/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.025158 days, at day 7.6/7.7, date = 08-Jan-2000
+Restart file written for report step  76/210, date = 08-Jan-2000 14:24:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.037421 days, at day 7.62516/7.7, date = 08-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 2, stepsize 0.0187105 days, at day 7.66258/7.7, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0187105 days, at day 7.68129/7.7, date = 08-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 11 (0.0sec)
+
+
+Report step 77/210 at day 7.7/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0261947 days, at day 7.7/7.8, date = 08-Jan-2000
+Restart file written for report step  77/210, date = 08-Jan-2000 16:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0369026 days, at day 7.72619/7.8, date = 08-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 2, stepsize 0.0196814 days, at day 7.7631/7.8, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0172212 days, at day 7.78278/7.8, date = 08-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step 78/210 at day 7.8/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.0153078 days, at day 7.8/7.9, date = 08-Jan-2000
+Restart file written for report step  78/210, date = 08-Jan-2000 19:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0336771 days, at day 7.81531/7.9, date = 08-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 2, stepsize 0.0224514 days, at day 7.84898/7.9, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0285638 days, at day 7.87144/7.9, date = 08-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 17 (0.0sec)
+
+
+Report step 79/210 at day 7.9/21, date = 08-Jan-2000
+
+Starting time step 0, stepsize 0.022851 days, at day 7.9/8, date = 08-Jan-2000
+Restart file written for report step  79/210, date = 08-Jan-2000 21:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 1, stepsize 0.0502722 days, at day 7.92285/8, date = 08-Jan-2000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 29 (0.1sec)
+
+Starting time step 2, stepsize 0.0268767 days, at day 7.97312/8, date = 08-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 80/210 at day 8/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0591288 days, at day 8/8.1, date = 09-Jan-2000
+Restart file written for report step  80/210, date = 09-Jan-2000 00:00:00
+ Newton its=13, linearizations=14 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 1, stepsize 0.0204356 days, at day 8.05913/8.1, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.0204356 days, at day 8.07956/8.1, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 81/210 at day 8.1/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0163485 days, at day 8.1/8.2, date = 09-Jan-2000
+Restart file written for report step  81/210, date = 09-Jan-2000 02:24:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0359666 days, at day 8.11635/8.2, date = 09-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 2, stepsize 0.0239777 days, at day 8.15232/8.2, date = 09-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0237072 days, at day 8.17629/8.2, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 16 (0.0sec)
+
+
+Report step 82/210 at day 8.2/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0189657 days, at day 8.2/8.3, date = 09-Jan-2000
+Restart file written for report step  82/210, date = 09-Jan-2000 04:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0417246 days, at day 8.21897/8.3, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 2, stepsize 0.0222531 days, at day 8.26069/8.3, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0170566 days, at day 8.28294/8.3, date = 09-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 83/210 at day 8.3/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0151614 days, at day 8.3/8.4, date = 09-Jan-2000
+Restart file written for report step  83/210, date = 09-Jan-2000 07:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.033355 days, at day 8.31516/8.4, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.026684 days, at day 8.34852/8.4, date = 09-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0247996 days, at day 8.3752/8.4, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 84/210 at day 8.4/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0198397 days, at day 8.4/8.5, date = 09-Jan-2000
+Restart file written for report step  84/210, date = 09-Jan-2000 09:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 1, stepsize 0.0436472 days, at day 8.41984/8.5, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its=17, linearizations=18 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 2, stepsize 0.0205399 days, at day 8.46349/8.5, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0159732 days, at day 8.48403/8.5, date = 09-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step 85/210 at day 8.5/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0159732 days, at day 8.5/8.6, date = 09-Jan-2000
+Restart file written for report step  85/210, date = 09-Jan-2000 12:00:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0415304 days, at day 8.51597/8.6, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 27 (0.1sec)
+
+Starting time step 2, stepsize 0.0221496 days, at day 8.5575/8.6, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0203468 days, at day 8.57965/8.6, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 86/210 at day 8.6/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0162774 days, at day 8.6/8.7, date = 09-Jan-2000
+Restart file written for report step  86/210, date = 09-Jan-2000 14:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0423213 days, at day 8.61628/8.7, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 2, stepsize 0.0241836 days, at day 8.6586/8.7, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0172176 days, at day 8.68278/8.7, date = 09-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 12 (0.0sec)
+
+
+Report step 87/210 at day 8.7/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0153045 days, at day 8.7/8.8, date = 09-Jan-2000
+Restart file written for report step  87/210, date = 09-Jan-2000 16:48:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0397918 days, at day 8.7153/8.8, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 2, stepsize 0.0244873 days, at day 8.7551/8.8, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0204164 days, at day 8.77958/8.8, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 88/210 at day 8.8/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0163331 days, at day 8.8/8.9, date = 09-Jan-2000
+Restart file written for report step  88/210, date = 09-Jan-2000 19:12:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0424661 days, at day 8.81633/8.9, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 2, stepsize 0.0242663 days, at day 8.8588/8.9, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0169344 days, at day 8.88307/8.9, date = 09-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 12 (0.0sec)
+
+
+Report step 89/210 at day 8.9/21, date = 09-Jan-2000
+
+Starting time step 0, stepsize 0.0150528 days, at day 8.9/9, date = 09-Jan-2000
+Restart file written for report step  89/210, date = 09-Jan-2000 21:36:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0391373 days, at day 8.91505/9, date = 09-Jan-2000
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 2, stepsize 0.0240845 days, at day 8.95419/9, date = 09-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0217253 days, at day 8.97827/9, date = 09-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 12 (0.0sec)
+
+
+Report step 90/210 at day 9/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0173802 days, at day 9/9.1, date = 10-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step  90/210, date = 10-Jan-2000 00:00:00
+
+Starting time step 1, stepsize 0.0451886 days, at day 9.01738/9.1, date = 10-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 2, stepsize 0.0187156 days, at day 9.06257/9.1, date = 10-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0187156 days, at day 9.08128/9.1, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step 91/210 at day 9.1/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0136113 days, at day 9.1/9.2, date = 10-Jan-2000
+Restart file written for report step  91/210, date = 10-Jan-2000 02:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0353894 days, at day 9.11361/9.2, date = 10-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0283115 days, at day 9.149/9.2, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 3, stepsize 0.0226878 days, at day 9.17731/9.2, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step 92/210 at day 9.2/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0165002 days, at day 9.2/9.3, date = 10-Jan-2000
+Restart file written for report step  92/210, date = 10-Jan-2000 04:48:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0429005 days, at day 9.2165/9.3, date = 10-Jan-2000
+ Newton its=19, linearizations=20 (0.0sec), linear its= 41 (0.1sec)
+
+Starting time step 2, stepsize 0.0180634 days, at day 9.2594/9.3, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.022536 days, at day 9.27746/9.3, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+
+Report step 93/210 at day 9.3/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0163898 days, at day 9.3/9.4, date = 10-Jan-2000
+Restart file written for report step  93/210, date = 10-Jan-2000 07:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0360576 days, at day 9.31639/9.4, date = 10-Jan-2000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 2, stepsize 0.0192307 days, at day 9.35245/9.4, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0283219 days, at day 9.37168/9.4, date = 10-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 24 (0.0sec)
+
+
+Report step 94/210 at day 9.4/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0174289 days, at day 9.4/9.5, date = 10-Jan-2000
+Restart file written for report step  94/210, date = 10-Jan-2000 09:36:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 1, stepsize 0.0244004 days, at day 9.41743/9.5, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0177458 days, at day 9.44183/9.5, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 3, stepsize 0.0248441 days, at day 9.45958/9.5, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 4, stepsize 0.0155808 days, at day 9.48442/9.5, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 95/210 at day 9.5/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0342778 days, at day 9.5/9.6, date = 10-Jan-2000
+Restart file written for report step  95/210, date = 10-Jan-2000 12:00:00
+ Newton its=14, linearizations=15 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 1, stepsize 0.0195873 days, at day 9.53428/9.6, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 2, stepsize 0.0230674 days, at day 9.55387/9.6, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 3, stepsize 0.0115337 days, at day 9.57693/9.6, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 4, stepsize 0.0115337 days, at day 9.58847/9.6, date = 10-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 96/210 at day 9.6/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0115337 days, at day 9.6/9.7, date = 10-Jan-2000
+Restart file written for report step  96/210, date = 10-Jan-2000 14:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0299876 days, at day 9.61153/9.7, date = 10-Jan-2000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 25 (0.1sec)
+
+Starting time step 2, stepsize 0.0171358 days, at day 9.64152/9.7, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.0239901 days, at day 9.65866/9.7, date = 10-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 4, stepsize 0.0173528 days, at day 9.68265/9.7, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 97/210 at day 9.7/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0381761 days, at day 9.7/9.8, date = 10-Jan-2000
+Restart file written for report step  97/210, date = 10-Jan-2000 16:48:00
+ Newton its=15, linearizations=16 (0.0sec), linear its= 26 (0.1sec)
+
+Starting time step 1, stepsize 0.0203606 days, at day 9.73818/9.8, date = 10-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.0414633 days, at day 9.75854/9.8, date = 10-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 21 (0.0sec)
+
+
+Report step 98/210 at day 9.8/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0276422 days, at day 9.8/9.9, date = 10-Jan-2000
+Restart file written for report step  98/210, date = 10-Jan-2000 19:12:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 1, stepsize 0.0386991 days, at day 9.82764/9.9, date = 10-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 22 (0.1sec)
+
+Starting time step 2, stepsize 0.0168294 days, at day 9.86634/9.9, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 3, stepsize 0.0168294 days, at day 9.88317/9.9, date = 10-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 99/210 at day 9.9/21, date = 10-Jan-2000
+
+Starting time step 0, stepsize 0.0112196 days, at day 9.9/10, date = 10-Jan-2000
+Restart file written for report step  99/210, date = 10-Jan-2000 21:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0246831 days, at day 9.91122/10, date = 10-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0151896 days, at day 9.9359/10, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0212654 days, at day 9.95109/10, date = 10-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 4, stepsize 0.0130864 days, at day 9.97236/10, date = 10-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.014556 days, at day 9.98544/10, date = 10-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 100/210 at day 10/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0129387 days, at day 10/10.1, date = 11-Jan-2000
+Restart file written for report step 100/210, date = 11-Jan-2000 00:00:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 0.0181141 days, at day 10.0129/10.1, date = 11-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0120761 days, at day 10.0311/10.1, date = 11-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0265674 days, at day 10.0431/10.1, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 4, stepsize 0.0163492 days, at day 10.0697/10.1, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.0139545 days, at day 10.086/10.1, date = 11-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step 101/210 at day 10.1/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.012404 days, at day 10.1/10.2, date = 11-Jan-2000
+Restart file written for report step 101/210, date = 11-Jan-2000 02:24:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0272888 days, at day 10.1124/10.2, date = 11-Jan-2000
+ Newton its=14, linearizations=15 (0.0sec), linear its= 24 (0.1sec)
+
+Starting time step 2, stepsize 0.0155936 days, at day 10.1397/10.2, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.021831 days, at day 10.1553/10.2, date = 11-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 4, stepsize 0.014554 days, at day 10.1771/10.2, date = 11-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.0083287 days, at day 10.1917/10.2, date = 11-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 102/210 at day 10.2/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0149917 days, at day 10.2/10.3, date = 11-Jan-2000
+Restart file written for report step 102/210, date = 11-Jan-2000 04:48:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0389783 days, at day 10.215/10.3, date = 11-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 2, stepsize 0.0259855 days, at day 10.254/10.3, date = 11-Jan-2000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 19 (0.1sec)
+
+Starting time step 3, stepsize 0.0100223 days, at day 10.28/10.3, date = 11-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 4, stepsize 0.0100223 days, at day 10.29/10.3, date = 11-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 103/210 at day 10.3/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0260579 days, at day 10.3/10.4, date = 11-Jan-2000
+Restart file written for report step 103/210, date = 11-Jan-2000 07:12:00
+ Newton its=11, linearizations=12 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 1, stepsize 0.0189512 days, at day 10.3261/10.4, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 2, stepsize 0.0265317 days, at day 10.345/10.4, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 24 (0.0sec)
+
+Starting time step 3, stepsize 0.0163272 days, at day 10.3715/10.4, date = 11-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 4, stepsize 0.0121321 days, at day 10.3879/10.4, date = 11-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 104/210 at day 10.4/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0121321 days, at day 10.4/10.5, date = 11-Jan-2000
+Restart file written for report step 104/210, date = 11-Jan-2000 09:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0266907 days, at day 10.4121/10.5, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 24 (0.0sec)
+
+Starting time step 2, stepsize 0.016425 days, at day 10.4388/10.5, date = 11-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0447521 days, at day 10.4552/10.5, date = 11-Jan-2000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 32 (0.1sec)
+
+
+Report step 105/210 at day 10.5/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0179009 days, at day 10.5/10.6, date = 11-Jan-2000
+Restart file written for report step 105/210, date = 11-Jan-2000 12:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0393819 days, at day 10.5179/10.6, date = 11-Jan-2000
+ Newton its=20, linearizations=21 (0.0sec), linear its= 34 (0.1sec)
+
+Starting time step 2, stepsize 0.0157528 days, at day 10.5573/10.6, date = 11-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 3, stepsize 0.0269645 days, at day 10.573/10.6, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 19 (0.0sec)
+
+
+Report step 106/210 at day 10.6/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0165935 days, at day 10.6/10.7, date = 11-Jan-2000
+Restart file written for report step 106/210, date = 11-Jan-2000 14:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0431432 days, at day 10.6166/10.7, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 2, stepsize 0.0265497 days, at day 10.6597/10.7, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 3, stepsize 0.0137136 days, at day 10.6863/10.7, date = 11-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 107/210 at day 10.7/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0121899 days, at day 10.7/10.8, date = 11-Jan-2000
+Restart file written for report step 107/210, date = 11-Jan-2000 16:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0268177 days, at day 10.7122/10.8, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 2, stepsize 0.0165032 days, at day 10.739/10.8, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0231045 days, at day 10.7555/10.8, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0142182 days, at day 10.7786/10.8, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.00716649 days, at day 10.7928/10.8, date = 11-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 108/210 at day 10.8/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0128997 days, at day 10.8/10.9, date = 11-Jan-2000
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 108/210, date = 11-Jan-2000 19:12:00
+
+Starting time step 1, stepsize 0.0335392 days, at day 10.8129/10.9, date = 11-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 2, stepsize 0.0206395 days, at day 10.8464/10.9, date = 11-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0164608 days, at day 10.8671/10.9, date = 11-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 4, stepsize 0.00823042 days, at day 10.8835/10.9, date = 11-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.00823042 days, at day 10.8918/10.9, date = 11-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 109/210 at day 10.9/21, date = 11-Jan-2000
+
+Starting time step 0, stepsize 0.0148148 days, at day 10.9/11, date = 11-Jan-2000
+Restart file written for report step 109/210, date = 11-Jan-2000 21:36:00
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0266666 days, at day 10.9148/11, date = 11-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 2, stepsize 0.0177777 days, at day 10.9415/11, date = 11-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.040741 days, at day 10.9593/11, date = 11-Jan-2000
+ Newton its=15, linearizations=16 (0.0sec), linear its= 24 (0.0sec)
+
+
+Report step 110/210 at day 11/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0217285 days, at day 11/11.1, date = 12-Jan-2000
+Restart file written for report step 110/210, date = 12-Jan-2000 00:00:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0304199 days, at day 11.0217/11.1, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 2, stepsize 0.01872 days, at day 11.0521/11.1, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0291316 days, at day 11.0709/11.1, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+
+Report step 111/210 at day 11.1/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.019421 days, at day 11.1/11.2, date = 12-Jan-2000
+Restart file written for report step 111/210, date = 12-Jan-2000 02:24:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0271895 days, at day 11.1194/11.2, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 2, stepsize 0.016732 days, at day 11.1466/11.2, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0183288 days, at day 11.1633/11.2, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0112792 days, at day 11.1817/11.2, date = 12-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.00704952 days, at day 11.193/11.2, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 112/210 at day 11.2/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0126891 days, at day 11.2/11.3, date = 12-Jan-2000
+Restart file written for report step 112/210, date = 12-Jan-2000 04:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0279161 days, at day 11.2127/11.3, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 2, stepsize 0.0186107 days, at day 11.2406/11.3, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.026055 days, at day 11.2592/11.3, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 4, stepsize 0.014729 days, at day 11.2853/11.3, date = 12-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 113/210 at day 11.3/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0324038 days, at day 11.3/11.4, date = 12-Jan-2000
+Restart file written for report step 113/210, date = 12-Jan-2000 07:12:00
+ Newton its=12, linearizations=13 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 1, stepsize 0.0216025 days, at day 11.3324/11.4, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 2, stepsize 0.0302436 days, at day 11.354/11.4, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 3, stepsize 0.0157501 days, at day 11.3842/11.4, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 114/210 at day 11.4/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0283501 days, at day 11.4/11.5, date = 12-Jan-2000
+Restart file written for report step 114/210, date = 12-Jan-2000 09:36:00
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 1, stepsize 0.0189001 days, at day 11.4284/11.5, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.0264601 days, at day 11.4473/11.5, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 3, stepsize 0.0162831 days, at day 11.4737/11.5, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 4, stepsize 0.0100066 days, at day 11.49/11.5, date = 12-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 115/210 at day 11.5/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0100066 days, at day 11.5/11.6, date = 12-Jan-2000
+Restart file written for report step 115/210, date = 12-Jan-2000 12:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 1, stepsize 0.0220145 days, at day 11.51/11.6, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 2, stepsize 0.0135474 days, at day 11.532/11.6, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0243853 days, at day 11.5456/11.6, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 4, stepsize 0.0150063 days, at day 11.57/11.6, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.01504 days, at day 11.585/11.6, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 116/210 at day 11.6/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0109382 days, at day 11.6/11.7, date = 12-Jan-2000
+Restart file written for report step 116/210, date = 12-Jan-2000 14:24:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 1, stepsize 0.024064 days, at day 11.6109/11.7, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 2, stepsize 0.0148086 days, at day 11.635/11.7, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.020732 days, at day 11.6498/11.7, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0138214 days, at day 11.6705/11.7, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0156358 days, at day 11.6844/11.7, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 117/210 at day 11.7/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.0113715 days, at day 11.7/11.8, date = 12-Jan-2000
+Restart file written for report step 117/210, date = 12-Jan-2000 16:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 1, stepsize 0.0250173 days, at day 11.7114/11.8, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 2, stepsize 0.0153953 days, at day 11.7364/11.8, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0277115 days, at day 11.7518/11.8, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 4, stepsize 0.0102522 days, at day 11.7795/11.8, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.0102522 days, at day 11.7897/11.8, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+
+Report step 118/210 at day 11.8/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.00745613 days, at day 11.8/11.9, date = 12-Jan-2000
+Restart file written for report step 118/210, date = 12-Jan-2000 19:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0164035 days, at day 11.8075/11.9, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 2, stepsize 0.0119298 days, at day 11.8239/11.9, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0167017 days, at day 11.8358/11.9, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 4, stepsize 0.0111345 days, at day 11.8525/11.9, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.0155883 days, at day 11.8636/11.9, date = 12-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 6, stepsize 0.0103922 days, at day 11.8792/11.9, date = 12-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 7, stepsize 0.0103938 days, at day 11.8896/11.9, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 119/210 at day 11.9/21, date = 12-Jan-2000
+
+Starting time step 0, stepsize 0.00755915 days, at day 11.9/12, date = 12-Jan-2000
+Restart file written for report step 119/210, date = 12-Jan-2000 21:36:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0196538 days, at day 11.9076/12, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0142937 days, at day 11.9272/12, date = 12-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0314461 days, at day 11.9415/12, date = 12-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 23 (0.0sec)
+
+Starting time step 4, stepsize 0.0135237 days, at day 11.973/12, date = 12-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 5, stepsize 0.0135237 days, at day 11.9865/12, date = 12-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 120/210 at day 12/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.00983538 days, at day 12/12.1, date = 13-Jan-2000
+Restart file written for report step 120/210, date = 13-Jan-2000 00:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0216378 days, at day 12.0098/12.1, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0144252 days, at day 12.0315/12.1, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0259654 days, at day 12.0459/12.1, date = 13-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 4, stepsize 0.0159787 days, at day 12.0719/12.1, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.0121574 days, at day 12.0878/12.1, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+
+Report step 121/210 at day 12.1/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.00884176 days, at day 12.1/12.2, date = 13-Jan-2000
+Restart file written for report step 121/210, date = 13-Jan-2000 02:24:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0194519 days, at day 12.1088/12.2, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 2, stepsize 0.0141468 days, at day 12.1283/12.2, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0254643 days, at day 12.1424/12.2, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0169762 days, at day 12.1679/12.2, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0151191 days, at day 12.1849/12.2, date = 13-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 122/210 at day 12.2/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.0134392 days, at day 12.2/12.3, date = 13-Jan-2000
+Restart file written for report step 122/210, date = 13-Jan-2000 04:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0295662 days, at day 12.2134/12.3, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0197108 days, at day 12.243/12.3, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0186419 days, at day 12.2627/12.3, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 4, stepsize 0.00932097 days, at day 12.2814/12.3, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 5, stepsize 0.00932097 days, at day 12.2907/12.3, date = 13-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 123/210 at day 12.3/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.0082853 days, at day 12.3/12.4, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 123/210, date = 13-Jan-2000 07:12:00
+
+Starting time step 1, stepsize 0.0182277 days, at day 12.3083/12.4, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0121518 days, at day 12.3265/12.4, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0267339 days, at day 12.3387/12.4, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 4, stepsize 0.0178226 days, at day 12.3654/12.4, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0167787 days, at day 12.3832/12.4, date = 13-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 11 (0.0sec)
+
+
+Report step 124/210 at day 12.4/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.013423 days, at day 12.4/12.5, date = 13-Jan-2000
+Restart file written for report step 124/210, date = 13-Jan-2000 09:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 1, stepsize 0.0295305 days, at day 12.4134/12.5, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 2, stepsize 0.019687 days, at day 12.443/12.5, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0186797 days, at day 12.4626/12.5, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 17 (0.0sec)
+
+Starting time step 4, stepsize 0.0124532 days, at day 12.4813/12.5, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.00622658 days, at day 12.4938/12.5, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  7 (0.0sec)
+
+
+Report step 125/210 at day 12.5/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.0112078 days, at day 12.5/12.6, date = 13-Jan-2000
+Restart file written for report step 125/210, date = 13-Jan-2000 12:00:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0246572 days, at day 12.5112/12.6, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0164382 days, at day 12.5359/12.6, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0230134 days, at day 12.5523/12.6, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 4, stepsize 0.0153423 days, at day 12.5753/12.6, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.00934105 days, at day 12.5907/12.6, date = 13-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 126/210 at day 12.6/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.00934105 days, at day 12.6/12.7, date = 13-Jan-2000
+Restart file written for report step 126/210, date = 13-Jan-2000 14:24:00
+ Newton its= 4, linearizations= 5 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0242867 days, at day 12.6093/12.7, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 2, stepsize 0.0176631 days, at day 12.6336/12.7, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.0247283 days, at day 12.6513/12.7, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 4, stepsize 0.0119904 days, at day 12.676/12.7, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 5, stepsize 0.0119904 days, at day 12.688/12.7, date = 13-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 127/210 at day 12.7/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.0119904 days, at day 12.7/12.8, date = 13-Jan-2000
+Restart file written for report step 127/210, date = 13-Jan-2000 16:48:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.026379 days, at day 12.712/12.8, date = 13-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 2, stepsize 0.0162332 days, at day 12.7384/12.8, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 3, stepsize 0.0227265 days, at day 12.7546/12.8, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 4, stepsize 0.0113355 days, at day 12.7773/12.8, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0113355 days, at day 12.7887/12.8, date = 13-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 128/210 at day 12.8/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.0113355 days, at day 12.8/12.9, date = 13-Jan-2000
+Restart file written for report step 128/210, date = 13-Jan-2000 19:12:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.024938 days, at day 12.8113/12.9, date = 13-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 2, stepsize 0.0153465 days, at day 12.8363/12.9, date = 13-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.0276237 days, at day 12.8516/12.9, date = 13-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 20 (0.0sec)
+
+Starting time step 4, stepsize 0.0103782 days, at day 12.8792/12.9, date = 13-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 5, stepsize 0.0103782 days, at day 12.8896/12.9, date = 13-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 129/210 at day 12.9/21, date = 13-Jan-2000
+
+Starting time step 0, stepsize 0.00922506 days, at day 12.9/13, date = 13-Jan-2000
+Restart file written for report step 129/210, date = 13-Jan-2000 21:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 1, stepsize 0.0202951 days, at day 12.9092/13, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0147601 days, at day 12.9295/13, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0206641 days, at day 12.9443/13, date = 13-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+Starting time step 4, stepsize 0.0150285 days, at day 12.9649/13, date = 13-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.0200271 days, at day 12.98/13, date = 13-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 16 (0.0sec)
+
+
+Report step 130/210 at day 13/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0133514 days, at day 13/13.1, date = 14-Jan-2000
+Restart file written for report step 130/210, date = 14-Jan-2000 00:00:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.018692 days, at day 13.0134/13.1, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 2, stepsize 0.0135942 days, at day 13.032/13.1, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0190318 days, at day 13.0456/13.1, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 4, stepsize 0.0138413 days, at day 13.0647/13.1, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0107446 days, at day 13.0785/13.1, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 6, stepsize 0.0107446 days, at day 13.0893/13.1, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 131/210 at day 13.1/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0236382 days, at day 13.1/13.2, date = 14-Jan-2000
+Restart file written for report step 131/210, date = 14-Jan-2000 02:24:00
+ Newton its=13, linearizations=14 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 1, stepsize 0.0145466 days, at day 13.1236/13.2, date = 14-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.0261839 days, at day 13.1382/13.2, date = 14-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 21 (0.0sec)
+
+Starting time step 3, stepsize 0.0161132 days, at day 13.1644/13.2, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 4, stepsize 0.0195182 days, at day 13.1805/13.2, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 15 (0.0sec)
+
+
+Report step 132/210 at day 13.2/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.014195 days, at day 13.2/13.3, date = 14-Jan-2000
+Restart file written for report step 132/210, date = 14-Jan-2000 04:48:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.019873 days, at day 13.2142/13.3, date = 14-Jan-2000
+ Newton its=12, linearizations=13 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0132487 days, at day 13.2341/13.3, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0185482 days, at day 13.2473/13.3, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 13 (0.0sec)
+
+Starting time step 4, stepsize 0.0134896 days, at day 13.2659/13.3, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0103227 days, at day 13.2794/13.3, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 6, stepsize 0.0103227 days, at day 13.2897/13.3, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 133/210 at day 13.3/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.02271 days, at day 13.3/13.4, date = 14-Jan-2000
+Restart file written for report step 133/210, date = 14-Jan-2000 07:12:00
+ Newton its=12, linearizations=13 (0.0sec), linear its= 19 (0.0sec)
+
+Starting time step 1, stepsize 0.01514 days, at day 13.3227/13.4, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 2, stepsize 0.01514 days, at day 13.3379/13.4, date = 14-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 3, stepsize 0.012112 days, at day 13.353/13.4, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 4, stepsize 0.017449 days, at day 13.3651/13.4, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 5, stepsize 0.00872449 days, at day 13.3826/13.4, date = 14-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 6, stepsize 0.00872449 days, at day 13.3913/13.4, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+
+Report step 134/210 at day 13.4/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.00872449 days, at day 13.4/13.5, date = 14-Jan-2000
+Restart file written for report step 134/210, date = 14-Jan-2000 09:36:00
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0191939 days, at day 13.4087/13.5, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 2, stepsize 0.0139592 days, at day 13.4279/13.5, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0195429 days, at day 13.4419/13.5, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 4, stepsize 0.014213 days, at day 13.4614/13.5, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0121833 days, at day 13.4756/13.5, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 6, stepsize 0.00609166 days, at day 13.4878/13.5, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+Starting time step 7, stepsize 0.00609166 days, at day 13.4939/13.5, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 135/210 at day 13.5/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0134016 days, at day 13.5/13.6, date = 14-Jan-2000
+Restart file written for report step 135/210, date = 14-Jan-2000 12:00:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0187623 days, at day 13.5134/13.6, date = 14-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 2, stepsize 0.0150098 days, at day 13.5322/13.6, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0210138 days, at day 13.5472/13.6, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 4, stepsize 0.0152827 days, at day 13.5682/13.6, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 5, stepsize 0.0165297 days, at day 13.5835/13.6, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 10 (0.0sec)
+
+
+Report step 136/210 at day 13.6/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0146931 days, at day 13.6/13.7, date = 14-Jan-2000
+Restart file written for report step 136/210, date = 14-Jan-2000 14:24:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 1, stepsize 0.0205703 days, at day 13.6147/13.7, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 16 (0.0sec)
+
+Starting time step 2, stepsize 0.0149602 days, at day 13.6353/13.7, date = 14-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0269284 days, at day 13.6502/13.7, date = 14-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 22 (0.0sec)
+
+Starting time step 4, stepsize 0.0114241 days, at day 13.6772/13.7, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 5, stepsize 0.0114241 days, at day 13.6886/13.7, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 137/210 at day 13.7/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0159937 days, at day 13.7/13.8, date = 14-Jan-2000
+Restart file written for report step 137/210, date = 14-Jan-2000 16:48:00
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 0.0159937 days, at day 13.716/13.8, date = 14-Jan-2000
+ Newton its=10, linearizations=11 (0.0sec), linear its= 11 (0.0sec)
+
+Starting time step 2, stepsize 0.0127949 days, at day 13.732/13.8, date = 14-Jan-2000
+ Newton its= 6, linearizations= 7 (0.0sec), linear its=  6 (0.0sec)
+
+Starting time step 3, stepsize 0.0230309 days, at day 13.7448/13.8, date = 14-Jan-2000
+ Newton its=11, linearizations=12 (0.0sec), linear its= 14 (0.0sec)
+
+Starting time step 4, stepsize 0.0167497 days, at day 13.7678/13.8, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.0154371 days, at day 13.7846/13.8, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+
+Report step 138/210 at day 13.8/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0154371 days, at day 13.8/13.9, date = 14-Jan-2000
+Restart file written for report step 138/210, date = 14-Jan-2000 19:12:00
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 1, stepsize 0.0154371 days, at day 13.8154/13.9, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 2, stepsize 0.0137218 days, at day 13.8309/13.9, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 3, stepsize 0.0137218 days, at day 13.8446/13.9, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 4, stepsize 0.0137218 days, at day 13.8583/13.9, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 5, stepsize 0.0137218 days, at day 13.872/13.9, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 10 (0.0sec)
+
+Starting time step 6, stepsize 0.00711927 days, at day 13.8858/13.9, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 7, stepsize 0.00711927 days, at day 13.8929/13.9, date = 14-Jan-2000
+ Newton its= 5, linearizations= 6 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 139/210 at day 13.9/21, date = 14-Jan-2000
+
+Starting time step 0, stepsize 0.0156624 days, at day 13.9/14, date = 14-Jan-2000
+Restart file written for report step 139/210, date = 14-Jan-2000 21:36:00
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 1, stepsize 0.0219273 days, at day 13.9157/14, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its=  9 (0.0sec)
+
+Starting time step 2, stepsize 0.019491 days, at day 13.9376/14, date = 14-Jan-2000
+ Newton its=13, linearizations=14 (0.0sec), linear its= 18 (0.0sec)
+
+Starting time step 3, stepsize 0.0119944 days, at day 13.9571/14, date = 14-Jan-2000
+ Newton its= 7, linearizations= 8 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 4, stepsize 0.0167922 days, at day 13.9691/14, date = 14-Jan-2000
+ Newton its= 8, linearizations= 9 (0.0sec), linear its=  8 (0.0sec)
+
+Starting time step 5, stepsize 0.0141326 days, at day 13.9859/14, date = 14-Jan-2000
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 11 (0.0sec)
+
+
+Report step 140/210 at day 14/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.0125623 days, at day 14/14.1, date = 15-Jan-2000
+Restart file written for report step 140/210, date = 15-Jan-2000 00:00:00
+ Newton its= 9, linearizations=10 (0.0sec), linear its= 12 (0.0sec)
+
+Starting time step 1, stepsize 0.0111665 days, at day 14.0126/14.1, date = 15-Jan-2000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.0sec)
+
+Starting time step 2, stepsize 0.0334996 days, at day 14.0237/14.1, date = 15-Jan-2000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.0sec)
+
+Starting time step 3, stepsize 0.0427716 days, at day 14.0572/14.1, date = 15-Jan-2000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 141/210 at day 14.1/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.1/14.2, date = 15-Jan-2000
+Restart file written for report step 141/210, date = 15-Jan-2000 02:24:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 142/210 at day 14.2/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.2/14.3, date = 15-Jan-2000
+Restart file written for report step 142/210, date = 15-Jan-2000 04:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.0sec)
+
+
+Report step 143/210 at day 14.3/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.3/14.4, date = 15-Jan-2000
+Restart file written for report step 143/210, date = 15-Jan-2000 07:12:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 144/210 at day 14.4/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.4/14.5, date = 15-Jan-2000
+Restart file written for report step 144/210, date = 15-Jan-2000 09:36:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+
+
+Report step 145/210 at day 14.5/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.5/14.6, date = 15-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 145/210, date = 15-Jan-2000 12:00:00
+
+
+Report step 146/210 at day 14.6/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.6/14.7, date = 15-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 146/210, date = 15-Jan-2000 14:24:00
+
+
+Report step 147/210 at day 14.7/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.7/14.8, date = 15-Jan-2000
+Restart file written for report step 147/210, date = 15-Jan-2000 16:48:00
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 148/210 at day 14.8/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.8/14.9, date = 15-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 148/210, date = 15-Jan-2000 19:12:00
+
+
+Report step 149/210 at day 14.9/21, date = 15-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 14.9/15, date = 15-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 149/210, date = 15-Jan-2000 21:36:00
+
+
+Report step 150/210 at day 15/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15/15.1, date = 16-Jan-2000
+Restart file written for report step 150/210, date = 16-Jan-2000 00:00:00
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+
+
+Report step 151/210 at day 15.1/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.1/15.2, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 151/210, date = 16-Jan-2000 02:24:00
+
+
+Report step 152/210 at day 15.2/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.2/15.3, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 152/210, date = 16-Jan-2000 04:48:00
+
+
+Report step 153/210 at day 15.3/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.3/15.4, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 153/210, date = 16-Jan-2000 07:12:00
+
+
+Report step 154/210 at day 15.4/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.4/15.5, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 154/210, date = 16-Jan-2000 09:36:00
+
+
+Report step 155/210 at day 15.5/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.5/15.6, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 155/210, date = 16-Jan-2000 12:00:00
+
+
+Report step 156/210 at day 15.6/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.6/15.7, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 156/210, date = 16-Jan-2000 14:24:00
+
+
+Report step 157/210 at day 15.7/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.7/15.8, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 157/210, date = 16-Jan-2000 16:48:00
+
+
+Report step 158/210 at day 15.8/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.8/15.9, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 158/210, date = 16-Jan-2000 19:12:00
+
+
+Report step 159/210 at day 15.9/21, date = 16-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 15.9/16, date = 16-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 159/210, date = 16-Jan-2000 21:36:00
+
+
+Report step 160/210 at day 16/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16/16.1, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 160/210, date = 17-Jan-2000 00:00:00
+
+
+Report step 161/210 at day 16.1/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.1/16.2, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 161/210, date = 17-Jan-2000 02:24:00
+
+
+Report step 162/210 at day 16.2/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.2/16.3, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 162/210, date = 17-Jan-2000 04:48:00
+
+
+Report step 163/210 at day 16.3/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.3/16.4, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 163/210, date = 17-Jan-2000 07:12:00
+
+
+Report step 164/210 at day 16.4/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.4/16.5, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 164/210, date = 17-Jan-2000 09:36:00
+
+
+Report step 165/210 at day 16.5/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.5/16.6, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 165/210, date = 17-Jan-2000 12:00:00
+
+
+Report step 166/210 at day 16.6/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.6/16.7, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 166/210, date = 17-Jan-2000 14:24:00
+
+
+Report step 167/210 at day 16.7/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.7/16.8, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 167/210, date = 17-Jan-2000 16:48:00
+
+
+Report step 168/210 at day 16.8/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.8/16.9, date = 17-Jan-2000
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 168/210, date = 17-Jan-2000 19:12:00
+
+
+Report step 169/210 at day 16.9/21, date = 17-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 16.9/17, date = 17-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 169/210, date = 17-Jan-2000 21:36:00
+
+
+Report step 170/210 at day 17/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17/17.1, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.0sec)
+Restart file written for report step 170/210, date = 18-Jan-2000 00:00:00
+
+
+Report step 171/210 at day 17.1/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.1/17.2, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 171/210, date = 18-Jan-2000 02:24:00
+
+
+Report step 172/210 at day 17.2/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.2/17.3, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 172/210, date = 18-Jan-2000 04:48:00
+
+
+Report step 173/210 at day 17.3/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.3/17.4, date = 18-Jan-2000
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 173/210, date = 18-Jan-2000 07:12:00
+
+
+Report step 174/210 at day 17.4/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.4/17.5, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 174/210, date = 18-Jan-2000 09:36:00
+
+
+Report step 175/210 at day 17.5/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.5/17.6, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 175/210, date = 18-Jan-2000 12:00:00
+
+
+Report step 176/210 at day 17.6/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.6/17.7, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 176/210, date = 18-Jan-2000 14:24:00
+
+
+Report step 177/210 at day 17.7/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.7/17.8, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 177/210, date = 18-Jan-2000 16:48:00
+
+
+Report step 178/210 at day 17.8/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.8/17.9, date = 18-Jan-2000
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 178/210, date = 18-Jan-2000 19:12:00
+
+
+Report step 179/210 at day 17.9/21, date = 18-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 17.9/18, date = 18-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 179/210, date = 18-Jan-2000 21:36:00
+
+
+Report step 180/210 at day 18/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18/18.1, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 180/210, date = 19-Jan-2000 00:00:00
+
+
+Report step 181/210 at day 18.1/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.1/18.2, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 181/210, date = 19-Jan-2000 02:24:00
+
+
+Report step 182/210 at day 18.2/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.2/18.3, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 182/210, date = 19-Jan-2000 04:48:00
+
+
+Report step 183/210 at day 18.3/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.3/18.4, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 183/210, date = 19-Jan-2000 07:12:00
+
+
+Report step 184/210 at day 18.4/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.4/18.5, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 184/210, date = 19-Jan-2000 09:36:00
+
+
+Report step 185/210 at day 18.5/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.5/18.6, date = 19-Jan-2000
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 185/210, date = 19-Jan-2000 12:00:00
+
+
+Report step 186/210 at day 18.6/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.6/18.7, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 186/210, date = 19-Jan-2000 14:24:00
+
+
+Report step 187/210 at day 18.7/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.7/18.8, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 187/210, date = 19-Jan-2000 16:48:00
+
+
+Report step 188/210 at day 18.8/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.8/18.9, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 188/210, date = 19-Jan-2000 19:12:00
+
+
+Report step 189/210 at day 18.9/21, date = 19-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 18.9/19, date = 19-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 189/210, date = 19-Jan-2000 21:36:00
+
+
+Report step 190/210 at day 19/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19/19.1, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.0sec)
+Restart file written for report step 190/210, date = 20-Jan-2000 00:00:00
+
+
+Report step 191/210 at day 19.1/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.1/19.2, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 191/210, date = 20-Jan-2000 02:24:00
+
+
+Report step 192/210 at day 19.2/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.2/19.3, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 192/210, date = 20-Jan-2000 04:48:00
+
+
+Report step 193/210 at day 19.3/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.3/19.4, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 193/210, date = 20-Jan-2000 07:12:00
+
+
+Report step 194/210 at day 19.4/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.4/19.5, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 194/210, date = 20-Jan-2000 09:36:00
+
+
+Report step 195/210 at day 19.5/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.5/19.6, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 195/210, date = 20-Jan-2000 12:00:00
+
+
+Report step 196/210 at day 19.6/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.6/19.7, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 196/210, date = 20-Jan-2000 14:24:00
+
+
+Report step 197/210 at day 19.7/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.7/19.8, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 197/210, date = 20-Jan-2000 16:48:00
+
+
+Report step 198/210 at day 19.8/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.8/19.9, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 198/210, date = 20-Jan-2000 19:12:00
+
+
+Report step 199/210 at day 19.9/21, date = 20-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 19.9/20, date = 20-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 199/210, date = 20-Jan-2000 21:36:00
+
+
+Report step 200/210 at day 20/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20/20.1, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 200/210, date = 21-Jan-2000 00:00:00
+
+
+Report step 201/210 at day 20.1/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.1/20.2, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 201/210, date = 21-Jan-2000 02:24:00
+
+
+Report step 202/210 at day 20.2/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.2/20.3, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 202/210, date = 21-Jan-2000 04:48:00
+
+
+Report step 203/210 at day 20.3/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.3/20.4, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 203/210, date = 21-Jan-2000 07:12:00
+
+
+Report step 204/210 at day 20.4/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.4/20.5, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 204/210, date = 21-Jan-2000 09:36:00
+
+
+Report step 205/210 at day 20.5/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.5/20.6, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 205/210, date = 21-Jan-2000 12:00:00
+
+
+Report step 206/210 at day 20.6/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.6/20.7, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 206/210, date = 21-Jan-2000 14:24:00
+
+
+Report step 207/210 at day 20.7/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.7/20.8, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 207/210, date = 21-Jan-2000 16:48:00
+
+
+Report step 208/210 at day 20.8/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.8/20.9, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  3 (0.0sec)
+Restart file written for report step 208/210, date = 21-Jan-2000 19:12:00
+
+
+Report step 209/210 at day 20.9/21, date = 21-Jan-2000
+
+Starting time step 0, stepsize 0.1 days, at day 20.9/21, date = 21-Jan-2000
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.0sec)
+Restart file written for report step 209/210, date = 21-Jan-2000 21:36:00
+
+Restart file written for report step 210/210, date = 22-Jan-2000 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      0.15 s
+  Deck input:                    0.09 s
+Number of timesteps:           507
+Simulation time:                31.83 s
+  Assembly time:                 5.86 s (Wasted: 0.0 s; 0.5%)
+    Well assembly:               0.48 s (Wasted: 0.0 s; 0.5%)
+  Linear solve time:            11.77 s (Wasted: 0.1 s; 0.7%)
+    Linear setup:                6.86 s (Wasted: 0.0 s; 0.7%)
+  Props/update time:            10.32 s (Wasted: 0.1 s; 0.5%)
+  Pre/post step:                 3.21 s (Wasted: 0.0 s; 0.2%)
+  Output write time:             0.57 s
+Overall Linearizations:       3997      (Wasted:    21; 0.5%)
+Overall Newton Iterations:    3491      (Wasted:    21; 0.6%)
+Overall Linear Iterations:    4815      (Wasted:    36; 0.7%)
+
+
+
+Error summary:
+Warnings          0
+Info              1559
+Errors            0
+Bugs              0
+Debug             0
+Problems          1
+

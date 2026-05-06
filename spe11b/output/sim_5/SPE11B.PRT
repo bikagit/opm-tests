@@ -1,0 +1,4150 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2025.04-pre (ebe0754ff*)
+Machine name     =  Macbookns-MacBook-Pro-2.local (Number of logical cores: 10, Memory size: 16384.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 24.2.0, Darwin Kernel Version 24.2.0: Fri Dec  6 19:01:59 PST 2024; root:xnu-11215.61.5~2/RELEASE_ARM64_T6000 )
+Build time       =  2024-12-11 at 17:21:30 hrs
+User             =  root
+Simulation started on 18-12-2024 at 12:05:12 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EclDeckFileName="SPE11B" # default: ""
+UseBestResidual="true" # default: "0"
+RelaxedMaxPvFraction="0" # default: "0.03"
+OutputExtraConvergenceInfo="steps,iterations" # default: "none"
+EnableEclOutput="0" # default: "1"
+FullTimeStepInitially="1" # default: "0"
+ToleranceCnvRelaxed="0.01" # default: "1"
+ToleranceCnv="0.01" # default: "0.01"
+ToleranceMb="1e-5" # default: "1e-07"
+ToleranceMbRelaxed="1e-5" # default: "1e-06"
+MinStrictCnvIter="5" # default: "-1"
+SolverMaxTimeStepInDays="3650" # default: "365"
+LinearSolver="cprw" # default: "cprw"
+NewtonMinIterations="1" # default: "2"
+NewtonMaxIterations="20" # default: "20"
+LinearSolverReduction="0.0025" # default: "0.01"
+OutputDir="/Users/macbookn/hackatonwork/opm-tests/spe11b/output/sim_5" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+BdaDeviceId="0"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeWeightsMethod="1"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDryRun="auto"
+EnableEsmry="0"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableOpmRstFile="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheck="1"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="8"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWelleqIter="30"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MiluVariant="ILU"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepBeforeShuttingProblematicWellsInDays="0.01"
+MinTimeStepSize="0"
+NetworkMaxIterations="200"
+NetworkMaxStrictIterations="100"
+NewtonMaxError="1e+100"
+NewtonMaxRelax="0.5"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+ShutUnsolvableWells="1"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepVerbosity="1"
+ToleranceCnvEnergy="0.01"
+ToleranceCnvEnergyRelaxed="1"
+ToleranceEisenstat="0.5"
+ToleranceEnergyBalance="1e-07"
+ToleranceEnergyBalanceRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseBestPath="0"
+UseEisenstat="0"
+UseGmres="0"
+UseImplicitIpr="1"
+UseMLmethodsTols="0"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+
+Reading deck file 'SPE11B.data'
+    0 Reading RUNSPEC  in SPE11B.DATA line 4
+    1 Reading DIMENS   in SPE11B.DATA line 6
+    2 Reading EQLDIMS  in SPE11B.DATA line 9
+    3 Reading TABDIMS  in SPE11B.DATA line 12
+    4 Reading WATER    in SPE11B.DATA line 15
+    5 Reading GAS      in SPE11B.DATA line 16
+    6 Reading CO2STORE in SPE11B.DATA line 17
+    7 Reading DISGASW  in SPE11B.DATA line 18
+    8 Reading VAPWAT   in SPE11B.DATA line 19
+    9 Reading DIFFUSE  in SPE11B.DATA line 20
+   10 Reading THERMAL  in SPE11B.DATA line 22
+   11 Reading METRIC   in SPE11B.DATA line 24
+   12 Reading START    in SPE11B.DATA line 26
+   13 Reading UNIFOUT  in SPE11B.DATA line 30
+   14 Reading GRID     in SPE11B.DATA line 32
+   15 Reading INIT     in SPE11B.DATA line 34
+   16 Reading DX       in /Users/macbookn/hackatonwork/opm-tests/spe11b/DX.INC line 3
+   17 Reading DY       in SPE11B.DATA line 37
+   18 Reading DZ       in SPE11B.DATA line 39
+   19 Reading TOPS     in SPE11B.DATA line 41
+   20 Reading PERMX    in /Users/macbookn/hackatonwork/opm-tests/spe11b/PERMX.INC line 3
+   21 Reading COPY     in SPE11B.DATA line 47
+   22 Reading MULTIPLY in SPE11B.DATA line 52
+   23 Reading PORO     in /Users/macbookn/hackatonwork/opm-tests/spe11b/PORO.INC line 3
+   24 Reading THCONR   in /Users/macbookn/hackatonwork/opm-tests/spe11b/THCONR.INC line 3
+   25 Reading BCCON    in SPE11B.DATA line 62
+   26 Reading DISPERC  in /Users/macbookn/hackatonwork/opm-tests/spe11b/DISPERC.INC line 3
+   27 Reading EDIT     in SPE11B.DATA line 70
+   28 Reading EQUALS   in /Users/macbookn/hackatonwork/opm-tests/spe11b/PVBOUNDARIES.INC line 3
+   29 Reading PROPS    in SPE11B.DATA line 75
+   30 Reading SGWFN    in /Users/macbookn/hackatonwork/opm-tests/spe11b/TABLES.INC line 3
+   31 Reading DIFFAWAT in SPE11B.DATA line 80
+   32 Reading DIFFAGAS in SPE11B.DATA line 82
+   33 Reading SPECROCK in SPE11B.DATA line 85
+   34 Reading THCO2MIX in SPE11B.DATA line 102
+   35 Reading REGIONS  in SPE11B.DATA line 105
+   36 Reading SATNUM   in /Users/macbookn/hackatonwork/opm-tests/spe11b/SATNUM.INC line 3
+   37 Reading FIPNUM   in /Users/macbookn/hackatonwork/opm-tests/spe11b/FIPNUM.INC line 3
+   38 Reading SOLUTION in SPE11B.DATA line 113
+   39 Reading EQUIL    in SPE11B.DATA line 115
+   40 Reading RPTRST   in SPE11B.DATA line 118
+   41 Reading RTEMPVD  in SPE11B.DATA line 122
+   42 Reading SUMMARY  in SPE11B.DATA line 127
+   43 Reading PERFORMA in SPE11B.DATA line 129
+   44 Reading FGIP     in SPE11B.DATA line 130
+   45 Reading FGIR     in SPE11B.DATA line 131
+   46 Reading FGIT     in SPE11B.DATA line 132
+   47 Reading FGIPL    in SPE11B.DATA line 134
+   48 Reading FGIPG    in SPE11B.DATA line 135
+   49 Reading RGKDI    in SPE11B.DATA line 137
+   50 Reading RGKDM    in SPE11B.DATA line 139
+   51 Reading RGIP     in SPE11B.DATA line 141
+   52 Reading RWCD     in SPE11B.DATA line 143
+   53 Reading WBHP     in SPE11B.DATA line 145
+   54 Reading WGIR     in SPE11B.DATA line 147
+   55 Reading WGIT     in SPE11B.DATA line 149
+   56 Reading BWPR     in SPE11B.DATA line 151
+   57 Reading SCHEDULE in SPE11B.DATA line 156
+   58 Reading RPTRST   in SPE11B.DATA line 158
+   59 Reading BCPROP   in SPE11B.DATA line 162
+   60 Reading TUNING   in SPE11B.DATA line 168
+   61 Reading SOURCE   in SPE11B.DATA line 172
+   62 Reading TSTEP    in SPE11B.DATA line 176
+   63 Reading TUNING   in SPE11B.DATA line 179
+   64 Reading SOURCE   in SPE11B.DATA line 183
+   65 Reading TSTEP    in SPE11B.DATA line 187
+   66 Reading TUNING   in SPE11B.DATA line 190
+   67 Reading SOURCE   in SPE11B.DATA line 194
+   68 Reading TSTEP    in SPE11B.DATA line 198
+   69 Reading TUNING   in SPE11B.DATA line 201
+   70 Reading SOURCE   in SPE11B.DATA line 205
+   71 Reading TSTEP    in SPE11B.DATA line 209
+   72 Reading TUNING   in SPE11B.DATA line 212
+   73 Reading SOURCE   in SPE11B.DATA line 216
+   74 Reading TSTEP    in SPE11B.DATA line 220
+The CO2 storage option is given. PVT properties from the Brine-CO2 system is used
+See the OPM manual for details on the used models.
+
+Creating grid from keywords DX, DY, DZ and TOPS
+3 fluid phases are active
+
+Processing dynamic information from
+SPE11B.DATA line 156
+Initializing report step 0/17 at 2025-01-01 0 DAYS line 156
+Processing keyword RPTRST at line 158
+Processing keyword BCPROP at line 162
+Processing keyword TUNING at line 168
+Processing keyword SOURCE at line 172
+Complete report step 1 (364963.5 DAYS) at 3024-03-28 (0 DAYS)
+
+Initializing report step 2/17 at 3024-03-28 (0 DAYS) line 176
+Processing keyword TUNING at line 179
+Processing keyword SOURCE at line 183
+Complete report step 2 (36.5 DAYS) at 3024-05-04 (364963.5 DAYS)
+
+Initializing report step 3/17 at 3024-05-04 (364963.5 DAYS) line 187
+Processing keyword TUNING at line 190
+Processing keyword SOURCE at line 194
+Complete report step 3 (1825 DAYS) at 3029-05-03 (365000 DAYS)
+
+Initializing report step 4/17 at 3029-05-03 (365000 DAYS) line 198
+Complete report step 4 (1825 DAYS) at 3034-05-02 (366825 DAYS)
+
+Initializing report step 5/17 at 3034-05-02 (366825 DAYS) line 198
+Complete report step 5 (1825 DAYS) at 3039-05-01 (368650 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/17 at 3039-05-01 (368650 DAYS) line 198
+Complete report step 6 (1825 DAYS) at 3044-04-29 (370475 DAYS)
+
+Initializing report step 7/17 at 3044-04-29 (370475 DAYS) line 198
+Complete report step 7 (1825 DAYS) at 3049-04-28 (372300 DAYS)
+
+Initializing report step 8/17 at 3049-04-28 (372300 DAYS) line 198
+Processing keyword TUNING at line 201
+Processing keyword SOURCE at line 205
+Complete report step 8 (1825 DAYS) at 3054-04-27 (374125 DAYS)
+
+Initializing report step 9/17 at 3054-04-27 (374125 DAYS) line 209
+Complete report step 9 (1825 DAYS) at 3059-04-26 (375950 DAYS)
+
+Initializing report step 10/17 at 3059-04-26 (375950 DAYS) line 209
+Complete report step 10 (1825 DAYS) at 3064-04-24 (377775 DAYS)
+
+Initializing report step 11/17 at 3064-04-24 (377775 DAYS) line 209
+Complete report step 11 (1825 DAYS) at 3069-04-23 (379600 DAYS)
+
+Initializing report step 12/17 at 3069-04-23 (379600 DAYS) line 209
+Complete report step 12 (1825 DAYS) at 3074-04-22 (381425 DAYS)
+
+Initializing report step 13/17 at 3074-04-22 (381425 DAYS) line 209
+Processing keyword TUNING at line 212
+Processing keyword SOURCE at line 216
+Complete report step 13 (1825 DAYS) at 3079-04-21 (383250 DAYS)
+
+Initializing report step 14/17 at 3079-04-21 (383250 DAYS) line 220
+Complete report step 14 (1825 DAYS) at 3084-04-19 (385075 DAYS)
+
+Initializing report step 15/17 at 3084-04-19 (385075 DAYS) line 220
+Complete report step 15 (1825 DAYS) at 3089-04-18 (386900 DAYS)
+
+Initializing report step 16/17 at 3089-04-18 (386900 DAYS) line 220
+Complete report step 16 (1825 DAYS) at 3094-04-17 (388725 DAYS)
+
+Initializing report step 17/17 at 3094-04-17 (388725 DAYS) line 220
+Complete report step 17 (1825 DAYS) at 3099-04-16 (390550 DAYS)
+
+
+Processing grid
+2 pinch-out connections generated
+Total number of active cells: 101040 / total pore volume: 20437486 RM3
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0025000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "finesmoother": {
+            "type": "ParOverILU0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ILU0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+
+===============Saturation Functions Diagnostics===============
+
+System:  Water-Gas system.
+Relative permeability input format: Saturation Family II.
+Number of saturation regions: 7
+
+
+Warning: Dispersion is activated in combination with VAPWAT/VAPOIL. 
+Water/oil is still allowed to vaporize, but dispersion in the gas phase is ignored.
+CO2STORE/CO2SOL is enabled. 
+ The surface density of CO2 is  1.868433kg/m3 
+ The surface density of Brine is  998.107723kg/m3
+ The surface densities are computed using the reference pressure ( 101325.000000Pa) and the reference temperature (288.710000K).
+
+Warning: No explicit RVWVD table is given for EQUIL region 1. 
+and datum depth is not at the gas-water-contact. 
+Rvw is set to 0.0 in all cells. 
+
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/17 at day 0/392375, date = 01-Jan-2025
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 3650 days, at day 0/364964, date = 01-Jan-2025
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00363632 after 20 iterations 
+ Newton its= 2, linearizations= 3 (0.7sec), linear its= 22 (1.1sec)
+
+Starting time step 1, stepsize 3650 days, at day 3650/364964, date = 30-Dec-2034
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 16 (1.0sec)
+
+Starting time step 2, stepsize 3650 days, at day 7300/364964, date = 27-Dec-2044
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 20 (1.1sec)
+
+Starting time step 3, stepsize 3650 days, at day 10950/364964, date = 25-Dec-2054
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 4, stepsize 3650 days, at day 14600/364964, date = 22-Dec-2064
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 5, stepsize 3650 days, at day 18250/364964, date = 20-Dec-2074
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (0.9sec)
+
+Starting time step 6, stepsize 3650 days, at day 21900/364964, date = 17-Dec-2084
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 20 (1.0sec)
+
+Starting time step 7, stepsize 3650 days, at day 25550/364964, date = 15-Dec-2094
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 20 (1.0sec)
+
+Starting time step 8, stepsize 3650 days, at day 29200/364964, date = 13-Dec-2104
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 20 (1.1sec)
+
+Starting time step 9, stepsize 3650 days, at day 32850/364964, date = 11-Dec-2114
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 21 (1.0sec)
+
+Starting time step 10, stepsize 3650 days, at day 36500/364964, date = 08-Dec-2124
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 20 (1.0sec)
+
+Starting time step 11, stepsize 3650 days, at day 40150/364964, date = 06-Dec-2134
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (0.9sec)
+
+Starting time step 12, stepsize 3650 days, at day 43800/364964, date = 03-Dec-2144
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (0.9sec)
+
+Starting time step 13, stepsize 3650 days, at day 47450/364964, date = 01-Dec-2154
+ Newton its= 2, linearizations= 3 (0.2sec), linear its= 20 (1.0sec)
+
+Starting time step 14, stepsize 3650 days, at day 51100/364964, date = 28-Nov-2164
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 15, stepsize 3650 days, at day 54750/364964, date = 26-Nov-2174
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 19 (1.1sec)
+
+Starting time step 16, stepsize 3650 days, at day 58400/364964, date = 23-Nov-2184
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 17, stepsize 3650 days, at day 62050/364964, date = 21-Nov-2194
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 18, stepsize 3650 days, at day 65700/364964, date = 19-Nov-2204
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.1sec)
+
+Starting time step 19, stepsize 3650 days, at day 69350/364964, date = 17-Nov-2214
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 21 (1.1sec)
+
+Starting time step 20, stepsize 3650 days, at day 73000/364964, date = 14-Nov-2224
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 18 (1.0sec)
+
+Starting time step 21, stepsize 3650 days, at day 76650/364964, date = 12-Nov-2234
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 22, stepsize 3650 days, at day 80300/364964, date = 09-Nov-2244
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 23, stepsize 3650 days, at day 83950/364964, date = 07-Nov-2254
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 24, stepsize 3650 days, at day 87600/364964, date = 04-Nov-2264
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 25, stepsize 3650 days, at day 91250/364964, date = 02-Nov-2274
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 26, stepsize 3650 days, at day 94900/364964, date = 30-Oct-2284
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (0.9sec)
+
+Starting time step 27, stepsize 3650 days, at day 98550/364964, date = 28-Oct-2294
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (0.9sec)
+
+Starting time step 28, stepsize 3650 days, at day 102200/364964, date = 26-Oct-2304
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 29, stepsize 3650 days, at day 105850/364964, date = 24-Oct-2314
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 30, stepsize 3650 days, at day 109500/364964, date = 21-Oct-2324
+ Newton its= 2, linearizations= 3 (0.2sec), linear its= 18 (1.1sec)
+
+Starting time step 31, stepsize 3650 days, at day 113150/364964, date = 19-Oct-2334
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 32, stepsize 3650 days, at day 116800/364964, date = 16-Oct-2344
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 33, stepsize 3650 days, at day 120450/364964, date = 14-Oct-2354
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 34, stepsize 3650 days, at day 124100/364964, date = 11-Oct-2364
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 35, stepsize 3650 days, at day 127750/364964, date = 09-Oct-2374
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.1sec)
+
+Starting time step 36, stepsize 3650 days, at day 131400/364964, date = 06-Oct-2384
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 37, stepsize 3650 days, at day 135050/364964, date = 04-Oct-2394
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 38, stepsize 3650 days, at day 138700/364964, date = 01-Oct-2404
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 39, stepsize 3650 days, at day 142350/364964, date = 29-Sep-2414
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 40, stepsize 3650 days, at day 146000/364964, date = 26-Sep-2424
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 41, stepsize 3650 days, at day 149650/364964, date = 24-Sep-2434
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 42, stepsize 3650 days, at day 153300/364964, date = 21-Sep-2444
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 43, stepsize 3650 days, at day 156950/364964, date = 19-Sep-2454
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 44, stepsize 3650 days, at day 160600/364964, date = 16-Sep-2464
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.1sec)
+
+Starting time step 45, stepsize 3650 days, at day 164250/364964, date = 14-Sep-2474
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.1sec)
+
+Starting time step 46, stepsize 3650 days, at day 167900/364964, date = 11-Sep-2484
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 47, stepsize 3650 days, at day 171550/364964, date = 09-Sep-2494
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 48, stepsize 3650 days, at day 175200/364964, date = 07-Sep-2504
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 49, stepsize 3650 days, at day 178850/364964, date = 05-Sep-2514
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 50, stepsize 3650 days, at day 182500/364964, date = 02-Sep-2524
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (0.9sec)
+
+Starting time step 51, stepsize 3650 days, at day 186150/364964, date = 31-Aug-2534
+ Newton its= 2, linearizations= 3 (0.2sec), linear its= 16 (1.1sec)
+
+Starting time step 52, stepsize 3650 days, at day 189800/364964, date = 28-Aug-2544
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 53, stepsize 3650 days, at day 193450/364964, date = 26-Aug-2554
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 54, stepsize 3650 days, at day 197100/364964, date = 23-Aug-2564
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 55, stepsize 3650 days, at day 200750/364964, date = 21-Aug-2574
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 56, stepsize 3650 days, at day 204400/364964, date = 18-Aug-2584
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 57, stepsize 3650 days, at day 208050/364964, date = 16-Aug-2594
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 58, stepsize 3650 days, at day 211700/364964, date = 14-Aug-2604
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 59, stepsize 3650 days, at day 215350/364964, date = 12-Aug-2614
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 16 (0.9sec)
+
+Starting time step 60, stepsize 3650 days, at day 219000/364964, date = 09-Aug-2624
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 15 (1.1sec)
+
+Starting time step 61, stepsize 3650 days, at day 222650/364964, date = 07-Aug-2634
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 62, stepsize 3650 days, at day 226300/364964, date = 04-Aug-2644
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 63, stepsize 3650 days, at day 229950/364964, date = 02-Aug-2654
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 64, stepsize 3650 days, at day 233600/364964, date = 30-Jul-2664
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 65, stepsize 3650 days, at day 237250/364964, date = 28-Jul-2674
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (0.9sec)
+
+Starting time step 66, stepsize 3650 days, at day 240900/364964, date = 25-Jul-2684
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.1sec)
+
+Starting time step 67, stepsize 3650 days, at day 244550/364964, date = 23-Jul-2694
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.0sec)
+
+Starting time step 68, stepsize 3650 days, at day 248200/364964, date = 21-Jul-2704
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  5 (0.3sec)
+
+Starting time step 69, stepsize 3650 days, at day 251850/364964, date = 19-Jul-2714
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (0.9sec)
+
+Starting time step 70, stepsize 3650 days, at day 255500/364964, date = 16-Jul-2724
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 71, stepsize 3650 days, at day 259150/364964, date = 14-Jul-2734
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 72, stepsize 3650 days, at day 262800/364964, date = 11-Jul-2744
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  5 (0.4sec)
+
+Starting time step 73, stepsize 3650 days, at day 266450/364964, date = 09-Jul-2754
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  6 (0.4sec)
+
+Starting time step 74, stepsize 3650 days, at day 270100/364964, date = 06-Jul-2764
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  5 (0.3sec)
+
+Starting time step 75, stepsize 3650 days, at day 273750/364964, date = 04-Jul-2774
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  6 (0.3sec)
+
+Starting time step 76, stepsize 3650 days, at day 277400/364964, date = 01-Jul-2784
+ Newton its= 1, linearizations= 2 (0.3sec), linear its=  5 (0.3sec)
+
+Starting time step 77, stepsize 3650 days, at day 281050/364964, date = 29-Jun-2794
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  6 (0.4sec)
+
+Starting time step 78, stepsize 3650 days, at day 284700/364964, date = 26-Jun-2804
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 79, stepsize 3650 days, at day 288350/364964, date = 24-Jun-2814
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 18 (1.2sec)
+
+Starting time step 80, stepsize 3650 days, at day 292000/364964, date = 21-Jun-2824
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.1sec)
+
+Starting time step 81, stepsize 3650 days, at day 295650/364964, date = 19-Jun-2834
+ Newton its= 2, linearizations= 3 (0.3sec), linear its= 17 (1.1sec)
+
+Starting time step 82, stepsize 3650 days, at day 299300/364964, date = 16-Jun-2844
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 83, stepsize 3650 days, at day 302950/364964, date = 14-Jun-2854
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 84, stepsize 3650 days, at day 306600/364964, date = 11-Jun-2864
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 85, stepsize 3650 days, at day 310250/364964, date = 09-Jun-2874
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 17 (1.1sec)
+
+Starting time step 86, stepsize 3650 days, at day 313900/364964, date = 06-Jun-2884
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 87, stepsize 3650 days, at day 317550/364964, date = 04-Jun-2894
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 18 (1.1sec)
+
+Starting time step 88, stepsize 3650 days, at day 321200/364964, date = 02-Jun-2904
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 89, stepsize 3650 days, at day 324850/364964, date = 31-May-2914
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 16 (0.9sec)
+
+Starting time step 90, stepsize 3650 days, at day 328500/364964, date = 28-May-2924
+ Newton its= 2, linearizations= 3 (0.6sec), linear its= 16 (1.0sec)
+
+Starting time step 91, stepsize 3650 days, at day 332150/364964, date = 26-May-2934
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 16 (0.8sec)
+
+Starting time step 92, stepsize 3650 days, at day 335800/364964, date = 23-May-2944
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 16 (1.0sec)
+
+Starting time step 93, stepsize 3650 days, at day 339450/364964, date = 21-May-2954
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 94, stepsize 3650 days, at day 343100/364964, date = 18-May-2964
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 16 (1.0sec)
+
+Starting time step 95, stepsize 3650 days, at day 346750/364964, date = 16-May-2974
+ Newton its= 2, linearizations= 3 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 96, stepsize 3650 days, at day 350400/364964, date = 13-May-2984
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 97, stepsize 3650 days, at day 354050/364964, date = 11-May-2994
+ Newton its= 2, linearizations= 3 (0.6sec), linear its= 18 (1.0sec)
+
+Starting time step 98, stepsize 3650 days, at day 357700/364964, date = 09-May-3004
+ Newton its= 2, linearizations= 3 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 99, stepsize 3613.5 days, at day 361350/364964, date = 07-May-3014
+ Newton its= 2, linearizations= 3 (0.6sec), linear its= 17 (1.0sec)
+
+Report step  1/17 at day 364964/392375, date = 28-Mar-3024
+
+Starting time step 0, stepsize 36.5 days, at day 364964/365000, date = 28-Mar-3024
+ Newton its= 1, linearizations= 2 (0.3sec), linear its=  0 (0.2sec)
+
+Report step  2/17 at day 365000/392375, date = 04-May-3024
+
+Starting time step 0, stepsize 1825 days, at day 365000/366825, date = 04-May-3024
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 365000/366825, date = 04-May-3024
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 365000/366825, date = 04-May-3024
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 365000/366825, date = 04-May-3024
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 21.643058 days
+
+
+Starting time step 0, stepsize 21.6431 days, at day 365000/366825, date = 04-May-3024
+ Newton its= 9, linearizations=10 (1.4sec), linear its= 15 (1.8sec)
+
+Starting time step 1, stepsize 19.2383 days, at day 365022/366825, date = 25-May-3024
+ Newton its= 4, linearizations= 5 (0.8sec), linear its= 15 (1.1sec)
+
+Starting time step 2, stepsize 50.0195 days, at day 365041/366825, date = 13-Jun-3024
+ Newton its= 6, linearizations= 7 (1.0sec), linear its=  9 (1.0sec)
+
+Starting time step 3, stepsize 90.0351 days, at day 365091/366825, date = 02-Aug-3024
+ Newton its= 8, linearizations= 9 (1.5sec), linear its= 30 (2.1sec)
+
+Starting time step 4, stepsize 90.0351 days, at day 365181/366825, date = 31-Oct-3024
+ Newton its= 7, linearizations= 8 (1.1sec), linear its= 15 (1.3sec)
+
+Starting time step 5, stepsize 126.049 days, at day 365271/366825, date = 29-Jan-3025
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 9, linearizations=10 (1.3sec), linear its= 26 (2.4sec)
+
+Starting time step 6, stepsize 112.044 days, at day 365397/366825, date = 05-Jun-3025
+ Newton its= 8, linearizations= 9 (1.3sec), linear its= 24 (1.8sec)
+
+Starting time step 7, stepsize 112.044 days, at day 365509/366825, date = 25-Sep-3025
+ Newton its= 6, linearizations= 7 (1.1sec), linear its= 12 (1.1sec)
+
+Starting time step 8, stepsize 201.679 days, at day 365621/366825, date = 15-Jan-3026
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=19, linearizations=20 (3.2sec), linear its= 54 (4.8sec)
+
+Starting time step 9, stepsize 84.9173 days, at day 365823/366825, date = 04-Aug-3026
+ Newton its= 8, linearizations= 9 (1.2sec), linear its= 23 (1.9sec)
+
+Starting time step 10, stepsize 84.9173 days, at day 365908/366825, date = 28-Oct-3026
+ Newton its=10, linearizations=11 (1.6sec), linear its= 32 (2.6sec)
+
+Starting time step 11, stepsize 67.9339 days, at day 365993/366825, date = 21-Jan-3027
+ Newton its= 7, linearizations= 8 (1.6sec), linear its= 15 (1.9sec)
+
+Starting time step 12, stepsize 95.1074 days, at day 366061/366825, date = 30-Mar-3027
+ Newton its=11, linearizations=12 (1.7sec), linear its= 26 (2.3sec)
+
+Starting time step 13, stepsize 69.169 days, at day 366156/366825, date = 03-Jul-3027
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00278067 after 20 iterations 
+ Newton its= 8, linearizations= 9 (1.6sec), linear its= 37 (2.7sec)
+
+Starting time step 14, stepsize 69.169 days, at day 366225/366825, date = 10-Sep-3027
+ Newton its= 9, linearizations=10 (2.5sec), linear its= 30 (3.2sec)
+
+Starting time step 15, stepsize 61.4836 days, at day 366294/366825, date = 19-Nov-3027
+ Newton its= 5, linearizations= 6 (0.9sec), linear its= 13 (1.3sec)
+
+Starting time step 16, stepsize 135.264 days, at day 366355/366825, date = 19-Jan-3028
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 44.637081 days
+
+
+Starting time step 16, stepsize 44.6371 days, at day 366355/366825, date = 19-Jan-3028
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.730237 days
+
+
+Starting time step 16, stepsize 14.7302 days, at day 366355/366825, date = 19-Jan-3028
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  4 (0.4sec)
+
+Starting time step 17, stepsize 29.4605 days, at day 366370/366825, date = 03-Feb-3028
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  7 (0.6sec)
+
+Starting time step 18, stepsize 88.3814 days, at day 366400/366825, date = 03-Mar-3028
+ Newton its= 9, linearizations=10 (0.9sec), linear its= 21 (1.8sec)
+
+Starting time step 19, stepsize 78.5613 days, at day 366488/366825, date = 31-May-3028
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 22 (1.6sec)
+
+Starting time step 20, stepsize 78.5613 days, at day 366567/366825, date = 17-Aug-3028
+ Newton its= 8, linearizations= 9 (0.8sec), linear its= 35 (2.0sec)
+
+Starting time step 21, stepsize 78.5613 days, at day 366645/366825, date = 04-Nov-3028
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 24 (1.6sec)
+
+Starting time step 22, stepsize 101.26 days, at day 366724/366825, date = 21-Jan-3029
+ Newton its= 9, linearizations=10 (0.9sec), linear its= 28 (1.9sec)
+
+Report step  3/17 at day 366825/392375, date = 03-May-3029
+
+Starting time step 0, stepsize 1825 days, at day 366825/368650, date = 03-May-3029
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 366825/368650, date = 03-May-3029
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 366825/368650, date = 03-May-3029
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 366825/368650, date = 03-May-3029
+ Newton its= 7, linearizations= 8 (0.7sec), linear its= 22 (1.6sec)
+
+Starting time step 1, stepsize 91.819 days, at day 366891/368650, date = 07-Jul-3029
+ Newton its= 9, linearizations=10 (0.7sec), linear its= 27 (1.8sec)
+
+Starting time step 2, stepsize 81.6169 days, at day 366982/368650, date = 07-Oct-3029
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 26.933584 days
+
+
+Starting time step 2, stepsize 26.9336 days, at day 366982/368650, date = 07-Oct-3029
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.888083 days
+
+
+Starting time step 2, stepsize 8.88808 days, at day 366982/368650, date = 07-Oct-3029
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.2sec)
+
+Starting time step 3, stepsize 17.7762 days, at day 366991/368650, date = 16-Oct-3029
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 4, stepsize 53.3285 days, at day 367009/368650, date = 03-Nov-3029
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 14 (1.1sec)
+
+Starting time step 5, stepsize 95.9913 days, at day 367062/368650, date = 26-Dec-3029
+ Newton its=11, linearizations=12 (0.9sec), linear its= 52 (3.1sec)
+
+Starting time step 6, stepsize 69.8118 days, at day 367158/368650, date = 01-Apr-3030
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 32 (1.8sec)
+
+Starting time step 7, stepsize 97.7366 days, at day 367228/368650, date = 10-Jun-3030
+ Newton its= 9, linearizations=10 (0.8sec), linear its= 35 (2.1sec)
+
+Starting time step 8, stepsize 86.877 days, at day 367326/368650, date = 15-Sep-3030
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 29 (2.0sec)
+
+Starting time step 9, stepsize 86.877 days, at day 367413/368650, date = 11-Dec-3030
+ Newton its=17, linearizations=18 (1.4sec), linear its= 70 (4.3sec)
+
+Starting time step 10, stepsize 40.8833 days, at day 367500/368650, date = 08-Mar-3031
+ Newton its= 4, linearizations= 5 (0.4sec), linear its=  9 (0.7sec)
+
+Starting time step 11, stepsize 106.297 days, at day 367541/368650, date = 18-Apr-3031
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.077853 days
+
+
+Starting time step 11, stepsize 35.0779 days, at day 367541/368650, date = 18-Apr-3031
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 11.575692 days
+
+
+Starting time step 11, stepsize 11.5757 days, at day 367541/368650, date = 18-Apr-3031
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.1sec)
+
+Starting time step 12, stepsize 23.1514 days, at day 367552/368650, date = 30-Apr-3031
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 13, stepsize 69.4541 days, at day 367575/368650, date = 23-May-3031
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 22.919869 days
+
+
+Starting time step 13, stepsize 22.9199 days, at day 367575/368650, date = 23-May-3031
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  7 (0.6sec)
+
+Starting time step 14, stepsize 45.8397 days, at day 367598/368650, date = 15-Jun-3031
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 14 (1.0sec)
+
+Starting time step 15, stepsize 100.847 days, at day 367644/368650, date = 31-Jul-3031
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 33.279650 days
+
+
+Starting time step 15, stepsize 33.2797 days, at day 367644/368650, date = 31-Jul-3031
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 10.982285 days
+
+
+Starting time step 15, stepsize 10.9823 days, at day 367644/368650, date = 31-Jul-3031
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 16, stepsize 21.9646 days, at day 367655/368650, date = 11-Aug-3031
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 17, stepsize 65.8937 days, at day 367677/368650, date = 02-Sep-3031
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 31 (1.9sec)
+
+Starting time step 18, stepsize 65.8937 days, at day 367743/368650, date = 06-Nov-3031
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 21 (1.5sec)
+
+Starting time step 19, stepsize 92.2512 days, at day 367809/368650, date = 11-Jan-3032
+ Newton its= 8, linearizations= 9 (0.6sec), linear its= 22 (1.5sec)
+
+Starting time step 20, stepsize 92.2512 days, at day 367901/368650, date = 13-Apr-3032
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 24 (1.7sec)
+
+Starting time step 21, stepsize 92.2512 days, at day 367993/368650, date = 14-Jul-3032
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 22 (1.5sec)
+
+Starting time step 22, stepsize 92.2512 days, at day 368086/368650, date = 14-Oct-3032
+ Newton its= 8, linearizations= 9 (0.6sec), linear its= 24 (1.6sec)
+
+Starting time step 23, stepsize 92.2512 days, at day 368178/368650, date = 14-Jan-3033
+ Newton its= 9, linearizations=10 (0.7sec), linear its= 44 (2.5sec)
+
+Starting time step 24, stepsize 82.0011 days, at day 368270/368650, date = 17-Apr-3033
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 26 (1.6sec)
+
+Starting time step 25, stepsize 114.801 days, at day 368352/368650, date = 08-Jul-3033
+ Newton its=16, linearizations=17 (1.3sec), linear its= 61 (3.8sec)
+
+Starting time step 26, stepsize 57.4007 days, at day 368467/368650, date = 30-Oct-3033
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 27, stepsize 125.746 days, at day 368524/368650, date = 27-Dec-3033
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 41.496204 days
+
+
+Starting time step 27, stepsize 41.4962 days, at day 368524/368650, date = 27-Dec-3033
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 13.693747 days
+
+
+Starting time step 27, stepsize 13.6937 days, at day 368524/368650, date = 27-Dec-3033
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.2sec)
+
+Starting time step 28, stepsize 27.3875 days, at day 368538/368650, date = 09-Jan-3034
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 15 (1.0sec)
+
+Starting time step 29, stepsize 42.3324 days, at day 368565/368650, date = 06-Feb-3034
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 30, stepsize 42.3324 days, at day 368608/368650, date = 20-Mar-3034
+ Newton its= 4, linearizations= 5 (0.4sec), linear its=  9 (0.7sec)
+
+Report step  4/17 at day 368650/392375, date = 02-May-3034
+
+Starting time step 0, stepsize 1825 days, at day 368650/370475, date = 02-May-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 368650/370475, date = 02-May-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 368650/370475, date = 02-May-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 368650/370475, date = 02-May-3034
+ Newton its=12, linearizations=13 (1.1sec), linear its= 70 (3.7sec)
+
+Starting time step 1, stepsize 43.7233 days, at day 368716/370475, date = 06-Jul-3034
+ Newton its= 4, linearizations= 5 (0.4sec), linear its=  8 (0.7sec)
+
+Starting time step 2, stepsize 113.681 days, at day 368759/370475, date = 19-Aug-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 37.514634 days
+
+
+Starting time step 2, stepsize 37.5146 days, at day 368759/370475, date = 19-Aug-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.379829 days
+
+
+Starting time step 2, stepsize 12.3798 days, at day 368759/370475, date = 19-Aug-3034
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 3, stepsize 24.7597 days, at day 368772/370475, date = 31-Aug-3034
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  9 (0.7sec)
+
+Starting time step 4, stepsize 74.279 days, at day 368796/370475, date = 25-Sep-3034
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 24.512062 days
+
+
+Starting time step 4, stepsize 24.5121 days, at day 368796/370475, date = 25-Sep-3034
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  7 (0.6sec)
+
+Starting time step 5, stepsize 49.0241 days, at day 368821/370475, date = 19-Oct-3034
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 13 (1.1sec)
+
+Starting time step 6, stepsize 107.853 days, at day 368870/370475, date = 07-Dec-3034
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.591514 days
+
+
+Starting time step 6, stepsize 35.5915 days, at day 368870/370475, date = 07-Dec-3034
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 10 (0.8sec)
+
+Starting time step 7, stepsize 71.183 days, at day 368906/370475, date = 12-Jan-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 23.490399 days
+
+
+Starting time step 7, stepsize 23.4904 days, at day 368906/370475, date = 12-Jan-3035
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 10 (0.9sec)
+
+Starting time step 8, stepsize 46.9808 days, at day 368929/370475, date = 05-Feb-3035
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 14 (1.1sec)
+
+Starting time step 9, stepsize 122.15 days, at day 368976/370475, date = 24-Mar-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 40.309525 days
+
+
+Starting time step 9, stepsize 40.3095 days, at day 368976/370475, date = 24-Mar-3035
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 13 (0.9sec)
+
+Starting time step 10, stepsize 80.6191 days, at day 369016/370475, date = 03-May-3035
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00753856 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 26.604287 days
+
+
+Starting time step 10, stepsize 26.6043 days, at day 369016/370475, date = 03-May-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.779415 days
+
+
+Starting time step 10, stepsize 8.77941 days, at day 369016/370475, date = 03-May-3035
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 11, stepsize 17.5588 days, at day 369025/370475, date = 12-May-3035
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  3 (0.8sec)
+
+Starting time step 12, stepsize 52.6765 days, at day 369043/370475, date = 29-May-3035
+ Newton its= 5, linearizations= 6 (0.7sec), linear its= 19 (1.3sec)
+
+Starting time step 13, stepsize 115.888 days, at day 369095/370475, date = 21-Jul-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.243130 days
+
+
+Starting time step 13, stepsize 38.2431 days, at day 369095/370475, date = 21-Jul-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.620233 days
+
+
+Starting time step 13, stepsize 12.6202 days, at day 369095/370475, date = 21-Jul-3035
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 14, stepsize 25.2405 days, at day 369108/370475, date = 02-Aug-3035
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.9sec)
+
+Starting time step 15, stepsize 65.6252 days, at day 369133/370475, date = 28-Aug-3035
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 32 (2.0sec)
+
+Starting time step 16, stepsize 118.125 days, at day 369199/370475, date = 01-Nov-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.981375 days
+
+
+Starting time step 16, stepsize 38.9814 days, at day 369199/370475, date = 01-Nov-3035
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 15 (1.0sec)
+
+Starting time step 17, stepsize 77.9628 days, at day 369238/370475, date = 10-Dec-3035
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00701348 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 25.727708 days
+
+
+Starting time step 17, stepsize 25.7277 days, at day 369238/370475, date = 10-Dec-3035
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 8.490144 days
+
+
+Starting time step 17, stepsize 8.49014 days, at day 369238/370475, date = 10-Dec-3035
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.2sec)
+
+Starting time step 18, stepsize 16.9803 days, at day 369246/370475, date = 19-Dec-3035
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  7 (0.6sec)
+
+Starting time step 19, stepsize 50.9409 days, at day 369263/370475, date = 05-Jan-3036
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 19 (1.3sec)
+
+Starting time step 20, stepsize 112.07 days, at day 369314/370475, date = 25-Feb-3036
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.983065 days
+
+
+Starting time step 20, stepsize 36.9831 days, at day 369314/370475, date = 25-Feb-3036
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.204412 days
+
+
+Starting time step 20, stepsize 12.2044 days, at day 369314/370475, date = 25-Feb-3036
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  5 (0.5sec)
+
+Starting time step 21, stepsize 24.4088 days, at day 369326/370475, date = 08-Mar-3036
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 22, stepsize 73.2265 days, at day 369351/370475, date = 01-Apr-3036
+ Newton its= 6, linearizations= 7 (0.7sec), linear its= 28 (1.8sec)
+
+Starting time step 23, stepsize 131.808 days, at day 369424/370475, date = 14-Jun-3036
+ Newton its=13, linearizations=14 (1.2sec), linear its= 59 (3.8sec)
+
+Starting time step 24, stepsize 81.1124 days, at day 369556/370475, date = 23-Oct-3036
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 24 (1.4sec)
+
+Starting time step 25, stepsize 146.002 days, at day 369637/370475, date = 13-Jan-3037
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.180764 days
+
+
+Starting time step 25, stepsize 48.1808 days, at day 369637/370475, date = 13-Jan-3037
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  4 (0.6sec)
+
+Starting time step 26, stepsize 96.3615 days, at day 369685/370475, date = 02-Mar-3037
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 31 (1.9sec)
+
+Starting time step 27, stepsize 134.906 days, at day 369782/370475, date = 06-Jun-3037
+ Newton its=12, linearizations=13 (1.0sec), linear its= 54 (3.3sec)
+
+Starting time step 28, stepsize 89.9374 days, at day 369916/370475, date = 19-Oct-3037
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 26 (1.6sec)
+
+Starting time step 29, stepsize 161.887 days, at day 370006/370475, date = 17-Jan-3038
+ Newton its=12, linearizations=13 (1.0sec), linear its= 49 (3.2sec)
+
+Starting time step 30, stepsize 107.925 days, at day 370168/370475, date = 28-Jun-3038
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 21 (1.4sec)
+
+Starting time step 31, stepsize 99.3963 days, at day 370276/370475, date = 14-Oct-3038
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 19 (1.4sec)
+
+Starting time step 32, stepsize 99.3963 days, at day 370376/370475, date = 21-Jan-3039
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 18 (1.2sec)
+
+Report step  5/17 at day 370475/392375, date = 01-May-3039
+
+Starting time step 0, stepsize 1825 days, at day 370475/372300, date = 01-May-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 370475/372300, date = 01-May-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 370475/372300, date = 01-May-3039
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 370475/372300, date = 01-May-3039
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.8sec)
+
+Starting time step 1, stepsize 131.17 days, at day 370541/372300, date = 05-Jul-3039
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00308422 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 370541/372300, date = 05-Jul-3039
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 14 (0.9sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 370584/372300, date = 17-Aug-3039
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00286822 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00614235 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 28.568837 days
+
+
+Starting time step 2, stepsize 28.5688 days, at day 370584/372300, date = 17-Aug-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 9.427716 days
+
+
+Starting time step 2, stepsize 9.42772 days, at day 370584/372300, date = 17-Aug-3039
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 3, stepsize 18.8554 days, at day 370593/372300, date = 27-Aug-3039
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 4, stepsize 56.5663 days, at day 370612/372300, date = 15-Sep-3039
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 19 (1.2sec)
+
+Starting time step 5, stepsize 124.446 days, at day 370669/372300, date = 10-Nov-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 41.067132 days
+
+
+Starting time step 5, stepsize 41.0671 days, at day 370669/372300, date = 10-Nov-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 13.552153 days
+
+
+Starting time step 5, stepsize 13.5522 days, at day 370669/372300, date = 10-Nov-3039
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.2sec)
+
+Starting time step 6, stepsize 27.1043 days, at day 370682/372300, date = 24-Nov-3039
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 7, stepsize 81.3129 days, at day 370709/372300, date = 21-Dec-3039
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 26.833264 days
+
+
+Starting time step 7, stepsize 26.8333 days, at day 370709/372300, date = 21-Dec-3039
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 8, stepsize 53.6665 days, at day 370736/372300, date = 17-Jan-3040
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 9, stepsize 139.533 days, at day 370790/372300, date = 10-Mar-3040
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 46.045881 days
+
+
+Starting time step 9, stepsize 46.0459 days, at day 370790/372300, date = 10-Mar-3040
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 11 (0.8sec)
+
+Starting time step 10, stepsize 92.0918 days, at day 370836/372300, date = 25-Apr-3040
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00387913 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00437743 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 30.390281 days
+
+
+Starting time step 10, stepsize 30.3903 days, at day 370836/372300, date = 25-Apr-3040
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.6sec)
+
+Starting time step 11, stepsize 60.7806 days, at day 370866/372300, date = 26-May-3040
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 24 (1.4sec)
+
+Starting time step 12, stepsize 109.405 days, at day 370927/372300, date = 26-Jul-3040
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.103654 days
+
+
+Starting time step 12, stepsize 36.1037 days, at day 370927/372300, date = 26-Jul-3040
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  7 (0.6sec)
+
+Starting time step 13, stepsize 72.2073 days, at day 370963/372300, date = 31-Aug-3040
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00756108 after 20 iterations 
+ Newton its= 9, linearizations=10 (0.9sec), linear its= 92 (4.3sec)
+
+Starting time step 14, stepsize 64.1843 days, at day 371035/372300, date = 11-Nov-3040
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 25 (1.5sec)
+
+Starting time step 15, stepsize 115.532 days, at day 371100/372300, date = 14-Jan-3041
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.125459 days
+
+
+Starting time step 15, stepsize 38.1255 days, at day 371100/372300, date = 14-Jan-3041
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  5 (0.5sec)
+
+Starting time step 16, stepsize 76.2509 days, at day 371138/372300, date = 21-Feb-3041
+ Newton its=10, linearizations=11 (1.0sec), linear its= 49 (3.0sec)
+
+Starting time step 17, stepsize 61.0007 days, at day 371214/372300, date = 08-May-3041
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 27 (1.5sec)
+
+Starting time step 18, stepsize 134.202 days, at day 371275/372300, date = 08-Jul-3041
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00269875 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 44.286533 days
+
+
+Starting time step 18, stepsize 44.2865 days, at day 371275/372300, date = 08-Jul-3041
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.614556 days
+
+
+Starting time step 18, stepsize 14.6146 days, at day 371275/372300, date = 08-Jul-3041
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 13 (0.8sec)
+
+Starting time step 19, stepsize 29.2291 days, at day 371290/372300, date = 23-Jul-3041
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  9 (0.6sec)
+
+Starting time step 20, stepsize 87.6873 days, at day 371319/372300, date = 21-Aug-3041
+ Newton its=11, linearizations=12 (0.9sec), linear its= 77 (4.1sec)
+
+Starting time step 21, stepsize 63.7726 days, at day 371406/372300, date = 17-Nov-3041
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 14 (0.9sec)
+
+Starting time step 22, stepsize 140.3 days, at day 371470/372300, date = 20-Jan-3042
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 46.298913 days
+
+
+Starting time step 22, stepsize 46.2989 days, at day 371470/372300, date = 20-Jan-3042
+ Newton its= 4, linearizations= 5 (0.4sec), linear its=  8 (0.7sec)
+
+Starting time step 23, stepsize 92.5978 days, at day 371517/372300, date = 07-Mar-3042
+ Newton its= 8, linearizations= 9 (0.8sec), linear its= 42 (2.2sec)
+
+Starting time step 24, stepsize 92.5978 days, at day 371609/372300, date = 08-Jun-3042
+ Newton its= 7, linearizations= 8 (0.8sec), linear its= 32 (1.8sec)
+
+Starting time step 25, stepsize 129.637 days, at day 371702/372300, date = 08-Sep-3042
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00429118 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 42.780196 days
+
+
+Starting time step 25, stepsize 42.7802 days, at day 371702/372300, date = 08-Sep-3042
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 14 (0.9sec)
+
+Starting time step 26, stepsize 85.5604 days, at day 371745/372300, date = 21-Oct-3042
+ Newton its= 7, linearizations= 8 (0.7sec), linear its= 30 (1.9sec)
+
+Starting time step 27, stepsize 119.785 days, at day 371830/372300, date = 15-Jan-3043
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 39.528901 days
+
+
+Starting time step 27, stepsize 39.5289 days, at day 371830/372300, date = 15-Jan-3043
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.9sec)
+
+Starting time step 28, stepsize 79.0578 days, at day 371870/372300, date = 23-Feb-3043
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 24 (1.5sec)
+
+Starting time step 29, stepsize 142.304 days, at day 371949/372300, date = 13-May-3043
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00614685 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 46.960334 days
+
+
+Starting time step 29, stepsize 46.9603 days, at day 371949/372300, date = 13-May-3043
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 15.496910 days
+
+
+Starting time step 29, stepsize 15.4969 days, at day 371949/372300, date = 13-May-3043
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.2sec)
+
+Starting time step 30, stepsize 30.9938 days, at day 371964/372300, date = 29-May-3043
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 13 (0.9sec)
+
+Starting time step 31, stepsize 80.5839 days, at day 371995/372300, date = 29-Jun-3043
+ Newton its= 6, linearizations= 7 (0.7sec), linear its= 20 (1.3sec)
+
+Starting time step 32, stepsize 145.051 days, at day 372076/372300, date = 17-Sep-3043
+ Newton its=11, linearizations=12 (1.0sec), linear its= 40 (2.6sec)
+
+Starting time step 33, stepsize 79.1829 days, at day 372221/372300, date = 09-Feb-3044
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 17 (1.3sec)
+
+Report step  6/17 at day 372300/392375, date = 29-Apr-3044
+
+Starting time step 0, stepsize 1825 days, at day 372300/374125, date = 29-Apr-3044
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 372300/374125, date = 29-Apr-3044
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 372300/374125, date = 29-Apr-3044
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=15, linearizations=16 (1.4sec), linear its= 57 (3.5sec)
+
+Starting time step 1, stepsize 105.996 days, at day 372499/374125, date = 13-Nov-3044
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 34 (2.2sec)
+
+Starting time step 2, stepsize 105.996 days, at day 372605/374125, date = 27-Feb-3045
+ Newton its= 9, linearizations=10 (0.8sec), linear its= 42 (2.5sec)
+
+Starting time step 3, stepsize 94.2187 days, at day 372711/374125, date = 13-Jun-3045
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 26 (1.7sec)
+
+Starting time step 4, stepsize 94.2187 days, at day 372805/374125, date = 15-Sep-3045
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 17 (1.3sec)
+
+Starting time step 5, stepsize 131.906 days, at day 372899/374125, date = 19-Dec-3045
+ Newton its= 9, linearizations=10 (0.8sec), linear its= 40 (2.5sec)
+
+Starting time step 6, stepsize 117.25 days, at day 373031/374125, date = 30-Apr-3046
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 22 (1.5sec)
+
+Starting time step 7, stepsize 164.15 days, at day 373148/374125, date = 25-Aug-3046
+ Newton its=10, linearizations=11 (0.8sec), linear its= 30 (2.1sec)
+
+Starting time step 8, stepsize 131.32 days, at day 373312/374125, date = 05-Feb-3047
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 49 (2.7sec)
+
+Starting time step 9, stepsize 131.32 days, at day 373444/374125, date = 16-Jun-3047
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 22 (1.5sec)
+
+Starting time step 10, stepsize 183.848 days, at day 373575/374125, date = 26-Oct-3047
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 60.669786 days
+
+
+Starting time step 10, stepsize 60.6698 days, at day 373575/374125, date = 26-Oct-3047
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 20.021029 days
+
+
+Starting time step 10, stepsize 20.021 days, at day 373575/374125, date = 26-Oct-3047
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.2sec)
+
+Starting time step 11, stepsize 40.0421 days, at day 373595/374125, date = 15-Nov-3047
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 12, stepsize 120.126 days, at day 373635/374125, date = 25-Dec-3047
+ Newton its= 9, linearizations=10 (0.8sec), linear its= 39 (2.4sec)
+
+Starting time step 13, stepsize 106.779 days, at day 373755/374125, date = 23-Apr-3048
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 24 (1.7sec)
+
+Starting time step 14, stepsize 149.49 days, at day 373862/374125, date = 08-Aug-3048
+ Newton its= 9, linearizations=10 (0.8sec), linear its= 30 (2.0sec)
+
+Starting time step 15, stepsize 113.424 days, at day 374012/374125, date = 04-Jan-3049
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 20 (1.4sec)
+
+Report step  7/17 at day 374125/392375, date = 28-Apr-3049
+
+Starting time step 0, stepsize 1825 days, at day 374125/375950, date = 28-Apr-3049
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 374125/375950, date = 28-Apr-3049
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00638635 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 374125/375950, date = 28-Apr-3049
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 374125/375950, date = 28-Apr-3049
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 21.643058 days
+
+
+Starting time step 0, stepsize 21.6431 days, at day 374125/375950, date = 28-Apr-3049
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 7.142209 days
+
+
+Starting time step 0, stepsize 7.14221 days, at day 374125/375950, date = 28-Apr-3049
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 11 (1.0sec)
+
+Starting time step 1, stepsize 12.856 days, at day 374132/375950, date = 05-May-3049
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.8sec)
+
+Starting time step 2, stepsize 33.4255 days, at day 374145/375950, date = 17-May-3049
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 18 (1.3sec)
+
+Starting time step 3, stepsize 46.7958 days, at day 374178/375950, date = 20-Jun-3049
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 17 (1.4sec)
+
+Starting time step 4, stepsize 84.2324 days, at day 374225/375950, date = 06-Aug-3049
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 27 (1.8sec)
+
+Starting time step 5, stepsize 84.2324 days, at day 374309/375950, date = 29-Oct-3049
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 30 (1.8sec)
+
+Starting time step 6, stepsize 117.925 days, at day 374394/375950, date = 21-Jan-3050
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 28 (1.8sec)
+
+Starting time step 7, stepsize 117.925 days, at day 374512/375950, date = 19-May-3050
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 27 (1.8sec)
+
+Starting time step 8, stepsize 165.095 days, at day 374630/375950, date = 14-Sep-3050
+ Newton its=15, linearizations=16 (1.2sec), linear its= 81 (4.5sec)
+
+Starting time step 9, stepsize 88.0509 days, at day 374795/375950, date = 26-Feb-3051
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 17 (1.1sec)
+
+Starting time step 10, stepsize 193.712 days, at day 374883/375950, date = 25-May-3051
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 63.924948 days
+
+
+Starting time step 10, stepsize 63.9249 days, at day 374883/375950, date = 25-May-3051
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 19 (1.2sec)
+
+Starting time step 11, stepsize 127.85 days, at day 374947/375950, date = 28-Jul-3051
+ Newton its= 8, linearizations= 9 (0.7sec), linear its= 38 (2.2sec)
+
+Starting time step 12, stepsize 127.85 days, at day 375074/375950, date = 03-Dec-3051
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 42.190466 days
+
+
+Starting time step 12, stepsize 42.1905 days, at day 375074/375950, date = 03-Dec-3051
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.1sec)
+
+Starting time step 13, stepsize 84.3809 days, at day 375117/375950, date = 14-Jan-3052
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 31 (1.9sec)
+
+Starting time step 14, stepsize 151.886 days, at day 375201/375950, date = 08-Apr-3052
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 50.122273 days
+
+
+Starting time step 14, stepsize 50.1223 days, at day 375201/375950, date = 08-Apr-3052
+ Newton its= 4, linearizations= 5 (0.5sec), linear its= 17 (1.0sec)
+
+Starting time step 15, stepsize 100.245 days, at day 375251/375950, date = 28-May-3052
+ Newton its= 7, linearizations= 8 (0.7sec), linear its= 38 (2.1sec)
+
+Starting time step 16, stepsize 140.342 days, at day 375351/375950, date = 05-Sep-3052
+ Newton its=10, linearizations=11 (0.9sec), linear its= 51 (2.9sec)
+
+Starting time step 17, stepsize 112.274 days, at day 375492/375950, date = 23-Jan-3053
+ Newton its= 8, linearizations= 9 (0.8sec), linear its= 37 (2.1sec)
+
+Starting time step 18, stepsize 112.274 days, at day 375604/375950, date = 16-May-3053
+ Newton its= 7, linearizations= 8 (0.7sec), linear its= 27 (1.7sec)
+
+Starting time step 19, stepsize 116.858 days, at day 375716/375950, date = 05-Sep-3053
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 38.563087 days
+
+
+Starting time step 19, stepsize 38.5631 days, at day 375716/375950, date = 05-Sep-3053
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.1sec)
+
+Starting time step 20, stepsize 77.1262 days, at day 375755/375950, date = 13-Oct-3053
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 24 (1.3sec)
+
+Starting time step 21, stepsize 118.026 days, at day 375832/375950, date = 29-Dec-3053
+ Newton its= 8, linearizations= 9 (0.8sec), linear its= 31 (2.1sec)
+
+Report step  8/17 at day 375950/392375, date = 27-Apr-3054
+
+Starting time step 0, stepsize 1825 days, at day 375950/377775, date = 27-Apr-3054
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 375950/377775, date = 27-Apr-3054
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 375950/377775, date = 27-Apr-3054
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 375950/377775, date = 27-Apr-3054
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 19 (1.2sec)
+
+Starting time step 1, stepsize 131.17 days, at day 376016/377775, date = 01-Jul-3054
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 376016/377775, date = 01-Jul-3054
+ Newton its= 4, linearizations= 5 (0.7sec), linear its= 18 (1.2sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 376059/377775, date = 13-Aug-3054
+ Newton its= 6, linearizations= 7 (1.2sec), linear its= 24 (1.9sec)
+
+Starting time step 3, stepsize 155.83 days, at day 376145/377775, date = 08-Nov-3054
+ Newton its=10, linearizations=11 (1.2sec), linear its= 32 (2.4sec)
+
+Starting time step 4, stepsize 124.664 days, at day 376301/377775, date = 13-Apr-3055
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 41.139125 days
+
+
+Starting time step 4, stepsize 41.1391 days, at day 376301/377775, date = 13-Apr-3055
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 15 (1.1sec)
+
+Starting time step 5, stepsize 82.2783 days, at day 376342/377775, date = 24-May-3055
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 22 (1.5sec)
+
+Starting time step 6, stepsize 148.101 days, at day 376425/377775, date = 14-Aug-3055
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.873281 days
+
+
+Starting time step 6, stepsize 48.8733 days, at day 376425/377775, date = 14-Aug-3055
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 19 (1.1sec)
+
+Starting time step 7, stepsize 97.7466 days, at day 376474/377775, date = 02-Oct-3055
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 35 (1.9sec)
+
+Starting time step 8, stepsize 136.845 days, at day 376571/377775, date = 08-Jan-3056
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 45.158911 days
+
+
+Starting time step 8, stepsize 45.1589 days, at day 376571/377775, date = 08-Jan-3056
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 9, stepsize 90.3178 days, at day 376616/377775, date = 22-Feb-3056
+ Newton its= 6, linearizations= 7 (0.7sec), linear its= 29 (2.0sec)
+
+Starting time step 10, stepsize 162.572 days, at day 376707/377775, date = 22-May-3056
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 53.648787 days
+
+
+Starting time step 10, stepsize 53.6488 days, at day 376707/377775, date = 22-May-3056
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 11, stepsize 107.298 days, at day 376760/377775, date = 15-Jul-3056
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.408199 days
+
+
+Starting time step 11, stepsize 35.4082 days, at day 376760/377775, date = 15-Jul-3056
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 11.684706 days
+
+
+Starting time step 11, stepsize 11.6847 days, at day 376760/377775, date = 15-Jul-3056
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 12, stepsize 23.3694 days, at day 376772/377775, date = 27-Jul-3056
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 13, stepsize 70.1082 days, at day 376795/377775, date = 19-Aug-3056
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 30 (1.5sec)
+
+Starting time step 14, stepsize 126.195 days, at day 376866/377775, date = 28-Oct-3056
+ Newton its=13, linearizations=14 (1.0sec), linear its= 56 (3.1sec)
+
+Starting time step 15, stepsize 77.6584 days, at day 376992/377775, date = 03-Mar-3057
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 21 (1.2sec)
+
+Starting time step 16, stepsize 170.848 days, at day 377069/377775, date = 20-May-3057
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 56.379964 days
+
+
+Starting time step 16, stepsize 56.38 days, at day 377069/377775, date = 20-May-3057
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.605388 days
+
+
+Starting time step 16, stepsize 18.6054 days, at day 377069/377775, date = 20-May-3057
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 17, stepsize 37.2108 days, at day 377088/377775, date = 08-Jun-3057
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 13 (0.8sec)
+
+Starting time step 18, stepsize 111.632 days, at day 377125/377775, date = 15-Jul-3057
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.838668 days
+
+
+Starting time step 18, stepsize 36.8387 days, at day 377125/377775, date = 15-Jul-3057
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.5sec)
+
+Starting time step 19, stepsize 73.6773 days, at day 377162/377775, date = 21-Aug-3057
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 22 (1.2sec)
+
+Starting time step 20, stepsize 162.09 days, at day 377236/377775, date = 02-Nov-3057
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 53.489746 days
+
+
+Starting time step 20, stepsize 53.4897 days, at day 377236/377775, date = 02-Nov-3057
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 21, stepsize 106.979 days, at day 377289/377775, date = 26-Dec-3057
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.0052271 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00561524 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.303232 days
+
+
+Starting time step 21, stepsize 35.3032 days, at day 377289/377775, date = 26-Dec-3057
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 11.650067 days
+
+
+Starting time step 21, stepsize 11.6501 days, at day 377289/377775, date = 26-Dec-3057
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 3.844522 days
+
+
+Starting time step 21, stepsize 3.84452 days, at day 377289/377775, date = 26-Dec-3057
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 22, stepsize 7.68904 days, at day 377293/377775, date = 30-Dec-3057
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 23, stepsize 23.0671 days, at day 377301/377775, date = 06-Jan-3058
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.9sec)
+
+Starting time step 24, stepsize 69.2014 days, at day 377324/377775, date = 29-Jan-3058
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 21 (1.1sec)
+
+Starting time step 25, stepsize 152.243 days, at day 377393/377775, date = 09-Apr-3058
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 50.240214 days
+
+
+Starting time step 25, stepsize 50.2402 days, at day 377393/377775, date = 09-Apr-3058
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 26, stepsize 100.48 days, at day 377443/377775, date = 29-May-3058
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 33.158541 days
+
+
+Starting time step 26, stepsize 33.1585 days, at day 377443/377775, date = 29-May-3058
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  9 (0.6sec)
+
+Starting time step 27, stepsize 66.3171 days, at day 377476/377775, date = 01-Jul-3058
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 28, stepsize 116.104 days, at day 377543/377775, date = 05-Sep-3058
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 38.314402 days
+
+
+Starting time step 28, stepsize 38.3144 days, at day 377543/377775, date = 05-Sep-3058
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.6sec)
+
+Starting time step 29, stepsize 76.6288 days, at day 377581/377775, date = 14-Oct-3058
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 25 (1.4sec)
+
+Starting time step 30, stepsize 117.265 days, at day 377658/377775, date = 29-Dec-3058
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00295984 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.697546 days
+
+
+Starting time step 30, stepsize 38.6975 days, at day 377658/377775, date = 29-Dec-3058
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 32 (1.7sec)
+
+Starting time step 31, stepsize 39.2839 days, at day 377696/377775, date = 06-Feb-3059
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 32, stepsize 39.2839 days, at day 377736/377775, date = 17-Mar-3059
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.0sec)
+
+Report step  9/17 at day 377775/392375, date = 26-Apr-3059
+
+Starting time step 0, stepsize 1825 days, at day 377775/379600, date = 26-Apr-3059
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00845666 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 377775/379600, date = 26-Apr-3059
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 377775/379600, date = 26-Apr-3059
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 377775/379600, date = 26-Apr-3059
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 21.643058 days
+
+
+Starting time step 0, stepsize 21.6431 days, at day 377775/379600, date = 26-Apr-3059
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.1sec)
+
+Starting time step 1, stepsize 43.2861 days, at day 377797/379600, date = 17-May-3059
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 11 (0.8sec)
+
+Starting time step 2, stepsize 112.544 days, at day 377840/379600, date = 29-Jun-3059
+ Newton its=12, linearizations=13 (1.1sec), linear its= 65 (3.5sec)
+
+Starting time step 3, stepsize 75.0293 days, at day 377952/379600, date = 20-Oct-3059
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 18 (1.1sec)
+
+Starting time step 4, stepsize 165.064 days, at day 378028/379600, date = 03-Jan-3060
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 54.471249 days
+
+
+Starting time step 4, stepsize 54.4712 days, at day 378028/379600, date = 03-Jan-3060
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 11 (0.8sec)
+
+Starting time step 5, stepsize 108.942 days, at day 378082/379600, date = 26-Feb-3060
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 35.951024 days
+
+
+Starting time step 5, stepsize 35.951 days, at day 378082/379600, date = 26-Feb-3060
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 11 (0.7sec)
+
+Starting time step 6, stepsize 71.902 days, at day 378118/379600, date = 02-Apr-3060
+ Newton its= 5, linearizations= 6 (0.6sec), linear its= 21 (1.3sec)
+
+Starting time step 7, stepsize 158.185 days, at day 378190/379600, date = 13-Jun-3060
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 52.200887 days
+
+
+Starting time step 7, stepsize 52.2009 days, at day 378190/379600, date = 13-Jun-3060
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 21 (1.1sec)
+
+Starting time step 8, stepsize 104.402 days, at day 378242/379600, date = 05-Aug-3060
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 34.452586 days
+
+
+Starting time step 8, stepsize 34.4526 days, at day 378242/379600, date = 05-Aug-3060
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 38 (2.1sec)
+
+Starting time step 9, stepsize 62.0147 days, at day 378276/379600, date = 08-Sep-3060
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 13 (1.0sec)
+
+Starting time step 10, stepsize 161.238 days, at day 378338/379600, date = 09-Nov-3060
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00361672 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 53.208573 days
+
+
+Starting time step 10, stepsize 53.2086 days, at day 378338/379600, date = 09-Nov-3060
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 18 (1.1sec)
+
+Starting time step 11, stepsize 106.417 days, at day 378392/379600, date = 01-Jan-3061
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00492954 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.117658 days
+
+
+Starting time step 11, stepsize 35.1177 days, at day 378392/379600, date = 01-Jan-3061
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 37 (1.9sec)
+
+Starting time step 12, stepsize 70.2353 days, at day 378427/379600, date = 05-Feb-3061
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 27 (1.5sec)
+
+Starting time step 13, stepsize 154.518 days, at day 378497/379600, date = 17-Apr-3061
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 50.990840 days
+
+
+Starting time step 13, stepsize 50.9908 days, at day 378497/379600, date = 17-Apr-3061
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 14, stepsize 101.982 days, at day 378548/379600, date = 07-Jun-3061
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 33.653954 days
+
+
+Starting time step 14, stepsize 33.654 days, at day 378548/379600, date = 07-Jun-3061
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  4 (0.4sec)
+
+Starting time step 15, stepsize 67.3079 days, at day 378582/379600, date = 10-Jul-3061
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 21 (1.2sec)
+
+Starting time step 16, stepsize 175.001 days, at day 378649/379600, date = 16-Sep-3061
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.0094168 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 57.750186 days
+
+
+Starting time step 16, stepsize 57.7502 days, at day 378649/379600, date = 16-Sep-3061
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 19.057561 days
+
+
+Starting time step 16, stepsize 19.0576 days, at day 378649/379600, date = 16-Sep-3061
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 17, stepsize 38.1151 days, at day 378668/379600, date = 05-Oct-3061
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 18, stepsize 114.345 days, at day 378706/379600, date = 12-Nov-3061
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 37.733971 days
+
+
+Starting time step 18, stepsize 37.734 days, at day 378706/379600, date = 12-Nov-3061
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 19, stepsize 75.4679 days, at day 378744/379600, date = 19-Dec-3061
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 30 (1.8sec)
+
+Starting time step 20, stepsize 135.842 days, at day 378819/379600, date = 05-Mar-3062
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 44.827958 days
+
+
+Starting time step 20, stepsize 44.828 days, at day 378819/379600, date = 05-Mar-3062
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 21, stepsize 89.6559 days, at day 378864/379600, date = 19-Apr-3062
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 30 (1.8sec)
+
+Starting time step 22, stepsize 161.381 days, at day 378954/379600, date = 17-Jul-3062
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 53.255614 days
+
+
+Starting time step 22, stepsize 53.2556 days, at day 378954/379600, date = 17-Jul-3062
+ Newton its= 3, linearizations= 4 (0.4sec), linear its=  9 (0.7sec)
+
+Starting time step 23, stepsize 106.511 days, at day 379007/379600, date = 09-Sep-3062
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00771061 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.0045279 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 35.148705 days
+
+
+Starting time step 23, stepsize 35.1487 days, at day 379007/379600, date = 09-Sep-3062
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 11.599073 days
+
+
+Starting time step 23, stepsize 11.5991 days, at day 379007/379600, date = 09-Sep-3062
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.2sec)
+
+Starting time step 24, stepsize 23.1981 days, at day 379019/379600, date = 20-Sep-3062
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.4sec)
+
+Starting time step 25, stepsize 69.5944 days, at day 379042/379600, date = 13-Oct-3062
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 20 (1.3sec)
+
+Starting time step 26, stepsize 153.108 days, at day 379112/379600, date = 22-Dec-3062
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 50.525561 days
+
+
+Starting time step 26, stepsize 50.5256 days, at day 379112/379600, date = 22-Dec-3062
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.1sec)
+
+Starting time step 27, stepsize 101.051 days, at day 379162/379600, date = 11-Feb-3063
+ Newton its=11, linearizations=12 (1.1sec), linear its= 66 (3.6sec)
+
+Starting time step 28, stepsize 73.4917 days, at day 379263/379600, date = 23-May-3063
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.7sec)
+
+Starting time step 29, stepsize 131.708 days, at day 379337/379600, date = 04-Aug-3063
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.463773 days
+
+
+Starting time step 29, stepsize 43.4638 days, at day 379337/379600, date = 04-Aug-3063
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00271145 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.343045 days
+
+
+Starting time step 29, stepsize 14.343 days, at day 379337/379600, date = 04-Aug-3063
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.733205 days
+
+
+Starting time step 29, stepsize 4.7332 days, at day 379337/379600, date = 04-Aug-3063
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 30, stepsize 9.46641 days, at day 379341/379600, date = 09-Aug-3063
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 31, stepsize 28.3992 days, at day 379351/379600, date = 18-Aug-3063
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 32, stepsize 85.1977 days, at day 379379/379600, date = 16-Sep-3063
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 30 (1.5sec)
+
+Starting time step 33, stepsize 135.62 days, at day 379464/379600, date = 10-Dec-3063
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 44.754690 days
+
+
+Starting time step 33, stepsize 44.7547 days, at day 379464/379600, date = 10-Dec-3063
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.5sec)
+
+Starting time step 34, stepsize 90.8656 days, at day 379509/379600, date = 24-Jan-3064
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 31 (1.5sec)
+
+Report step 10/17 at day 379600/392375, date = 24-Apr-3064
+
+Starting time step 0, stepsize 1825 days, at day 379600/381425, date = 24-Apr-3064
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 379600/381425, date = 24-Apr-3064
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 379600/381425, date = 24-Apr-3064
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 379600/381425, date = 24-Apr-3064
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 1, stepsize 131.17 days, at day 379666/381425, date = 28-Jun-3064
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 379666/381425, date = 28-Jun-3064
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.284418 days
+
+
+Starting time step 1, stepsize 14.2844 days, at day 379666/381425, date = 28-Jun-3064
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 2, stepsize 28.5688 days, at day 379680/381425, date = 12-Jul-3064
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 3, stepsize 85.7065 days, at day 379708/381425, date = 10-Aug-3064
+ Newton its=10, linearizations=11 (0.7sec), linear its= 44 (2.3sec)
+
+Starting time step 4, stepsize 68.5652 days, at day 379794/381425, date = 04-Nov-3064
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 19 (1.0sec)
+
+Starting time step 5, stepsize 178.27 days, at day 379863/381425, date = 11-Jan-3065
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 58.828949 days
+
+
+Starting time step 5, stepsize 58.8289 days, at day 379863/381425, date = 11-Jan-3065
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 11 (0.7sec)
+
+Starting time step 6, stepsize 117.658 days, at day 379922/381425, date = 11-Mar-3065
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.827106 days
+
+
+Starting time step 6, stepsize 38.8271 days, at day 379922/381425, date = 11-Mar-3065
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.812945 days
+
+
+Starting time step 6, stepsize 12.8129 days, at day 379922/381425, date = 11-Mar-3065
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 7, stepsize 25.6259 days, at day 379934/381425, date = 24-Mar-3065
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 8, stepsize 76.8777 days, at day 379960/381425, date = 18-Apr-3065
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 25 (1.3sec)
+
+Starting time step 9, stepsize 169.131 days, at day 380037/381425, date = 04-Jul-3065
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 55.813189 days
+
+
+Starting time step 9, stepsize 55.8132 days, at day 380037/381425, date = 04-Jul-3065
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00539848 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.418352 days
+
+
+Starting time step 9, stepsize 18.4184 days, at day 380037/381425, date = 04-Jul-3065
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 6.078056 days
+
+
+Starting time step 9, stepsize 6.07806 days, at day 380037/381425, date = 04-Jul-3065
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 10, stepsize 12.1561 days, at day 380043/381425, date = 10-Jul-3065
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 11, stepsize 36.4683 days, at day 380055/381425, date = 23-Jul-3065
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.6sec)
+
+Starting time step 12, stepsize 109.405 days, at day 380092/381425, date = 28-Aug-3065
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.103654 days
+
+
+Starting time step 12, stepsize 36.1037 days, at day 380092/381425, date = 28-Aug-3065
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.5sec)
+
+Starting time step 13, stepsize 72.2073 days, at day 380128/381425, date = 03-Oct-3065
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 14 (0.9sec)
+
+Starting time step 14, stepsize 187.739 days, at day 380200/381425, date = 14-Dec-3065
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 61.953871 days
+
+
+Starting time step 14, stepsize 61.9539 days, at day 380200/381425, date = 14-Dec-3065
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 15, stepsize 123.908 days, at day 380262/381425, date = 14-Feb-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 40.889555 days
+
+
+Starting time step 15, stepsize 40.8896 days, at day 380262/381425, date = 14-Feb-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 13.493553 days
+
+
+Starting time step 15, stepsize 13.4936 days, at day 380262/381425, date = 14-Feb-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 4.452872 days
+
+
+Starting time step 15, stepsize 4.45287 days, at day 380262/381425, date = 14-Feb-3066
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 16, stepsize 8.90574 days, at day 380266/381425, date = 19-Feb-3066
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 17, stepsize 26.7172 days, at day 380275/381425, date = 28-Feb-3066
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  6 (0.4sec)
+
+Starting time step 18, stepsize 80.1517 days, at day 380302/381425, date = 26-Mar-3066
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 26 (1.3sec)
+
+Starting time step 19, stepsize 176.334 days, at day 380382/381425, date = 15-Jun-3066
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 58.190138 days
+
+
+Starting time step 19, stepsize 58.1901 days, at day 380382/381425, date = 15-Jun-3066
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.1sec)
+
+Starting time step 20, stepsize 116.38 days, at day 380440/381425, date = 12-Aug-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.405491 days
+
+
+Starting time step 20, stepsize 38.4055 days, at day 380440/381425, date = 12-Aug-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.673812 days
+
+
+Starting time step 20, stepsize 12.6738 days, at day 380440/381425, date = 12-Aug-3066
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 21, stepsize 25.3476 days, at day 380453/381425, date = 24-Aug-3066
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.4sec)
+
+Starting time step 22, stepsize 76.0429 days, at day 380478/381425, date = 19-Sep-3066
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 21 (1.2sec)
+
+Starting time step 23, stepsize 197.711 days, at day 380554/381425, date = 04-Dec-3066
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.244784 days
+
+
+Starting time step 23, stepsize 65.2448 days, at day 380554/381425, date = 04-Dec-3066
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 24, stepsize 130.49 days, at day 380620/381425, date = 07-Feb-3067
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 43.061558 days
+
+
+Starting time step 24, stepsize 43.0616 days, at day 380620/381425, date = 07-Feb-3067
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 25, stepsize 86.1231 days, at day 380663/381425, date = 22-Mar-3067
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 28.420628 days
+
+
+Starting time step 25, stepsize 28.4206 days, at day 380663/381425, date = 22-Mar-3067
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 26, stepsize 56.8413 days, at day 380691/381425, date = 20-Apr-3067
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 27, stepsize 170.524 days, at day 380748/381425, date = 15-Jun-3067
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 56.272843 days
+
+
+Starting time step 27, stepsize 56.2728 days, at day 380748/381425, date = 15-Jun-3067
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.570038 days
+
+
+Starting time step 27, stepsize 18.57 days, at day 380748/381425, date = 15-Jun-3067
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  6 (0.4sec)
+
+Starting time step 28, stepsize 37.1401 days, at day 380766/381425, date = 04-Jul-3067
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 29, stepsize 111.42 days, at day 380804/381425, date = 10-Aug-3067
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.768676 days
+
+
+Starting time step 29, stepsize 36.7687 days, at day 380804/381425, date = 10-Aug-3067
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  9 (0.6sec)
+
+Starting time step 30, stepsize 73.5374 days, at day 380840/381425, date = 16-Sep-3067
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 20 (1.1sec)
+
+Starting time step 31, stepsize 191.197 days, at day 380914/381425, date = 28-Nov-3067
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 63.095048 days
+
+
+Starting time step 31, stepsize 63.095 days, at day 380914/381425, date = 28-Nov-3067
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 22 (1.1sec)
+
+Starting time step 32, stepsize 126.19 days, at day 380977/381425, date = 30-Jan-3068
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00633911 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 41.642732 days
+
+
+Starting time step 32, stepsize 41.6427 days, at day 380977/381425, date = 30-Jan-3068
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 33, stepsize 83.2855 days, at day 381019/381425, date = 12-Mar-3068
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 27 (1.3sec)
+
+Starting time step 34, stepsize 183.228 days, at day 381102/381425, date = 03-Jun-3068
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 60.465246 days
+
+
+Starting time step 34, stepsize 60.4652 days, at day 381102/381425, date = 03-Jun-3068
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.7sec)
+
+Starting time step 35, stepsize 120.93 days, at day 381162/381425, date = 03-Aug-3068
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 39.907062 days
+
+
+Starting time step 35, stepsize 39.9071 days, at day 381162/381425, date = 03-Aug-3068
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 13.169331 days
+
+
+Starting time step 35, stepsize 13.1693 days, at day 381162/381425, date = 03-Aug-3068
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 36, stepsize 26.3387 days, at day 381176/381425, date = 16-Aug-3068
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.1sec)
+
+Starting time step 37, stepsize 79.016 days, at day 381202/381425, date = 11-Sep-3068
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 20 (1.0sec)
+
+Starting time step 38, stepsize 144.098 days, at day 381281/381425, date = 29-Nov-3068
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 47.552463 days
+
+
+Starting time step 38, stepsize 47.5525 days, at day 381281/381425, date = 29-Nov-3068
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 39, stepsize 96.5459 days, at day 381328/381425, date = 16-Jan-3069
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 31.860150 days
+
+
+Starting time step 39, stepsize 31.8601 days, at day 381328/381425, date = 16-Jan-3069
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 40, stepsize 64.6858 days, at day 381360/381425, date = 17-Feb-3069
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 12 (0.8sec)
+
+Report step 11/17 at day 381425/392375, date = 23-Apr-3069
+
+Starting time step 0, stepsize 1825 days, at day 381425/383250, date = 23-Apr-3069
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 381425/383250, date = 23-Apr-3069
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 381425/383250, date = 23-Apr-3069
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 381425/383250, date = 23-Apr-3069
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.6sec)
+
+Starting time step 1, stepsize 131.17 days, at day 381491/383250, date = 27-Jun-3069
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 381491/383250, date = 27-Jun-3069
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 381534/383250, date = 09-Aug-3069
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 21 (1.1sec)
+
+Starting time step 3, stepsize 225.088 days, at day 381620/383250, date = 04-Nov-3069
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 74.278976 days
+
+
+Starting time step 3, stepsize 74.279 days, at day 381620/383250, date = 04-Nov-3069
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (0.9sec)
+
+Starting time step 4, stepsize 148.558 days, at day 381695/383250, date = 17-Jan-3070
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 49.024124 days
+
+
+Starting time step 4, stepsize 49.0241 days, at day 381695/383250, date = 17-Jan-3070
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 5, stepsize 98.0482 days, at day 381744/383250, date = 07-Mar-3070
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 27 (1.5sec)
+
+Starting time step 6, stepsize 215.706 days, at day 381842/383250, date = 13-Jun-3070
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 71.183028 days
+
+
+Starting time step 6, stepsize 71.183 days, at day 381842/383250, date = 13-Jun-3070
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 7, stepsize 142.366 days, at day 381913/383250, date = 23-Aug-3070
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 46.980799 days
+
+
+Starting time step 7, stepsize 46.9808 days, at day 381913/383250, date = 23-Aug-3070
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 8, stepsize 93.9616 days, at day 381960/383250, date = 09-Oct-3070
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 57 (2.8sec)
+
+Starting time step 9, stepsize 131.546 days, at day 382054/383250, date = 11-Jan-3071
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.410258 days
+
+
+Starting time step 9, stepsize 43.4103 days, at day 382054/383250, date = 11-Jan-3071
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.6sec)
+
+Starting time step 10, stepsize 86.8205 days, at day 382097/383250, date = 24-Feb-3071
+ Newton its= 6, linearizations= 7 (0.5sec), linear its= 31 (1.7sec)
+
+Starting time step 11, stepsize 156.277 days, at day 382184/383250, date = 22-May-3071
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 51.571386 days
+
+
+Starting time step 11, stepsize 51.5714 days, at day 382184/383250, date = 22-May-3071
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 12, stepsize 103.143 days, at day 382236/383250, date = 12-Jul-3071
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 34.037115 days
+
+
+Starting time step 12, stepsize 34.0371 days, at day 382236/383250, date = 12-Jul-3071
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 13, stepsize 68.0742 days, at day 382270/383250, date = 15-Aug-3071
+ Newton its= 4, linearizations= 5 (0.3sec), linear its= 14 (0.9sec)
+
+Starting time step 14, stepsize 176.993 days, at day 382338/383250, date = 22-Oct-3071
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 58.407689 days
+
+
+Starting time step 14, stepsize 58.4077 days, at day 382338/383250, date = 22-Oct-3071
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 19.274537 days
+
+
+Starting time step 14, stepsize 19.2745 days, at day 382338/383250, date = 22-Oct-3071
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  2 (0.2sec)
+
+Starting time step 15, stepsize 38.5491 days, at day 382357/383250, date = 11-Nov-3071
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 16, stepsize 115.647 days, at day 382396/383250, date = 19-Dec-3071
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 38.163584 days
+
+
+Starting time step 16, stepsize 38.1636 days, at day 382396/383250, date = 19-Dec-3071
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.593983 days
+
+
+Starting time step 16, stepsize 12.594 days, at day 382396/383250, date = 19-Dec-3071
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 17, stepsize 25.188 days, at day 382408/383250, date = 01-Jan-3072
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 18, stepsize 75.5639 days, at day 382433/383250, date = 26-Jan-3072
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 30 (1.6sec)
+
+Starting time step 19, stepsize 166.241 days, at day 382509/383250, date = 11-Apr-3072
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 54.859389 days
+
+
+Starting time step 19, stepsize 54.8594 days, at day 382509/383250, date = 11-Apr-3072
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00560638 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.103598 days
+
+
+Starting time step 19, stepsize 18.1036 days, at day 382509/383250, date = 11-Apr-3072
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 5.974187 days
+
+
+Starting time step 19, stepsize 5.97419 days, at day 382509/383250, date = 11-Apr-3072
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.1sec)
+
+Starting time step 20, stepsize 11.9484 days, at day 382515/383250, date = 16-Apr-3072
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 21, stepsize 35.8451 days, at day 382527/383250, date = 28-Apr-3072
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 22, stepsize 107.535 days, at day 382563/383250, date = 03-Jun-3072
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 35.486674 days
+
+
+Starting time step 22, stepsize 35.4867 days, at day 382563/383250, date = 03-Jun-3072
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 23, stepsize 70.9733 days, at day 382598/383250, date = 09-Jul-3072
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 25 (1.3sec)
+
+Starting time step 24, stepsize 156.141 days, at day 382669/383250, date = 18-Sep-3072
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 51.526650 days
+
+
+Starting time step 24, stepsize 51.5267 days, at day 382669/383250, date = 18-Sep-3072
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.6sec)
+
+Starting time step 25, stepsize 103.053 days, at day 382721/383250, date = 08-Nov-3072
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 34.007589 days
+
+
+Starting time step 25, stepsize 34.0076 days, at day 382721/383250, date = 08-Nov-3072
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  4 (0.3sec)
+
+Starting time step 26, stepsize 68.0152 days, at day 382755/383250, date = 12-Dec-3072
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 25 (1.4sec)
+
+Starting time step 27, stepsize 176.839 days, at day 382823/383250, date = 18-Feb-3073
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00947394 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00600486 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 58.357023 days
+
+
+Starting time step 27, stepsize 58.357 days, at day 382823/383250, date = 18-Feb-3073
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 19.257818 days
+
+
+Starting time step 27, stepsize 19.2578 days, at day 382823/383250, date = 18-Feb-3073
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 28, stepsize 38.5156 days, at day 382842/383250, date = 10-Mar-3073
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 29, stepsize 115.547 days, at day 382881/383250, date = 17-Apr-3073
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 38.130479 days
+
+
+Starting time step 29, stepsize 38.1305 days, at day 382881/383250, date = 17-Apr-3073
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 30, stepsize 76.261 days, at day 382919/383250, date = 25-May-3073
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 25 (1.4sec)
+
+Starting time step 31, stepsize 167.774 days, at day 382995/383250, date = 09-Aug-3073
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 55.365455 days
+
+
+Starting time step 31, stepsize 55.3655 days, at day 382995/383250, date = 09-Aug-3073
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 32, stepsize 110.731 days, at day 383050/383250, date = 04-Oct-3073
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.541200 days
+
+
+Starting time step 32, stepsize 36.5412 days, at day 383050/383250, date = 04-Oct-3073
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.058596 days
+
+
+Starting time step 32, stepsize 12.0586 days, at day 383050/383250, date = 04-Oct-3073
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+
+Starting time step 33, stepsize 24.1172 days, at day 383062/383250, date = 16-Oct-3073
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 34, stepsize 72.3516 days, at day 383086/383250, date = 09-Nov-3073
+ Newton its= 5, linearizations= 6 (0.4sec), linear its= 25 (1.3sec)
+
+Starting time step 35, stepsize 91.1621 days, at day 383159/383250, date = 20-Jan-3074
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 34 (2.0sec)
+
+Report step 12/17 at day 383250/392375, date = 22-Apr-3074
+
+Starting time step 0, stepsize 1825 days, at day 383250/385075, date = 22-Apr-3074
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00315548 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 383250/385075, date = 22-Apr-3074
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 383250/385075, date = 22-Apr-3074
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 383250/385075, date = 22-Apr-3074
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 37 (2.0sec)
+
+Starting time step 1, stepsize 131.17 days, at day 383316/385075, date = 26-Jun-3074
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 383316/385075, date = 26-Jun-3074
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.284418 days
+
+
+Starting time step 1, stepsize 14.2844 days, at day 383316/385075, date = 26-Jun-3074
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  5 (0.3sec)
+
+Starting time step 2, stepsize 28.5688 days, at day 383330/385075, date = 10-Jul-3074
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  6 (0.3sec)
+
+Starting time step 3, stepsize 85.7065 days, at day 383358/385075, date = 08-Aug-3074
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 35 (1.9sec)
+
+Starting time step 4, stepsize 222.837 days, at day 383444/385075, date = 02-Nov-3074
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 73.536186 days
+
+
+Starting time step 4, stepsize 73.5362 days, at day 383444/385075, date = 02-Nov-3074
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 25 (1.4sec)
+
+Starting time step 5, stepsize 147.072 days, at day 383518/385075, date = 14-Jan-3075
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.533883 days
+
+
+Starting time step 5, stepsize 48.5339 days, at day 383518/385075, date = 14-Jan-3075
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (1.0sec)
+
+Starting time step 6, stepsize 97.0678 days, at day 383566/385075, date = 04-Mar-3075
+ Newton its= 4, linearizations= 5 (0.5sec), linear its= 42 (2.2sec)
+
+Starting time step 7, stepsize 252.376 days, at day 383663/385075, date = 09-Jun-3075
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 83.284143 days
+
+
+Starting time step 7, stepsize 83.2841 days, at day 383663/385075, date = 09-Jun-3075
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 24 (1.3sec)
+
+Starting time step 8, stepsize 166.568 days, at day 383747/385075, date = 31-Aug-3075
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 54.967534 days
+
+
+Starting time step 8, stepsize 54.9675 days, at day 383747/385075, date = 31-Aug-3075
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 9, stepsize 109.935 days, at day 383802/385075, date = 25-Oct-3075
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.278573 days
+
+
+Starting time step 9, stepsize 36.2786 days, at day 383802/385075, date = 25-Oct-3075
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  9 (0.5sec)
+
+Starting time step 10, stepsize 72.5571 days, at day 383838/385075, date = 30-Nov-3075
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.2sec)
+
+Starting time step 11, stepsize 188.649 days, at day 383910/385075, date = 11-Feb-3076
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its=11, linearizations=12 (1.0sec), linear its= 56 (3.2sec)
+
+Starting time step 12, stepsize 137.199 days, at day 384099/385075, date = 18-Aug-3076
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 45.275659 days
+
+
+Starting time step 12, stepsize 45.2757 days, at day 384099/385075, date = 18-Aug-3076
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.9sec)
+
+Starting time step 13, stepsize 90.5513 days, at day 384144/385075, date = 02-Oct-3076
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 14, stepsize 271.654 days, at day 384235/385075, date = 31-Dec-3076
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 89.645804 days
+
+
+Starting time step 14, stepsize 89.6458 days, at day 384235/385075, date = 31-Dec-3076
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.1sec)
+
+Starting time step 15, stepsize 179.292 days, at day 384324/385075, date = 31-Mar-3077
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 59.166231 days
+
+
+Starting time step 15, stepsize 59.1662 days, at day 384324/385075, date = 31-Mar-3077
+ Newton its= 3, linearizations= 4 (0.6sec), linear its= 11 (0.9sec)
+
+Starting time step 16, stepsize 118.332 days, at day 384384/385075, date = 29-May-3077
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00302675 after 20 iterations 
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 39.049712 days
+
+
+Starting time step 16, stepsize 39.0497 days, at day 384384/385075, date = 29-May-3077
+ Newton its= 3, linearizations= 4 (0.5sec), linear its= 16 (1.1sec)
+
+Starting time step 17, stepsize 78.0994 days, at day 384423/385075, date = 07-Jul-3077
+ Newton its= 4, linearizations= 5 (0.6sec), linear its= 15 (1.3sec)
+
+Starting time step 18, stepsize 203.059 days, at day 384501/385075, date = 23-Sep-3077
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 67.009306 days
+
+
+Starting time step 18, stepsize 67.0093 days, at day 384501/385075, date = 23-Sep-3077
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 19, stepsize 134.019 days, at day 384568/385075, date = 29-Nov-3077
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 44.226142 days
+
+
+Starting time step 19, stepsize 44.2261 days, at day 384568/385075, date = 29-Nov-3077
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 20, stepsize 88.4523 days, at day 384612/385075, date = 13-Jan-3078
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 21, stepsize 229.976 days, at day 384700/385075, date = 11-Apr-3078
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 75.892060 days
+
+
+Starting time step 21, stepsize 75.8921 days, at day 384700/385075, date = 11-Apr-3078
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 17 (1.0sec)
+
+Starting time step 22, stepsize 151.784 days, at day 384776/385075, date = 26-Jun-3078
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 50.088760 days
+
+
+Starting time step 22, stepsize 50.0888 days, at day 384776/385075, date = 26-Jun-3078
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 23, stepsize 100.178 days, at day 384826/385075, date = 15-Aug-3078
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 23 (1.3sec)
+
+Starting time step 24, stepsize 148.347 days, at day 384927/385075, date = 23-Nov-3078
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.954570 days
+
+
+Starting time step 24, stepsize 48.9546 days, at day 384927/385075, date = 23-Nov-3078
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 13 (0.9sec)
+
+Starting time step 25, stepsize 99.3926 days, at day 384976/385075, date = 11-Jan-3079
+ Newton its= 4, linearizations= 5 (1.0sec), linear its= 24 (2.0sec)
+
+Report step 13/17 at day 385075/392375, date = 21-Apr-3079
+
+Starting time step 0, stepsize 1825 days, at day 385075/386900, date = 21-Apr-3079
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 385075/386900, date = 21-Apr-3079
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 385075/386900, date = 21-Apr-3079
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 385075/386900, date = 21-Apr-3079
+ Newton its= 3, linearizations= 4 (1.0sec), linear its= 14 (1.6sec)
+
+Starting time step 1, stepsize 131.17 days, at day 385141/386900, date = 25-Jun-3079
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 385141/386900, date = 25-Jun-3079
+ Newton its= 3, linearizations= 4 (0.5sec), linear its= 14 (1.1sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 385184/386900, date = 07-Aug-3079
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 18 (1.0sec)
+
+Starting time step 3, stepsize 259.717 days, at day 385270/386900, date = 02-Nov-3079
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 85.706511 days
+
+
+Starting time step 3, stepsize 85.7065 days, at day 385270/386900, date = 02-Nov-3079
+ Newton its= 4, linearizations= 5 (0.7sec), linear its= 20 (1.4sec)
+
+Starting time step 4, stepsize 171.413 days, at day 385356/386900, date = 27-Jan-3080
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 56.566297 days
+
+
+Starting time step 4, stepsize 56.5663 days, at day 385356/386900, date = 27-Jan-3080
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.666878 days
+
+
+Starting time step 4, stepsize 18.6669 days, at day 385356/386900, date = 27-Jan-3080
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 5, stepsize 37.3338 days, at day 385375/386900, date = 14-Feb-3080
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 12 (0.9sec)
+
+Starting time step 6, stepsize 112.001 days, at day 385412/386900, date = 23-Mar-3080
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00916938 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.960418 days
+
+
+Starting time step 6, stepsize 36.9604 days, at day 385412/386900, date = 23-Mar-3080
+ Newton its= 3, linearizations= 4 (0.5sec), linear its= 11 (0.9sec)
+
+Starting time step 7, stepsize 73.9208 days, at day 385449/386900, date = 29-Apr-3080
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 12 (0.9sec)
+
+Starting time step 8, stepsize 221.763 days, at day 385523/386900, date = 12-Jul-3080
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 73.181629 days
+
+
+Starting time step 8, stepsize 73.1816 days, at day 385523/386900, date = 12-Jul-3080
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 12 (0.9sec)
+
+Starting time step 9, stepsize 146.363 days, at day 385596/386900, date = 23-Sep-3080
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00302984 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00926108 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 48.299875 days
+
+
+Starting time step 9, stepsize 48.2999 days, at day 385596/386900, date = 23-Sep-3080
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 15.938959 days
+
+
+Starting time step 9, stepsize 15.939 days, at day 385596/386900, date = 23-Sep-3080
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 10, stepsize 31.8779 days, at day 385612/386900, date = 09-Oct-3080
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 11, stepsize 95.6338 days, at day 385644/386900, date = 10-Nov-3080
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 32 (1.7sec)
+
+Starting time step 12, stepsize 210.394 days, at day 385740/386900, date = 13-Feb-3081
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 69.430104 days
+
+
+Starting time step 12, stepsize 69.4301 days, at day 385740/386900, date = 13-Feb-3081
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 22.911934 days
+
+
+Starting time step 12, stepsize 22.9119 days, at day 385740/386900, date = 13-Feb-3081
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 13, stepsize 45.8239 days, at day 385763/386900, date = 08-Mar-3081
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 17 (0.9sec)
+
+Starting time step 14, stepsize 137.472 days, at day 385808/386900, date = 23-Apr-3081
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 45.365630 days
+
+
+Starting time step 14, stepsize 45.3656 days, at day 385808/386900, date = 23-Apr-3081
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 12 (0.8sec)
+
+Starting time step 15, stepsize 90.7313 days, at day 385854/386900, date = 07-Jun-3081
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 29.941316 days
+
+
+Starting time step 15, stepsize 29.9413 days, at day 385854/386900, date = 07-Jun-3081
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 16, stepsize 59.8826 days, at day 385884/386900, date = 07-Jul-3081
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 17, stepsize 179.648 days, at day 385944/386900, date = 05-Sep-3081
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 59.283805 days
+
+
+Starting time step 17, stepsize 59.2838 days, at day 385944/386900, date = 05-Sep-3081
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 14 (0.9sec)
+
+Starting time step 18, stepsize 118.568 days, at day 386003/386900, date = 03-Nov-3081
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 39.127312 days
+
+
+Starting time step 18, stepsize 39.1273 days, at day 386003/386900, date = 03-Nov-3081
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.3sec)
+
+Starting time step 19, stepsize 78.2546 days, at day 386042/386900, date = 13-Dec-3081
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.9sec)
+
+Starting time step 20, stepsize 234.764 days, at day 386120/386900, date = 01-Mar-3082
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 77.472077 days
+
+
+Starting time step 20, stepsize 77.4721 days, at day 386120/386900, date = 01-Mar-3082
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 19 (1.1sec)
+
+Starting time step 21, stepsize 154.944 days, at day 386198/386900, date = 17-May-3082
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 51.131571 days
+
+
+Starting time step 21, stepsize 51.1316 days, at day 386198/386900, date = 17-May-3082
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 22, stepsize 102.263 days, at day 386249/386900, date = 07-Jul-3082
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.0081103 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 33.746837 days
+
+
+Starting time step 22, stepsize 33.7468 days, at day 386249/386900, date = 07-Jul-3082
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 23, stepsize 67.4937 days, at day 386283/386900, date = 10-Aug-3082
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 24, stepsize 202.481 days, at day 386350/386900, date = 17-Oct-3082
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 66.818737 days
+
+
+Starting time step 24, stepsize 66.8187 days, at day 386350/386900, date = 17-Oct-3082
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 25, stepsize 133.637 days, at day 386417/386900, date = 22-Dec-3082
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00919421 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 44.100366 days
+
+
+Starting time step 25, stepsize 44.1004 days, at day 386417/386900, date = 22-Dec-3082
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 14.553121 days
+
+
+Starting time step 25, stepsize 14.5531 days, at day 386417/386900, date = 22-Dec-3082
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  1 (0.1sec)
+
+Starting time step 26, stepsize 29.1062 days, at day 386431/386900, date = 06-Jan-3083
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  5 (0.3sec)
+
+Starting time step 27, stepsize 87.3187 days, at day 386461/386900, date = 04-Feb-3083
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 20 (1.1sec)
+
+Starting time step 28, stepsize 227.029 days, at day 386548/386900, date = 02-May-3083
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00812092 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 74.919466 days
+
+
+Starting time step 28, stepsize 74.9195 days, at day 386548/386900, date = 02-May-3083
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 20 (1.2sec)
+
+Starting time step 29, stepsize 149.839 days, at day 386623/386900, date = 16-Jul-3083
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00547245 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 49.446848 days
+
+
+Starting time step 29, stepsize 49.4468 days, at day 386623/386900, date = 16-Jul-3083
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 30, stepsize 98.8937 days, at day 386672/386900, date = 04-Sep-3083
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 8, linearizations= 9 (0.8sec), linear its= 75 (3.9sec)
+
+Starting time step 31, stepsize 64.4219 days, at day 386771/386900, date = 12-Dec-3083
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 18 (1.1sec)
+
+Starting time step 32, stepsize 64.4219 days, at day 386836/386900, date = 14-Feb-3084
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 17 (1.0sec)
+
+Report step 14/17 at day 386900/392375, date = 19-Apr-3084
+
+Starting time step 0, stepsize 1825 days, at day 386900/388725, date = 19-Apr-3084
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 386900/388725, date = 19-Apr-3084
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 386900/388725, date = 19-Apr-3084
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 386900/388725, date = 19-Apr-3084
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 16 (1.0sec)
+
+Starting time step 1, stepsize 131.17 days, at day 386966/388725, date = 23-Jun-3084
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00279 after 20 iterations 
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 386966/388725, date = 23-Jun-3084
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 387009/388725, date = 05-Aug-3084
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 3, stepsize 259.717 days, at day 387095/388725, date = 31-Oct-3084
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 85.706511 days
+
+
+Starting time step 3, stepsize 85.7065 days, at day 387095/388725, date = 31-Oct-3084
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.9sec)
+
+Starting time step 4, stepsize 171.413 days, at day 387181/388725, date = 25-Jan-3085
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 56.566297 days
+
+
+Starting time step 4, stepsize 56.5663 days, at day 387181/388725, date = 25-Jan-3085
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 5, stepsize 113.133 days, at day 387238/388725, date = 22-Mar-3085
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 37.333756 days
+
+
+Starting time step 5, stepsize 37.3338 days, at day 387238/388725, date = 22-Mar-3085
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  5 (0.4sec)
+
+Starting time step 6, stepsize 74.6675 days, at day 387275/388725, date = 29-Apr-3085
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 7, stepsize 224.003 days, at day 387350/388725, date = 12-Jul-3085
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 73.920837 days
+
+
+Starting time step 7, stepsize 73.9208 days, at day 387350/388725, date = 12-Jul-3085
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 10 (0.7sec)
+
+Starting time step 8, stepsize 147.842 days, at day 387424/388725, date = 24-Sep-3085
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.787752 days
+
+
+Starting time step 8, stepsize 48.7878 days, at day 387424/388725, date = 24-Sep-3085
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 9, stepsize 97.5755 days, at day 387472/388725, date = 12-Nov-3085
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 29 (1.6sec)
+
+Starting time step 10, stepsize 214.666 days, at day 387570/388725, date = 18-Feb-3086
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 70.839816 days
+
+
+Starting time step 10, stepsize 70.8398 days, at day 387570/388725, date = 18-Feb-3086
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 11, stepsize 141.68 days, at day 387641/388725, date = 29-Apr-3086
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 46.754279 days
+
+
+Starting time step 11, stepsize 46.7543 days, at day 387641/388725, date = 29-Apr-3086
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.8sec)
+
+Starting time step 12, stepsize 93.5086 days, at day 387688/388725, date = 15-Jun-3086
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 33 (1.7sec)
+
+Starting time step 13, stepsize 243.122 days, at day 387781/388725, date = 17-Sep-3086
+ Newton its=14, linearizations=15 (1.2sec), linear its= 95 (5.3sec)
+
+Starting time step 14, stepsize 138.927 days, at day 388024/388725, date = 18-May-3087
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 45.845910 days
+
+
+Starting time step 14, stepsize 45.8459 days, at day 388024/388725, date = 18-May-3087
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 15, stepsize 91.6918 days, at day 388070/388725, date = 03-Jul-3087
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00580158 after 20 iterations 
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 34 (1.9sec)
+
+Starting time step 16, stepsize 238.399 days, at day 388162/388725, date = 02-Oct-3087
+ Newton its=16, linearizations=17 (1.3sec), linear its=109 (5.9sec)
+
+Starting time step 17, stepsize 119.199 days, at day 388400/388725, date = 28-May-3088
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 39.335791 days
+
+
+Starting time step 17, stepsize 39.3358 days, at day 388400/388725, date = 28-May-3088
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 12.980811 days
+
+
+Starting time step 17, stepsize 12.9808 days, at day 388400/388725, date = 28-May-3088
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 18, stepsize 25.9616 days, at day 388413/388725, date = 10-Jun-3088
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.3sec)
+
+Starting time step 19, stepsize 77.8849 days, at day 388439/388725, date = 06-Jul-3088
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 20, stepsize 208.01 days, at day 388517/388725, date = 21-Sep-3088
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 68.643231 days
+
+
+Starting time step 20, stepsize 68.6432 days, at day 388517/388725, date = 21-Sep-3088
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 11 (0.7sec)
+
+Starting time step 21, stepsize 139.367 days, at day 388586/388725, date = 29-Nov-3088
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00803443 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 45.990965 days
+
+
+Starting time step 21, stepsize 45.991 days, at day 388586/388725, date = 29-Nov-3088
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.6sec)
+
+Starting time step 22, stepsize 93.3756 days, at day 388632/388725, date = 14-Jan-3089
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 27 (1.4sec)
+
+Report step 15/17 at day 388725/392375, date = 18-Apr-3089
+
+Starting time step 0, stepsize 1825 days, at day 388725/390550, date = 18-Apr-3089
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 388725/390550, date = 18-Apr-3089
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 388725/390550, date = 18-Apr-3089
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 388725/390550, date = 18-Apr-3089
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 1, stepsize 131.17 days, at day 388791/390550, date = 22-Jun-3089
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 388791/390550, date = 22-Jun-3089
+ Newton its= 2, linearizations= 3 (0.3sec), linear its=  5 (0.4sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 388834/390550, date = 04-Aug-3089
+ Newton its= 3, linearizations= 4 (0.4sec), linear its= 16 (0.9sec)
+
+Starting time step 3, stepsize 259.717 days, at day 388920/390550, date = 30-Oct-3089
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 85.706511 days
+
+
+Starting time step 3, stepsize 85.7065 days, at day 388920/390550, date = 30-Oct-3089
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 4, stepsize 171.413 days, at day 389006/390550, date = 24-Jan-3090
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 56.566297 days
+
+
+Starting time step 4, stepsize 56.5663 days, at day 389006/390550, date = 24-Jan-3090
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.9sec)
+
+Starting time step 5, stepsize 113.133 days, at day 389063/390550, date = 21-Mar-3090
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 37.333756 days
+
+
+Starting time step 5, stepsize 37.3338 days, at day 389063/390550, date = 21-Mar-3090
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00409293 after 20 iterations 
+ Newton its= 6, linearizations= 7 (0.6sec), linear its= 46 (2.6sec)
+
+Starting time step 6, stepsize 67.2008 days, at day 389100/390550, date = 28-Apr-3090
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 7, stepsize 201.602 days, at day 389167/390550, date = 04-Jul-3090
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 66.528753 days
+
+
+Starting time step 7, stepsize 66.5288 days, at day 389167/390550, date = 04-Jul-3090
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 8, stepsize 133.058 days, at day 389234/390550, date = 08-Sep-3090
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.908977 days
+
+
+Starting time step 8, stepsize 43.909 days, at day 389234/390550, date = 08-Sep-3090
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 9, stepsize 87.818 days, at day 389278/390550, date = 22-Oct-3090
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 20 (1.2sec)
+
+Starting time step 10, stepsize 228.327 days, at day 389366/390550, date = 18-Jan-3091
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 75.347805 days
+
+
+Starting time step 10, stepsize 75.3478 days, at day 389366/390550, date = 18-Jan-3091
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 24.864776 days
+
+
+Starting time step 10, stepsize 24.8648 days, at day 389366/390550, date = 18-Jan-3091
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 11, stepsize 49.7296 days, at day 389390/390550, date = 12-Feb-3091
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 12, stepsize 149.189 days, at day 389440/390550, date = 03-Apr-3091
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 49.232256 days
+
+
+Starting time step 12, stepsize 49.2323 days, at day 389440/390550, date = 03-Apr-3091
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.9sec)
+
+Starting time step 13, stepsize 98.4645 days, at day 389489/390550, date = 22-May-3091
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 27 (1.5sec)
+
+Starting time step 14, stepsize 256.008 days, at day 389588/390550, date = 28-Aug-3091
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 84.482551 days
+
+
+Starting time step 14, stepsize 84.4826 days, at day 389588/390550, date = 28-Aug-3091
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.2sec)
+
+Starting time step 15, stepsize 168.965 days, at day 389672/390550, date = 21-Nov-3091
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00271065 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 55.758483 days
+
+
+Starting time step 15, stepsize 55.7585 days, at day 389672/390550, date = 21-Nov-3091
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 19 (1.2sec)
+
+Starting time step 16, stepsize 111.517 days, at day 389728/390550, date = 16-Jan-3092
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.800599 days
+
+
+Starting time step 16, stepsize 36.8006 days, at day 389728/390550, date = 16-Jan-3092
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 17, stepsize 73.6012 days, at day 389765/390550, date = 21-Feb-3092
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.8sec)
+
+Starting time step 18, stepsize 220.804 days, at day 389838/390550, date = 05-May-3092
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 72.865186 days
+
+
+Starting time step 18, stepsize 72.8652 days, at day 389838/390550, date = 05-May-3092
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 19, stepsize 145.73 days, at day 389911/390550, date = 17-Jul-3092
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 48.091023 days
+
+
+Starting time step 19, stepsize 48.091 days, at day 389911/390550, date = 17-Jul-3092
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  8 (0.6sec)
+
+Starting time step 20, stepsize 96.182 days, at day 389959/390550, date = 03-Sep-3092
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (1.0sec)
+
+Starting time step 21, stepsize 288.546 days, at day 390056/390550, date = 08-Dec-3092
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 95.220225 days
+
+
+Starting time step 21, stepsize 95.2202 days, at day 390056/390550, date = 08-Dec-3092
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.2sec)
+
+Starting time step 22, stepsize 190.44 days, at day 390151/390550, date = 13-Mar-3093
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 62.845349 days
+
+
+Starting time step 22, stepsize 62.8453 days, at day 390151/390550, date = 13-Mar-3093
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 18 (1.0sec)
+
+Starting time step 23, stepsize 125.691 days, at day 390214/390550, date = 15-May-3093
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00675549 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 41.477930 days
+
+
+Starting time step 23, stepsize 41.4779 days, at day 390214/390550, date = 15-May-3093
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 24, stepsize 82.9559 days, at day 390255/390550, date = 26-Jun-3093
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 19 (1.1sec)
+
+Starting time step 25, stepsize 211.922 days, at day 390338/390550, date = 17-Sep-3093
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 69.934284 days
+
+
+Starting time step 25, stepsize 69.9343 days, at day 390338/390550, date = 17-Sep-3093
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 26, stepsize 141.988 days, at day 390408/390550, date = 26-Nov-3093
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00504514 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 46.855970 days
+
+
+Starting time step 26, stepsize 46.856 days, at day 390408/390550, date = 26-Nov-3093
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.9sec)
+
+Starting time step 27, stepsize 95.1318 days, at day 390455/390550, date = 11-Jan-3094
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 23 (1.3sec)
+
+Report step 16/17 at day 390550/392375, date = 17-Apr-3094
+
+Starting time step 0, stepsize 1825 days, at day 390550/392375, date = 17-Apr-3094
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 602.250000 days
+
+
+Starting time step 0, stepsize 602.25 days, at day 390550/392375, date = 17-Apr-3094
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 198.742500 days
+
+
+Starting time step 0, stepsize 198.743 days, at day 390550/392375, date = 17-Apr-3094
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 65.585025 days
+
+
+Starting time step 0, stepsize 65.585 days, at day 390550/392375, date = 17-Apr-3094
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 1, stepsize 131.17 days, at day 390616/392375, date = 21-Jun-3094
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00848867 after 20 iterations 
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 43.286117 days
+
+
+Starting time step 1, stepsize 43.2861 days, at day 390616/392375, date = 21-Jun-3094
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  4 (0.3sec)
+
+Starting time step 2, stepsize 86.5722 days, at day 390659/392375, date = 03-Aug-3094
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 20 (1.1sec)
+
+Starting time step 3, stepsize 225.088 days, at day 390745/392375, date = 29-Oct-3094
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 74.278976 days
+
+
+Starting time step 3, stepsize 74.279 days, at day 390745/392375, date = 29-Oct-3094
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.6sec)
+
+Starting time step 4, stepsize 148.558 days, at day 390820/392375, date = 11-Jan-3095
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 49.024124 days
+
+
+Starting time step 4, stepsize 49.0241 days, at day 390820/392375, date = 11-Jan-3095
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 16.177961 days
+
+
+Starting time step 4, stepsize 16.178 days, at day 390820/392375, date = 11-Jan-3095
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.1sec)
+
+Starting time step 5, stepsize 32.3559 days, at day 390836/392375, date = 27-Jan-3095
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 6, stepsize 97.0678 days, at day 390868/392375, date = 01-Mar-3095
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 22 (1.2sec)
+
+Starting time step 7, stepsize 252.376 days, at day 390965/392375, date = 06-Jun-3095
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 83.284143 days
+
+
+Starting time step 7, stepsize 83.2841 days, at day 390965/392375, date = 06-Jun-3095
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 10 (0.7sec)
+
+Starting time step 8, stepsize 166.568 days, at day 391049/392375, date = 28-Aug-3095
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 54.967534 days
+
+
+Starting time step 8, stepsize 54.9675 days, at day 391049/392375, date = 28-Aug-3095
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.8sec)
+
+Starting time step 9, stepsize 109.935 days, at day 391104/392375, date = 22-Oct-3095
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 36.278573 days
+
+
+Starting time step 9, stepsize 36.2786 days, at day 391104/392375, date = 22-Oct-3095
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.2sec)
+
+Starting time step 10, stepsize 72.5571 days, at day 391140/392375, date = 27-Nov-3095
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 13 (0.7sec)
+
+Starting time step 11, stepsize 217.671 days, at day 391212/392375, date = 08-Feb-3096
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 71.831574 days
+
+
+Starting time step 11, stepsize 71.8316 days, at day 391212/392375, date = 08-Feb-3096
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.8sec)
+
+Starting time step 12, stepsize 143.663 days, at day 391284/392375, date = 20-Apr-3096
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 47.408839 days
+
+
+Starting time step 12, stepsize 47.4088 days, at day 391284/392375, date = 20-Apr-3096
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 13, stepsize 94.8177 days, at day 391332/392375, date = 06-Jun-3096
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 24 (1.2sec)
+
+Starting time step 14, stepsize 246.526 days, at day 391426/392375, date = 09-Sep-3096
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 81.353567 days
+
+
+Starting time step 14, stepsize 81.3536 days, at day 391426/392375, date = 09-Sep-3096
+ Newton its= 7, linearizations= 8 (0.6sec), linear its= 31 (1.7sec)
+
+Starting time step 15, stepsize 113.895 days, at day 391508/392375, date = 29-Nov-3096
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00286264 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 37.585348 days
+
+
+Starting time step 15, stepsize 37.5853 days, at day 391508/392375, date = 29-Nov-3096
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 16, stepsize 75.1707 days, at day 391545/392375, date = 06-Jan-3097
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 14 (0.8sec)
+
+Starting time step 17, stepsize 225.512 days, at day 391621/392375, date = 22-Mar-3097
+    Oscillating behavior detected: Relaxation set to 0.900000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 74.418989 days
+
+
+Starting time step 17, stepsize 74.419 days, at day 391621/392375, date = 22-Mar-3097
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 11 (0.7sec)
+
+Starting time step 18, stepsize 148.838 days, at day 391695/392375, date = 04-Jun-3097
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 49.116533 days
+
+
+Starting time step 18, stepsize 49.1165 days, at day 391695/392375, date = 04-Jun-3097
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 12 (0.7sec)
+
+Starting time step 19, stepsize 98.2331 days, at day 391744/392375, date = 24-Jul-3097
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 31 (1.6sec)
+
+Starting time step 20, stepsize 255.406 days, at day 391842/392375, date = 30-Oct-3097
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 84.283970 days
+
+
+Starting time step 20, stepsize 84.284 days, at day 391842/392375, date = 30-Oct-3097
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 16 (0.9sec)
+
+Starting time step 21, stepsize 168.568 days, at day 391927/392375, date = 22-Jan-3098
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00381804 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 55.627421 days
+
+
+Starting time step 21, stepsize 55.6274 days, at day 391927/392375, date = 22-Jan-3098
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 18.357049 days
+
+
+Starting time step 21, stepsize 18.357 days, at day 391927/392375, date = 22-Jan-3098
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.1sec)
+
+Starting time step 22, stepsize 36.7141 days, at day 391945/392375, date = 09-Feb-3098
+ Newton its= 2, linearizations= 3 (0.2sec), linear its=  7 (0.4sec)
+
+Starting time step 23, stepsize 110.142 days, at day 391982/392375, date = 18-Mar-3098
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Oscillating behavior detected: Relaxation set to 0.500000
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.346957 days
+
+
+Starting time step 23, stepsize 36.347 days, at day 391982/392375, date = 18-Mar-3098
+ Newton its= 3, linearizations= 4 (0.3sec), linear its=  9 (0.6sec)
+
+Starting time step 24, stepsize 72.6939 days, at day 392018/392375, date = 24-Apr-3098
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 25, stepsize 142.128 days, at day 392091/392375, date = 05-Jul-3098
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00280141 after 20 iterations 
+
+Warning: Full linear solver tolerance not achieved. The reduction is:0.00708726 after 20 iterations 
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 46.902294 days
+
+
+Starting time step 25, stepsize 46.9023 days, at day 392091/392375, date = 05-Jul-3098
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 15.477757 days
+
+
+Starting time step 25, stepsize 15.4778 days, at day 392091/392375, date = 05-Jul-3098
+ Newton its= 1, linearizations= 2 (0.2sec), linear its=  2 (0.1sec)
+
+Starting time step 26, stepsize 30.9555 days, at day 392106/392375, date = 21-Jul-3098
+ Newton its= 3, linearizations= 4 (0.3sec), linear its= 15 (0.8sec)
+
+Starting time step 27, stepsize 92.8665 days, at day 392137/392375, date = 21-Aug-3098
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 31 (1.6sec)
+
+Starting time step 28, stepsize 144.957 days, at day 392230/392375, date = 22-Nov-3098
+
+Problem: Solver convergence failure - Numerical problem encountered
+Timestep chopped to 47.835650 days
+
+
+Starting time step 28, stepsize 47.8356 days, at day 392230/392375, date = 22-Nov-3098
+ Newton its= 5, linearizations= 6 (0.5sec), linear its= 31 (1.6sec)
+
+Starting time step 29, stepsize 97.1209 days, at day 392278/392375, date = 08-Jan-3099
+ Newton its= 4, linearizations= 5 (0.4sec), linear its= 33 (1.7sec)
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:         1
+Threads per MPI process:         1
+Setup time:                      1.71 s
+  Deck input:                    0.29 s
+Number of timesteps:           824
+Simulation time:              4986.46 s
+  Assembly time:               501.12 s (Wasted: 259.3 s; 51.7%)
+    Well assembly:               0.00 s (Wasted: 0.0 s; 0.0%)
+  Linear solve time:          2834.40 s (Wasted: 2231.0 s; 78.7%)
+    Linear setup:              336.05 s (Wasted: 192.6 s; 57.3%)
+  Props/update time:          1483.78 s (Wasted: 1003.4 s; 67.6%)
+  Pre/post step:               163.60 s (Wasted: 38.3 s; 23.4%)
+  Output write time:             0.04 s
+Overall Linearizations:       5827      (Wasted:  3117; 53.5%)
+Overall Newton Iterations:    5282      (Wasted:  3117; 59.0%)
+Overall Linear Iterations:   32247      (Wasted: 22454; 69.6%)
+
+
+
+Error summary:
+Warnings          52
+Info              1704
+Errors            0
+Bugs              0
+Debug             0
+Problems          279
+
