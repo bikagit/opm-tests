@@ -191,8 +191,9 @@ if __name__ == "__main__":
 
     # 1) Test parity plot (single PNG)
     plt.figure(figsize=(6, 5))
-    plt.scatter(y_test, y_pred_test, alpha=0.6, color='green')
-    plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+    _yt, _yp = np.clip(y_test, 0, 1), np.clip(y_pred_test, 0, 1)
+    plt.scatter(_yt, _yp, alpha=0.6, color='green', s=7)
+    plt.plot([0, 1], [0, 1], 'r--')
     # plt.title('Test Set: Actual vs Predicted')
     plt.xlabel('Actual'); plt.ylabel('Predicted'); plt.grid(True)
     plt.tight_layout()
@@ -244,8 +245,9 @@ if __name__ == "__main__":
 
     # 3) Validation parity plot (single PNG)
     plt.figure(figsize=(6, 5))
-    plt.scatter(y_val, y_pred_val, alpha=0.6, color='purple')
-    plt.plot([y_val.min(), y_val.max()], [y_val.min(), y_val.max()], 'r--')
+    _yv, _yvp = np.clip(y_val, 0, 1), np.clip(y_pred_val, 0, 1)
+    plt.scatter(_yv, _yvp, alpha=0.6, color='purple', s=7)
+    plt.plot([0, 1], [0, 1], 'r--')
     # plt.title('Validation Set: Actual vs Predicted')
     plt.xlabel('Actual'); plt.ylabel('Predicted'); plt.grid(True)
     plt.tight_layout()
