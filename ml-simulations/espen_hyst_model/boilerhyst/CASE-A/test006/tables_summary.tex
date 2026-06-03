@@ -1,0 +1,157 @@
+% Tables and summary for:
+% "Data-Driven Modeling of Hysteresis in Porous Media:
+%  Neural Network Surrogates Coupled with the OPM Flow Reservoir Simulator"
+%
+% All measured values obtained on a MacBook (Apple Silicon, CPU-only).
+% Training uses Adam (lr=0.01), MSE loss, early stopping (patience 20/50),
+% batch size 32, up to 1000 epochs, augmented dataset ~30x original size.
+
+% ============================================================
+% TABLE 1 — Single-case surrogate accuracy (Case A, Swi=0.06)
+% ============================================================
+
+\begin{table}[h]
+\centering
+\caption{Single-case accuracy on held-out test data: consolidated performance
+metrics for the Killough-, Carlson-, and LS-LBM-trained neural network models
+(Case~A, $S_{wi}=0.06$).}
+\label{tab:accuracy}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Model} & \textbf{RMSE} & \textbf{MAE} & \textbf{R$^2$ Score}
+  & \textbf{EndP-Err (Start)} & \textbf{EndP-Err (End)} \\
+\hline
+Killough NN & 0.0105 & 0.0075 & 0.9987 & 0.0076 & 0.0096 \\
+Carlson NN  & 0.0116 & 0.0087 & 0.9980 & 0.0200 & 0.0005 \\
+LS-LBM NN  & 0.0459 & 0.0296 & 0.9660 & 0.0100 & 0.0142 \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================
+% TABLE 2 — Computational performance (Case A, Swi=0.06, CPU)
+% ============================================================
+%
+% Training time: wall-clock time for full training run (augmented dataset,
+%   early stopping, single CPU core).
+% Inference time/call: mean wall-clock time for a single model.predict()
+%   call inside OPM Flow (2000-call benchmark, single saturation point).
+% Reference eval. time/call: mean wall-clock time for one evaluation of the
+%   corresponding classical hysteresis binary (per saturation point),
+%   measured on the same hardware.
+
+\begin{table}[h]
+\centering
+\caption{Computational timing metrics: offline training cost and
+simulation-time inference cost per surrogate call, compared with the
+classical hysteresis model evaluation cost (Case~A, $S_{wi}=0.06$,
+CPU-only, MacBook).}
+\label{tab:timing}
+\begin{tabular}{lccc}
+\hline
+\textbf{Model} & \textbf{Training time (CPU)} & \textbf{Inference / call}
+  & \textbf{Reference eval.\ / call} \\
+\hline
+ML-Killough & 289.2\,s & 26.78\,ms & 0.393\,ms \\
+ML-Carlson  & 286.0\,s & 26.97\,ms & 0.250\,ms \\
+ML-LS-LBM  & 308.8\,s & 26.93\,ms & 1.190\,ms \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================
+% TABLE 3 — Breakthrough time and recovery factor (multi-case)
+% ============================================================
+%
+% Breakthrough time (BT): first day at which oil is produced at the
+%   production well (OP01/OP02).
+% Recovery factor (RF): cumulative oil produced / OOIP at final
+%   simulation time (9 days).
+% OOIP: Case A/test006 = 2124.4 mL (Swi=0.06);
+%        Case A/test020 = 1808.0 mL (Swi=0.20);
+%        Case B/test006 = oil injected scenario;
+%        Case B/test020 = oil injected scenario.
+% X in Table 4 denotes solver non-convergence (Killough: Swi >= 0.20;
+%   Carlson: Swi >= 0.35).
+
+\begin{table}[h]
+\centering
+\caption{Multi-case performance metrics: water breakthrough time and
+oil recovery factor at final simulation time (9\,days) for the
+no-hysteresis baseline and each ML surrogate across cases and initial
+saturations.}
+\label{tab:multicase}
+\begin{tabular}{llcc}
+\hline
+\textbf{Case} & \textbf{Model} & \textbf{BT (days)} & \textbf{RF (\%)} \\
+\hline
+\multirow{4}{*}{A, $S_{wi}=0.06$}
+  & No-hysteresis & 2.0052 & 26.1 \\
+  & ML-Killough   & 2.0104 & 26.9 \\
+  & ML-Carlson    & 2.0060 & 26.3 \\
+  & ML-LS-LBM    & 2.0582 & 11.7 \\
+\hline
+\multirow{3}{*}{A, $S_{wi}=0.20$}
+  & No-hysteresis & 0.0359 & 29.2 \\
+  & ML-Carlson    & 2.0165 & 32.2 \\
+  & ML-LS-LBM    & 2.0011 & 37.3 \\
+\hline
+\multirow{4}{*}{B, $S_{wi}=0.06$}
+  & No-hysteresis & 0.0359 &  2.4 \\
+  & ML-Killough   & 0.1089 &  1.5 \\
+  & ML-Carlson    & 0.0359 &  1.9 \\
+  & ML-LS-LBM    & 0.0359 &  1.4 \\
+\hline
+\multirow{3}{*}{B, $S_{wi}=0.20$}
+  & No-hysteresis & 0.0359 &  2.4 \\
+  & ML-Carlson    & 0.0359 &  1.3 \\
+  & ML-LS-LBM    & 0.0359 &  1.2 \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================
+% SUMMARY PARAGRAPH (for Section 4.2.2 / 4.3.1)
+% ============================================================
+
+\subsubsection*{Summary of computational performance (Table~\ref{tab:timing})}
+
+Training is performed once offline and requires approximately 5--6 minutes
+per surrogate on a single CPU core (MacBook, Apple Silicon), with all three
+models converging within 300--550 epochs via early stopping.
+The mean simulation-time inference cost per surrogate call is
+approximately 27\,ms on the same hardware, which is two orders of magnitude
+slower than a single classical hysteresis evaluation (0.25--1.2\,ms per
+saturation point).
+This overhead is expected on CPU-only hardware, where the per-call overhead
+of the Keras inference graph dominates; on GPU or with a compiled
+inference backend (e.g.\ Kerasify binary called directly from the OPM Flow
+C++ layer) the inference cost is substantially reduced.
+The reference evaluation times reported are per-saturation-point costs
+of the corresponding classical hysteresis binary measured on the same
+hardware and compiled configuration.
+
+\subsubsection*{Summary of multi-case results (Table~\ref{tab:multicase})}
+
+For Case~A ($S_{wi}=0.06$), all three ML surrogates reproduce breakthrough
+times within 3\,\% of each other (2.0052--2.0582 days vs.\ 2.0052 days
+for no-hysteresis), and recovery factors between 26--27\,\%, consistent
+with the no-hysteresis baseline.
+The exception is ML-LS-LBM, which yields a substantially lower recovery
+factor of 11.7\,\%, reflecting stronger oil trapping encoded in the
+pore-scale LS-LBM training data relative to the classical models.
+
+For Case~A ($S_{wi}=0.20$), hysteresis significantly delays breakthrough
+(from 0.036 to $\approx$2.0 days) and increases recovery, with
+ML-LS-LBM reaching 37.3\,\% vs.\ 29.2\,\% for no-hysteresis, highlighting
+the sensitivity of recovery predictions to the choice of hysteresis
+representation.
+
+For Case~B (alternating injection, $S_{wi}=0.06$ and 0.20), the
+no-hysteresis baseline shows early breakthrough (0.036 days) and low
+recovery ($\leq$2.4\,\%), consistent with the absence of oil trapping.
+All ML surrogates produce similar results in this scenario, with
+ML-Killough showing a slightly delayed breakthrough (0.109 days) for
+$S_{wi}=0.06$ reflecting differences in training data between the
+Killough and Carlson/LS-LBM datasets under the Scenario~B saturation
+paths.
