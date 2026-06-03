@@ -4,12 +4,12 @@ set -u  # Treat unset variables as error
 
 # === CONFIGURATION ===
 # === CONFIGURATION ===
-CASE="/CASE-A/test006"
-FOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/spe1"${CASE}
+CASE="/CASE-B/test006"
+FOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/core-twophase-hyst"${CASE}
 #FOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/spe1/CASE-B/test006"
 MODELFOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/ml-simulations/espen_hyst_model/boilerhyst"${CASE}
 FLOW_BIN="/Users/macbookn/activopmwkspc/edgedev/build/opm-simulators/bin/flow"
-MODEL_PATH="/Users/macbookn/activopmwkspc/edgedev/opm-tests/spe1/mlhyst/models/oldmodelkrnw.model"
+MODEL_PATH="/Users/macbookn/activopmwkspc/edgedev/opm-tests/core-twophase-hyst/mlhyst/models/oldmodelkrnw.model"
 PLOPM_ENV="/Users/macbookn/activopmwkspc/pyDavid/plopm/vplopm/bin/activate"
 
 # === FUNCTIONS ===
@@ -68,19 +68,19 @@ generate_plots() {
 echo "[INFO] Starting simulations..."
 mkdir -p "$FOLDER"/Figures
 # Classic simulations
-# run_flow "$FOLDER/ClassicKillough-hystnew-output" "$FOLDER/CORE_ExampleKillough.DATA"
-# run_flow "$FOLDER/ClassicCarlson-hystnew-output" "$FOLDER/CORE_ExampleCarlson.DATA"
-# run_flow "$FOLDER/Nohysteresis-output" "$FOLDER/CORE_Examplenohyst.DATA"
+run_flow "$FOLDER/ClassicKillough-hystnew-output" "$FOLDER/CORE_ExampleKillough.DATA"
+run_flow "$FOLDER/ClassicCarlson-hystnew-output" "$FOLDER/CORE_ExampleCarlson.DATA"
+run_flow "$FOLDER/Nohysteresis-output" "$FOLDER/CORE_Examplenohyst.DATA"
 
-# # ML-based simulations
-# update_model "oldmodelkrnwCORE_ExampleKillough.model"
-# run_flow "$FOLDER/Killoughmlhystnew-output" "$FOLDER/CORE_ExampleKillough.DATA" "--activate-m-l-rel-p-erm=True"
+# ML-based simulations
+update_model "oldmodelkrnwCORE_ExampleKillough.model"
+run_flow "$FOLDER/Killoughmlhystnew-output" "$FOLDER/CORE_ExampleKillough.DATA" "--activate-m-l-rel-p-erm=True"
 
-# update_model "oldmodelkrnwCORE_ExampleCarlson.model"
-# run_flow "$FOLDER/Carlsonmlhystnew-output" "$FOLDER/CORE_ExampleCarlson.DATA" "--activate-m-l-rel-p-erm=True"
+update_model "oldmodelkrnwCORE_ExampleCarlson.model"
+run_flow "$FOLDER/Carlsonmlhystnew-output" "$FOLDER/CORE_ExampleCarlson.DATA" "--activate-m-l-rel-p-erm=True"
 
-# update_model "oldmodelkrnwCORE_Example.model"
-# run_flow "$FOLDER/LSLBMmlhystnew-output" "$FOLDER/CORE_Example.DATA" "--activate-m-l-rel-p-erm=True"
+update_model "oldmodelkrnwCORE_Example.model"
+run_flow "$FOLDER/LSLBMmlhystnew-output" "$FOLDER/CORE_Example.DATA" "--activate-m-l-rel-p-erm=True"
 
 # Activate plotting environment
 source "$PLOPM_ENV"
