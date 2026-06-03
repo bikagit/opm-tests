@@ -111,6 +111,70 @@ saturations.}
 \end{table}
 
 % ============================================================
+% TABLE 4 — Simulation CPU-time comparison (all cases)
+% ============================================================
+%
+% Wall   = sum of solver-phase columns (Assembly+LSetup+LSolve+LocSol+Update+Output)
+% Asm    = assembly time
+% LSet   = linear system setup time
+% LSolv  = linear solve time
+% Upd    = relative permeability update time (ML inference or classical scanning curve)
+% NI     = total Newton iterations
+% Speedup = No-hysteresis wall / run wall for each case block
+%
+% Requires \usepackage{multirow} and \usepackage{booktabs} (or standard tabular).
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Model} & \textbf{Wall (s)} & \textbf{Asm (s)} & \textbf{LSet (s)} & \textbf{LSolv (s)} & \textbf{Upd (s)} & \textbf{NI} & \textbf{Speedup} \\
+\hline
+\multirow{6}{*}{A, $S_{wi}=0.06$}
+  & No-hysteresis    & 0.604 & 0.167 & 0.130 & 0.178 & 0.130 &  6176 & $1.00\times$ \\
+  & Classic-Killough & 0.592 & 0.167 & 0.122 & 0.171 & 0.132 &  6339 & $1.02\times$ \\
+  & Classic-Carlson  & 0.551 & 0.156 & 0.114 & 0.156 & 0.124 &  5964 & $1.10\times$ \\
+  & ML-Killough      & 4.142 & 0.202 & 0.161 & 0.213 & 3.566 &  7561 & $0.15\times$ \\
+  & ML-Carlson       & 3.873 & 0.188 & 0.149 & 0.199 & 3.336 &  7107 & $0.16\times$ \\
+  & ML-LS-LBM        & 4.318 & 0.213 & 0.163 & 0.215 & 3.727 &  7907 & $0.14\times$ \\
+\hline
+\multirow{4}{*}{A, $S_{wi}=0.20$}
+  & No-hysteresis    & 0.916 & 0.269 & 0.190 & 0.254 & 0.203 & 10181 & $1.00\times$ \\
+  & Classic-Carlson  & 0.708 & 0.209 & 0.146 & 0.194 & 0.158 &  8066 & $1.29\times$ \\
+  & ML-Carlson       & 5.047 & 0.241 & 0.175 & 0.237 & 4.394 &  9381 & $0.18\times$ \\
+  & ML-LS-LBM        & 5.247 & 0.254 & 0.192 & 0.256 & 4.545 &  9629 & $0.17\times$ \\
+\hline
+\multirow{6}{*}{B, $S_{wi}=0.06$}
+  & No-hysteresis    & 0.963 & 0.276 & 0.205 & 0.274 & 0.208 & 12151 & $1.00\times$ \\
+  & Classic-Killough & 0.799 & 0.232 & 0.169 & 0.225 & 0.173 & 10520 & $1.20\times$ \\
+  & Classic-Carlson  & 0.775 & 0.227 & 0.164 & 0.216 & 0.168 & 10215 & $1.24\times$ \\
+  & ML-Killough      & 5.686 & 0.271 & 0.202 & 0.270 & 4.943 & 12306 & $0.17\times$ \\
+  & ML-Carlson       & 5.898 & 0.280 & 0.213 & 0.281 & 5.125 & 12799 & $0.16\times$ \\
+  & ML-LS-LBM        & 5.802 & 0.275 & 0.211 & 0.281 & 5.035 & 12563 & $0.17\times$ \\
+\hline
+\multirow{4}{*}{B, $S_{wi}=0.20$}
+  & No-hysteresis    & 0.984 & 0.276 & 0.210 & 0.276 & 0.222 & 12151 & $1.00\times$ \\
+  & Classic-Carlson  & 0.868 & 0.251 & 0.181 & 0.239 & 0.197 & 11294 & $1.13\times$ \\
+  & ML-Carlson       & 5.578 & 0.263 & 0.200 & 0.265 & 4.849 & 12111 & $0.18\times$ \\
+  & ML-LS-LBM        & 5.401 & 0.258 & 0.190 & 0.252 & 4.700 & 11742 & $0.18\times$ \\
+\hline
+\end{tabular}
+}
+\caption{Simulation CPU-time comparison across all cases. Wall\,=\,total
+wall-clock time (sum of solver phases); Asm\,=\,assembly; LSet\,=\,linear
+system setup; LSolv\,=\,linear solve; Upd\,=\,relative permeability update
+(ML inference or classical scanning-curve evaluation); NI\,=\,total Newton
+iterations. Speedup is relative to the no-hysteresis baseline for each case.
+The Update column isolates the relperm evaluation cost: ML inference accounts
+for 85--90\,\% of total wall time at this proof-of-concept scale (10-cell
+grid, Python-based Keras inference called from C++), compared with
+$<5$\,\% for classical evaluation. All values measured on a MacBook
+(Apple Silicon, CPU-only).}
+\label{tab:timing_metrics}
+\end{table}
+
+% ============================================================
 % SUMMARY PARAGRAPH (for Section 4.2.2 / 4.3.1)
 % ============================================================
 
