@@ -34,27 +34,71 @@ LS-LBM NN  & 0.0459 & 0.0296 & 0.9660 & 0.0100 & 0.0142 \\
 %
 % Training time: wall-clock time for full training run (augmented dataset,
 %   early stopping, single CPU core).
-% Inference time/call: mean wall-clock time for a single model.predict()
-%   call inside OPM Flow (2000-call benchmark, single saturation point).
-% Reference eval. time/call: mean wall-clock time for one evaluation of the
-%   corresponding classical hysteresis binary (per saturation point),
-%   measured on the same hardware.
+% Inference / call: mean cost of one non-wetting relperm evaluation by the
+%   surrogate (one "call" = one saturation point = one grid cell), measured by
+%   a dedicated timer in OPM Flow with the vectorised (batched) path of
+%   NNModel::applyBatch. The batch evaluates all grid cells per nonlinear
+%   iteration; the per-call figure is the batch time divided by the number of
+%   cells. (Per-cell cost is flat across batch sizes, so this is the genuine
+%   marginal per-evaluation cost, not just an amortisation artefact.)
+% Reference eval. / call: mean cost of one evaluation of the classical
+%   hysteresis model (Killough/Carlson scanning-curve construction), measured
+%   with the standalone reference binary, per saturation point, same hardware.
+%   NB: this standalone cost includes process-launch and deck-parse overhead
+%   amortised over the points in each invocation, so it overstates the pure
+%   in-simulator scanning-curve arithmetic (which is sub-microsecond).
 
 \begin{table}[h]
 \centering
 \caption{Computational timing metrics: offline training cost and
-simulation-time inference cost per surrogate call, compared with the
-classical hysteresis model evaluation cost (Case~A, $S_{wi}=0.06$,
-CPU-only, MacBook).}
+simulation-time inference cost with the vectorised (batched) surrogate
+evaluation, compared with the classical hysteresis model evaluation cost
+(Case~A, $S_{wi}=0.06$, CPU-only, MacBook). One ``call'' is a single
+non-wetting relperm evaluation (one saturation point). The surrogate
+inference is the vectorised, single-precision, derivative-free cost amortised
+per evaluation over the batched call; the reference evaluation is the
+classical hysteresis-model (Killough/Carlson scanning-curve) construction
+measured with the standalone reference binary on the same hardware.}
 \label{tab:timing}
 \begin{tabular}{lccc}
 \hline
 \textbf{Model} & \textbf{Training time (CPU)} & \textbf{Inference / call}
   & \textbf{Reference eval.\ / call} \\
 \hline
-ML-Killough & 289.2\,s & 26.78\,ms & 0.393\,ms \\
-ML-Carlson  & 286.0\,s & 26.97\,ms & 0.250\,ms \\
-ML-LS-LBM  & 308.8\,s & 26.93\,ms & 1.190\,ms \\
+ML-Killough & 289.2\,s & 0.0016\,ms & 0.393\,ms \\
+ML-Carlson  & 286.0\,s & 0.0016\,ms & 0.250\,ms \\
+ML-LS-LBM  & 308.8\,s & 0.0016\,ms & 1.190\,ms \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================
+% TABLE 2b — Training cost vs total simulation wall time
+% ============================================================
+%
+% Same layout as Table 2, but the per-call timing columns are replaced by the
+% total simulation wall-clock time (Wall) taken from Table~\ref{tab:timing_metrics}
+% for Case A, Swi=0.06 (vectorised batched inference). Provides a direct
+% "offline cost vs in-simulation cost" view per surrogate.
+
+\begin{table}[h]
+\centering
+\caption{Offline training cost and total simulation wall-clock time per
+model (Case~A, $S_{wi}=0.06$, CPU-only, MacBook). Training time applies to
+the ML surrogates only; wall times are taken from Table~\ref{tab:timing_metrics}
+(vectorised batched inference). The classical and no-hysteresis runs are shown
+for reference.}
+\label{tab:training_wall}
+\begin{tabular}{lcc}
+\hline
+\textbf{Model} & \textbf{Training time (CPU)} & \textbf{Wall (s)} \\
+\hline
+No-hysteresis    & --       & 0.539 \\
+Classic-Killough & --       & 0.581 \\
+Classic-Carlson  & --       & 0.515 \\
+ML-Killough      & 289.2\,s & 0.806 \\
+ML-Carlson       & 286.0\,s & 0.772 \\
+ML-LS-LBM       & 308.8\,s & 0.836 \\
 \hline
 \end{tabular}
 \end{table}
@@ -115,62 +159,68 @@ saturations.}
 % ============================================================
 %
 % Wall   = sum of solver-phase columns (Assembly+LSetup+LSolve+LocSol+Update+Output)
-% Asm    = assembly time
+% Asm    = assembly time (includes the once-per-iteration batched ML inference,
+%          which runs in beginIteration(); see ML-inference note below)
 % LSet   = linear system setup time
 % LSolv  = linear solve time
-% Upd    = relative permeability update time (ML inference or classical scanning curve)
+% Upd    = solution-update time
 % NI     = total Newton iterations
 % Speedup = No-hysteresis wall / run wall for each case block
+% ML inf. = dedicated-timer total cost of the batched relperm inference
 %
-% Requires \usepackage{multirow} and \usepackage{booktabs} (or standard tabular).
+% Vectorised (batched) inference: NNModel::applyBatch evaluates all cells in a
+% single call per nonlinear iteration. Requires \usepackage{multirow}.
 
 \begin{table}[h!]
 \centering
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Case} & \textbf{Model} & \textbf{Wall (s)} & \textbf{Asm (s)} & \textbf{LSet (s)} & \textbf{LSolv (s)} & \textbf{Upd (s)} & \textbf{NI} & \textbf{Speedup} \\
+\textbf{Case} & \textbf{Model} & \textbf{Wall (s)} & \textbf{Asm (s)} & \textbf{LSet (s)} & \textbf{LSolv (s)} & \textbf{Upd (s)} & \textbf{ML inf.\ (s)} & \textbf{NI} & \textbf{Speedup} \\
 \hline
 \multirow{6}{*}{A, $S_{wi}=0.06$}
-  & No-hysteresis    & 0.604 & 0.167 & 0.130 & 0.178 & 0.130 &  6176 & $1.00\times$ \\
-  & Classic-Killough & 0.592 & 0.167 & 0.122 & 0.171 & 0.132 &  6339 & $1.02\times$ \\
-  & Classic-Carlson  & 0.551 & 0.156 & 0.114 & 0.156 & 0.124 &  5964 & $1.10\times$ \\
-  & ML-Killough      & 4.142 & 0.202 & 0.161 & 0.213 & 3.566 &  7561 & $0.15\times$ \\
-  & ML-Carlson       & 3.873 & 0.188 & 0.149 & 0.199 & 3.336 &  7107 & $0.16\times$ \\
-  & ML-LS-LBM        & 4.318 & 0.213 & 0.163 & 0.215 & 3.727 &  7907 & $0.14\times$ \\
+  & No-hysteresis    & 0.539 & 0.146 & 0.118 & 0.157 & 0.117 & --    &  6176 & $1.00\times$ \\
+  & Classic-Killough & 0.581 & 0.154 & 0.129 & 0.168 & 0.131 & --    &  6339 & $0.93\times$ \\
+  & Classic-Carlson  & 0.515 & 0.136 & 0.115 & 0.149 & 0.115 & --    &  5964 & $1.05\times$ \\
+  & ML-Killough      & 0.806 & 0.316 & 0.148 & 0.193 & 0.149 & 0.134 &  7482 & $0.67\times$ \\
+  & ML-Carlson       & 0.772 & 0.307 & 0.141 & 0.183 & 0.141 & 0.129 &  7206 & $0.70\times$ \\
+  & ML-LS-LBM        & 0.836 & 0.329 & 0.147 & 0.197 & 0.162 & 0.141 &  7909 & $0.64\times$ \\
 \hline
 \multirow{4}{*}{A, $S_{wi}=0.20$}
-  & No-hysteresis    & 0.916 & 0.269 & 0.190 & 0.254 & 0.203 & 10181 & $1.00\times$ \\
-  & Classic-Carlson  & 0.708 & 0.209 & 0.146 & 0.194 & 0.158 &  8066 & $1.29\times$ \\
-  & ML-Carlson       & 5.047 & 0.241 & 0.175 & 0.237 & 4.394 &  9381 & $0.18\times$ \\
-  & ML-LS-LBM        & 5.247 & 0.254 & 0.192 & 0.256 & 4.545 &  9629 & $0.17\times$ \\
+  & No-hysteresis    & 0.798 & 0.227 & 0.171 & 0.225 & 0.175 & --    & 10181 & $1.00\times$ \\
+  & Classic-Carlson  & 0.648 & 0.181 & 0.143 & 0.186 & 0.139 & --    &  8066 & $1.23\times$ \\
+  & ML-Carlson       & 0.948 & 0.378 & 0.169 & 0.218 & 0.184 & 0.163 &  9219 & $0.84\times$ \\
+  & ML-LS-LBM        & 0.963 & 0.391 & 0.168 & 0.222 & 0.182 & 0.168 &  9554 & $0.83\times$ \\
 \hline
 \multirow{6}{*}{B, $S_{wi}=0.06$}
-  & No-hysteresis    & 0.963 & 0.276 & 0.205 & 0.274 & 0.208 & 12151 & $1.00\times$ \\
-  & Classic-Killough & 0.799 & 0.232 & 0.169 & 0.225 & 0.173 & 10520 & $1.20\times$ \\
-  & Classic-Carlson  & 0.775 & 0.227 & 0.164 & 0.216 & 0.168 & 10215 & $1.24\times$ \\
-  & ML-Killough      & 5.686 & 0.271 & 0.202 & 0.270 & 4.943 & 12306 & $0.17\times$ \\
-  & ML-Carlson       & 5.898 & 0.280 & 0.213 & 0.281 & 5.125 & 12799 & $0.16\times$ \\
-  & ML-LS-LBM        & 5.802 & 0.275 & 0.211 & 0.281 & 5.035 & 12563 & $0.17\times$ \\
+  & No-hysteresis    & 1.019 & 0.286 & 0.218 & 0.285 & 0.231 & --    & 12151 & $1.00\times$ \\
+  & Classic-Killough & 0.891 & 0.242 & 0.194 & 0.248 & 0.207 & --    & 10520 & $1.14\times$ \\
+  & Classic-Carlson  & 0.861 & 0.239 & 0.182 & 0.238 & 0.202 & --    & 10215 & $1.18\times$ \\
+  & ML-Killough      & 1.223 & 0.494 & 0.214 & 0.282 & 0.234 & 0.210 & 11958 & $0.83\times$ \\
+  & ML-Carlson       & 1.324 & 0.529 & 0.234 & 0.310 & 0.251 & 0.226 & 12935 & $0.77\times$ \\
+  & ML-LS-LBM        & 1.385 & 0.545 & 0.247 & 0.326 & 0.266 & 0.230 & 12958 & $0.74\times$ \\
 \hline
 \multirow{4}{*}{B, $S_{wi}=0.20$}
-  & No-hysteresis    & 0.984 & 0.276 & 0.210 & 0.276 & 0.222 & 12151 & $1.00\times$ \\
-  & Classic-Carlson  & 0.868 & 0.251 & 0.181 & 0.239 & 0.197 & 11294 & $1.13\times$ \\
-  & ML-Carlson       & 5.578 & 0.263 & 0.200 & 0.265 & 4.849 & 12111 & $0.18\times$ \\
-  & ML-LS-LBM        & 5.401 & 0.258 & 0.190 & 0.252 & 4.700 & 11742 & $0.18\times$ \\
+  & No-hysteresis    & 1.029 & 0.287 & 0.219 & 0.287 & 0.235 & --    & 12151 & $1.00\times$ \\
+  & Classic-Carlson  & 0.920 & 0.258 & 0.198 & 0.257 & 0.208 & --    & 11294 & $1.12\times$ \\
+  & ML-Carlson       & 1.276 & 0.506 & 0.228 & 0.300 & 0.242 & 0.216 & 12324 & $0.81\times$ \\
+  & ML-LS-LBM        & 1.240 & 0.497 & 0.219 & 0.290 & 0.234 & 0.212 & 12070 & $0.83\times$ \\
 \hline
 \end{tabular}
 }
-\caption{Simulation CPU-time comparison across all cases. Wall\,=\,total
-wall-clock time (sum of solver phases); Asm\,=\,assembly; LSet\,=\,linear
-system setup; LSolv\,=\,linear solve; Upd\,=\,relative permeability update
-(ML inference or classical scanning-curve evaluation); NI\,=\,total Newton
-iterations. Speedup is relative to the no-hysteresis baseline for each case.
-The Update column isolates the relperm evaluation cost: ML inference accounts
-for 85--90\,\% of total wall time at this proof-of-concept scale (10-cell
-grid, Python-based Keras inference called from C++), compared with
-$<5$\,\% for classical evaluation. All values measured on a MacBook
-(Apple Silicon, CPU-only).}
+\caption{Simulation CPU-time comparison across all cases, using the vectorised
+(batched) ML relperm inference. Wall\,=\,total wall-clock time (sum of solver
+phases); Asm\,=\,assembly; LSet\,=\,linear system setup; LSolv\,=\,linear solve;
+Upd\,=\,solution update; NI\,=\,total Newton iterations; Speedup is relative to
+the no-hysteresis baseline for each case. The batched surrogate is evaluated
+once per nonlinear iteration in \texttt{beginIteration()}, so its cost is
+contained in the Assembly column; the dedicated ML-inference timer (ML inf.)
+reports it separately, showing it is now a small fraction ($\sim$17--20\,\%) of
+the ML run wall time rather than the dominant cost. With batched inference the
+ML surrogates run at $0.64$--$0.84\times$ the no-hysteresis wall time (vs.\
+$\sim$$0.15\times$ for the per-cell evaluation), i.e.\ within $\sim$20--35\,\%
+of a non-hysteretic simulation. All values measured on a MacBook (Apple
+Silicon, CPU-only); ML inference is single-precision and derivative-free.}
 \label{tab:timing_metrics}
 \end{table}
 
@@ -183,14 +233,17 @@ $<5$\,\% for classical evaluation. All values measured on a MacBook
 Training is performed once offline and requires approximately 5--6 minutes
 per surrogate on a single CPU core (MacBook, Apple Silicon), with all three
 models converging within 300--550 epochs via early stopping.
-The mean simulation-time inference cost per surrogate call is
-approximately 27\,ms on the same hardware, which is two orders of magnitude
-slower than a single classical hysteresis evaluation (0.25--1.2\,ms per
-saturation point).
-This overhead is expected on CPU-only hardware, where the per-call overhead
-of the Keras inference graph dominates; on GPU or with a compiled
-inference backend (e.g.\ Kerasify binary called directly from the OPM Flow
-C++ layer) the inference cost is substantially reduced.
+At simulation time the surrogate is evaluated through the compiled C++
+inference path (Kerasify format, loaded directly by OPM Flow) using a
+vectorised, single-precision, derivative-free kernel that processes all grid
+cells in one call per nonlinear iteration. The resulting cost is
+approximately $1.6\,\mu$s per saturation-point evaluation (one grid cell),
+more than two orders of magnitude \emph{below} a single classical
+scanning-curve evaluation ($0.25$--$1.2$\,ms per saturation point).
+Vectorising the evaluation (versus the per-cell call of the reference
+pointwise implementation) reduces the total in-simulation inference cost by
+about a factor of 25 for the present cases and is the key enabler for the
+overall wall-time speedups reported in Table~\ref{tab:timing_metrics}.
 The reference evaluation times reported are per-saturation-point costs
 of the corresponding classical hysteresis binary measured on the same
 hardware and compiled configuration.

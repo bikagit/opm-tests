@@ -4,7 +4,7 @@ set -u  # Treat unset variables as error
 
 # === CONFIGURATION ===
 # === CONFIGURATION ===
-CASE="/CASE-B/test006"
+CASE="/CASE-A/test006"
 FOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/core-twophase-hyst"${CASE}
 #FOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/spe1/CASE-B/test006"
 MODELFOLDER="/Users/macbookn/activopmwkspc/edgedev/opm-tests/ml-simulations/espen_hyst_model/boilerhyst"${CASE}
