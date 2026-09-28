@@ -1,0 +1,37 @@
+START examples spe11a
+START examples spe11b
+START examples spe11b_convective
+START examples spe11c
+DONE examples spe11c status 0
+START examples special_issue_convective
+DONE examples spe11b status 0
+START tests input
+DONE examples spe11b_convective status 0
+START tests spe11a
+DONE examples spe11a status 0
+START tests spe11a_cartesian
+DONE examples special_issue_convective status 1
+START tests spe11a_corner-point
+DONE tests spe11a_cartesian status 0
+START tests spe11a_data_format
+DONE tests spe11a_corner-point status 0
+START tests spe11b_cartesian
+DONE tests spe11a status 0
+START tests spe11b_corner-point
+DONE tests input status 0
+START tests spe11b_data_format
+DONE tests spe11a_data_format status 0
+START tests spe11c
+DONE tests spe11b_cartesian status 0
+START tests spe11c_cartesian
+DONE tests spe11b_corner-point status 0
+START tests spe11c_corner-point
+DONE tests spe11b_data_format status 0
+START tests spe11c_data_format
+DONE tests spe11c_cartesian status 0
+START derived r5_Cart_50m-50m-10m_no_dispersion
+DONE tests spe11c status 0
+DONE tests spe11c_corner-point status 0
+DONE tests spe11c_data_format status 0
+DONE derived r5_Cart_50m-50m-10m_no_dispersion status 0
+Some decks failed; inspect manifest and logs

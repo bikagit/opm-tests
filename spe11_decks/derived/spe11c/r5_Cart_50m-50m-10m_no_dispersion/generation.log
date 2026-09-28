@@ -1,0 +1,4 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion
+            Files (5): FIPNUM.INC, FLUXNUM.INC, GRID.INC, R5_CART_50M-50M-10M_NO_DISPERSION.DATA, TABLES.INC

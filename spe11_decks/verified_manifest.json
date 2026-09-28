@@ -1,0 +1,658 @@
+[
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11a/r1_Cart_1cm.toml",
+    "folder": "benchmark/spe11a/r1_Cart_1cm",
+    "decks": [
+      "benchmark/spe11a/r1_Cart_1cm/R1_CART_1CM.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      280,
+      1,
+      120
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11a/r2_Cart_1cm_capmax2500Pa.toml",
+    "folder": "benchmark/spe11a/r2_Cart_1cm_capmax2500Pa",
+    "decks": [
+      "benchmark/spe11a/r2_Cart_1cm_capmax2500Pa/R2_CART_1CM_CAPMAX2500PA.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      280,
+      1,
+      120
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11a/r3_cp_1cmish_capmax2500Pa.toml",
+    "folder": "benchmark/spe11a/r3_cp_1cmish_capmax2500Pa",
+    "decks": [
+      "benchmark/spe11a/r3_cp_1cmish_capmax2500Pa/R3_CP_1CMISH_CAPMAX2500PA.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      280,
+      1,
+      183
+    ],
+    "include_files_checked": 4
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11a/r4_Cart_1mm_capmax2500Pa.toml",
+    "folder": "benchmark/spe11a/r4_Cart_1mm_capmax2500Pa",
+    "decks": [
+      "benchmark/spe11a/r4_Cart_1mm_capmax2500Pa/R4_CART_1MM_CAPMAX2500PA.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      2800,
+      1,
+      1200
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11a/r5_Cart_1mm_capmax2500Pa_strictol.toml",
+    "folder": "benchmark/spe11a/r5_Cart_1mm_capmax2500Pa_strictol",
+    "decks": [
+      "benchmark/spe11a/r5_Cart_1mm_capmax2500Pa_strictol/R5_CART_1MM_CAPMAX2500PA_STRICTOL.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      2800,
+      1,
+      1200
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11b/r1_Cart_10m.toml",
+    "folder": "benchmark/spe11b/r1_Cart_10m",
+    "decks": [
+      "benchmark/spe11b/r1_Cart_10m/R1_CART_10M.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      842,
+      1,
+      120
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11b/r2_cp_10mish.toml",
+    "folder": "benchmark/spe11b/r2_cp_10mish",
+    "decks": [
+      "benchmark/spe11b/r2_cp_10mish/R2_CP_10MISH.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      842,
+      1,
+      157
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11b/r3_cp_10mish_convective.toml",
+    "folder": "benchmark/spe11b/r3_cp_10mish_convective",
+    "decks": [
+      "benchmark/spe11b/r3_cp_10mish_convective/R3_CP_10MISH_CONVECTIVE.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      842,
+      1,
+      157
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11b/r4_Cart_1m.toml",
+    "folder": "benchmark/spe11b/r4_Cart_1m",
+    "decks": [
+      "benchmark/spe11b/r4_Cart_1m/R4_CART_1M.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      8400,
+      1,
+      1200
+    ],
+    "include_files_checked": 4
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11c/r1_Cart_50m-50m-10m.toml",
+    "folder": "benchmark/spe11c/r1_Cart_50m-50m-10m",
+    "decks": [
+      "benchmark/spe11c/r1_Cart_50m-50m-10m/R1_CART_50M-50M-10M.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      170,
+      102,
+      120
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11c/r2_cp_50m-50m-8mish.toml",
+    "folder": "benchmark/spe11c/r2_cp_50m-50m-8mish",
+    "decks": [
+      "benchmark/spe11c/r2_cp_50m-50m-8mish/R2_CP_50M-50M-8MISH.DATA"
+    ],
+    "origin": "upstream reference",
+    "returncode": 0,
+    "dimensions": [
+      170,
+      102,
+      157
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11c/r3_cp_50m-50m-8mish_convective.toml",
+    "folder": "benchmark/spe11c/r3_cp_50m-50m-8mish_convective",
+    "decks": [
+      "benchmark/spe11c/r3_cp_50m-50m-8mish_convective/R3_CP_50M-50M-8MISH_CONVECTIVE.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      170,
+      102,
+      157
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "benchmark",
+    "config": "configs/benchmark/spe11c/r4_cp_8m-8mish-8mish.toml",
+    "folder": "benchmark/spe11c/r4_cp_8m-8mish-8mish",
+    "decks": [
+      "benchmark/spe11c/r4_cp_8m-8mish-8mish/R4_CP_8M-8MISH-8MISH.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      1052,
+      607,
+      157
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp0-z40mish-x40m.toml",
+    "folder": "convergence/full_cp0-z40mish-x40m",
+    "decks": [
+      "convergence/full_cp0-z40mish-x40m/FULL_CP0-Z40MISH-X40M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      212,
+      1,
+      25
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp1-z20mish-x20m.toml",
+    "folder": "convergence/full_cp1-z20mish-x20m",
+    "decks": [
+      "convergence/full_cp1-z20mish-x20m/FULL_CP1-Z20MISH-X20M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      422,
+      1,
+      55
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp2-z10mish-x10m.toml",
+    "folder": "convergence/full_cp2-z10mish-x10m",
+    "decks": [
+      "convergence/full_cp2-z10mish-x10m/FULL_CP2-Z10MISH-X10M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      842,
+      1,
+      112
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp3-z5mish-x5m.toml",
+    "folder": "convergence/full_cp3-z5mish-x5m",
+    "decks": [
+      "convergence/full_cp3-z5mish-x5m/FULL_CP3-Z5MISH-X5M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      1682,
+      1,
+      224
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp0-z320mish-x320m.toml",
+    "folder": "convergence/lower_cp0-z320mish-x320m",
+    "decks": [],
+    "origin": "generated from upstream template",
+    "returncode": 1
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp1-z160mish-x160m.toml",
+    "folder": "convergence/lower_cp1-z160mish-x160m",
+    "decks": [
+      "convergence/lower_cp1-z160mish-x160m/LOWER_CP1-Z160MISH-X160M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      54,
+      1,
+      3
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp2-z80mish-x80m.toml",
+    "folder": "convergence/lower_cp2-z80mish-x80m",
+    "decks": [
+      "convergence/lower_cp2-z80mish-x80m/LOWER_CP2-Z80MISH-X80M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      107,
+      1,
+      5
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp3-z40mish-x40m.toml",
+    "folder": "convergence/lower_cp3-z40mish-x40m",
+    "decks": [
+      "convergence/lower_cp3-z40mish-x40m/LOWER_CP3-Z40MISH-X40M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      212,
+      1,
+      9
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp4-z20mish-x20m.toml",
+    "folder": "convergence/lower_cp4-z20mish-x20m",
+    "decks": [
+      "convergence/lower_cp4-z20mish-x20m/LOWER_CP4-Z20MISH-X20M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      422,
+      1,
+      19
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp5-z10mish-x10m.toml",
+    "folder": "convergence/lower_cp5-z10mish-x10m",
+    "decks": [
+      "convergence/lower_cp5-z10mish-x10m/LOWER_CP5-Z10MISH-X10M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      842,
+      1,
+      37
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp6-z5mish-x5m.toml",
+    "folder": "convergence/lower_cp6-z5mish-x5m",
+    "decks": [
+      "convergence/lower_cp6-z5mish-x5m/LOWER_CP6-Z5MISH-X5M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0,
+    "dimensions": [
+      1682,
+      1,
+      73
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "derived",
+    "config": "configs/derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion.toml",
+    "folder": "derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion",
+    "decks": [
+      "derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion/R5_CART_50M-50M-10M_NO_DISPERSION.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      170,
+      102,
+      120
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11a.toml",
+    "folder": "examples/spe11a",
+    "decks": [
+      "examples/spe11a/SPE11A.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      55,
+      1,
+      74
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11b.toml",
+    "folder": "examples/spe11b",
+    "decks": [
+      "examples/spe11b/SPE11B.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      83,
+      1,
+      58
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11b_convective.toml",
+    "folder": "examples/spe11b_convective",
+    "decks": [
+      "examples/spe11b_convective/SPE11B_CONVECTIVE.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      83,
+      1,
+      58
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11c.toml",
+    "folder": "examples/spe11c",
+    "decks": [
+      "examples/spe11c/SPE11C.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      44,
+      27,
+      12
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/special_issue_convective.toml",
+    "folder": "examples/special_issue_convective",
+    "decks": [],
+    "origin": "generated",
+    "returncode": 1
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/input.toml",
+    "folder": "tests/input",
+    "decks": [
+      "tests/input/INPUT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      72,
+      1,
+      52
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a.toml",
+    "folder": "tests/spe11a",
+    "decks": [
+      "tests/spe11a/SPE11A.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      55,
+      1,
+      74
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_cartesian.toml",
+    "folder": "tests/spe11a_cartesian",
+    "decks": [
+      "tests/spe11a_cartesian/SPE11A_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      28,
+      1,
+      12
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_corner-point.toml",
+    "folder": "tests/spe11a_corner-point",
+    "decks": [
+      "tests/spe11a_corner-point/SPE11A_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      28,
+      1,
+      11
+    ],
+    "include_files_checked": 4
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_data_format.toml",
+    "folder": "tests/spe11a_data_format",
+    "decks": [
+      "tests/spe11a_data_format/SPE11A_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      28,
+      1,
+      12
+    ],
+    "include_files_checked": 3
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_cartesian.toml",
+    "folder": "tests/spe11b_cartesian",
+    "decks": [
+      "tests/spe11b_cartesian/SPE11B_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      86,
+      1,
+      12
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_corner-point.toml",
+    "folder": "tests/spe11b_corner-point",
+    "decks": [
+      "tests/spe11b_corner-point/SPE11B_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      84,
+      1,
+      11
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_data_format.toml",
+    "folder": "tests/spe11b_data_format",
+    "decks": [
+      "tests/spe11b_data_format/SPE11B_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      86,
+      1,
+      12
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c.toml",
+    "folder": "tests/spe11c",
+    "decks": [
+      "tests/spe11c/SPE11C.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      135,
+      11,
+      18
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_cartesian.toml",
+    "folder": "tests/spe11c_cartesian",
+    "decks": [
+      "tests/spe11c_cartesian/SPE11C_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      18,
+      12,
+      12
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_corner-point.toml",
+    "folder": "tests/spe11c_corner-point",
+    "decks": [
+      "tests/spe11c_corner-point/SPE11C_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      18,
+      12,
+      11
+    ],
+    "include_files_checked": 5
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_data_format.toml",
+    "folder": "tests/spe11c_data_format",
+    "decks": [
+      "tests/spe11c_data_format/SPE11C_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0,
+    "dimensions": [
+      44,
+      27,
+      18
+    ],
+    "include_files_checked": 5
+  }
+]

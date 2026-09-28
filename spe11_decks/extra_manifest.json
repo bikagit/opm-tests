@@ -1,0 +1,180 @@
+[
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11c.toml",
+    "folder": "examples/spe11c",
+    "decks": [
+      "examples/spe11c/SPE11C.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11b.toml",
+    "folder": "examples/spe11b",
+    "decks": [
+      "examples/spe11b/SPE11B.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11b_convective.toml",
+    "folder": "examples/spe11b_convective",
+    "decks": [
+      "examples/spe11b_convective/SPE11B_CONVECTIVE.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/spe11a.toml",
+    "folder": "examples/spe11a",
+    "decks": [
+      "examples/spe11a/SPE11A.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "examples",
+    "config": "configs/examples/special_issue_convective.toml",
+    "folder": "examples/special_issue_convective",
+    "decks": [],
+    "origin": "generated",
+    "returncode": 1
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_cartesian.toml",
+    "folder": "tests/spe11a_cartesian",
+    "decks": [
+      "tests/spe11a_cartesian/SPE11A_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_corner-point.toml",
+    "folder": "tests/spe11a_corner-point",
+    "decks": [
+      "tests/spe11a_corner-point/SPE11A_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a.toml",
+    "folder": "tests/spe11a",
+    "decks": [
+      "tests/spe11a/SPE11A.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/input.toml",
+    "folder": "tests/input",
+    "decks": [
+      "tests/input/INPUT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11a_data_format.toml",
+    "folder": "tests/spe11a_data_format",
+    "decks": [
+      "tests/spe11a_data_format/SPE11A_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_cartesian.toml",
+    "folder": "tests/spe11b_cartesian",
+    "decks": [
+      "tests/spe11b_cartesian/SPE11B_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_corner-point.toml",
+    "folder": "tests/spe11b_corner-point",
+    "decks": [
+      "tests/spe11b_corner-point/SPE11B_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11b_data_format.toml",
+    "folder": "tests/spe11b_data_format",
+    "decks": [
+      "tests/spe11b_data_format/SPE11B_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_cartesian.toml",
+    "folder": "tests/spe11c_cartesian",
+    "decks": [
+      "tests/spe11c_cartesian/SPE11C_CARTESIAN.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c.toml",
+    "folder": "tests/spe11c",
+    "decks": [
+      "tests/spe11c/SPE11C.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_corner-point.toml",
+    "folder": "tests/spe11c_corner-point",
+    "decks": [
+      "tests/spe11c_corner-point/SPE11C_CORNER-POINT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "tests",
+    "config": "configs/tests/spe11c_data_format.toml",
+    "folder": "tests/spe11c_data_format",
+    "decks": [
+      "tests/spe11c_data_format/SPE11C_DATA_FORMAT.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  },
+  {
+    "category": "derived",
+    "config": "configs/derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion.toml",
+    "folder": "derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion",
+    "decks": [
+      "derived/spe11c/r5_Cart_50m-50m-10m_no_dispersion/R5_CART_50M-50M-10M_NO_DISPERSION.DATA"
+    ],
+    "origin": "generated",
+    "returncode": 0
+  }
+]

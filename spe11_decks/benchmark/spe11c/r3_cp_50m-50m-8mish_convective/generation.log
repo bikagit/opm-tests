@@ -1,0 +1,4 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/benchmark/spe11c/r3_cp_50m-50m-8mish_convective
+            Files (5): FIPNUM.INC, FLUXNUM.INC, GRID.INC, R3_CP_50M-50M-8MISH_CONVECTIVE.DATA, TABLES.INC

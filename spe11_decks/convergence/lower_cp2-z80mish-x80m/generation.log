@@ -1,0 +1,10 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/convergence/lower_cp2-z80mish-x80m
+            Files (6):
+              - FIPNUM.INC
+              - FLUXNUM.INC
+              - GRID.INC
+              - LOWER_CP2-Z80MISH-X80M.DATA
+              - PVBOUNDARIES.INC
+              - TABLES.INC

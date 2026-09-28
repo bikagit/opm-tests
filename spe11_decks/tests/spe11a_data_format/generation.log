@@ -1,0 +1,4 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/tests/spe11a_data_format
+            Files (4): FIPNUM.INC, FLUXNUM.INC, SPE11A_DATA_FORMAT.DATA, TABLES.INC

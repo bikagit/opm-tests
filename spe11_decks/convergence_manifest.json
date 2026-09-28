@@ -1,0 +1,110 @@
+[
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp0-z40mish-x40m.toml",
+    "folder": "convergence/full_cp0-z40mish-x40m",
+    "decks": [
+      "convergence/full_cp0-z40mish-x40m/FULL_CP0-Z40MISH-X40M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp1-z20mish-x20m.toml",
+    "folder": "convergence/full_cp1-z20mish-x20m",
+    "decks": [
+      "convergence/full_cp1-z20mish-x20m/FULL_CP1-Z20MISH-X20M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp2-z10mish-x10m.toml",
+    "folder": "convergence/full_cp2-z10mish-x10m",
+    "decks": [
+      "convergence/full_cp2-z10mish-x10m/FULL_CP2-Z10MISH-X10M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/full_cp3-z5mish-x5m.toml",
+    "folder": "convergence/full_cp3-z5mish-x5m",
+    "decks": [
+      "convergence/full_cp3-z5mish-x5m/FULL_CP3-Z5MISH-X5M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp0-z320mish-x320m.toml",
+    "folder": "convergence/lower_cp0-z320mish-x320m",
+    "decks": [],
+    "origin": "generated from upstream template",
+    "returncode": 1
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp1-z160mish-x160m.toml",
+    "folder": "convergence/lower_cp1-z160mish-x160m",
+    "decks": [
+      "convergence/lower_cp1-z160mish-x160m/LOWER_CP1-Z160MISH-X160M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp2-z80mish-x80m.toml",
+    "folder": "convergence/lower_cp2-z80mish-x80m",
+    "decks": [
+      "convergence/lower_cp2-z80mish-x80m/LOWER_CP2-Z80MISH-X80M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp3-z40mish-x40m.toml",
+    "folder": "convergence/lower_cp3-z40mish-x40m",
+    "decks": [
+      "convergence/lower_cp3-z40mish-x40m/LOWER_CP3-Z40MISH-X40M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp4-z20mish-x20m.toml",
+    "folder": "convergence/lower_cp4-z20mish-x20m",
+    "decks": [
+      "convergence/lower_cp4-z20mish-x20m/LOWER_CP4-Z20MISH-X20M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp5-z10mish-x10m.toml",
+    "folder": "convergence/lower_cp5-z10mish-x10m",
+    "decks": [
+      "convergence/lower_cp5-z10mish-x10m/LOWER_CP5-Z10MISH-X10M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  },
+  {
+    "category": "convergence",
+    "config": "configs/convergence/lower_cp6-z5mish-x5m.toml",
+    "folder": "convergence/lower_cp6-z5mish-x5m",
+    "decks": [
+      "convergence/lower_cp6-z5mish-x5m/LOWER_CP6-Z5MISH-X5M.DATA"
+    ],
+    "origin": "generated from upstream template",
+    "returncode": 0
+  }
+]

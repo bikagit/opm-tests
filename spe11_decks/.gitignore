@@ -1,0 +1,6 @@
+.venv/
+pyopmspe11/
+# Files exceeding GitHub's 100 MB limit
+benchmark/spe11c/r2_cp_50m-50m-8mish/GRID.INC
+benchmark/spe11c/r3_cp_50m-50m-8mish_convective/GRID.INC
+benchmark/spe11c/r4_cp_8m-8mish-8mish/GRID.INC

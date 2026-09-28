@@ -1,0 +1,3 @@
+START examples special_issue_convective
+DONE examples special_issue_convective status 1
+Some decks failed; inspect manifest and logs

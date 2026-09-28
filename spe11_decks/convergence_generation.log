@@ -1,0 +1,22 @@
+START full_cp0-z40mish-x40m
+DONE full_cp0-z40mish-x40m 0
+START full_cp1-z20mish-x20m
+DONE full_cp1-z20mish-x20m 0
+START full_cp2-z10mish-x10m
+DONE full_cp2-z10mish-x10m 0
+START full_cp3-z5mish-x5m
+DONE full_cp3-z5mish-x5m 0
+START lower_cp0-z320mish-x320m
+DONE lower_cp0-z320mish-x320m 1
+START lower_cp1-z160mish-x160m
+DONE lower_cp1-z160mish-x160m 0
+START lower_cp2-z80mish-x80m
+DONE lower_cp2-z80mish-x80m 0
+START lower_cp3-z40mish-x40m
+DONE lower_cp3-z40mish-x40m 0
+START lower_cp4-z20mish-x20m
+DONE lower_cp4-z20mish-x20m 0
+START lower_cp5-z10mish-x10m
+DONE lower_cp5-z10mish-x10m 0
+START lower_cp6-z5mish-x5m
+DONE lower_cp6-z5mish-x5m 0

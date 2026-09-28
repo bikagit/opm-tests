@@ -1,0 +1,69 @@
+START benchmark r1_Cart_1cm
+DONE benchmark r1_Cart_1cm status 0
+START benchmark r2_Cart_1cm_capmax2500Pa
+DONE benchmark r2_Cart_1cm_capmax2500Pa status 0
+START benchmark r3_cp_1cmish_capmax2500Pa
+DONE benchmark r3_cp_1cmish_capmax2500Pa status 0
+START benchmark r4_Cart_1mm_capmax2500Pa
+DONE benchmark r4_Cart_1mm_capmax2500Pa status 0
+START benchmark r5_Cart_1mm_capmax2500Pa_strictol
+START benchmark r5_Cart_1mm_capmax2500Pa_strictol
+START benchmark r3_cp_10mish_convective
+START benchmark r1_Cart_10m
+START benchmark r2_cp_10mish
+DONE benchmark r1_Cart_10m status 0
+START benchmark r4_Cart_1m
+DONE benchmark r2_cp_10mish status 0
+START benchmark r1_Cart_50m-50m-10m
+DONE benchmark r1_Cart_50m-50m-10m status 0
+START benchmark r2_cp_50m-50m-8mish
+DONE benchmark r2_cp_50m-50m-8mish status 0
+START benchmark r3_cp_50m-50m-8mish_convective
+DONE benchmark r3_cp_10mish_convective status 0
+START examples spe11a
+START examples spe11b
+START examples spe11b_convective
+START examples spe11c
+START examples special_issue_convective
+START tests input
+START tests spe11a
+START tests spe11a_cartesian
+START tests spe11a_corner-point
+START tests spe11a_data_format
+START tests spe11b_cartesian
+START tests spe11b_corner-point
+START tests spe11b_data_format
+START tests spe11c
+START tests spe11c_cartesian
+START tests spe11c_corner-point
+START tests spe11c_data_format
+START derived r5_Cart_50m-50m-10m_no_dispersion
+START benchmark r4_cp_8m-8mish-8mish
+DONE benchmark r3_cp_50m-50m-8mish_convective status 0
+DONE benchmark r5_Cart_1mm_capmax2500Pa_strictol status 0
+DONE benchmark r4_Cart_1m status 0
+DONE benchmark r4_cp_8m-8mish-8mish status 0
+Traceback (most recent call last):
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/generate_all.py", line 56, in <module>
+    code=subprocess.run([str(EXE),'-i',str(cfg),'-o',str(dst),'-m','deck','-f','0'],stdout=log,stderr=subprocess.STDOUT).returncode
+             ^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/generate_all.py", line 53, in main
+    origin='upstream reference'
+                   ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/generate_all.py", line 40, in generate
+    category, cfg, dst = job
+                  ^^^^^^^^^^^
+  File "/usr/lib/python3.12/shutil.py", line 475, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/nonexistent/.cache'

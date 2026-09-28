@@ -1,0 +1,4 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/benchmark/spe11b/r4_Cart_1m
+            Files (5): FIPNUM.INC, FLUXNUM.INC, PVBOUNDARIES.INC, R4_CART_1M.DATA, TABLES.INC

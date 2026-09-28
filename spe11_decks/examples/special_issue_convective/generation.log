@@ -1,0 +1,18 @@
+pyopmspe11: info: generating the input files, please wait...
+Traceback (most recent call last):
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/.venv/bin/pyopmspe11", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/.venv/lib/python3.12/site-packages/pyopmspe11/core/pyopmspe11.py", line 73, in main
+    generated_files = generate_deck_files(cfg)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/.venv/lib/python3.12/site-packages/pyopmspe11/utils/mapproperties.py", line 50, in generate_deck_files
+    xc, zc, d_x, d_y, d_z, ycent, xmx, ymy = _build_corner_point_grid(cfg, points)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/.venv/lib/python3.12/site-packages/pyopmspe11/utils/mapproperties.py", line 1310, in _build_corner_point_grid
+    xcoord, zcoord, cfg.nxyz[0], cfg.nxyz[2] = _refine_vertical_grid(
+                                               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/.venv/lib/python3.12/site-packages/pyopmspe11/utils/mapproperties.py", line 1384, in _refine_vertical_grid
+    xcr[p : p + znr[i]] = xi + dx * w
+    ~~~^^^^^^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (50,) into shape (49,)

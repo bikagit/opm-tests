@@ -1,0 +1,10 @@
+pyopmspe11: info: generating the input files, please wait...
+pyopmspe11: success
+            Output directory: /home/AD.NORCERESEARCH.NO/bika/workstation/cpr/spe11_decks/examples/spe11b
+            Files (6):
+              - FIPNUM.INC
+              - FLUXNUM.INC
+              - GRID.INC
+              - PVBOUNDARIES.INC
+              - SPE11B.DATA
+              - TABLES.INC

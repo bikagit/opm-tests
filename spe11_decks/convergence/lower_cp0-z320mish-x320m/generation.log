@@ -1,0 +1,3 @@
+pyopmspe11: error: invalid TOML configuration:
+  - variable 'z_n[15]' has invalid value '0', expected 'a value greater than 0'.
+  - variable 'z_n[16]' has invalid value '0', expected 'a value greater than 0'.
